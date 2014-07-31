@@ -1,5 +1,4 @@
-mresponsiv
-==========
+WP-THEME-BASIC
+===
 
-
-Dokumentasjon for teamet «mresponsive».
+A template for creating wordpress themes
