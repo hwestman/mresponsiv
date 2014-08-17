@@ -1,11 +1,59 @@
 
 /***** Mobile *****/
+body, html {
+    margin: 0px;
+    padding: 0px;
+}
 
-@media only screen 
-(max-width : 439px) {
+.column {
+    float: left;
+    min-width: 260px;
+    background-color: yellow;
+}
+
+.columPadding {
+    float: left;
+    padding: 20px;
+    display: block;
     
 }
 
+.contact {
+    float: left;
+    width: 100%;
+    background-color: green;
+    
+}
+
+img {
+    float: left;
+    width: 80px;
+    height: 80px;
+}
+
+a {
+    float: left;
+}
+
+.phone {
+    float: left;
+}
+
+.email {
+    float: left;
+}
+
+@media only screen and (max-width : 539px) {
+  
+    .column {
+        width: 100%;
+    }
+        body {
+        background-color: blue;
+    }
+    
+    
+}
 
 
 
@@ -13,16 +61,27 @@
 /***** Tablet *****/
 
 
-@media only screen 
-and (min-width : 540px) 
-and (max-width : 839px) {
+@media only screen and (min-width : 540px) and (max-width : 839px) {
+
     
+    .column {
+        width: 50%;
+    }
+    
+    body {
+        background-color: red;
+    }
 }
 
-/***** Tablet *****/
+/***** Desktop *****/
 
-@media only screen 
-(min-width : 840px) {
+@media only screen  and (min-width : 840px) {
     
+    .column {
+        width: 33%;
+    }
     
+        body {
+        background-color: green;
+    }
 }
