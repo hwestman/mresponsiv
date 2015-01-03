@@ -2,4 +2,4 @@
 sitemap.xml
 *.log
 mresponsive.sublime-workspace
-
+.DS_Store
