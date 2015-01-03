@@ -18,7 +18,7 @@ get_header(); ?>
 
 
 <div class="container" id="blue">
-	Test
+	Test from tower
 </div>
 
 <div id="main-content" class="main-content">
