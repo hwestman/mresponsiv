@@ -1,87 +1,15 @@
+/*
+Theme Name: mResponsive
+Theme URI: n/a	
+Author: Roy Martin Kristiansen, Hallvard Westman
+Author URI: http://hallvard.westman.no
+Description: A template for creating wordpress themes
+Version: 1.1
+License: n/a
+License URI: n/a	
+Tags: Meyership, Blue, Responsive
+Text Domain: Skreddersydd tema for Meyership-konsernet.
 
-/***** Mobile *****/
-body, html {
-    margin: 0px;
-    padding: 0px;
-}
-
-.column {
-    float: left;
-    min-width: 260px;
-    background-color: yellow;
-}
-
-.columPadding {
-    float: left;
-    padding: 20px;
-    display: block;
-    
-}
-
-.contact {
-    float: left;
-    width: 100%;
-    background-color: green;
-    
-}
-
-img {
-    float: left;
-    width: 80px;
-    height: 80px;
-}
-
-a {
-    float: left;
-}
-
-.phone {
-    float: left;
-}
-
-.email {
-    float: left;
-}
-
-@media only screen and (max-width : 539px) {
-  
-    .column {
-        width: 100%;
-    }
-        body {
-        background-color: blue;
-    }
-    
-    
-}
-
-
-
-
-/***** Tablet *****/
-
-
-@media only screen and (min-width : 540px) and (max-width : 839px) {
-
-    
-    .column {
-        width: 50%;
-    }
-    
-    body {
-        background-color: red;
-    }
-}
-
-/***** Desktop *****/
-
-@media only screen  and (min-width : 840px) {
-    
-    .column {
-        width: 33%;
-    }
-    
-        body {
-        background-color: green;
-    }
-}
+*/
+h1 {
+  color: red; }

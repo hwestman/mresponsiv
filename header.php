@@ -24,10 +24,20 @@
 	<title><?php wp_title( '|', true, 'right' ); ?></title>
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-	<!--[if lt IE 9]>
-	<script src="<?php echo get_template_directory_uri(); ?>/js/html5.js"></script>
-	<![endif]-->
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/bootstrap.css">
+	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css">
+
+	<!-- JavaScript -->
+	<script src="<?php echo get_template_directory_uri(); ?>/js/lib/jquery-2.1.3.min.js"></script>
+
+	
 	<?php wp_head(); ?>
+
+	<!-- LiveReload-->
+	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+
 </head>
 
 <body <?php body_class(); ?>>
@@ -47,7 +57,7 @@
 			<div class="search-toggle">
 				<a href="#search-container" class="screen-reader-text"><?php _e( 'Search', 'twentyfourteen' ); ?></a>
 			</div>
-
+		
 			<nav id="primary-navigation" class="site-navigation primary-navigation" role="navigation">
 				<button class="menu-toggle"><?php _e( 'Primary Menu', 'wpthemebasic' ); ?></button>
 				<a class="screen-reader-text skip-link" href="#content"><?php _e( 'Skip to content', 'wpthemebasic' ); ?></a>

@@ -16,6 +16,11 @@
 
 get_header(); ?>
 
+
+<div class="container" id="blue">
+	Test
+</div>
+
 <div id="main-content" class="main-content">
 
 
