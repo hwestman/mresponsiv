@@ -1,0 +1,98 @@
+
+$meyership-blue:  #1068AE; 
+
+a {
+	color: red;
+}
+
+
+#blue {
+	background-color: blue;
+}
+
+#sidebar {
+	background-color: red;
+	min-height: 555px;
+}
+
+#content {
+	float: left;
+	background-color: brown;
+	min-height: 100%;
+}
+
+#hero-image {
+	width: 100%;
+	position: absolute;
+	max-width: 1400px;
+	margin: 0 auto;
+	z-index: -2;
+
+	img {
+		display: block;
+		float: left;
+		width: 100%;
+	}
+}
+
+#navigation {
+	background-color: #ffffff;
+
+	img {
+		float: left;
+		display: block;
+		width: 66px;
+	}
+	
+	#site-title {
+		float: left;
+		padding: 10px;
+	}
+
+}
+
+#product-menu {
+	float: left;
+	padding: 20px 0px 0px 0px;
+
+	li {
+		float: left;
+		margin: 0px 10px 10px 0px;
+	}
+}
+
+#info-menu {
+	float: left;
+	padding: 20px 0px 0px 0px;
+
+	li {
+		float: left;
+		margin: 0px 10px 10px 0px;
+	}
+}
+
+
+#main {
+	margin: 0px auto 0 auto;
+
+	#page-title {
+
+		.page-title-text {
+			display: inline-block;
+			padding: 15px;
+			color: #ffffff;
+			width: auto;
+			background-color: $meyership-blue;
+			margin: 30px 0px 210px 0px;
+		}
+	}
+
+	#main-background {
+		background-color: #ffffff;
+		padding: 30px;
+		min-height: 800px;
+	}
+}
+
+
+
