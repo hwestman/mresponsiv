@@ -117,10 +117,6 @@ small, .font_small {
 #blue {
   background-color: blue; }
 
-#sidebar {
-  background-color: red;
-  min-height: 555px; }
-
 #content {
   float: left;
   background-color: brown;
@@ -169,6 +165,15 @@ small, .font_small {
     background-color: #ffffff;
     padding: 30px;
     min-height: 800px; }
+
+/*==Sidebar==*/
+#sidebar {
+  background-color: blue; }
+  #sidebar h4 {
+    color: green; }
+  #sidebar .contact-person img {
+    width: 200px;
+    float: left; }
 
 /* Extra small devices (phones, less than 768px) */
 @media (max-width: 767px) {
