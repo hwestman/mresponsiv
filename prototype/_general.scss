@@ -47,7 +47,13 @@ small, .font_small {font-size: 0.833em;}
 * === HEADER ===
 */
 
+#header {
 
+}
+
+.header-bg {
+	background-color: #ffffff;
+}
 
 
 /*
@@ -82,7 +88,6 @@ small, .font_small {font-size: 0.833em;}
 	margin-right: auto;
 	margin-left: auto;
 	z-index: -2;
-	height: 390px;
 	overflow: hidden;
 
 	img {
