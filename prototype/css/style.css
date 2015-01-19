@@ -179,18 +179,16 @@ small, .font_small {
   * === HEADER ===
   */
   #hero-image {
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
     width: 100%;
+    height: 270px;
     position: absolute;
     margin-right: auto;
     margin-left: auto;
     z-index: -2;
-    height: 390px;
     overflow: hidden; }
-    #hero-image img {
-      display: block;
-      float: left;
-      width: 100%;
-      height: auto; }
 
   /*
   * — Branding 
@@ -224,20 +222,16 @@ small, .font_small {
   * === HEADER ===
   */
   #hero-image {
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
     width: 100%;
-    height: 220px;
+    height: 270px;
     position: absolute;
     margin-right: auto;
     margin-left: auto;
     z-index: -2;
     overflow: hidden; }
-    #hero-image img {
-      display: block;
-      float: left;
-      width: auto;
-      min-width: 100%;
-      height: auto;
-      min-height: 100%; }
 
   /*
   * — Branding 
@@ -271,6 +265,9 @@ small, .font_small {
   * === HEADER ===
   */
   #hero-image {
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
     width: 100%;
     height: 270px;
     position: absolute;
@@ -278,13 +275,6 @@ small, .font_small {
     margin-left: auto;
     z-index: -2;
     overflow: hidden; }
-    #hero-image img {
-      display: block;
-      float: left;
-      width: auto;
-      min-width: 100%;
-      height: auto;
-      min-height: 100%; }
 
   /*
   * — Branding 
@@ -315,20 +305,16 @@ small, .font_small {
   * === HEADER ===
   */
   #hero-image {
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
     width: 100%;
-    height: 320px;
+    height: 340px;
     position: absolute;
     margin-right: auto;
     margin-left: auto;
     z-index: -2;
     overflow: hidden; }
-    #hero-image img {
-      display: block;
-      float: left;
-      width: auto;
-      min-width: 100%;
-      height: auto;
-      min-height: 100%; }
 
   /*
   * — Branding 
