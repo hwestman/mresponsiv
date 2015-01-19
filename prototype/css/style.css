@@ -108,6 +108,9 @@ small, .font_small {
 /*
 * === HEADER ===
 */
+.header-bg {
+  background-color: #ffffff; }
+
 /*
 * — Minor Section Heading —
 */
@@ -132,7 +135,6 @@ small, .font_small {
   margin-right: auto;
   margin-left: auto;
   z-index: -2;
-  height: 390px;
   overflow: hidden; }
   #hero-image img {
     display: block;
@@ -182,15 +184,82 @@ small, .font_small {
 body {
   background-color: Azure; }
 
+/*
+* === HEADER ===
+*/
+#hero-image {
+  width: 100%;
+  position: absolute;
+  margin-right: auto;
+  margin-left: auto;
+  z-index: -2;
+  height: 390px;
+  overflow: hidden; }
+  #hero-image img {
+    display: block;
+    float: left;
+    width: 100%;
+    height: auto; }
+
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
   body {
     background-color: Beige; } }
+/*
+* === HEADER ===
+*/
+#hero-image {
+  width: 100%;
+  position: absolute;
+  margin-right: auto;
+  margin-left: auto;
+  z-index: -2;
+  height: 390px;
+  overflow: hidden; }
+  #hero-image img {
+    display: block;
+    float: left;
+    width: 100%;
+    height: auto; }
+
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
   body {
     background-color: Coral; } }
+/*
+* === HEADER ===
+*/
+#hero-image {
+  width: 100%;
+  position: absolute;
+  margin-right: auto;
+  margin-left: auto;
+  z-index: -2;
+  height: 270px;
+  overflow: hidden; }
+  #hero-image img {
+    display: block;
+    float: left;
+    width: 100%;
+    height: auto; }
+
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
   body {
     background-color: DarkOrchid; } }
+/*
+* === HEADER ===
+*/
+#hero-image {
+  width: 100%;
+  position: absolute;
+  margin-right: auto;
+  margin-left: auto;
+  z-index: -2;
+  height: 320px;
+  overflow: hidden; }
+  #hero-image img {
+    display: block;
+    float: left;
+    width: 100%;
+    height: auto; }
