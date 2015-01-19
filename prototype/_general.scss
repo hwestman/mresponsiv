@@ -70,17 +70,26 @@ small, .font_small {font-size: 0.833em;}
 	min-height: 100%;
 }
 
+
+/*
+* 	Hero Image 
+*/
+
+
 #hero-image {
 	width: 100%;
 	position: absolute;
-	max-width: 1400px;
-	margin: 0 auto;
+	margin-right: auto;
+	margin-left: auto;
 	z-index: -2;
+	height: 390px;
+	overflow: hidden;
 
 	img {
 		display: block;
 		float: left;
 		width: 100%;
+		height: auto;
 	}
 }
 
