@@ -1,4 +1,4 @@
-
+@media (max-width: 767px) {
 
 body {
 	background-color: Azure;
@@ -26,3 +26,42 @@ body {
 		height: auto;
 	}
 }
+
+
+
+/*
+* — Branding 
+*/
+
+#branding {
+	min-height: 33px;
+}
+
+#logo {
+	float:left;
+
+	img {
+		float: left;
+		display: block;
+		width: 33px;
+		height: 33px;
+	}
+}
+
+#site-title {
+	float: left;
+	font-size: 15px;
+	padding: 0px;
+	line-height: 0px;
+	margin: 16px 0px 16px 8px;
+}
+
+#product-menu, #info-menu {
+	display: none;
+}
+
+
+
+
+
+} // @media 
