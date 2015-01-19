@@ -61,14 +61,4 @@ a {
     background-color: #ffffff;
     padding: 30px;
     min-height: 800px; }
-#sidebar{
-    
-    background-color: green;
-    
-    .contact-person{
-        img{
-            width: 300px;
-            
-        }
-    }
-}
+

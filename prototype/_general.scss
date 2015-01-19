@@ -1,4 +1,5 @@
 
+
 $meyership-blue:  #1068AE; 
 
 a {
@@ -63,11 +64,6 @@ small, .font_small {font-size: 0.833em;}
 
 #blue {
 	background-color: blue;
-}
-
-#sidebar {
-	background-color: red;
-	min-height: 555px;
 }
 
 #content {
@@ -156,6 +152,21 @@ small, .font_small {font-size: 0.833em;}
 		padding: 30px;
 		min-height: 800px;
 	}
+}
+
+/*==Sidebar==*/
+#sidebar{
+    h4{
+        color: green;
+    }
+    background-color: blue;
+    
+    .contact-person{
+        img{
+            width: 200px;
+            float: left;
+        }
+    }
 }
 
 
