@@ -142,16 +142,6 @@ small, .font_small {
     width: 100%;
     height: auto; }
 
-#navigation {
-  background-color: #ffffff; }
-  #navigation img {
-    float: left;
-    display: block;
-    width: 66px; }
-  #navigation #site-title {
-    float: left;
-    padding: 10px; }
-
 #product-menu {
   float: left;
   padding: 20px 0px 0px 0px; }
@@ -181,85 +171,176 @@ small, .font_small {
     min-height: 800px; }
 
 /* Extra small devices (phones, less than 768px) */
-body {
-  background-color: Azure; }
+@media (max-width: 767px) {
+  body {
+    background-color: Azure; }
 
-/*
-* === HEADER ===
-*/
-#hero-image {
-  width: 100%;
-  position: absolute;
-  margin-right: auto;
-  margin-left: auto;
-  z-index: -2;
-  height: 390px;
-  overflow: hidden; }
-  #hero-image img {
-    display: block;
-    float: left;
+  /*
+  * === HEADER ===
+  */
+  #hero-image {
     width: 100%;
-    height: auto; }
+    position: absolute;
+    margin-right: auto;
+    margin-left: auto;
+    z-index: -2;
+    height: 390px;
+    overflow: hidden; }
+    #hero-image img {
+      display: block;
+      float: left;
+      width: 100%;
+      height: auto; }
 
+  /*
+  * — Branding 
+  */
+  #branding {
+    min-height: 33px; }
+
+  #logo {
+    float: left; }
+    #logo img {
+      float: left;
+      display: block;
+      width: 33px;
+      height: 33px; }
+
+  #site-title {
+    float: left;
+    font-size: 15px;
+    padding: 0px;
+    line-height: 0px;
+    margin: 16px 0px 16px 8px; }
+
+  #product-menu, #info-menu {
+    display: none; } }
 /* Small devices (tablets, 768px and up) */
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 991px) {
   body {
-    background-color: Beige; } }
-/*
-* === HEADER ===
-*/
-#hero-image {
-  width: 100%;
-  position: absolute;
-  margin-right: auto;
-  margin-left: auto;
-  z-index: -2;
-  height: 390px;
-  overflow: hidden; }
-  #hero-image img {
-    display: block;
-    float: left;
-    width: 100%;
-    height: auto; }
+    background-color: Beige; }
 
+  /*
+  * === HEADER ===
+  */
+  #hero-image {
+    width: 100%;
+    position: absolute;
+    margin-right: auto;
+    margin-left: auto;
+    z-index: -2;
+    height: 390px;
+    overflow: hidden; }
+    #hero-image img {
+      display: block;
+      float: left;
+      width: 100%;
+      height: auto; }
+
+  /*
+  * — Branding 
+  */
+  #branding {
+    min-height: 44px; }
+
+  #logo {
+    float: left; }
+    #logo img {
+      float: left;
+      display: block;
+      width: 55px;
+      height: 55px; }
+
+  #site-title {
+    float: left;
+    font-size: 18px;
+    padding: 0px;
+    line-height: 0px;
+    margin: 26px 0px 26px 8px; }
+
+  #product-menu, #info-menu {
+    display: none; } }
 /* Medium devices (desktops, 992px and up) */
-@media (min-width: 992px) {
+@media (min-width: 992px) and (max-width: 1199px) {
   body {
-    background-color: Coral; } }
-/*
-* === HEADER ===
-*/
-#hero-image {
-  width: 100%;
-  position: absolute;
-  margin-right: auto;
-  margin-left: auto;
-  z-index: -2;
-  height: 270px;
-  overflow: hidden; }
-  #hero-image img {
-    display: block;
-    float: left;
-    width: 100%;
-    height: auto; }
+    background-color: Coral; }
 
+  /*
+  * === HEADER ===
+  */
+  #hero-image {
+    width: 100%;
+    position: absolute;
+    margin-right: auto;
+    margin-left: auto;
+    z-index: -2;
+    height: 270px;
+    overflow: hidden; }
+    #hero-image img {
+      display: block;
+      float: left;
+      width: 100%;
+      height: auto; }
+
+  /*
+  * — Branding 
+  */
+  #branding {
+    min-height: 44px; }
+
+  #logo {
+    float: left; }
+    #logo img {
+      float: left;
+      display: block;
+      width: 55px;
+      height: 55px; }
+
+  #site-title {
+    float: left;
+    font-size: 18px;
+    padding: 0px;
+    line-height: 0px;
+    margin: 26px 0px 26px 8px; } }
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
   body {
-    background-color: DarkOrchid; } }
-/*
-* === HEADER ===
-*/
-#hero-image {
-  width: 100%;
-  position: absolute;
-  margin-right: auto;
-  margin-left: auto;
-  z-index: -2;
-  height: 320px;
-  overflow: hidden; }
-  #hero-image img {
-    display: block;
-    float: left;
+    background-color: DarkOrchid; }
+
+  /*
+  * === HEADER ===
+  */
+  #hero-image {
     width: 100%;
-    height: auto; }
+    position: absolute;
+    margin-right: auto;
+    margin-left: auto;
+    z-index: -2;
+    height: 320px;
+    overflow: hidden; }
+    #hero-image img {
+      display: block;
+      float: left;
+      width: 100%;
+      height: auto; }
+
+  /*
+  * — Branding 
+  */
+  #branding {
+    min-height: 66px; }
+
+  #logo {
+    float: left; }
+    #logo img {
+      float: left;
+      display: block;
+      width: 66px;
+      height: 66px; }
+
+  #site-title {
+    float: left;
+    font-size: 20px;
+    padding: 0px;
+    line-height: 0px;
+    margin: 33px 0px 33px 10px; } }

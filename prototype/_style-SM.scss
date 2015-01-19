@@ -1,11 +1,11 @@
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 991px) {
 
 body {
 	background-color: Beige;
 }
 
 
-}
+
 
 
 
@@ -31,3 +31,40 @@ body {
 		height: auto;
 	}
 }
+
+/*
+* — Branding 
+*/
+
+#branding {
+	min-height: 44px;
+}
+
+#logo {
+	float:left;
+
+	img {
+		float: left;
+		display: block;
+		width: 55px;
+		height: 55px;
+	}
+}
+
+#site-title {
+	float: left;
+	font-size: 18px;
+	padding: 0px;
+	line-height: 0px;
+	margin: 26px 0px 26px 8px;
+}
+
+#product-menu, #info-menu {
+	display: none;
+}
+
+
+
+
+
+} // @media 

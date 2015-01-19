@@ -4,7 +4,7 @@ body {
 	background-color: DarkOrchid;
 }
 
-}
+
 
 
 
@@ -28,3 +28,33 @@ body {
 		height: auto;
 	}
 }
+
+
+/*
+* — Branding 
+*/
+
+#branding {
+	min-height: 66px;
+}
+
+#logo {
+	float:left;
+
+	img {
+		float: left;
+		display: block;
+		width: 66px;
+		height: 66px;
+	}
+}
+
+#site-title {
+	float: left;
+	font-size: 20px;
+	padding: 0px;
+	line-height: 0px;
+	margin: 33px 0px 33px 10px;
+}
+
+} // @media 
