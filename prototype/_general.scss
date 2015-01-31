@@ -1,10 +1,12 @@
 
 
 $meyership-blue:  #1068AE; 
-
+$meyership-green: #79BF08;
+$meyership-lightgray: #F0F0F0;
 a {
 	color: red;
 }
+
 
 
 
@@ -132,25 +134,52 @@ small, .font_small {font-size: 0.833em;}
 
 	#main-background {
 		background-color: #ffffff;
-		padding: 30px;
 		min-height: 800px;
 	}
 }
 
 /*==Sidebar==*/
 #sidebar{
-    h4{
-        color: green;
-    }
-    background-color: blue;
+
+    padding: 0 30px 0 60px;
+    background-color: $meyership-lightgray;
     
     .contact-person{
+        float: left;
+        margin-top: 60px;
+
         img{
-            width: 200px;
+            border: none;
             float: left;
+            width: 120px;
+
+        }
+
+        button {
+            float: left;
+            margin-top: 30px;
+            margin-left: 30px;
+
+            border-radius: 50%;
+            width: 90px;
+            height: 90px;
+            border: none;
+            background-color: $meyership-green;
+
+            color:white;
+        }
+        .name{
+            float: left;
+            clear: both;
+            margin: 30px  0 0 0;
+
+        }
+        .title{
+            float: left;
+            clear: both;
+            margin: 10px  0 0 0;
         }
     }
 }
-
 
 

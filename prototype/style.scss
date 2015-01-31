@@ -12,10 +12,13 @@ Text Domain: Skreddersydd tema for Meyership-konsernet.
 
 */
 
+@import "bourbon";
+
 /* Eric Meyer's CSS Reset
    http://meyerweb.com/eric/tools/css/reset/ 
 */
 @import 'reset';
+
 
 
 /* The general styles - Generic to all devices */
@@ -34,6 +37,8 @@ Text Domain: Skreddersydd tema for Meyership-konsernet.
 
 /* Large devices (large desktops, 1200px and up) */ 
 @import 'style-LG';
+
+
 
 
 
