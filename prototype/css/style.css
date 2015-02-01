@@ -12,8 +12,7 @@ Tags: Meyership, Blue, Responsive
 Text Domain: Skreddersydd tema for Meyership-konsernet.
 
 
-
-/* Eric Meyer's CSS Reset
+/* Eric Meyer's CSS Reset 
    http://meyerweb.com/eric/tools/css/reset/ 
 */
 /* Eric Meyer's CSS Reset
@@ -168,43 +167,16 @@ small, .font_small {
 
 /* Margins */
 /*bottom*/
-<<<<<<< HEAD
-/* line 144, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/general */
-.margin-bottom-medium {
-  margin-bottom: 30px; }
-
-/* line 147, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/general */
-.margin-bottom-large {
-  margin-bottom: 60px; }
-
-/* line 150, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/general */
-=======
 .margin-bottom-medium {
   margin-bottom: 30px; }
 
 .margin-bottom-large {
   margin-bottom: 60px; }
 
->>>>>>> origin/master
 .margin-bottom-small {
   margin-bottom: 15px; }
 
 /*Right*/
-<<<<<<< HEAD
-/* line 154, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/general */
-.margin-right-small {
-  margin-right: 15px; }
-
-/* line 157, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/general */
-.margin-right-medium {
-  margin-right: 30px; }
-
-/* line 160, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/general */
-.margin-right-large {
-  margin-right: 60px; }
-
-/* line 165, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/general */
-=======
 .margin-right-small {
   margin-right: 15px; }
 
@@ -214,26 +186,12 @@ small, .font_small {
 .margin-right-large {
   margin-right: 60px; }
 
->>>>>>> origin/master
 .main-content {
   display: table-cell;
   vertical-align: top;
   float: none; }
 
 /*==Sidebar==*/
-<<<<<<< HEAD
-/* line 171, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/general */
-#sidebar {
-  padding: 30px 30px 0 60px;
-  background-color: #F0F0F0; }
-  /* line 176, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/general */
-  #sidebar .content {
-    float: left; }
-  /* line 180, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/general */
-  #sidebar .contact-person {
-    float: left; }
-    /* line 182, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/general */
-=======
 #sidebar {
   padding: 30px 30px 0 60px;
   background-color: #f0f0f0; }
@@ -241,15 +199,10 @@ small, .font_small {
     float: left; }
   #sidebar .contact-person {
     float: left; }
->>>>>>> origin/master
     #sidebar .contact-person img {
       border: none;
       float: left;
       width: 120px; }
-<<<<<<< HEAD
-    /* line 188, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/general */
-=======
->>>>>>> origin/master
     #sidebar .contact-person button {
       margin-top: 15px;
       color: white;
@@ -257,21 +210,11 @@ small, .font_small {
       width: 90px;
       height: 90px;
       border: none;
-<<<<<<< HEAD
-      background-color: #79BF08; }
-    /* line 197, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/general */
-    #sidebar .contact-person .name {
-      float: left;
-      clear: both;
-      margin: 30px 0 0 0; }
-    /* line 203, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/general */
-=======
       background-color: #79bf08; }
     #sidebar .contact-person .name {
       float: left;
       clear: both;
       margin: 30px  0 0 0; }
->>>>>>> origin/master
     #sidebar .contact-person .title {
       float: left;
       clear: both;
@@ -298,7 +241,7 @@ small, .font_small {
     overflow: hidden; }
 
   /*
-  * — Branding
+  * — Branding 
   */
   #branding {
     min-height: 33px; }
@@ -320,15 +263,6 @@ small, .font_small {
 
   #product-menu, #info-menu {
     display: none; }
-<<<<<<< HEAD
-
-  /* line 57, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/style-XS */
-  .main-content {
-    display: block;
-    float: left; }
- }
-=======
->>>>>>> origin/master
 
   .main-content {
     display: block;
@@ -354,7 +288,7 @@ small, .font_small {
     overflow: hidden; }
 
   /*
-  * — Branding
+  * — Branding 
   */
   #branding {
     min-height: 44px; }
@@ -397,7 +331,7 @@ small, .font_small {
     overflow: hidden; }
 
   /*
-  * — Branding
+  * — Branding 
   */
   #branding {
     min-height: 44px; }
@@ -440,7 +374,7 @@ small, .font_small {
     overflow: hidden; }
 
   /*
-  * — Branding
+  * — Branding 
   */
   #branding {
     min-height: 66px; }
