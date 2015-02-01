@@ -15,19 +15,15 @@ Text Domain: Skreddersydd tema for Meyership-konsernet.
 !FIXIT
 hwestman made it
 */
-@import "bourbon";
+
 
 /* Eric Meyer's CSS Reset 
    http://meyerweb.com/eric/tools/css/reset/ 
 */
 @import 'reset';
 
-
-
 /* The general styles - Generic to all devices */
 @import 'general';
-
-
 
 /* Extra small devices (phones, less than 768px) */
 @import 'style-XS';
