@@ -68,9 +68,10 @@ table {
 a {
   color: red; }
 
-/*
-* === GENERAL ===
-*/
+/**
+ * 1.0 Repeatable Patterns
+ * ----------------------------------------------------------------------------
+ */
 html {
   font-size: 1em; }
 
@@ -105,9 +106,10 @@ h4 {
 small, .font_small {
   font-size: 0.833em; }
 
-/*
-* === HEADER ===
-*/
+/**
+ * 0.0 Header
+ * ----------------------------------------------------------------------------
+ */
 .header-bg {
   background-color: #ffffff; }
 
@@ -152,15 +154,20 @@ small, .font_small {
     float: left;
     margin: 0px 10px 10px 0px; }
 
+/**
+ * 0.0 page-title
+ * ----------------------------------------------------------------------------
+ */
+#page-title .page-title-text {
+  display: inline-block;
+  line-height: 1em;
+  padding: 10px 15px 8px 15px;
+  color: #ffffff;
+  width: auto;
+  background-color: #1068ae; }
+
 #main {
   margin: 0px auto 0 auto; }
-  #main #page-title .page-title-text {
-    display: inline-block;
-    padding: 15px;
-    color: #ffffff;
-    width: auto;
-    background-color: #1068ae;
-    margin: 30px 0px 210px 0px; }
   #main #main-background {
     background-color: #ffffff;
     min-height: 800px; }
@@ -191,7 +198,10 @@ small, .font_small {
   vertical-align: top;
   float: none; }
 
-/*==Sidebar==*/
+/**
+ * 0.0 ˍSidebar 
+ * ----------------------------------------------------------------------------
+ */
 #sidebar {
   padding: 30px 30px 0 60px;
   background-color: #f0f0f0; }
@@ -224,6 +234,13 @@ small, .font_small {
 @media (max-width: 767px) {
   body {
     background-color: Azure; }
+
+  /**
+   * 0.0 Page Title
+   * ----------------------------------------------------------------------------
+   */
+  #page-title .page-title-text {
+    margin: 15px 0px 170px 0px; }
 
   /*
   * === HEADER ===
@@ -272,6 +289,13 @@ small, .font_small {
   body {
     background-color: Beige; }
 
+  /**
+   * 0.0 Page Title
+   * ----------------------------------------------------------------------------
+   */
+  #page-title .page-title-text {
+    margin: 15px 0px 170px 0px; }
+
   /*
   * === HEADER ===
   */
@@ -315,6 +339,13 @@ small, .font_small {
   body {
     background-color: Coral; }
 
+  /**
+   * 0.0 Page Title
+   * ----------------------------------------------------------------------------
+   */
+  #page-title .page-title-text {
+    margin: 15px 0px 170px 0px; }
+
   /*
   * === HEADER ===
   */
@@ -357,6 +388,13 @@ small, .font_small {
 @media (min-width: 1200px) {
   body {
     background-color: DarkOrchid; }
+
+  /**
+   * 0.0 Page Title
+   * ----------------------------------------------------------------------------
+   */
+  #page-title .page-title-text {
+    margin: 30px 0px 210px 0px; }
 
   /*
   * === HEADER ===
