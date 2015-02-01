@@ -138,27 +138,33 @@ small, .font_small {font-size: 0.833em;}
 	}
 }
 
+/* Margins */
+.margin-bottom-medium{
+    margin-bottom: 30px;
+}
+.margin-bottom-large{
+    margin-bottom: 60px;
+}
+.margin-bottom-small{
+    margin-bottom: 15px;
+}
+
 /*==Sidebar==*/
 #sidebar{
 
-    padding: 0 30px 0 60px;
+
+    padding: 30px 30px 0 60px;
     background-color: $meyership-lightgray;
     
     .contact-person{
         float: left;
-        margin-top: 60px;
-
-        img{
-            border: none;
-            float: left;
-            width: 120px;
-
-        }
 
         button {
             float: left;
-            margin-top: 30px;
+            margin-top: 15px;
             margin-left: 30px;
+
+            color:white;
 
             border-radius: 50%;
             width: 90px;
@@ -166,7 +172,7 @@ small, .font_small {font-size: 0.833em;}
             border: none;
             background-color: $meyership-green;
 
-            color:white;
+
         }
         .name{
             float: left;
@@ -178,6 +184,12 @@ small, .font_small {font-size: 0.833em;}
             float: left;
             clear: both;
             margin: 10px  0 0 0;
+        }
+        img{
+            border: none;
+            float: left;
+            width: 120px;
+
         }
     }
 }
