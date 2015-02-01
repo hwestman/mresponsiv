@@ -170,6 +170,7 @@ small, .font_small {font-size: 0.833em;}
 /*==Sidebar==*/
 #sidebar{
     padding: 30px 30px 0 60px;
+
     background-color: $meyership-lightgray;
     
     .content{
@@ -185,18 +186,13 @@ small, .font_small {font-size: 0.833em;}
 
         }
         button {
-            float: left;
             margin-top: 15px;
-
             color:white;
-
             border-radius: 50%;
             width: 90px;
             height: 90px;
             border: none;
             background-color: $meyership-green;
-
-
         }
         .name{
             float: left;
