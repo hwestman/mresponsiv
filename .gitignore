@@ -8,3 +8,4 @@ jonas
 bower_components
 *.map
 prototype/css/style.css
+/prototype/css/style.css
