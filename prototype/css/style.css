@@ -216,20 +216,29 @@ small, .font_small {
 /*==Sidebar==*/
 /* line 171, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/general */
 #sidebar {
-  padding: 30px 30px 0 60px;
+  padding: 30px 0 0 60px;
   background-color: #F0F0F0; }
   /* line 176, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/general */
   #sidebar .content {
-    float: left; }
-  /* line 180, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/general */
+    float: left;
+    width: 100%; }
+  /* line 183, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/general */
   #sidebar .contact-person {
     float: left; }
-    /* line 182, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/general */
+    /* line 186, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/general */
+    #sidebar .contact-person .left-col {
+      width: 120px;
+      float: left; }
+    /* line 191, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/general */
+    #sidebar .contact-person .right-col {
+      width: 90px;
+      float: left; }
+    /* line 197, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/general */
     #sidebar .contact-person img {
       border: none;
       float: left;
       width: 120px; }
-    /* line 188, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/general */
+    /* line 203, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/general */
     #sidebar .contact-person button {
       margin-top: 15px;
       color: white;
@@ -238,12 +247,12 @@ small, .font_small {
       height: 90px;
       border: none;
       background-color: #79BF08; }
-    /* line 197, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/general */
+    /* line 212, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/general */
     #sidebar .contact-person .name {
       float: left;
       clear: both;
       margin: 30px 0 0 0; }
-    /* line 203, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/general */
+    /* line 218, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/general */
     #sidebar .contact-person .title {
       float: left;
       clear: both;
@@ -356,6 +365,10 @@ small, .font_small {
   /* line 60, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/style-SM */
   #product-menu, #info-menu {
     display: none; }
+
+  /* line 63, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/style-SM */
+  #sidebar {
+    padding: 30px 0 0 60px; }
  }
 
 /* Medium devices (desktops, 992px and up) */
