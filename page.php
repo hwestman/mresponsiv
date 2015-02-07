@@ -5,37 +5,40 @@
  */
 
 get_header(); ?>
-<p>jonas</p>
-<div id="main-content" class="main-content">
 
-<?php
-	if ( is_front_page() && twentyfourteen_has_featured_posts() ) {
-		// Include the featured content template.
-		get_template_part( 'featured-content' );
-	}
-?>
-	<div id="primary" class="content-area">
-		<div id="content" class="site-content" role="main">
+<?php get_template_part( 'template-hero-image'); ?> 
 
+<div id="main">
+    <div id="wrapper" class="container">
+
+		<?php get_template_part( 'template-content-header-big'); ?> 
+
+        <div id="content-wrapper">
+
+            <div class="col-sm-12 col-md-8 side-by-side-fill-height">
 			<?php
 				// Start the Loop.
 				while ( have_posts() ) : the_post();
 
-					// Include the page content template.
-					get_template_part( 'content', 'page' );
+					echo "<h1>" . the_title() . "</h1>";
+					
+					echo the_content();
 
-					// If comments are open or we have at least one comment, load up the comment template.
-					if ( comments_open() || get_comments_number() ) {
-						comments_template();
-					}
 				endwhile;
 			?>
+			</div>
 
-		</div><!-- #content -->
-	</div><!-- #primary -->
-	<?php get_sidebar( 'content' ); ?>
-</div><!-- #main-content -->
+		<div id="sidebar-right" class="col-sm-12 col-md-4 side-by-side-fill-height">
+            <div class="sidebar"> 
+				<h2>sidebar</h2>
+				<?php get_sidebar( 'content' ); ?>
+        	</div> <!-- .sidebar -->   
+        </div> <!-- #sidebar-right -->
+            
+    
+    </div> <!-- #content-wrapper -->
+    </div> <!-- #wrapper -->
+
 
 <?php
-get_sidebar();
 get_footer();

@@ -1,81 +1,51 @@
 <?php
+
+
+
 /**
+ * 1.0 Thumbnails 
+ * ----------------------------------------------------------------------------
  */
 
+// Adding support for post/page thumbnails
+add_theme_support( 'post-thumbnails' );
 
-if ( ! function_exists( 'wpthemebasic_setup' ) ) :
-/**
- * Twenty Fourteen setup.
- *
- * Set up theme defaults and registers support for various WordPress features.
- *
- * Note that this function is hooked into the after_setup_theme hook, which
- * runs before the init hook. The init hook is too late for some features, such
- * as indicating support post thumbnails.
- *
- * @since Twenty Fourteen 1.0
- */
-function wpthemebasic_setup() {
-
-
-
-	// Add RSS feed links to <head> for posts and comments.
-	add_theme_support( 'automatic-feed-links' );
-
-	// Enable support for Post Thumbnails, and declare two sizes.
-	add_theme_support( 'post-thumbnails' );
-	set_post_thumbnail_size( 672, 372, true );
-	add_image_size( 'wpthemebasic-full-width', 1038, 576, true );
-
-	// This theme uses wp_nav_menu() in two locations.
-	register_nav_menus( array(
-		'primary'   => __( 'Top primary menu', 'wpthemebasic' ),
-	) );
-
-	/*
-	 * Switch default core markup for search form, comment form, and comments
-	 * to output valid HTML5.
-	 */
-	add_theme_support( 'html5', array(
-		'search-form', 'comment-form', 'comment-list', 'gallery', 'caption'
-	) );
-
-	/*
-	 * Enable support for Post Formats.
-	 * See http://codex.wordpress.org/Post_Formats
-	 */
-	add_theme_support( 'post-formats', array(
-		'aside', 'image', 'video', 'audio', 'quote', 'link', 'gallery',
-	) );
-
-
-	// Add support for featured content.
-	add_theme_support( 'featured-content', array(
-		'featured_content_filter' => 'twentyfourteen_get_featured_posts',
-		'max_posts' => 6,
-	) );
-
-	// This theme uses its own gallery styles.
-	add_filter( 'use_default_gallery_style', '__return_false' );
+function register_costume_thumbnail_sizes (){
+    add_image_size( 'square', 400, 400, true ); // 400px x 400px (H x W Crop = true)
+    add_image_size( 'page-full-width', 1170, 320, true ); // 1170x x 650px (H x W , Crop = true)
+    add_image_size( 'collaborator', 300, 216, true ); // 300x x 216px (H x W , Crop = true)
+    add_image_size( 'news', 560, 400, true ); // 560x x 400px (H x W , Crop = true)
 }
-endif; // twentyfourteen_setup
-add_action( 'after_setup_theme', 'wpthemebasic_setup' );
+
+add_action( 'after_setup_theme', 'register_costume_thumbnail_sizes' ); // Enable the costume sizes
+
+
 
 /**
- * Enqueue scripts and styles for the front end.
- *
- * @since Twenty Fourteen 1.0
+ * 2.0 Menus 
+ * ----------------------------------------------------------------------------
  */
-function wpthemebasic_scripts() {
 
-	// Load our main stylesheet.
-	wp_enqueue_style( 'wpthemebasic-style', get_stylesheet_uri(), array( 'genericons' ) );
 
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
-	}
-
-	wp_enqueue_script( 'twentyfourteen-script', get_template_directory_uri() . '/js/functions.js', array( 'jquery' ), '20140319', true );
+//Adding support for costume menus 
+function register_costume_menus () {
+  register_nav_menus(
+    array(
+      'footer-partners' => __( 'Footer - Partners' )
+    )
+  );
 }
-add_action( 'wp_enqueue_scripts', 'wpthemebasic_scripts' );
 
+add_action( 'init', 'register_costume_menus' ); // Enable costume menus
+
+
+
+
+
+
+
+
+
+
+
+?>
