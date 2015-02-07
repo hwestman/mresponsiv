@@ -171,7 +171,7 @@ small, .font_small {font-size: 0.833em;}
     .page-title-text {
         display: inline-block;
         line-height: 1em;
-         padding: 10px 15px 8px 15px;
+        padding: 10px 15px 8px 15px;
         color: #ffffff;
         width: auto;
         background-color: $meyership-blue;
@@ -188,6 +188,11 @@ small, .font_small {font-size: 0.833em;}
  */
 #main {
 
+}
+
+#wrapper-inner {
+    float: left;
+    width: 100%;
 }
 
 #content-header {
