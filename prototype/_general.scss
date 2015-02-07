@@ -89,7 +89,14 @@ small, .font_small {font-size: 0.833em;}
  */
 
 #header {
+    width: 100%;
+	position: fixed;
+    top:0;
 
+	margin-right: auto;
+	margin-left: auto;
+	z-index: 2;
+	overflow: hidden;
 }
 
 .header-bg {
@@ -173,14 +180,7 @@ small, .font_small {font-size: 0.833em;}
     }
 }
 
-#main {
-	margin: 0px auto 0 auto;
 
-	#main-background {
-		background-color: #ffffff;
-		min-height: 800px;
-	}
-}
 
 
 
@@ -188,15 +188,16 @@ small, .font_small {font-size: 0.833em;}
  * 0.0 ˍContent
  * ----------------------------------------------------------------------------
  */
-
-.side-by-side-fill-height{
-    display: table-cell;
-    vertical-align: top;
-    float: none;
-    height: 100%;
-}
-
 #main {
+	margin: 66px auto 0 auto;
+
+	#main-background {
+		background-color: #ffffff;
+		min-height: 800px;
+	}
+
+
+
     h2{
         margin-bottom: $margin-large;
     }
@@ -205,6 +206,13 @@ small, .font_small {font-size: 0.833em;}
         margin-bottom: $margin-large;
     }
 }
+.side-by-side-fill-height{
+    display: table-cell;
+    vertical-align: top;
+    float: none;
+    height: 100%;
+}
+
 
 
 
