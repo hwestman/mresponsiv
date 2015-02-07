@@ -48,7 +48,7 @@ add_action( 'init', 'register_costume_menus' ); // Enable costume menus
 
 function register_collaborators_custom_post(){
     register_post_type('samarbeidspartnere', array(
-        'label' => __('Add item'),
+        'label' => __('Samarbeid'),
         'singular_label' => __('Samarbeidspartnere'),
         'public' => true,
         'show_ui' => true, // UI in admin panel
