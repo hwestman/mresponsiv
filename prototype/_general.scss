@@ -86,6 +86,7 @@ small, .font_small {font-size: 0.833em;}
 }
 
 
+
 /**
  * 0.0 Header
  * ----------------------------------------------------------------------------
@@ -183,8 +184,149 @@ small, .font_small {font-size: 0.833em;}
 }
 
 
+/**
+ * Frontpage 
+ * ----------------------------------------------------------------------------
+ */
+
+.frontpage-section-heading {
+
+    h2 {
+        padding-top: 0px;
+        margin-top: 0px;
+    }
+}
+
+.frontpage-section {
+    margin-bottom: 30px;
+}
 
 
+/**
+ * Frontpage - News
+ * ----------------------------------------------------------------------------
+ */
+
+
+.frontpage-news-item-conatiner {
+    padding: 0px;
+}
+
+.frontpage-news-item-link {
+    float: left;
+    padding: 15px;
+    display: block;
+    width: 100%;
+    margin: 0px;
+    text-decoration: none;
+    color: #000000;
+
+
+    h2 {
+        color: $meyership-blue;
+    }
+
+    p {
+        color: #9a9a9a;
+    }
+
+}
+
+.frontpage-news-item-link:hover {
+    background-color: #e5e5e5;
+
+}
+
+.frontpage-news-item-thumbnail {
+    float: left;
+    width: 100%;
+    padding-bottom: 8px;
+
+    img {
+    float: left; 
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    } 
+}
+
+.frontpage-news-item-heading {
+    float: left;
+    width: 100%;
+
+    h2 {
+        font-size: 1.2em;
+        margin: 0px;
+        padding: 0px 0px 0.2em 0px;
+    }
+}
+
+.frontpage-news-item-meta {
+    float: left;
+    width: 100%;
+    
+    p {
+        font-size: 0.8em;
+    }
+
+}
+
+/**
+ * Frontpage - Services 
+ * ----------------------------------------------------------------------------
+ */
+
+.frontpage-services-item-link {
+    float: left;
+    padding: 15px;
+    display: block;
+    width: 100%;
+    margin: 0px;
+    text-decoration: none;
+    color: #000000;
+
+
+    h2 {
+        color: $meyership-blue;
+    }
+
+    p {
+        color: #9a9a9a;
+    }
+
+}
+
+.frontpage-services-item-link:hover {
+    background-color: #e5e5e5;
+
+}
+
+.frontpage-services-item-thumbnail {
+    float: left;
+    width: 25%;
+    padding-right: 15px;
+
+    img {
+    float: left; 
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+    } 
+}
+
+.frontpage-services-item-info {
+    width: auto;
+    overflow: hidden;
+    
+    h2 {
+        margin-top: 0px;
+    }
+
+
+}
 
 /**
  * 0.0 ˍContent
@@ -223,6 +365,10 @@ small, .font_small {font-size: 0.833em;}
     min-height: 800px;
 }
 
+#content-full-width {
+    padding: 30px 0px 0px 0px;
+}
+
 .side-by-side-fill-height{
     display: table-cell;
     vertical-align: top;
@@ -239,7 +385,6 @@ small, .font_small {font-size: 0.833em;}
  */
 
 .sidebar {
-     
     padding: 30px 30px 30px 30px;
 }
 
