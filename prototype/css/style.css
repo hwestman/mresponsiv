@@ -1,0 +1,647 @@
+/*
+Theme Name: mResponsive
+Theme URI: n/a
+Author: Roy Martin Kristiansen, Hallvard Westman
+Author URI: http://hallvard.westman.no
+Description: A template for creating wordpress themes
+Version: 1.1
+License: n/a
+License URI: n/a
+Tags: Meyership, Blue, Responsive
+Text Domain: Skreddersydd tema for Meyership-konsernet.
+
+
+
+/* Eric Meyer's CSS Reset
+   http://meyerweb.com/eric/tools/css/reset/
+*/
+/* Eric Meyer's CSS Reset
+   http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+   This is a Sass partial
+*/
+/* line 20, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/reset */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+/* line 30, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/reset */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+/* line 33, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/reset */
+body {
+  line-height: 1; }
+
+/* line 36, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/reset */
+ol, ul {
+  list-style: none; }
+
+/* line 39, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/reset */
+blockquote, q {
+  quotes: none; }
+
+/* line 43, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/reset */
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none; }
+
+/* line 47, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/reset */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* The general styles - Generic to all devices */
+/**
+ * 1.0 Repeatable Patterns
+ * ----------------------------------------------------------------------------
+ */
+/* line 19, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/general */
+html {
+  font-size: 1em; }
+
+/* line 21, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/general */
+body {
+  background-color: white;
+  font-family: helvetica, arial, sans-serif;
+  font-weight: 400;
+  line-height: 1.45;
+  color: #333; }
+
+/* line 29, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/general */
+p {
+  margin-bottom: 1.3em; }
+
+/* line 31, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/general */
+h1, h2, h3, h4 {
+  margin: 1.414em 0 0.5em;
+  font-weight: inherit;
+  line-height: 1.2; }
+
+/* line 37, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/general */
+h1 {
+  margin-top: 0;
+  font-size: 2.074em; }
+
+/* line 42, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/general */
+h2 {
+  font-size: 1.728em; }
+
+/* line 44, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/general */
+h3 {
+  font-size: 1.44em; }
+
+/* line 46, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/general */
+h4 {
+  font-size: 1.2em; }
+
+/* line 48, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/general */
+small, .font_small {
+  font-size: 0.833em; }
+
+/* line 50, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/general */
+#wrapper {
+  overflow: hidden; }
+
+/* line 55, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/general */
+.mb-s {
+  margin: 0px 0px 10px 0px; }
+
+/* line 58, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/general */
+.mb-m {
+  margin: 0px 0px 30px 0px; }
+
+/* line 61, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/general */
+.mb-xl {
+  margin: 0px 0px 45px 0px; }
+
+/* Margins */
+/*bottom*/
+/* line 67, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/general */
+.margin-bottom-small {
+  margin-bottom: 15px; }
+
+/* line 70, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/general */
+.margin-bottom-medium {
+  margin-bottom: 30px; }
+
+/* line 73, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/general */
+.margin-bottom-large {
+  margin-bottom: 60px; }
+
+/*Right*/
+/* line 78, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/general */
+.margin-right-small {
+  margin-right: 15px; }
+
+/* line 81, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/general */
+.margin-right-medium {
+  margin-right: 30px; }
+
+/* line 84, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/general */
+.margin-right-large {
+  margin-right: 60px; }
+
+/**
+ * 0.0 Header
+ * ----------------------------------------------------------------------------
+ */
+/* line 94, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/general */
+#header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  margin-right: auto;
+  margin-left: auto;
+  z-index: 2;
+  overflow: hidden; }
+
+/* line 105, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/general */
+.header-bg {
+  background-color: #ffffff; }
+
+/*
+* — Minor Section Heading —
+*/
+/* line 115, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/general */
+#blue {
+  background-color: blue; }
+
+/* line 119, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/general */
+#content {
+  float: left;
+  min-height: 100%; }
+
+/*
+* 	Hero Image
+*/
+/* line 130, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/general */
+#hero-image {
+  width: 100%;
+  position: absolute;
+  margin-right: auto;
+  margin-left: auto;
+  z-index: -2;
+  overflow: hidden; }
+  /* line 138, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/general */
+  #hero-image img {
+    display: block;
+    float: left;
+    width: 100%;
+    height: auto; }
+
+/* line 146, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/general */
+#product-menu {
+  float: left;
+  padding: 20px 0px 0px 0px; }
+  /* line 150, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/general */
+  #product-menu li {
+    float: left;
+    margin: 0px 10px 10px 0px; }
+
+/* line 156, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/general */
+#info-menu {
+  float: left;
+  padding: 20px 0px 0px 0px; }
+  /* line 160, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/general */
+  #info-menu li {
+    float: left;
+    margin: 0px 10px 10px 0px; }
+
+/**
+ * 0.0 page-title
+ * ----------------------------------------------------------------------------
+ */
+/* line 175, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/general */
+#page-title .page-title-text {
+  display: inline-block;
+  line-height: 1em;
+  padding: 10px 15px 8px 15px;
+  color: #ffffff;
+  width: auto;
+  background-color: #1068AE; }
+
+/**
+ * 0.0 ˍContent
+ * ----------------------------------------------------------------------------
+ */
+/* line 195, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/general */
+#content-header {
+  float: left;
+  width: 100%; }
+  /* line 199, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/general */
+  #content-header #content-header-big {
+    float: left;
+    width: 100%; }
+  /* line 204, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/general */
+  #content-header #content-header-small {
+    float: left;
+    width: 100%; }
+  /* line 209, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/general */
+  #content-header #content-header-heading {
+    display: inline-block;
+    line-height: 1em;
+    padding: 10px 15px 8px 15px;
+    color: #ffffff;
+    width: auto;
+    background-color: #1068AE; }
+
+/* line 219, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/general */
+#content-wrapper {
+  float: left;
+  width: 100%;
+  background-color: #ffffff;
+  min-height: 800px; }
+
+/* line 226, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/general */
+.side-by-side-fill-height {
+  display: table-cell;
+  vertical-align: top;
+  float: none;
+  height: 100%; }
+
+/**
+ * 0.0 ˍSidebar
+ * ----------------------------------------------------------------------------
+ */
+/* line 241, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/general */
+.sidebar {
+  padding: 30px 30px 30px 30px; }
+
+/* line 246, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/general */
+#sidebar-right {
+  background-color: #F0F0F0; }
+  /* line 249, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/general */
+  #sidebar-right .content {
+    float: left;
+    width: 100%; }
+  /* line 256, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/general */
+  #sidebar-right .contact-person {
+    float: left; }
+    /* line 260, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/general */
+    #sidebar-right .contact-person .left-col {
+      width: 120px;
+      float: left;
+      color: black; }
+    /* line 265, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/general */
+    #sidebar-right .contact-person .right-col {
+      width: 90px;
+      float: left; }
+    /* line 271, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/general */
+    #sidebar-right .contact-person img {
+      border: none;
+      float: left;
+      width: 120px; }
+    /* line 277, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/general */
+    #sidebar-right .contact-person button {
+      margin-top: 15px;
+      color: white;
+      border-radius: 50%;
+      width: 90px;
+      height: 90px;
+      border: none;
+      background-color: #79BF08; }
+    /* line 286, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/general */
+    #sidebar-right .contact-person .name {
+      float: left;
+      clear: both;
+      margin: 30px 0 0 0; }
+    /* line 292, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/general */
+    #sidebar-right .contact-person .title {
+      float: left;
+      clear: both;
+      margin: 10px 0 0 0; }
+
+/**
+ * 0.0 Footer
+ * ----------------------------------------------------------------------------
+ */
+/* line 307, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/general */
+#footer-outer {
+  float: left;
+  width: 100%;
+  overflow: hidden; }
+
+/* line 313, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/general */
+.footer-bg {
+  background-color: #ccc; }
+
+/* line 318, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/general */
+#footer-partner-heading {
+  color: #000000; }
+
+/* line 322, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/general */
+#footer-partner-links {
+  float: left;
+  width: 100%;
+  padding: 0px; }
+  /* line 327, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/general */
+  #footer-partner-links ul {
+    float: left;
+    width: 100%;
+    list-style: none;
+    margin: 0px;
+    padding: 0px; }
+  /* line 335, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/general */
+  #footer-partner-links li {
+    float: left;
+    margin: 0px 15px 10px 0px; }
+  /* line 340, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/general */
+  #footer-partner-links a {
+    float: left;
+    display: block;
+    color: #ffffff;
+    background-color: #1068AE;
+    padding: 10px 15px 10px 15px;
+    text-decoration: none; }
+  /* line 350, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/general */
+  #footer-partner-links a:hover {
+    background-color: #333; }
+
+/* line 355, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/general */
+#footer-copyright {
+  text-align: center;
+  color: #656565; }
+
+/* Extra small devices (phones, less than 768px) */
+@media (max-width: 767px) {
+
+  /* line 6, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/style-XS */
+  #main {
+    margin-top: 33px; }
+
+  /* line 10, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/style-XS */
+  #content-header-big {
+    height: 225px; }
+
+  /**
+ * 0.0 Page Title
+ * ----------------------------------------------------------------------------
+ */
+  /* line 21, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/style-XS */
+  #page-title .page-title-text {
+    margin: 15px 0px 170px 0px; }
+
+  /*
+* === HEADER ===
+*/
+  /* line 31, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/style-XS */
+  #hero-image {
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    width: 100%;
+    height: 270px;
+    position: absolute;
+    margin-right: auto;
+    margin-left: auto;
+    z-index: -2;
+    overflow: hidden; }
+
+  /*
+* — Branding
+*/
+  /* line 49, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/style-XS */
+  #branding {
+    min-height: 33px; }
+
+  /* line 53, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/style-XS */
+  #logo {
+    float: left; }
+    /* line 56, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/style-XS */
+    #logo img {
+      float: left;
+      display: block;
+      width: 33px;
+      height: 33px; }
+
+  /* line 64, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/style-XS */
+  #site-title {
+    float: left;
+    font-size: 15px;
+    padding: 0px;
+    line-height: 0px;
+    margin: 16px 0px 16px 8px; }
+
+  /* line 72, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/style-XS */
+  #product-menu, #info-menu {
+    display: none; }
+
+  /* line 75, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/style-XS */
+  .side-by-side-fill-height {
+    display: block;
+    float: left; }
+
+  /* line 83, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/style-XS */
+  #footer-partner-links li {
+    float: left;
+    width: 100%; }
+  /* line 88, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/style-XS */
+  #footer-partner-links a {
+    float: left;
+    width: 100%; }
+ }
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991px) {
+
+  /* line 6, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/style-SM */
+  #main {
+    margin-top: 55px; }
+
+  /* line 10, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/style-SM */
+  #content-header-big {
+    height: 225px; }
+
+  /**
+ * 0.0 Page Title
+ * ----------------------------------------------------------------------------
+ */
+  /* line 22, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/style-SM */
+  #page-title .page-title-text {
+    margin: 15px 0px 170px 0px; }
+
+  /*
+* === HEADER ===
+*/
+  /* line 34, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/style-SM */
+  #hero-image {
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    width: 100%;
+    height: 270px;
+    position: absolute;
+    margin-right: auto;
+    margin-left: auto;
+    z-index: -2;
+    overflow: hidden; }
+
+  /*
+* — Branding
+*/
+  /* line 52, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/style-SM */
+  #branding {
+    min-height: 44px; }
+
+  /* line 56, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/style-SM */
+  #logo {
+    float: left; }
+    /* line 59, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/style-SM */
+    #logo img {
+      float: left;
+      display: block;
+      width: 55px;
+      height: 55px; }
+
+  /* line 67, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/style-SM */
+  #site-title {
+    float: left;
+    font-size: 18px;
+    padding: 0px;
+    line-height: 0px;
+    margin: 26px 0px 26px 8px; }
+
+  /* line 75, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/style-SM */
+  #product-menu, #info-menu {
+    display: none; }
+
+  /* line 79, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/style-SM */
+  .side-by-side-fill-height {
+    display: block;
+    float: left; }
+ }
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199px) {
+
+  /* line 6, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/style-MD */
+  #main {
+    margin-top: 55px; }
+
+  /* line 10, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/style-MD */
+  #content-header-big {
+    height: 225px; }
+
+  /**
+ * 0.0 Page Title
+ * ----------------------------------------------------------------------------
+ */
+  /*
+* === HEADER ===
+*/
+  /* line 26, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/style-MD */
+  #hero-image {
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    width: 100%;
+    height: 270px;
+    position: absolute;
+    margin-right: auto;
+    margin-left: auto;
+    z-index: -2;
+    overflow: hidden; }
+
+  /*
+* — Branding
+*/
+  /* line 43, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/style-MD */
+  #branding {
+    min-height: 44px; }
+
+  /* line 47, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/style-MD */
+  #logo {
+    float: left; }
+    /* line 50, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/style-MD */
+    #logo img {
+      float: left;
+      display: block;
+      width: 55px;
+      height: 55px; }
+
+  /* line 58, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/style-MD */
+  #site-title {
+    float: left;
+    font-size: 18px;
+    padding: 0px;
+    line-height: 0px;
+    margin: 26px 0px 26px 8px; }
+
+  /**
+ * 0.0 SIDEBAR
+ * ----------------------------------------------------------------------------
+ */ }
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+  /* line 6, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/style-LG */
+  #main {
+    margin-top: 66px; }
+
+  /* line 11, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/style-LG */
+  #content-header-big {
+    height: 280px; }
+
+  /* line 15, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/style-LG */
+  #content-header-small {
+    min-height: 50px; }
+
+  /**
+ * 0.0 Page Title
+ * ----------------------------------------------------------------------------
+ */
+  /* line 28, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/style-LG */
+  #page-title .page-title-text {
+    margin: 30px 0px 210px 0px; }
+
+  /*
+* === HEADER ===
+*/
+  /* line 37, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/style-LG */
+  #hero-image {
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    width: 100%;
+    height: 340px;
+    position: absolute;
+    margin-right: auto;
+    margin-left: auto;
+    z-index: -2;
+    overflow: hidden; }
+
+  /*
+* — Branding
+*/
+  /* line 54, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/style-LG */
+  #branding {
+    min-height: 66px; }
+
+  /* line 58, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/style-LG */
+  #logo {
+    float: left; }
+    /* line 61, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/style-LG */
+    #logo img {
+      float: left;
+      display: block;
+      width: 66px;
+      height: 66px; }
+
+  /* line 69, /Users/hwestman/Google Drive/Prosjekter/mresponsive/prototype/style-LG */
+  #site-title {
+    float: left;
+    font-size: 20px;
+    padding: 0px;
+    line-height: 0px;
+    margin: 33px 0px 33px 10px; }
+ }
+
+/*# sourceMappingURL=style.css.map */
