@@ -72,4 +72,6 @@
 	</header><!-- #masthead -->
     <p>just a test</p>
 
-	<div id="main" class="site-main">
+	<?php get_template_part( 'template-hero-image'); ?> 
+
+	<div id="main">

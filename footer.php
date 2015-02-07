@@ -1,28 +1,38 @@
 <?php
 /**
  * The template for displaying the footer
- *
- * Contains footer content and the closing of the #main and #page div elements.
- *
- * @package WordPress
- * @subpackage Twenty_Fourteen
- * @since Twenty Fourteen 1.0
  */
 ?>
 
-		</div><!-- #main -->
 
-		<footer id="colophon" class="site-footer" role="contentinfo">
 
-			<?php get_sidebar( 'footer' ); ?>
+<div id="footer-outer" class="fluid-container footer-bg">
+	<div id="footer-inner" class="container">
+		<div id="footer-content" >
+			<div id="footer-partner-heading" class="mb-m">
+				<h3>I Meyership konsernet</h3>
+			</div>
 
-			<div class="site-info">
-				<?php do_action( 'twentyfourteen_credits' ); ?>
-				<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'twentyfourteen' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'twentyfourteen' ), 'WordPress' ); ?></a>
-			</div><!-- .site-info -->
-		</footer><!-- #colophon -->
-	</div><!-- #page -->
+			<div class="col-xs-12">
+				<div id="footer-partner-links" class="mb-m">
 
-	<?php wp_footer(); ?>
+					<?php wp_nav_menu( array( 'footer-partners' => 'Footer - Partners' ) ); ?>
+					
+				</div>
+			</div>
+			<div id="footer-copyright" class="mb-s">
+				<p>Is og brus © 2015</p>
+			</div>
+
+		</div> <!-- footer-content -->     
+	</div> <!-- #footer-inner -->
+</div> <!-- #footer-outer -->
+
+</div><!-- #main --> 
+
+
+
+
+<?php wp_footer(); ?>
 </body>
 </html>

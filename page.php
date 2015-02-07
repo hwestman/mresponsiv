@@ -3,12 +3,9 @@
  * The template for displaying all pages
  *
  */
-
 get_header(); ?>
 
-<?php get_template_part( 'template-hero-image'); ?> 
 
-<div id="main">
     <div id="wrapper" class="container">
 
 		<?php get_template_part( 'template-content-header-big'); ?> 

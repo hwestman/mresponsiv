@@ -6,17 +6,13 @@
 
 get_header(); ?>
 
-
-<?php get_template_part( 'template-hero-image'); ?> 
-
-<div id="main">
     <div id="wrapper" class="container">
 
 	<?php get_template_part( 'template-content-header-big'); ?> 
 
         <div id="content-wrapper">
         <div id="content-full-width" class="no-padding"> 
-            <div id="frontpage-news-container" class="col-xs-12 frontpage-section">
+           
 				<?php
 					if ( have_posts() ) :
 						// Start the Loop.
