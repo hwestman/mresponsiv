@@ -2,58 +2,54 @@
 /**
  * The main template file
  *
- * This is the most generic template file in a WordPress theme and one
- * of the two required files for a theme (the other being style.css).
- * It is used to display a page when nothing more specific matches a query,
- * e.g., it puts together the home page when no home.php file exists.
- *
- * @link http://codex.wordpress.org/Template_Hierarchy
- *
- * @package WordPress
- * @subpackage Twenty_Fourteen
- * @since Twenty Fourteen 1.0
  */
 
 get_header(); ?>
 
 
-<div class="container" id="blue">
-	Test from tower
-</div>
+<?php get_template_part( 'hero-image'); ?> 
 
-<div id="main-content" class="main-content">
+<div id="main">
+    <div id="wrapper" class="container">
 
+        <div id="content-header">
+            <div id="content-header-big">
+                <div id="content-header-frontpage-heading">
+                    <h1>Varetransport<br/>
+                    Enkelt og greit
+                    </h1> 
+                </div>
+            </div>
+        </div>
+	
 
-	<div id="primary" class="content-area">
-		<div id="content" class="site-content" role="main">
+        <div id="content-wrapper">
+        <div id="content-full-width" class="no-padding"> 
+            <div id="frontpage-news-container" class="col-xs-12 frontpage-section">
+				<?php
+					if ( have_posts() ) :
+						// Start the Loop.
+						while ( have_posts() ) : the_post();
 
-		<?php
-			if ( have_posts() ) :
-				// Start the Loop.
-				while ( have_posts() ) : the_post();
+							/*
+							 * Include the post format-specific template for the content. If you want to
+							 * use this in a child theme, then include a file called called content-___.php
+							 * (where ___ is the post format) and that will be used instead.
+							 */
+							get_template_part( 'content', get_post_format() );
 
-					/*
-					 * Include the post format-specific template for the content. If you want to
-					 * use this in a child theme, then include a file called called content-___.php
-					 * (where ___ is the post format) and that will be used instead.
-					 */
-					get_template_part( 'content', get_post_format() );
+						endwhile;
+						// Previous/next post navigation.
 
-				endwhile;
-				// Previous/next post navigation.
+					else :
+						// If no content, include the "No posts found" template.
+						get_template_part( 'content', 'none' );
 
-			else :
-				// If no content, include the "No posts found" template.
-				get_template_part( 'content', 'none' );
-
-			endif;
-		?>
-
-		</div><!-- #content -->
-	</div><!-- #primary -->
-	<?php get_sidebar( 'content' ); ?>
-</div><!-- #main-content -->
+					endif;
+				?>
+	    </div> <!-- .content-full-width -->
+	</div> <!-- #content-wrapper -->
+</div> <!-- #wrapper -->
 
 <?php
-get_sidebar();
 get_footer();

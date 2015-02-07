@@ -1,0 +1,87 @@
+@media (min-width: 768px) and (max-width: 991px) {
+
+body {
+}
+
+#main {
+	margin-top: 55px;
+}
+
+#content-header-big {
+    height: 225px;
+}
+
+
+/**
+ * 0.0 Page Title
+ * ----------------------------------------------------------------------------
+ */
+
+#page-title {
+
+    .page-title-text {
+        margin: 15px 0px 170px 0px;
+    }
+}
+
+
+
+/*
+* === HEADER ===
+*/
+
+
+#hero-image {
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size:cover;
+	width: 100%;
+	height: 270px;
+	position: absolute;
+	margin-right: auto;
+	margin-left: auto;
+	z-index: -2;
+	overflow: hidden;
+}
+
+
+/*
+* — Branding 
+*/
+
+#branding {
+	min-height: 44px;
+}
+
+#logo {
+	float:left;
+
+	img {
+		float: left;
+		display: block;
+		width: 55px;
+		height: 55px;
+	}
+}
+
+#site-title {
+	float: left;
+	font-size: 18px;
+	padding: 0px;
+	line-height: 0px;
+	margin: 26px 0px 26px 8px;
+}
+
+#product-menu, #info-menu {
+	display: none;
+}
+
+.side-by-side-fill-height{
+    display: block;
+    float: left;
+}
+
+
+
+
+} // @media

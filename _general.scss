@@ -1,0 +1,567 @@
+
+
+$meyership-blue:  #1068AE; 
+$meyership-green: #79BF08;
+$meyership-lightgray: #F0F0F0;
+
+$margin-small: 15px;
+$margin-medium: 30px;
+$margin-large: 60px;
+ 
+
+
+
+/**
+ * 1.0 Repeatable Patterns
+ * ----------------------------------------------------------------------------
+ */
+
+html {font-size: 1em;} 
+
+body {
+  background-color: white;
+  font-family: helvetica, arial, sans-serif;
+  font-weight: 400;
+  line-height: 1.45;
+  color: #333;
+}
+
+p {margin-bottom: 1.3em;}
+
+h1, h2, h3, h4 {
+  margin: 1.414em 0 0.5em;
+  font-weight: inherit;
+  line-height: 1.2;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 2.074em;
+}
+
+h2 {font-size: 1.728em;}
+
+h3 {font-size: 1.44em;}
+
+h4 {font-size: 1.2em;}
+
+small, .font_small {font-size: 0.833em;}
+
+#wrapper {
+    overflow: hidden;
+}
+
+
+.mb-s {
+    margin: 0px 0px 10px 0px;
+}
+.mb-m {
+    margin: 0px 0px 30px 0px;
+}
+.mb-xl {
+    margin: 0px 0px 45px 0px;
+}
+/* Margins */
+
+/*bottom*/
+.margin-bottom-small{
+    margin-bottom: $margin-small;
+}
+.margin-bottom-medium{
+    margin-bottom: $margin-medium;
+}
+.margin-bottom-large{
+    margin-bottom: $margin-large;
+}
+
+/*Right*/
+.margin-right-small{
+    margin-right: $margin-small;
+}
+.margin-right-medium{
+    margin-right: $margin-medium;
+}
+.margin-right-large{
+    margin-right: $margin-large;
+}
+
+
+
+/**
+ * 0.0 Header
+ * ----------------------------------------------------------------------------
+ */
+
+#header {
+    width: 100%;
+	position: fixed;
+    top:0;
+
+	margin-right: auto;
+	margin-left: auto;
+	z-index: 2;
+	overflow: hidden;
+}
+
+.header-bg {
+	background-color: #ffffff;
+}
+
+
+/*
+* — Minor Section Heading —
+*/
+
+
+#blue {
+	background-color: blue;
+}
+
+#content {
+	float: left;
+	min-height: 100%;
+}
+
+
+/*
+* 	Hero Image 
+*/
+
+
+#hero-image {
+	width: 100%;
+	position: absolute;
+	margin-right: auto;
+	margin-left: auto;
+	z-index: -2;
+	overflow: hidden;
+
+	img {
+		display: block;
+		float: left;
+		width: 100%;
+		height: auto;
+	}
+}
+
+#product-menu {
+	float: left;
+	padding: 20px 0px 0px 0px;
+
+	li {
+		float: left;
+		margin: 0px 10px 10px 0px;
+	}
+}
+
+#info-menu {
+	float: left;
+	padding: 20px 0px 0px 0px;
+
+	li {
+		float: left;
+		margin: 0px 10px 10px 0px;
+	}
+}
+
+
+/**
+ * 0.0 page-title
+ * ----------------------------------------------------------------------------
+ */
+
+#page-title {
+
+
+    .page-title-text {
+        display: inline-block;
+        line-height: 1em;
+        padding: 10px 15px 8px 15px;
+        color: #ffffff;
+        width: auto;
+        background-color: $meyership-blue;
+    }
+}
+
+
+/**
+ * Frontpage 
+ * ----------------------------------------------------------------------------
+ */
+
+
+#content-header-frontpage-heading {
+    float: right;
+    display: inline-block;
+    padding: 25px;
+    background-color: #333333;
+    margin: 30px 0px 0px 0px;;
+
+    h1 {
+        padding: 0px;
+        margin: 0px;
+        color: #ffffff;
+        font-weight: lighter;
+    }
+
+}
+
+
+
+.frontpage-section-heading {
+
+    h2 {
+        padding-top: 0px;
+        margin-top: 0px;
+        text-align: left;
+    }
+}
+
+.frontpage-section {
+    margin-bottom: 45px;
+}
+
+
+/**
+ * Frontpage - News
+ * ----------------------------------------------------------------------------
+ */
+
+
+.frontpage-news-item-conatiner {
+    padding: 0px;
+}
+
+.frontpage-news-item-link {
+    float: left;
+    padding: 15px;
+    display: block;
+    width: 100%;
+    margin: 0px;
+    text-decoration: none;
+    color: #000000;
+
+
+    h2 {
+        color: $meyership-blue;
+    }
+
+    p {
+        color: #9a9a9a;
+    }
+
+}
+
+.frontpage-news-item-link:hover {
+    background-color: #e5e5e5;
+
+}
+
+.frontpage-news-item-thumbnail {
+    float: left;
+    width: 100%;
+    padding-bottom: 8px;
+
+    img {
+    float: left; 
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    } 
+}
+
+.frontpage-news-item-heading {
+    float: left;
+    width: 100%;
+
+    h2 {
+        font-size: 1.2em;
+        margin: 0px;
+        padding: 0px 0px 0.2em 0px;
+    }
+}
+
+.frontpage-news-item-meta {
+    float: left;
+    width: 100%;
+    
+    p {
+        font-size: 0.8em;
+    }
+
+}
+
+/**
+ * Frontpage - Services 
+ * ----------------------------------------------------------------------------
+ */
+
+.frontpage-services-item-link {
+    float: left;
+    padding: 15px;
+    display: block;
+    width: 100%;
+    margin: 0px;
+    text-decoration: none;
+    color: #000000;
+
+
+    h2 {
+        color: $meyership-blue;
+    }
+
+    p {
+        color: #000000;
+    }
+
+}
+
+.frontpage-services-item-link:hover {
+    background-color: #e5e5e5;
+    text-decoration: none;
+
+}
+
+.frontpage-services-item-thumbnail {
+    float: left;
+    width: 25%;
+    padding-right: 15px;
+
+    img {
+    float: left; 
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+    } 
+}
+
+.frontpage-services-item-info {
+    width: auto;
+    overflow: hidden;
+    
+    h2 {
+        margin-top: 0px;
+    }
+}
+
+/**
+ * Frontpage - Collaborators
+ * ----------------------------------------------------------------------------
+ */
+
+.frontpage-collaborators-list {
+    float: left;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;     
+}
+
+.frontpage-collaborators-item {
+
+   img {
+    float: left; 
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    }
+}
+
+.frontpage-collaborators-item-link {
+    float: left;
+    display: block;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+}
+
+.frontpage-collaborators-item-link:hover {
+    opacity: 0.7;
+}
+
+
+
+
+/**
+ * 0.0 ˍContent
+ * ----------------------------------------------------------------------------
+ */
+
+
+#content-header {
+    float: left;
+    width: 100%;
+
+    #content-header-big {
+    float: left;
+    width: 100%;
+    }
+
+    #content-header-small {
+    float: left;
+    width: 100%;
+    }
+
+    #content-header-frontpage {
+    float: left;
+    width: 100%;       
+    }
+
+     #content-header-heading {
+        display: inline-block;
+        line-height: 1em;
+        padding: 10px 15px 8px 15px;
+        color: #ffffff;
+        width: auto;
+        background-color: $meyership-blue;
+     }
+}
+
+#content-wrapper {
+    float: left;
+    width: 100%;
+    background-color: #ffffff;
+    min-height: 800px;
+}
+
+#content-full-width {
+    padding: 40px 0px 0px 0px;
+}
+
+.side-by-side-fill-height{
+    display: table-cell;
+    vertical-align: top;
+    float: none;
+    height: 100%;
+}
+
+
+
+
+/**
+ * 0.0 ˍSidebar
+ * ----------------------------------------------------------------------------
+ */
+
+.sidebar {
+    padding: 30px 30px 30px 30px;
+}
+
+#sidebar-right{
+    background-color: $meyership-lightgray;   
+    
+    .content{
+        float: left;
+        width: 100%;
+    }
+
+
+
+    .contact-person{
+
+        float: left;
+
+       .left-col{
+            width: 120px;
+            float: left;
+            color: black;
+        }
+        .right-col{
+            width: 90px;
+            float: left;
+
+        }
+
+        img{
+            border: none;
+            float: left;
+            width: 120px;
+
+        }
+        button {
+            margin-top: 15px;
+            color:white;
+            border-radius: 50%;
+            width: 90px;
+            height: 90px;
+            border: none;
+            background-color: $meyership-green;
+        }
+        .name{
+            float: left;
+            clear: both;
+            margin: 30px  0 0 0;
+
+        }
+        .title{
+            float: left;
+            clear: both;
+            margin: 10px  0 0 0;
+        }
+
+    }
+}
+
+
+/**
+ * 0.0 Footer
+ * ----------------------------------------------------------------------------
+ */
+
+ #footer-outer {
+    float: left;
+    width: 100%;
+    overflow: hidden;
+ }
+
+ .footer-bg {
+    background-color: #ccc;
+ }
+
+
+#footer-partner-heading {
+    color: #000000;
+}
+
+#footer-partner-links {
+    float: left;
+    width: 100%;
+    padding: 0px;
+
+    ul {
+        float: left;
+        width: 100%;
+        list-style: none;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    li {
+        float: left;
+        margin: 0px 15px 10px 0px;
+    }
+
+    a {
+
+        float: left;
+        display: block;
+        color: #ffffff;
+        background-color: $meyership-blue;
+        padding: 10px 15px 10px 15px;
+        text-decoration: none;
+    }
+
+    a:hover {
+     background-color: #333;
+    }
+}
+
+#footer-copyright {
+    text-align: center;
+    color: #656565;
+}
