@@ -47,6 +47,7 @@ add_action( 'init', 'register_costume_menus' ); // Enable costume menus
 //Add custom post type for collaborators
 
 function register_collaborators_custom_post(){
+    
     register_post_type('samarbeidspartnere', array(
         'label' => __('Samarbeid'),
         'singular_label' => __('Samarbeidspartnere'),
@@ -56,11 +57,55 @@ function register_collaborators_custom_post(){
         'hierarchical' => false,
         'rewrite' => array("slug" => "samarbeidspartnere"), // Permalinks format
         'taxonomies' => array("post_tag"),
-        'supports' => array('title', 'thumbnail', 'editor')
+        'supports' => array('title', 'thumbnail')
     )); 
 }
 
-add_action('init', 'register_collaborators_custom_post'); // Enable Collaborators 
+add_action('init', 'register_collaborators_custom_post'); // Enable Collaborators post 
+
+function register_collaborators_meta_boxes() {
+    add_meta_box("collaborators_meta", "Feauters", "collaborators_add_options", "samarbeidspartnere", "normal", "low");
+}
+
+add_action( 'admin_init', 'register_collaborators_meta_boxes' ); // Add to admin panel 
+
+/*
+* Function for adding the options tab. 
+*/
+function collaborators_add_options() {
+
+    global $post;
+    $custom = get_post_custom( $post->ID );
+ 
+    ?>
+    <style>.width99 {width:99%;}</style>
+    <p>
+        <label>Link til samarbeidspartner</label><br />
+        <input type="text" name="collaborator_url" value="<?= @$custom["collaborator_url"][0] ?>" class="width99" />
+    </p>
+
+    <?php
+}
+
+/**
+ * Save custom field data when creating/updating posts
+ */
+function update_collaborators_add_options(){
+  global $post;
+ 
+  if ( $post )
+  {
+    if( $_POST["collaborator_url"]  != "" ){update_post_meta($post->ID, "collaborator_url", @$_POST["collaborator_url"]);}
+  }
+}
+
+add_action( 'save_post', 'update_collaborators_add_options' );
+
+
+
+
+
+
 
 
 

@@ -8,11 +8,17 @@ get_header(); ?>
 
     <div id="wrapper" class="container">
 
+
+
+
+
 	<?php get_template_part( 'template-content-header-big'); ?> 
 
         <div id="content-wrapper">
         <div id="content-full-width" class="no-padding"> 
            
+			<?php get_template_part( 'template-collaborators'); ?> 
+
 				<?php
 					if ( have_posts() ) :
 						// Start the Loop.
