@@ -194,11 +194,12 @@ small, .font_small {font-size: 0.833em;}
     h2 {
         padding-top: 0px;
         margin-top: 0px;
+        text-align: left;
     }
 }
 
 .frontpage-section {
-    margin-bottom: 30px;
+    margin-bottom: 45px;
 }
 
 
@@ -292,13 +293,14 @@ small, .font_small {font-size: 0.833em;}
     }
 
     p {
-        color: #9a9a9a;
+        color: #000000;
     }
 
 }
 
 .frontpage-services-item-link:hover {
     background-color: #e5e5e5;
+    text-decoration: none;
 
 }
 
@@ -324,9 +326,47 @@ small, .font_small {font-size: 0.833em;}
     h2 {
         margin-top: 0px;
     }
-
-
 }
+
+/**
+ * Frontpage - Collaborators
+ * ----------------------------------------------------------------------------
+ */
+
+.frontpage-collaborators-list {
+    float: left;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;     
+}
+
+.frontpage-collaborators-item {
+
+   img {
+    float: left; 
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    }
+}
+
+.frontpage-collaborators-item-link {
+    float: left;
+    display: block;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+}
+
+.frontpage-collaborators-item-link:hover {
+    opacity: 0.7;
+}
+
+
+
 
 /**
  * 0.0 ˍContent
