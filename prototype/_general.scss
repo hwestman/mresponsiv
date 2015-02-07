@@ -3,9 +3,10 @@
 $meyership-blue:  #1068AE; 
 $meyership-green: #79BF08;
 $meyership-lightgray: #F0F0F0;
-a {
-	color: red;
-}
+
+$margin-small: 15px;
+$margin-medium: 30px;
+$margin-large: 60px;
 
 
 
@@ -55,6 +56,30 @@ small, .font_small {font-size: 0.833em;}
 }
 .mb-xl {
     margin: 0px 0px 45px 0px;
+}
+
+/* Margins */
+
+/*bottom*/
+.margin-bottom-small{
+    margin-bottom: $margin-small;
+}
+.margin-bottom-medium{
+    margin-bottom: $margin-medium;
+}
+.margin-bottom-large{
+    margin-bottom: $margin-large;
+}
+
+/*Right*/
+.margin-right-small{
+    margin-right: $margin-small;
+}
+.margin-right-medium{
+    margin-right: $margin-medium;
+}
+.margin-right-large{
+    margin-right: $margin-large;
 }
 
 
@@ -157,35 +182,31 @@ small, .font_small {font-size: 0.833em;}
 	}
 }
 
-/* Margins */
-
-/*bottom*/
-.margin-bottom-medium{
-    margin-bottom: 30px;
-}
-.margin-bottom-large{
-    margin-bottom: 60px;
-}
-.margin-bottom-small{
-    margin-bottom: 15px;
-}
-/*Right*/
-.margin-right-small{
-    margin-right: 15px;
-}
-.margin-right-medium{
-    margin-right: 30px;
-}
-.margin-right-large{
-    margin-right: 60px;
-}
 
 
-.main-content{
+/**
+ * 0.0 ˍContent
+ * ----------------------------------------------------------------------------
+ */
+
+.side-by-side-fill-height{
     display: table-cell;
     vertical-align: top;
     float: none;
+    height: 100%;
 }
+
+#main {
+    h2{
+        margin-bottom: $margin-large;
+    }
+    .ingress{
+        font-size: 1.3em;
+        margin-bottom: $margin-large;
+    }
+}
+
+
 
 /**
  * 0.0 ˍSidebar
@@ -204,12 +225,13 @@ small, .font_small {font-size: 0.833em;}
 
 
     .contact-person{
+
         float: left;
 
        .left-col{
             width: 120px;
             float: left;
-
+            color: black;
         }
         .right-col{
             width: 90px;
