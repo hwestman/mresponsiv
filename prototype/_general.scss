@@ -187,15 +187,7 @@ small, .font_small {font-size: 0.833em;}
  * ----------------------------------------------------------------------------
  */
 #main {
-	margin: 66px auto 0 auto;
 
-    h2{
-        margin-bottom: $margin-large;
-    }
-    .ingress{
-        font-size: 1.3em;
-        margin-bottom: $margin-large;
-    }
 }
 
 #content-header {
@@ -205,17 +197,15 @@ small, .font_small {font-size: 0.833em;}
     #content-header-big {
     float: left;
     width: 100%;
-    min-height: 200px;
     }
 
     #content-header-small {
     float: left;
     width: 100%;
-    min-height: 50px;
     }
 
      #content-header-heading {
-        display: inline;
+        display: inline-block;
         line-height: 1em;
         padding: 10px 15px 8px 15px;
         color: #ffffff;
@@ -246,9 +236,12 @@ small, .font_small {font-size: 0.833em;}
  * ----------------------------------------------------------------------------
  */
 
-#sidebar{
-    padding: 30px 0 0 60px;
-    background-color: $meyership-lightgray;
+.sidebar {
+    background-color: $meyership-lightgray;    
+}
+
+#sidebar-right{
+    padding: 30px 30px 30px 30px;
     
     .content{
         float: left;
