@@ -39,10 +39,28 @@ function register_costume_menus () {
 add_action( 'init', 'register_costume_menus' ); // Enable costume menus
 
 
+/**
+ * 3.0 Collaborators (Costume post type)
+ * ----------------------------------------------------------------------------
+ */
 
+//Add custom post type for collaborators
 
+function register_collaborators_custom_post(){
+    register_post_type('samarbeidspartnere', array(
+        'label' => __('Add item'),
+        'singular_label' => __('Samarbeidspartnere'),
+        'public' => true,
+        'show_ui' => true, // UI in admin panel
+        'capability_type' => 'post',
+        'hierarchical' => false,
+        'rewrite' => array("slug" => "samarbeidspartnere"), // Permalinks format
+        'taxonomies' => array("post_tag"),
+        'supports' => array('title', 'thumbnail', 'editor')
+    )); 
+}
 
-
+add_action('init', 'register_collaborators_custom_post'); // Enable Collaborators 
 
 
 
