@@ -189,6 +189,25 @@ small, .font_small {font-size: 0.833em;}
  * ----------------------------------------------------------------------------
  */
 
+
+#content-header-frontpage-heading {
+    float: right;
+    display: inline-block;
+    padding: 25px;
+    background-color: #333333;
+    margin: 30px 0px 0px 0px;;
+
+    h1 {
+        padding: 0px;
+        margin: 0px;
+        color: #ffffff;
+        font-weight: lighter;
+    }
+
+}
+
+
+
 .frontpage-section-heading {
 
     h2 {
@@ -386,6 +405,11 @@ small, .font_small {font-size: 0.833em;}
     #content-header-small {
     float: left;
     width: 100%;
+    }
+
+    #content-header-frontpage {
+    float: left;
+    width: 100%;       
     }
 
      #content-header-heading {
