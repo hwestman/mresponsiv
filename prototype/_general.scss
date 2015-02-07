@@ -57,7 +57,6 @@ small, .font_small {font-size: 0.833em;}
 .mb-xl {
     margin: 0px 0px 45px 0px;
 }
-
 /* Margins */
 
 /*bottom*/
@@ -190,13 +189,6 @@ small, .font_small {font-size: 0.833em;}
 #main {
 	margin: 66px auto 0 auto;
 
-	#main-background {
-		background-color: #ffffff;
-		min-height: 800px;
-	}
-
-
-
     h2{
         margin-bottom: $margin-large;
     }
@@ -205,6 +197,40 @@ small, .font_small {font-size: 0.833em;}
         margin-bottom: $margin-large;
     }
 }
+
+#content-header {
+    float: left;
+    width: 100%;
+
+    #content-header-big {
+    float: left;
+    width: 100%;
+    min-height: 200px;
+    }
+
+    #content-header-small {
+    float: left;
+    width: 100%;
+    min-height: 50px;
+    }
+
+     #content-header-heading {
+        display: inline;
+        line-height: 1em;
+        padding: 10px 15px 8px 15px;
+        color: #ffffff;
+        width: auto;
+        background-color: $meyership-blue;
+     }
+}
+
+#content-wrapper {
+    float: left;
+    width: 100%;
+    background-color: #ffffff;
+    min-height: 800px;
+}
+
 .side-by-side-fill-height{
     display: table-cell;
     vertical-align: top;
