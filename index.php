@@ -7,21 +7,12 @@
 get_header(); ?>
 
 
-<?php get_template_part( 'hero-image'); ?> 
+<?php get_template_part( 'template-hero-image'); ?> 
 
 <div id="main">
     <div id="wrapper" class="container">
 
-        <div id="content-header">
-            <div id="content-header-big">
-                <div id="content-header-frontpage-heading">
-                    <h1>Varetransport<br/>
-                    Enkelt og greit
-                    </h1> 
-                </div>
-            </div>
-        </div>
-	
+	<?php get_template_part( 'template-content-header-big'); ?> 
 
         <div id="content-wrapper">
         <div id="content-full-width" class="no-padding"> 
