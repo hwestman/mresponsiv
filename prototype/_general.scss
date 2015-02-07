@@ -47,6 +47,10 @@ h4 {font-size: 1.2em;}
 
 small, .font_small {font-size: 0.833em;}
 
+#wrapper {
+    overflow: hidden;
+}
+
 
 .mb-s {
     margin: 0px 0px 10px 0px;
@@ -186,14 +190,7 @@ small, .font_small {font-size: 0.833em;}
  * 0.0 ˍContent
  * ----------------------------------------------------------------------------
  */
-#main {
 
-}
-
-#wrapper-inner {
-    float: left;
-    width: 100%;
-}
 
 #content-header {
     float: left;
@@ -242,11 +239,12 @@ small, .font_small {font-size: 0.833em;}
  */
 
 .sidebar {
-    background-color: $meyership-lightgray;    
+     
+    padding: 30px 30px 30px 30px;
 }
 
 #sidebar-right{
-    padding: 30px 30px 30px 30px;
+    background-color: $meyership-lightgray;   
     
     .content{
         float: left;
@@ -305,6 +303,12 @@ small, .font_small {font-size: 0.833em;}
  * 0.0 Footer
  * ----------------------------------------------------------------------------
  */
+
+ #footer-outer {
+    float: left;
+    width: 100%;
+    overflow: hidden;
+ }
 
  .footer-bg {
     background-color: #ccc;
