@@ -101,8 +101,84 @@ function update_collaborators_add_options(){
 
 add_action( 'save_post', 'update_collaborators_add_options' );
 
+/**
+ * 4.0 Services (Custom post type)
+ * ----------------------------------------------------------------------------
+ */
 
+//Add custom post type for collaborators
 
+function register_services_custom_post(){
+
+    register_post_type('tjenester', array(
+        'label' => __('Tjenester'),
+        'singular_label' => __('Tjenester'),
+        'public' => true,
+        'show_ui' => true, // UI in admin panel
+        'capability_type' => 'page',
+        'hierarchical' => false,
+        'rewrite' => array("slug" => "tjenester"), // Permalinks format
+        'supports' => array('title', 'thumbnail')
+    ));
+}
+
+add_action('init', 'register_services_custom_post'); // Enable Collaborators post
+
+function register_services_meta_boxes() {
+    add_meta_box("services_meta", "Kontaktpersoner", "services_add_options", "tjenester", "normal", "low");
+}
+
+add_action( 'admin_init', 'register_services_meta_boxes' ); // Add to admin panel
+
+/*
+* Function for adding the options tab.
+*/
+function services_add_options() {
+
+    global $post;
+    $custom = get_post_custom( $post->ID );
+
+    ?>
+    <style>.width99 {width:99%;}</style>
+    <p>
+        <label>Link til samarbeidspartner</label><br />
+        <input type="text" name="collaborator_url" value="<?= @$custom["collaborator_url"][0] ?>" class="width99" />
+    </p>
+
+    <?php
+}
+
+/**
+ * Save custom field data when creating/updating posts
+ */
+function update_collaborators_add_options(){
+  global $post;
+
+  if ( $post )
+  {
+    if( $_POST["collaborator_url"]  != "" ){update_post_meta($post->ID, "collaborator_url", @$_POST["collaborator_url"]);}
+  }
+}
+
+add_action( 'save_post', 'update_collaborators_add_options' );
+
+/**
+ * 5.0 contact fields
+ * ----------------------------------------------------------------------------
+ */
+
+function modify_contact_fields( $contactmethods ) {
+
+    $contactmethods['number'] = 'Telefonnummer';
+    $contactmethods['hiredate'] = 'Ansatt siden';
+    $contactmethods['position'] = 'Stilling';
+
+    return $contactmethods;
+}
+add_filter('user_contactmethods','modify_contact_fields',10,1);
+
+//Remove color picker for users
+remove_action( 'admin_color_scheme_picker', 'admin_color_scheme_picker' );
 
 
 
