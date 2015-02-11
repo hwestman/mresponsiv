@@ -196,6 +196,7 @@ $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'them
 add_action('customize_register', 'add_custom_logo');
 
 
+
 function register_services_meta_boxes() {
     add_meta_box("services_meta", "Kontaktpersoner", "services_add_options", "tjenester", "normal", "low");
 }
@@ -222,7 +223,7 @@ function services_add_options() {
 
 /**
  * Save custom field data when creating/updating posts
- */
+ *
 function update_collaborators_add_options(){
   global $post;
 
@@ -233,7 +234,7 @@ function update_collaborators_add_options(){
 }
 
 add_action( 'save_post', 'update_collaborators_add_options' );
-
+*/
 /**
  * 5.0 contact fields
  * ----------------------------------------------------------------------------
@@ -253,52 +254,13 @@ add_filter('user_contactmethods','modify_contact_fields',10,1);
  * ----------------------------------------------------------------------------
  */
 
-/**
- * Enable costume logo from the Theme Appearence panel.
- */
-
-function add_custom_logo( $wp_customize ) {
-
-$wp_customize->add_section( 'theme_custom_logo_section' , array(
-    'title'       => __( 'Logo', 'themeslug' ),
-    'priority'    => 30,
-    'description' => 'To change the Logo, upload a new image. Optimal image size for this template is 10 x 10 pixels',
-) );
-
-$wp_customize->add_setting( 'theme_custom_logo_setting' );
-
-$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'theme_custom_logo', array(
-    'label'    => __( 'Logo', 'themeslug' ),
-    'section'  => 'theme_custom_logo_section',
-    'settings' => 'theme_custom_logo_setting',
-    'default-image' => get_template_directory_uri() . '/img/fallback-image-logo.jpg',
-) ) );
-
-}
-add_action('customize_register', 'add_custom_logo');
-
 //Remove color picker for users
 remove_action( 'admin_color_scheme_picker', 'admin_color_scheme_picker' );
 
 
 
-/**
- * 5.0 Bootstrap menu
- * ----------------------------------------------------------------------------
- */
 
-/*************
-Require the bootstrap navigation
-Source: https://github.com/twittem/wp-bootstrap-navwalker
-*************/
 
-require('wp_bootstrap_navwalker.php');
-
-/**
- * Adding new costume main menu.
- */
-
-=======
 /**
  * 5.0 Bootstrap menu
  * ----------------------------------------------------------------------------
