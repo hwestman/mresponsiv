@@ -3,6 +3,36 @@
 
 
 /**
+ * 0.0 Enqueue Resources
+ * ----------------------------------------------------------------------------
+ */
+
+function add_resources() {
+
+/******  Styles/CSS  ******/
+
+// Adding the bootstrap CSS (minified)
+// Bootstrap @grid-float-breakpoint costumized to “@screen-md-min” from getbootstrap.com
+
+wp_enqueue_style( 'bootstrap-css', get_template_directory_uri() . '/bootstrap/bootstrap.min.css');
+
+// Adding Theme specific styles
+wp_enqueue_style( 'theme-css', get_template_directory_uri() . '/style.css', false);
+
+
+/******  JavaScript ******/
+
+// Adding the bootstrap v3.3.1 JavaScript (minified)
+wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/bootstrap/bootstrap.min.js', array( 'jquery' ));
+
+}
+
+// This add alle the recourses to the theme header.
+add_action( 'wp_enqueue_scripts', 'add_resources' );
+
+
+
+/**
  * 1.0 Thumbnails 
  * ----------------------------------------------------------------------------
  */
@@ -176,12 +206,62 @@ function modify_contact_fields( $contactmethods ) {
     return $contactmethods;
 }
 add_filter('user_contactmethods','modify_contact_fields',10,1);
+/**
+ * 4.0 Theme Appearance Options (Logo etc..)
+ * ----------------------------------------------------------------------------
+ */
+
+/**
+ * Enable costume logo from the Theme Appearence panel.
+ */
+
+function add_custom_logo( $wp_customize ) {
+
+$wp_customize->add_section( 'theme_custom_logo_section' , array(
+    'title'       => __( 'Logo', 'themeslug' ),
+    'priority'    => 30,
+    'description' => 'To change the Logo, upload a new image. Optimal image size for this template is 10 x 10 pixels',
+) );
+
+$wp_customize->add_setting( 'theme_custom_logo_setting' );
+
+$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'theme_custom_logo', array(
+    'label'    => __( 'Logo', 'themeslug' ),
+    'section'  => 'theme_custom_logo_section',
+    'settings' => 'theme_custom_logo_setting',
+    'default-image' => get_template_directory_uri() . '/img/fallback-image-logo.jpg',
+) ) );
+
+}
+add_action('customize_register', 'add_custom_logo');
 
 //Remove color picker for users
 remove_action( 'admin_color_scheme_picker', 'admin_color_scheme_picker' );
 
 
 
+/**
+ * 5.0 Bootstrap menu
+ * ----------------------------------------------------------------------------
+ */
+
+/*************
+Require the bootstrap navigation
+Source: https://github.com/twittem/wp-bootstrap-navwalker
+*************/
+
+require('wp_bootstrap_navwalker.php');
+
+/**
+ * Adding new costume main menu.
+ */
+
+add_action( 'after_setup_theme', 'wpt_setup' );
+if( ! function_exists( 'wpt_setup' ) ):
+        function wpt_setup() {
+           register_nav_menu( 'main_menu', __( 'Main Menu', 'wptuts' ) );
+        }
+endif;
 
 
 
