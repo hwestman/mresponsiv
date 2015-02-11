@@ -92,6 +92,10 @@ small, .font_small {font-size: 0.833em;}
  * ----------------------------------------------------------------------------
  */
 
+.navbar-default {
+    background-color: transparent;
+}
+
 #header {
     width: 100%;
 	position: fixed;
@@ -122,11 +126,7 @@ small, .font_small {font-size: 0.833em;}
 
 
 #site-title {
-    float: left;
-    font-size: 20px;
-    line-height: 20px;
-    padding: 13px 10px 13px 10px;
-    margin: 0px;
+    font-weight: normal;
 }
 
 /*

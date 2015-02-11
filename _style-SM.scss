@@ -23,28 +23,47 @@ body {
       max-width: 750px;
   }
 
+
+#site-logo-container {
+	float: left;
+}
+
+#site-logo-link {
+	float: left;
+	display: block;
+	padding: 10px 7px 10px 15px;
+	margin: 0px;
+}
+
 #site-logo {
 		float: left;
 		display: block;
-		width: 28px;
-		height: 28px;
+		width: 33px;
+		height: 33px;
+}
+
+#site-title-container {
+	float: left;
+	display: inline-block;
+	overflow: hidden;
+}
+
+#site-title-link {
+	float: left;
+	display: block;
+	padding: 17px 0px 18px 0px;
+	margin: 0px;		
 }
 
 #site-title {
-	float: left;
-	font-size: 20px;
-	line-height: 20px;
-	padding: 13px 10px 13px 10px;
+	font-size: 16px;
+	font-size: 16px;
+	padding: 0px;
 	margin: 0px;
 }
 
 
-#page-title {
 
-    .page-title-text {
-        margin: 15px 0px 170px 0px;
-    }
-}
 
 
 

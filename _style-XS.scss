@@ -64,13 +64,14 @@ body {
 }
 
 #site-title-container {
+	float: left;
+	display: inline-block;
 	overflow: hidden;
 }
-
 #site-title-link {
 	float: left;
 	display: block;
-	padding: 17px 0px 17px 0px;
+	padding: 17px 0px 18px 0px;
 	margin: 0px;		
 }
 

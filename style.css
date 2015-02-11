@@ -141,6 +141,9 @@ small, .font_small {
  * 0.0 Header
  * ----------------------------------------------------------------------------
  */
+.navbar-default {
+  background-color: transparent; }
+
 #header {
   width: 100%;
   position: fixed;
@@ -163,11 +166,7 @@ small, .font_small {
   height: 42px; }
 
 #site-title {
-  float: left;
-  font-size: 20px;
-  line-height: 20px;
-  padding: 13px 10px 13px 10px;
-  margin: 0px; }
+  font-weight: normal; }
 
 /*
 * — Minor Section Heading —
@@ -531,12 +530,14 @@ small, .font_small {
     height: 33px; }
 
   #site-title-container {
+    float: left;
+    display: inline-block;
     overflow: hidden; }
 
   #site-title-link {
     float: left;
     display: block;
-    padding: 17px 0px 17px 0px;
+    padding: 17px 0px 18px 0px;
     margin: 0px; }
 
   #site-title {
@@ -568,21 +569,37 @@ small, .font_small {
     margin: auto;
     max-width: 750px; }
 
+  #site-logo-container {
+    float: left; }
+
+  #site-logo-link {
+    float: left;
+    display: block;
+    padding: 10px 7px 10px 15px;
+    margin: 0px; }
+
   #site-logo {
     float: left;
     display: block;
-    width: 28px;
-    height: 28px; }
+    width: 33px;
+    height: 33px; }
 
-  #site-title {
+  #site-title-container {
     float: left;
-    font-size: 20px;
-    line-height: 20px;
-    padding: 13px 10px 13px 10px;
+    display: inline-block;
+    overflow: hidden; }
+
+  #site-title-link {
+    float: left;
+    display: block;
+    padding: 17px 0px 18px 0px;
     margin: 0px; }
 
-  #page-title .page-title-text {
-    margin: 15px 0px 170px 0px; }
+  #site-title {
+    font-size: 16px;
+    font-size: 16px;
+    padding: 0px;
+    margin: 0px; }
 
   /*
   * === HEADER ===
@@ -629,18 +646,41 @@ small, .font_small {
     margin: auto;
     max-width: 970px; }
 
+  #site-logo-container {
+    float: left; }
+
+  #site-logo-link {
+    float: left;
+    display: block;
+    padding: 10px 10px 10px 15px;
+    margin: 0px; }
+
   #site-logo {
     float: left;
     display: block;
     width: 42px;
     height: 42px; }
 
-  #site-title {
+  #site-title-container {
     float: left;
-    font-size: 20px;
-    line-height: 20px;
-    padding: 13px 10px 13px 10px;
+    display: inline-block;
+    overflow: hidden; }
+
+  #site-title-link {
+    float: left;
+    display: block;
+    padding: 20px 0px 21px 0px;
     margin: 0px; }
+
+  #site-title {
+    font-size: 18px;
+    font-size: 18px;
+    padding: 0px;
+    margin: 0px; }
+
+  .navbar-nav > li > a {
+    padding-top: 20px;
+    padding-bottom: 20px; }
 
   /*
   * === HEADER ===
@@ -688,18 +728,41 @@ small, .font_small {
     margin: auto;
     max-width: 1170px; }
 
+  #site-logo-container {
+    float: left; }
+
+  #site-logo-link {
+    float: left;
+    display: block;
+    padding: 10px 10px 10px 15px;
+    margin: 0px; }
+
   #site-logo {
     float: left;
     display: block;
     width: 42px;
     height: 42px; }
 
-  #site-title {
+  #site-title-container {
     float: left;
-    font-size: 20px;
-    line-height: 20px;
-    padding: 13px 10px 13px 10px;
+    display: inline-block;
+    overflow: hidden; }
+
+  #site-title-link {
+    float: left;
+    display: block;
+    padding: 20px 0px 21px 0px;
     margin: 0px; }
+
+  #site-title {
+    font-size: 18px;
+    font-size: 18px;
+    padding: 0px;
+    margin: 0px; }
+
+  .navbar-nav > li > a {
+    padding-top: 20px;
+    padding-bottom: 20px; }
 
   /*
   * === HEADER ===

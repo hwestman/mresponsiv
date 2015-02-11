@@ -14,12 +14,16 @@ function add_resources() {
 // Adding the bootstrap CSS (minified)
 // Bootstrap @grid-float-breakpoint costumized to “@screen-md-min” from getbootstrap.com
 
-wp_enqueue_style( 'ma_bootstrap-css', get_template_directory_uri() . '/bootstrap/bootstrap.min.css'); 
+wp_enqueue_style( 'bootstrap-css', get_template_directory_uri() . '/bootstrap/bootstrap.min.css'); 
+
+// Adding Theme specific styles 
+wp_enqueue_style( 'theme-css', get_template_directory_uri() . '/style.css', false); 
+
 
 /******  JavaScript ******/
 
 // Adding the bootstrap v3.3.1 JavaScript (minified)
-wp_enqueue_script( 'ma_bootstrap-js', get_template_directory_uri() . '/bootstrap/bootstrap.min.js', array( 'jquery' ));
+wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/bootstrap/bootstrap.min.js', array( 'jquery' ));
 
 }
 

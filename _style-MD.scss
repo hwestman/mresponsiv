@@ -31,6 +31,17 @@ body {
       max-width: 970px;
   }
 
+#site-logo-container {
+	float: left;
+}
+
+#site-logo-link {
+	float: left;
+	display: block;
+	padding: 10px 10px 10px 15px;
+	margin: 0px;
+}
+
 #site-logo {
 		float: left;
 		display: block;
@@ -38,15 +49,30 @@ body {
 		height: 42px;
 }
 
-#site-title {
+#site-title-container {
 	float: left;
-	font-size: 20px;
-	line-height: 20px;
-	padding: 13px 10px 13px 10px;
+	display: inline-block;
+	overflow: hidden;
+}
+
+#site-title-link {
+	float: left;
+	display: block;
+	padding: 20px 0px 21px 0px;
+	margin: 0px;		
+}
+
+#site-title {
+	font-size: 18px;
+	font-size: 18px;
+	padding: 0px;
 	margin: 0px;
 }
 
-
+.navbar-nav > li > a {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
 
 /*
 * === HEADER ===

@@ -26,11 +26,6 @@
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
 	<!-- CSS -->
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/bootstrap.css">
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css">
-
-	<!-- JavaScript -->
-	<script src="<?php echo get_template_directory_uri(); ?>/js/lib/jquery-2.1.3.min.js"></script>
 
 	
 	<?php wp_head(); ?>
@@ -64,7 +59,7 @@
 
 	<div id="site-header">
 		<header>
-			<nav class="navbar navbar-default navbar-fixed-top header-background" role="navigation">
+			<nav class="navbar navbar-default navbar-fixed-top header-background header-bg role="navigation">
 				<div id="menu-max-width">
 
 					<div class="navbar-header">
