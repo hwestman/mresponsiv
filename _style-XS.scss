@@ -24,9 +24,7 @@ body {
 }
 
 
-/*
-* === HEADER ===
-*/
+
 
 #hero-image {
     background-repeat: no-repeat;
@@ -42,39 +40,45 @@ body {
 }
 
 
-/*
-* — Branding 
-*/
+/**
+ * 3.0 Header 
+ * ----------------------------------------------------------------------------
+ */
 
-#branding {
-	min-height: 33px;
+#site-logo-container {
+	float: left;
 }
 
-#logo {
-	float:left;
+#site-logo-link {
+	float: left;
+	display: block;
+	padding: 10px 7px 10px 15px;
+	margin: 0px;
+}
 
-	img {
+#site-logo {
 		float: left;
 		display: block;
 		width: 33px;
 		height: 33px;
-	}
+}
+
+#site-title-container {
+	overflow: hidden;
+}
+
+#site-title-link {
+	float: left;
+	display: block;
+	padding: 17px 0px 17px 0px;
+	margin: 0px;		
 }
 
 #site-title {
-	float: left;
-	font-size: 15px;
+	font-size: 16px;
+	font-size: 16px;
 	padding: 0px;
-	line-height: 0px;
-	margin: 16px 0px 16px 8px;
-}
-
-#product-menu, #info-menu {
-	display: none;
-}
-.side-by-side-fill-height{
-    display: block;
-    float: left;
+	margin: 0px;
 }
 
 

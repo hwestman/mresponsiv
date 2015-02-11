@@ -108,6 +108,27 @@ small, .font_small {font-size: 0.833em;}
 }
 
 
+#site-title-link {
+    color: #000000;
+}
+
+#site-logo {
+        float: left;
+        display: block;
+        width: 42px;
+        height: 42px;
+}
+
+
+
+#site-title {
+    float: left;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 13px 10px 13px 10px;
+    margin: 0px;
+}
+
 /*
 * — Minor Section Heading —
 */

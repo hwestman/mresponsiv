@@ -3,8 +3,9 @@
 Theme Name: mResponsive
 Theme URI: n/a	
 Author: Roy Martin Kristiansen, Hallvard Westman
-Description: A template for Meyership
-Version: 1.0
+Author URI: http://hallvard.westman.no
+Description: A template for creating wordpress themes
+Version: 1.1
 License: n/a
 License URI: n/a	
 Tags: Meyership, Blue, Responsive
@@ -151,6 +152,22 @@ small, .font_small {
 
 .header-bg {
   background-color: #ffffff; }
+
+#site-title-link {
+  color: #000000; }
+
+#site-logo {
+  float: left;
+  display: block;
+  width: 42px;
+  height: 42px; }
+
+#site-title {
+  float: left;
+  font-size: 20px;
+  line-height: 20px;
+  padding: 13px 10px 13px 10px;
+  margin: 0px; }
 
 /*
 * — Minor Section Heading —
@@ -482,9 +499,6 @@ small, .font_small {
   #page-title .page-title-text {
     margin: 15px 0px 170px 0px; }
 
-  /*
-  * === HEADER ===
-  */
   #hero-image {
     background-repeat: no-repeat;
     background-position: center top;
@@ -497,33 +511,39 @@ small, .font_small {
     z-index: -2;
     overflow: hidden; }
 
-  /*
-  * — Branding 
-  */
-  #branding {
-    min-height: 33px; }
-
-  #logo {
+  /**
+   * 3.0 Header 
+   * ----------------------------------------------------------------------------
+   */
+  #site-logo-container {
     float: left; }
-    #logo img {
-      float: left;
-      display: block;
-      width: 33px;
-      height: 33px; }
+
+  #site-logo-link {
+    float: left;
+    display: block;
+    padding: 10px 7px 10px 15px;
+    margin: 0px; }
+
+  #site-logo {
+    float: left;
+    display: block;
+    width: 33px;
+    height: 33px; }
+
+  #site-title-container {
+    overflow: hidden; }
+
+  #site-title-link {
+    float: left;
+    display: block;
+    padding: 17px 0px 17px 0px;
+    margin: 0px; }
 
   #site-title {
-    float: left;
-    font-size: 15px;
+    font-size: 16px;
+    font-size: 16px;
     padding: 0px;
-    line-height: 0px;
-    margin: 16px 0px 16px 8px; }
-
-  #product-menu, #info-menu {
-    display: none; }
-
-  .side-by-side-fill-height {
-    display: block;
-    float: left; }
+    margin: 0px; }
 
   #footer-partner-links li {
     float: left;
@@ -540,9 +560,27 @@ small, .font_small {
     height: 225px; }
 
   /**
-   * 0.0 Page Title
+   * 3.0 Header 
    * ----------------------------------------------------------------------------
    */
+  #menu-max-width {
+    float: none;
+    margin: auto;
+    max-width: 750px; }
+
+  #site-logo {
+    float: left;
+    display: block;
+    width: 28px;
+    height: 28px; }
+
+  #site-title {
+    float: left;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 13px 10px 13px 10px;
+    margin: 0px; }
+
   #page-title .page-title-text {
     margin: 15px 0px 170px 0px; }
 
@@ -560,27 +598,6 @@ small, .font_small {
     margin-left: auto;
     z-index: -2;
     overflow: hidden; }
-
-  /*
-  * — Branding 
-  */
-  #branding {
-    min-height: 44px; }
-
-  #logo {
-    float: left; }
-    #logo img {
-      float: left;
-      display: block;
-      width: 55px;
-      height: 55px; }
-
-  #site-title {
-    float: left;
-    font-size: 18px;
-    padding: 0px;
-    line-height: 0px;
-    margin: 26px 0px 26px 8px; }
 
   #product-menu, #info-menu {
     display: none; }
@@ -600,9 +617,31 @@ small, .font_small {
     height: 225px; }
 
   /**
-   * 0.0 Page Title
+   * 3.0 Header 
    * ----------------------------------------------------------------------------
    */
+  /**
+   * 3.0 Header 
+   * ----------------------------------------------------------------------------
+   */
+  #menu-max-width {
+    float: none;
+    margin: auto;
+    max-width: 970px; }
+
+  #site-logo {
+    float: left;
+    display: block;
+    width: 42px;
+    height: 42px; }
+
+  #site-title {
+    float: left;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 13px 10px 13px 10px;
+    margin: 0px; }
+
   /*
   * === HEADER ===
   */
@@ -621,24 +660,6 @@ small, .font_small {
   /*
   * — Branding 
   */
-  #branding {
-    min-height: 44px; }
-
-  #logo {
-    float: left; }
-    #logo img {
-      float: left;
-      display: block;
-      width: 55px;
-      height: 55px; }
-
-  #site-title {
-    float: left;
-    font-size: 18px;
-    padding: 0px;
-    line-height: 0px;
-    margin: 26px 0px 26px 8px; }
-
   /**
    * 0.0 SIDEBAR 
    * ----------------------------------------------------------------------------
@@ -658,8 +679,27 @@ small, .font_small {
    * 0.0 Page Title
    * ----------------------------------------------------------------------------
    */
-  #page-title .page-title-text {
-    margin: 30px 0px 210px 0px; }
+  /**
+   * 3.0 Header 
+   * ----------------------------------------------------------------------------
+   */
+  #menu-max-width {
+    float: none;
+    margin: auto;
+    max-width: 1170px; }
+
+  #site-logo {
+    float: left;
+    display: block;
+    width: 42px;
+    height: 42px; }
+
+  #site-title {
+    float: left;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 13px 10px 13px 10px;
+    margin: 0px; }
 
   /*
   * === HEADER ===
@@ -678,21 +718,4 @@ small, .font_small {
 
   /*
   * — Branding 
-  */
-  #branding {
-    min-height: 66px; }
-
-  #logo {
-    float: left; }
-    #logo img {
-      float: left;
-      display: block;
-      width: 66px;
-      height: 66px; }
-
-  #site-title {
-    float: left;
-    font-size: 20px;
-    padding: 0px;
-    line-height: 0px;
-    margin: 33px 0px 33px 10px; } }
+  */ }

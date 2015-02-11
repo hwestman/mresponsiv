@@ -13,9 +13,31 @@ body {
 
 
 /**
- * 0.0 Page Title
+ * 3.0 Header 
  * ----------------------------------------------------------------------------
  */
+
+   #menu-max-width {
+      float: none;
+      margin: auto;
+      max-width: 750px;
+  }
+
+#site-logo {
+		float: left;
+		display: block;
+		width: 28px;
+		height: 28px;
+}
+
+#site-title {
+	float: left;
+	font-size: 20px;
+	line-height: 20px;
+	padding: 13px 10px 13px 10px;
+	margin: 0px;
+}
+
 
 #page-title {
 
@@ -45,32 +67,6 @@ body {
 }
 
 
-/*
-* — Branding 
-*/
-
-#branding {
-	min-height: 44px;
-}
-
-#logo {
-	float:left;
-
-	img {
-		float: left;
-		display: block;
-		width: 55px;
-		height: 55px;
-	}
-}
-
-#site-title {
-	float: left;
-	font-size: 18px;
-	padding: 0px;
-	line-height: 0px;
-	margin: 26px 0px 26px 8px;
-}
 
 #product-menu, #info-menu {
 	display: none;

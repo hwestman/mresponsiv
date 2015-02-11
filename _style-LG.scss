@@ -23,11 +23,30 @@ body {
  * ----------------------------------------------------------------------------
  */
 
-#page-title {
+/**
+ * 3.0 Header 
+ * ----------------------------------------------------------------------------
+ */
 
-    .page-title-text {
-        margin: 30px 0px 210px 0px;
-    }
+ #menu-max-width {
+ 	float: none;
+ 	margin: auto;
+ 	max-width: 1170px;
+ }
+
+#site-logo {
+		float: left;
+		display: block;
+		width: 42px;
+		height: 42px;
+}
+
+#site-title {
+	float: left;
+	font-size: 20px;
+	line-height: 20px;
+	padding: 13px 10px 13px 10px;
+	margin: 0px;
 }
 
 
@@ -51,27 +70,7 @@ body {
 * — Branding 
 */
 
-#branding {
-	min-height: 66px;
-}
 
-#logo {
-	float:left;
 
-	img {
-		float: left;
-		display: block;
-		width: 66px;
-		height: 66px;
-	}
-}
-
-#site-title {
-	float: left;
-	font-size: 20px;
-	padding: 0px;
-	line-height: 0px;
-	margin: 33px 0px 33px 10px;
-}
 
 } // @media 
