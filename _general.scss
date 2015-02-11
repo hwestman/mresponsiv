@@ -92,6 +92,10 @@ small, .font_small {font-size: 0.833em;}
  * ----------------------------------------------------------------------------
  */
 
+.navbar-default {
+    background-color: transparent;
+}
+
 #header {
     width: 100%;
 	position: fixed;
@@ -107,6 +111,23 @@ small, .font_small {font-size: 0.833em;}
 	background-color: #ffffff;
 }
 
+
+#site-title-link {
+    color: #000000;
+}
+
+#site-logo {
+        float: left;
+        display: block;
+        width: 42px;
+        height: 42px;
+}
+
+
+
+#site-title {
+    font-weight: normal;
+}
 
 /*
 * — Minor Section Heading —

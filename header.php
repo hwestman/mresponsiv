@@ -26,50 +26,85 @@
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
 	<!-- CSS -->
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/bootstrap.css">
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css">
-
-	<!-- JavaScript -->
-	<script src="<?php echo get_template_directory_uri(); ?>/js/lib/jquery-2.1.3.min.js"></script>
 
 	
 	<?php wp_head(); ?>
 
 
 
+
+
 </head>
 
 <body <?php body_class(); ?>>
+
+<?php
+
+	function site_logo() {
+		$logo_image_option = get_theme_mod( 'theme_custom_logo_setting' );
+		if ( $logo_image_option != "") {
+			echo '<img id="site-logo" src="' . $logo_image_option . '" alt="Logo">';
+		}
+		else {
+			echo '<img id="site-logo" src="' . get_template_directory_uri() . '/img/fallback-image-logo.jpg">';
+		}
+	}
+
+?>
+
+
+
 <div id="page" class="hfeed site">
-	<?php if ( get_header_image() ) : ?>
+
+
 	<div id="site-header">
-		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-			<img src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="">
-		</a>
-	</div>
-	<?php endif; ?>
+		<header>
+			<nav class="navbar navbar-default navbar-fixed-top header-background header-bg role="navigation">
+				<div id="menu-max-width">
 
-	<header id="masthead" class="site-header" role="banner">
-		<div class="header-main">
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
 
-			<div class="search-toggle">
-				<a href="#search-container" class="screen-reader-text"><?php _e( 'Search', 'twentyfourteen' ); ?></a>
-			</div>
-		
-			<nav id="primary-navigation" class="site-navigation primary-navigation" role="navigation">
-				<button class="menu-toggle"><?php _e( 'Primary Menu', 'wpthemebasic' ); ?></button>
-				<a class="screen-reader-text skip-link" href="#content"><?php _e( 'Skip to content', 'wpthemebasic' ); ?></a>
-				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
+						<div id="site-branding">
+							<div id="site-logo-container">
+								<a id="site-logo-link" href="<?php echo site_url(); ?>">
+									<?php site_logo(); ?>
+								</a>
+							</div> <!-- #site-logo-container -->
+							<div id="site-title-container">
+								<a id="site-title-link" href="<?php echo site_url(); ?>">
+									<h1 id="site-title"><?php bloginfo('name'); ?></h1>
+								</a>
+							</div> <!-- #site-title-container -->
+						</div> <!-- #site-branding -->
+						</div> <!-- .navbar-heade -->
+
+					<div class="collapse navbar-collapse navbar-ex1-collapse">
+						<?php
+						wp_nav_menu( array(
+							'menu'             => 'Main Menu',
+							'theme_location'    => 'main_menu',
+							'depth' => 0,
+							'container' => false,
+							'menu_class' => 'nav navbar-nav navbar-right',
+							'fallback_cb' => 'wp_bootstrap_navwalker::fallback',
+                        //Process nav menu using our custom nav walker
+							'walker' => new wp_bootstrap_navwalker())
+						);
+						?>
+					</div><!-- .navbar-collapse -->
+				</div> <!-- #menu-max-width -->
 			</nav>
-		</div>
+		</header>
+	</div>
 
-		<div id="search-container" class="search-box-wrapper hide">
-			<div class="search-box">
-				<?php get_search_form(); ?>
-			</div>
-		</div>
-	</header><!-- #masthead -->
+
+
     <p>just a test</p>
 
 	<?php get_template_part( 'template-hero-image'); ?> 

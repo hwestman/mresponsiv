@@ -16,11 +16,63 @@ body {
 }
 
 /**
- * 0.0 Page Title
+ * 3.0 Header
  * ----------------------------------------------------------------------------
  */
 
+/**
+ * 3.0 Header
+ * ----------------------------------------------------------------------------
+ */
 
+  #menu-max-width {
+      float: none;
+      margin: auto;
+      max-width: 970px;
+  }
+
+#site-logo-container {
+	float: left;
+}
+
+#site-logo-link {
+	float: left;
+	display: block;
+	padding: 10px 10px 10px 15px;
+	margin: 0px;
+}
+
+#site-logo {
+		float: left;
+		display: block;
+		width: 42px;
+		height: 42px;
+}
+
+#site-title-container {
+	float: left;
+	display: inline-block;
+	overflow: hidden;
+}
+
+#site-title-link {
+	float: left;
+	display: block;
+	padding: 20px 0px 21px 0px;
+	margin: 0px;
+}
+
+#site-title {
+	font-size: 18px;
+	font-size: 18px;
+	padding: 0px;
+	margin: 0px;
+}
+
+.navbar-nav > li > a {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
 
 /*
 * === HEADER ===
@@ -43,28 +95,6 @@ body {
 * — Branding 
 */
 
-#branding {
-	min-height: 44px;
-}
-
-#logo {
-	float:left;
-
-	img {
-		float: left;
-		display: block;
-		width: 55px;
-		height: 55px;
-	}
-}
-
-#site-title {
-	float: left;
-	font-size: 18px;
-	padding: 0px;
-	line-height: 0px;
-	margin: 26px 0px 26px 8px;
-}
 
 /**
  * 0.0 SIDEBAR 
