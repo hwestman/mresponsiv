@@ -166,6 +166,34 @@ function register_services_custom_post(){
 
 add_action('init', 'register_services_custom_post'); // Enable Collaborators post
 
+function register_services_meta_boxes() {
+    add_meta_box("services_meta", "Tjenester", "services_add_options", "tjenester", "normal", "low");
+}
+
+add_action( 'admin_init', 'register_services_meta_boxes' ); // Add to admin panel
+
+/*
+* Function for adding the options tab.
+*/
+function services_add_options() {
+
+    global $post;
+    $custom = get_post_custom( $post->ID );
+
+    ?>
+    <style>.width99 {width:99%;}</style>
+    <p>
+        <label>Navn på tjeneste</label><br />
+        <input type="text" name="service_name" value="<?= @$custom["service_name"][0] ?>" class="width99" />
+    </p>
+    <p>
+        <label>Beskrivelse av tjeneste</label><br />
+        <input type="text" name="service_description" value="<?= @$custom["service_description"][0] ?>" class="width99 height99" />
+    </p>
+
+    <?php
+}
+
 /**
  * 4.0 Theme Appearance Options (Logo etc..)
  * ----------------------------------------------------------------------------
@@ -195,46 +223,6 @@ $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'them
 }
 add_action('customize_register', 'add_custom_logo');
 
-
-
-function register_services_meta_boxes() {
-    add_meta_box("services_meta", "Kontaktpersoner", "services_add_options", "tjenester", "normal", "low");
-}
-
-add_action( 'admin_init', 'register_services_meta_boxes' ); // Add to admin panel
-
-/*
-* Function for adding the options tab.
-*/
-function services_add_options() {
-
-    global $post;
-    $custom = get_post_custom( $post->ID );
-
-    ?>
-    <style>.width99 {width:99%;}</style>
-    <p>
-        <label>Link til samarbeidspartner</label><br />
-        <input type="text" name="collaborator_url" value="<?= @$custom["collaborator_url"][0] ?>" class="width99" />
-    </p>
-
-    <?php
-}
-
-/**
- * Save custom field data when creating/updating posts
- *
-function update_collaborators_add_options(){
-  global $post;
-
-  if ( $post )
-  {
-    if( $_POST["collaborator_url"]  != "" ){update_post_meta($post->ID, "collaborator_url", @$_POST["collaborator_url"]);}
-  }
-}
-
-add_action( 'save_post', 'update_collaborators_add_options' );
-*/
 /**
  * 5.0 contact fields
  * ----------------------------------------------------------------------------
