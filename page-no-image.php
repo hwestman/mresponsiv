@@ -1,14 +1,13 @@
 <?php
-/**
- * The template for displaying all pages
- *
- */
+/*
+Template Name: Page - Small header
+*/	
 get_header(); ?>
 
 
     <div id="wrapper" class="container">
 
-		<?php get_template_part( 'template-content-header-big'); ?> 
+		<?php get_template_part( 'template-content-header-small'); ?> 
 
         <div id="content-wrapper">
 
@@ -34,7 +33,6 @@ get_header(); ?>
 				<?php get_sidebar( 'content' ); ?>
         	</div> <!-- .sidebar -->   
         </div> <!-- #sidebar-right -->
-            
     
     </div> <!-- #content-wrapper -->
     </div> <!-- #wrapper -->

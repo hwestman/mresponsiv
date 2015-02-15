@@ -70,6 +70,37 @@ add_action( 'init', 'register_costume_menus' ); // Enable costume menus
 
 
 /**
+ * 3.0 Push down Navigation 
+ * Fixe issue for admin users navbar.
+ * ----------------------------------------------------------------------------
+ */
+
+add_filter('body_class', 'mbe_body_class');
+function mbe_body_class($classes){
+    if(is_user_logged_in()){
+        $classes[] = 'body-logged-in';
+    } else{
+        $classes[] = 'body-logged-out';
+    }
+    return $classes;
+}
+
+//Add the CSS to push down body on wadmin view
+add_action('wp_head', 'mbe_wp_head');
+function mbe_wp_head(){
+    echo '<style>'.PHP_EOL;
+
+    echo 'body{ padding-top: 0px !important; }'.PHP_EOL;
+    // Using custom CSS class name.
+    echo 'body.body-logged-in .navbar { top: 28px !important; }'.PHP_EOL;
+    // Using WordPress default CSS class name.
+    echo 'body.logged-in .navbar-fixed-top{ top: 28px !important; }'.PHP_EOL;
+    echo '</style>'.PHP_EOL;
+}
+
+
+
+/**
  * 3.0 Collaborators (Costume post type)
  * ----------------------------------------------------------------------------
  */

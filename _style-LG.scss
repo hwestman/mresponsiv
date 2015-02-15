@@ -4,16 +4,16 @@ body {
 }
 
 #main {
-	margin-top: 66px;
+	margin-top: 62px;
 }
 
 
 #content-header-big {
-    height: 280px;
+    height: 260px;
 }
 
 #content-header-small {
-	min-height: 50px;
+	min-height: 60px;
 }
 
 
@@ -89,6 +89,8 @@ body {
 	position: absolute;
 	margin-right: auto;
 	margin-left: auto;
+	margin-top: 0px;
+	padding: 0px;
 	z-index: -2;
 	overflow: hidden;
 }

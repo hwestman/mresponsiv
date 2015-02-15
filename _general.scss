@@ -206,6 +206,25 @@ small, .font_small {font-size: 0.833em;}
 
 
 /**
+ * Page - Full width content
+ * ----------------------------------------------------------------------------
+ */
+
+#normal-content {
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+}
+
+#full-width-content {
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+}
+
+
+
+/**
  * Frontpage 
  * ----------------------------------------------------------------------------
  */
@@ -434,20 +453,29 @@ small, .font_small {font-size: 0.833em;}
     }
 
      #content-header-heading {
-        display: inline-block;
+        float: left;
+        display: block;
         line-height: 1em;
         padding: 10px 15px 8px 15px;
+        margin: 15px 0px 15px 0px;
         color: #ffffff;
         width: auto;
         background-color: $meyership-blue;
      }
+    
+    h2 {
+        font-size: 1em;
+        margin: 0px;
+        padding: 0px;
+    }
+
 }
+
 
 #content-wrapper {
     float: left;
     width: 100%;
     background-color: #ffffff;
-    min-height: 800px;
 }
 
 #content-full-width {
@@ -470,7 +498,7 @@ small, .font_small {font-size: 0.833em;}
  */
 
 .sidebar {
-    padding: 30px 30px 30px 30px;
+    padding: 30px 15px 30px 15px;
 }
 
 #sidebar-right{

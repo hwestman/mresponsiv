@@ -36,7 +36,8 @@
 
 </head>
 
-<body <?php body_class(); ?>>
+<!-- Push down the menu, when user is logged inn -->
+<?php echo '<body class="'.join(' ', get_body_class()).'">'.PHP_EOL; ?>
 
 <?php 
 
@@ -55,7 +56,6 @@
 
 
 <div id="page" class="hfeed site">
-
 
 	<div id="site-header">
 		<header>
@@ -102,10 +102,6 @@
 			</nav> 
 		</header>
 	</div>
-	
-
-
-    <p>just a test</p>
 
 	<?php get_template_part( 'template-hero-image'); ?> 
 
