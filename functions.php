@@ -14,10 +14,17 @@ function add_resources() {
 // Adding the bootstrap CSS (minified)
 // Bootstrap @grid-float-breakpoint costumized to “@screen-md-min” from getbootstrap.com
 
-wp_enqueue_style( 'bootstrap-css', get_template_directory_uri() . '/bootstrap/bootstrap.min.css'); 
 
-// Adding Theme specific styles 
-wp_enqueue_style( 'theme-css', get_template_directory_uri() . '/style.css', false); 
+wp_enqueue_style( 'bootstrap-css', get_template_directory_uri() . '/bootstrap/bootstrap.min.css');
+
+// Adding Theme specific styles
+wp_enqueue_style( 'theme-css', get_template_directory_uri() . '/style.css', false);
+
+wp_enqueue_style( 'bootstrap-css', get_template_directory_uri() . '/bootstrap/bootstrap.min.css');
+
+// Adding Theme specific styles
+wp_enqueue_style( 'theme-css', get_template_directory_uri() . '/style.css', false);
+
 
 
 /******  JavaScript ******/
@@ -27,8 +34,13 @@ wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/bootstrap/bo
 
 }
 
-// This add alle the recourses to the theme header. 
-add_action( 'wp_enqueue_scripts', 'add_resources' ); 
+
+// This add alle the recourses to the theme header.
+add_action( 'wp_enqueue_scripts', 'add_resources' );
+
+// This add alle the recourses to the theme header.
+add_action( 'wp_enqueue_scripts', 'add_resources' );
+
 
 
 
@@ -162,6 +174,56 @@ function update_collaborators_add_options(){
 
 add_action( 'save_post', 'update_collaborators_add_options' );
 
+/**
+ * 4.0 Services (Custom post type)
+ * ----------------------------------------------------------------------------
+ */
+
+//Add custom post type for collaborators
+
+function register_services_custom_post(){
+
+    register_post_type('tjenester', array(
+        'label' => __('Tjenester'),
+        'singular_label' => __('Tjenester'),
+        'public' => true,
+        'show_ui' => true, // UI in admin panel
+        'capability_type' => 'page',
+        'hierarchical' => false,
+        'rewrite' => array("slug" => "tjenester"), // Permalinks format
+        'supports' => array('title', 'thumbnail')
+    ));
+}
+
+add_action('init', 'register_services_custom_post'); // Enable Collaborators post
+
+function register_services_meta_boxes() {
+    add_meta_box("services_meta", "Tjenester", "services_add_options", "tjenester", "normal", "low");
+}
+
+add_action( 'admin_init', 'register_services_meta_boxes' ); // Add to admin panel
+
+/*
+* Function for adding the options tab.
+*/
+function services_add_options() {
+
+    global $post;
+    $custom = get_post_custom( $post->ID );
+
+    ?>
+    <style>.width99 {width:99%;}</style>
+    <p>
+        <label>Navn på tjeneste</label><br />
+        <input type="text" name="service_name" value="<?= @$custom["service_name"][0] ?>" class="width99" />
+    </p>
+    <p>
+        <label>Beskrivelse av tjeneste</label><br />
+        <input type="text" name="service_description" value="<?= @$custom["service_description"][0] ?>" class="width99 height99" />
+    </p>
+
+    <?php
+}
 
 /**
  * 4.0 Theme Appearance Options (Logo etc..)
@@ -169,7 +231,7 @@ add_action( 'save_post', 'update_collaborators_add_options' );
  */
 
 /**
- * Enable costume logo from the Theme Appearence panel. 
+ * Enable costume logo from the Theme Appearence panel.
  */
 
 function add_custom_logo( $wp_customize ) {
@@ -190,13 +252,36 @@ $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'them
 ) ) );
 
 }
-add_action('customize_register', 'add_custom_logo'); 
+add_action('customize_register', 'add_custom_logo');
+
+/**
+ * 5.0 contact fields
+ * ----------------------------------------------------------------------------
+ */
+
+function modify_contact_fields( $contactmethods ) {
+
+    $contactmethods['number'] = 'Telefonnummer';
+    $contactmethods['hiredate'] = 'Ansatt siden';
+    $contactmethods['position'] = 'Stilling';
+
+    return $contactmethods;
+}
+add_filter('user_contactmethods','modify_contact_fields',10,1);
+/**
+ * 4.0 Theme Appearance Options (Logo etc..)
+ * ----------------------------------------------------------------------------
+ */
+
+//Remove color picker for users
+remove_action( 'admin_color_scheme_picker', 'admin_color_scheme_picker' );
+
 
 
 
 
 /**
- * 5.0 Bootstrap menu 
+ * 5.0 Bootstrap menu
  * ----------------------------------------------------------------------------
  */
 

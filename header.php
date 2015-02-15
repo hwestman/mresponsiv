@@ -39,7 +39,7 @@
 <!-- Push down the menu, when user is logged inn -->
 <?php echo '<body class="'.join(' ', get_body_class()).'">'.PHP_EOL; ?>
 
-<?php 
+<?php
 
 	function site_logo() {
 		$logo_image_option = get_theme_mod( 'theme_custom_logo_setting' );
@@ -71,7 +71,7 @@
 						</button>
 
 						<div id="site-branding">
-							<div id="site-logo-container"> 
+							<div id="site-logo-container">
 								<a id="site-logo-link" href="<?php echo site_url(); ?>">
 									<?php site_logo(); ?>
 								</a>
@@ -97,9 +97,9 @@
 							'walker' => new wp_bootstrap_navwalker())
 						);
 						?>
-					</div><!-- .navbar-collapse --> 
+					</div><!-- .navbar-collapse -->
 				</div> <!-- #menu-max-width -->
-			</nav> 
+			</nav>
 		</header>
 	</div>
 
