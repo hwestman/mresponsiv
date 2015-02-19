@@ -210,22 +210,23 @@ function services_add_options() {
 
     global $post;
     $custom = get_post_custom( $post->ID );
-
+    $contactpersons = get_post_meta($post->ID, 'contactpersons', true);
     ?>
     <p>
         <label for="my_meta_box_select">Kontaktperson</label></br>
 
 
-        <?php echo $custom["contactpersons[]"] ?>
        <?php
         $users = get_users();
         // Array of WP_User objects.
 
         foreach ( $users as $user ) { ?>
-
-
-        <input type="checkbox" class="contactperson" name="contactpersons" value="<?php esc_html($user->user_email) ?>" <?php checked( $check, 'on' ); ?> />
-            <?php echo '<span>' . esc_html( $user->user_email ) . '</span>';?>
+            <input type="checkbox" class="contactperson" name="contactpersons[]" value="<?php echo esc_html($user->ID) ?>"
+                <?php if(in_array($user->ID,$contactpersons)){
+                    echo "checked";
+                }
+                ?> />
+            <?php echo '<span>' . esc_html( $user->display_name ) . '</span>';?>
             </br>
         <?php } ?>
 
@@ -240,7 +241,10 @@ function update_services_add_options(){
 
   if ( $post )
   {
-    if( $_POST["contactpersons"]  != "" ){update_post_meta($post->ID, "contactpersons", $_POST["contactpersons"]);}
+    if( $_POST["contactpersons"]  != "" )
+    {
+        update_post_meta($post->ID, "contactpersons", $_POST["contactpersons"]);
+    }
   }
 }
 
