@@ -8,8 +8,18 @@
  */
 
 get_header(); ?>
+<div id="wrapper" class="container">
 
-	<div id="primary" class="content-area">
+
+
+
+
+<?php get_template_part( 'template-content-header-big'); ?>
+
+    <div id="content-wrapper">
+    <div id="content-full-width" class="no-padding">
+
+<div id="primary" class="content-area">
 		<div id="content" class="site-content" role="main">
 			<?php
 				// Start the Loop.
@@ -33,7 +43,9 @@ get_header(); ?>
 			?>
 		</div><!-- #content -->
 	</div><!-- #primary -->
-
+    </div> <!-- .content-full-width -->
+    </div> <!-- #content-wrapper -->
+</div> <!-- #wrapper -->
 <?php
 get_sidebar( 'content' );
 get_sidebar();

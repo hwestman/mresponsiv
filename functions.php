@@ -183,11 +183,12 @@ add_action( 'save_post', 'update_collaborators_add_options' );
 
 function register_services_custom_post(){
 
-    register_post_type('tjenester', array(
+    register_post_type('services', array(
         'label' => __('Tjenester'),
         'singular_label' => __('Tjenester'),
         'public' => true,
         'show_ui' => true, // UI in admin panel
+        'show_in_nav_menus' => true,
         'capability_type' => 'post',
         'hierarchical' => false,
         'rewrite' => array("slug" => "tjenester"), // Permalinks format
@@ -198,7 +199,7 @@ function register_services_custom_post(){
 add_action('init', 'register_services_custom_post'); // Enable Collaborators post
 
 function register_services_meta_boxes() {
-    add_meta_box("services_meta", "Meta", "services_add_options", "tjenester", "normal", "low");
+    add_meta_box("services_meta", "Meta", "services_add_options", "services", "normal", "low");
 }
 
 add_action( 'admin_init', 'register_services_meta_boxes' ); // Add to admin panel
@@ -329,7 +330,10 @@ if( ! function_exists( 'wpt_setup' ) ):
 endif;
 
 
-
-
+/**
+ * 6.0 MISC
+ * ----------------------------------------------------------------------------
+ */
+add_filter('show_admin_bar', '__return_false');
 
 ?>

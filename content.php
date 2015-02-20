@@ -11,7 +11,6 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<p>kake</p>
 
 	<header class="entry-header">
 		<div class="entry-meta">
