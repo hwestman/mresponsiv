@@ -7,7 +7,7 @@ get_header(); ?>
 
     <div id="wrapper" class="container">
 
-		<?php get_template_part( 'template-content-header-big'); ?> 
+		<?php get_template_part( 'template-content-header-frontpage'); ?> 
 
         <div id="content-wrapper">
 
