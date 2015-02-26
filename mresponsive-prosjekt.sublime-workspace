@@ -1,0 +1,417 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"col-xs",
+				"col-xs-12	 bootstrap.css"
+			],
+			[
+				"pad",
+				"padding-top"
+			],
+			[
+				"no",
+				"none"
+			],
+			[
+				"back",
+				"background-color: 〔property〕"
+			],
+			[
+				"in",
+				"inline-block"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"max",
+				"max-width"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"bac",
+				"background:   (property)"
+			],
+			[
+				"bac-",
+				"background-color:   (property)"
+			],
+			[
+				"ov",
+				"overflow"
+			],
+			[
+				"thum",
+				"thumbnail"
+			],
+			[
+				"min-",
+				"min-height"
+			],
+			[
+				"tex",
+				"text-decoration"
+			],
+			[
+				"co",
+				"color"
+			],
+			[
+				"fl",
+				"float"
+			],
+			[
+				"mar",
+				"margin"
+			],
+			[
+				"he",
+				"header	Tag"
+			],
+			[
+				"border",
+				"border-right"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "index.php",
+			"settings":
+			{
+				"buffer_size": 1084,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"syntax p",
+				"Set Syntax: PHP"
+			],
+			[
+				"ph",
+				"Set Syntax: PHP"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"html",
+				"Set Syntax: HTML"
+			],
+			[
+				"sass",
+				"Set Syntax: Sass"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"php",
+				"Set Syntax: PHP"
+			],
+			[
+				"javas",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"ftop",
+				"FTPSync: Setup FTPSync in this folder"
+			],
+			[
+				"ftp",
+				"FTPSync: Browse"
+			],
+			[
+				"php	",
+				"Set Syntax: PHP"
+			],
+			[
+				"sideb",
+				"View: Toggle Open Files in Side Bar"
+			],
+			[
+				"sideba",
+				"View: Toggle Open Files in Side Bar"
+			],
+			[
+				"sid",
+				"View: Toggle Side Bar"
+			],
+			[
+				"sidebar",
+				"View: Toggle Side Bar"
+			]
+		],
+		"width": 467.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/MediaAgency/public_html/mship/wp-content/themes/mresponsive/template-content-header-small.php",
+		"/Users/MediaAgency/public_html/mship/wp-content/themes/mresponsive/header.php",
+		"/Users/MediaAgency/public_html/mship/wp-content/themes/mresponsive/page-no-image.php",
+		"/Users/MediaAgency/public_html/mship/wp-content/themes/mresponsive/functions.php",
+		"/Users/MediaAgency/public_html/mship/wp-content/themes/mresponsive/prototype/_style-SM.scss",
+		"/Users/MediaAgency/public_html/mship/wp-content/themes/mresponsive/prototype/_style-MD.scss",
+		"/Users/MediaAgency/public_html/mship/wp-content/themes/mresponsive/prototype/_style-LG.scss",
+		"/Users/MediaAgency/public_html/mship/wp-content/themes/mresponsive/page-contact-us",
+		"/Users/MediaAgency/public_html/mship/wp-content/themes/mresponsive/prototype/_general.scss",
+		"/Users/MediaAgency/public_html/mship/wp-content/themes/mresponsive/sidebar.php",
+		"/Users/MediaAgency/public_html/mship/wp-content/themes/mresponsive/style.css",
+		"/Users/MediaAgency/public_html/mship/wp-content/themes/mresponsive/single.php",
+		"/Users/MediaAgency/public_html/mship/wp-content/themes/mresponsive/index.php",
+		"/Users/MediaAgency/public_html/mship/wp-content/themes/mresponsive/prototype/css/style.css",
+		"/Users/MediaAgency/public_html/mship/wp-content/themes/mresponsive/prototype/style.scss",
+		"/Users/MediaAgency/public_html/woodworker/wp-content/themes/leksehjelp/style_general.scss",
+		"/Users/MediaAgency/public_html/woodworker/wp-content/themes/lead-story/page-forside.php",
+		"/Users/MediaAgency/public_html/woodworker/wp-content/themes/lead-story/.gitignore",
+		"/Users/MediaAgency/public_html/woodworker/wp-content/themes/lead-story/functions.php",
+		"/Users/MediaAgency/public_html/woodworker/wp-content/themes/lead-story/page-sidebar-left.php",
+		"/Users/MediaAgency/public_html/woodworker/wp-content/themes/lead-story/page-full-width.php",
+		"/Users/MediaAgency/public_html/woodworker/wp-content/themes/lead-story/page.php",
+		"/Users/MediaAgency/public_html/woodworker/wp-content/themes/lead-story/page-sidebar-right.php",
+		"/Users/MediaAgency/public_html/woodworker/wp-content/themes/lead-story/content-frontpage-post-meta.php",
+		"/Users/MediaAgency/public_html/woodworker/wp-content/themes/lead-story/header.php",
+		"/Users/MediaAgency/public_html/woodworker/wp-content/themes/lead-story/content-social-share-horizontal.php",
+		"/Users/MediaAgency/public_html/woodworker/wp-content/themes/lead-story/single.php",
+		"/Users/MediaAgency/public_html/woodworker/wp-content/themes/lead-story/forside.php",
+		"/Users/MediaAgency/public_html/woodworker/wp-content/themes/lead-story/style.css",
+		"/Users/MediaAgency/public_html/dandelion/newsletter_check.php",
+		"/Users/MediaAgency/public_html/dandelion/newsletter_form.php",
+		"/Users/MediaAgency/public_html/dandelion/sidebar",
+		"/Users/MediaAgency/public_html/cookie/header.php",
+		"/Users/MediaAgency/public_html/dandelion/header.php",
+		"/Users/MediaAgency/public_html/cookie/birthday.php",
+		"/Users/MediaAgency/Downloads/index.php",
+		"/Users/MediaAgency/Dropbox (MediaAgency)/Interne prosjekter/tanumsapotek/index.php",
+		"/Users/MediaAgency/public_html/cookie/newsletter_check.php",
+		"/Users/MediaAgency/public_html/cookie/newsletter_form.php",
+		"/Users/MediaAgency/public_html/Countdown/index.php",
+		"/Users/MediaAgency/public_html/responsive-preview/preview.php",
+		"/Users/MediaAgency/web/css/style.css",
+		"/Users/MediaAgency/web/index.html",
+		"/Users/MediaAgency/public_html/responsive-preview/preview.html",
+		"/Users/MediaAgency/Library/Application Support/Sublime Text 3/Packages/Package Control/Package Control.sublime-settings"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"main",
+			"content-header",
+			"page",
+			"min-he",
+			"column-of-three",
+			"section-title",
+			"section",
+			"sidebar",
+			"page-featured-image",
+			"pages",
+			"page"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "index.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1084,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": "<",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								}
+							],
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.CSS Extended Completions":
+	{
+		"height": 0.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "mresponsive-prosjekt.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"in",
+				"~/web/index.html"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"lekseh",
+				"~/public_html/woodworker/wp-content/themes/lead-story-leksehjelp/roy-leksehjelp.sublime-workspace"
+			],
+			[
+				"lekse",
+				"~/public_html/woodworker/wp-content/themes/lead-story-leksehjelp/roy-leksehjelp.sublime-workspace"
+			],
+			[
+				"lead",
+				"~/public_html/woodworker/wp-content/themes/lead-story/roy-lead-story.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 369.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

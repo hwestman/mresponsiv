@@ -19,6 +19,8 @@ get_header(); ?>
            
 			<?php get_template_part( 'template-collaborators'); ?> 
 
+			<?php get_template_part( 'template-services'); ?> 
+
 				<?php
 					if ( have_posts() ) :
 						// Start the Loop.

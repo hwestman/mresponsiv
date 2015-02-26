@@ -338,6 +338,91 @@ small, .font_small {font-size: 0.833em;}
  * ----------------------------------------------------------------------------
  */
 
+.frontpage-services {
+    float: left;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;  
+}
+
+.frontpage-services-single {
+    float: left;
+    width: 100%;  
+    margin-bottom: 30px;
+}
+
+.frontpage-services-single-visual {
+    float: left; 
+    width: 33%;
+    margin-right: 15px;
+
+
+    img {
+        float: left; 
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        border-radius: 50%;
+    }
+
+    .frontpage-services-thumbnail-link {
+        float: left; 
+        display: block;
+        width: 100%;
+        padding-left: 10%;
+        padding-right: 10%;
+        overflow: hidden;
+    }
+
+}
+
+.frontpage-services-content {
+    float: none;
+    width: auto;
+    overflow: hidden;
+    padding-top: 30px;
+}
+
+.frontpage-services-content-link {
+        float: left; 
+        display: block;
+        width: 100%;
+
+        p {
+            color: #000000;
+        }
+
+        p:hover {
+            color: #ccc;
+        }
+
+        h2 {
+            color: $meyership-blue;
+        }
+
+        h2:hover {
+            color: #ccc;
+        }
+
+}
+
+.frontpage-services-content-link:hover {
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+.frontpage-services-single-heading {
+    margin-top: 0px;
+    padding-top: 0px;
+}
+
 .frontpage-services-item-link {
     float: left;
     padding: 15px;
