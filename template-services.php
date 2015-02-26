@@ -8,7 +8,7 @@
 	<div class="frontpage-section-heading col-xs-12">
 		<h2>Tjenester</h2>
 	</div>   
-    <div class="col-xs-push-1 col-xs-10">
+    <div class="col-xs-12">
         <div class="frontpage-services">
 
 <?php $items = new WP_Query( array( 'post_type' => 'services', 'posts_per_page' => -1, 'orderby' => 'menu_order', 'order' => 'ASC') ); ?>
@@ -17,19 +17,16 @@
 	
 	<?php $services_url = get_post_meta($post->ID, 'collaborator_url', true);?></p>
 	<?php $services_thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'square'); ?>
+	<?php $services_thumbnail2 = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'page-full-width'); ?>
 
-		<div class="frontpage-services-single">
-			<div class="frontpage-services-single-visual">
-			<a class="frontpage-services-thumbnail-link" href="<?php echo $services_url; ?>">
-				<img src="<?php echo $services_thumbnail[0] ?>" alt="<?php echo the_title(); ?>" >
-			</a>			
+		
+
+		<div class="frontpage-services-single col-xs-12">
+			<div class="frontpage-services-single-visual" style="background-image: url('<?php echo $services_thumbnail2[0] ?>');">
 			</div>
-			<div class="frontpage-services-content">
-				<a class="frontpage-services-content-link" href="<?php echo $services_url; ?>">
+			<a class="frontpage-services-content-link" href="<?php echo $services_url; ?>">
 				<h2 class="frontpage-services-single-heading"><?php echo the_title(); ?></h2>
-				<?php echo the_excerpt(); ?>
-				</a>	
-			</div>
+			</a>	
 		</div>
 
 	<?php wp_reset_query(); // Reset the loop. ?>
