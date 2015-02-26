@@ -260,49 +260,48 @@ small, .font_small {
  * Frontpage - News
  * ----------------------------------------------------------------------------
  */
-.frontpage-news-item-conatiner {
-  padding: 0px; }
-
-.frontpage-news-item-link {
+.frontpage-news-item {
   float: left;
-  padding: 15px;
-  display: block;
   width: 100%;
   margin: 0px;
-  text-decoration: none;
-  color: #000000; }
-  .frontpage-news-item-link h2 {
-    color: #1068ae; }
-  .frontpage-news-item-link p {
-    color: #9a9a9a; }
+  padding: 0px;
+  list-style: none; }
 
-.frontpage-news-item-link:hover {
-  background-color: #e5e5e5; }
-
-.frontpage-news-item-thumbnail {
+.frontpage-news-item-visual {
   float: left;
-  width: 100%;
-  padding-bottom: 8px; }
-  .frontpage-news-item-thumbnail img {
+  padding-bottom: 15px; }
+  .frontpage-news-item-visual img {
     float: left;
     display: block;
     width: 100%;
     max-width: 100%;
     height: auto; }
 
-.frontpage-news-item-heading {
+.frontpage-news-content-link {
   float: left;
+  display: block;
   width: 100%; }
-  .frontpage-news-item-heading h2 {
-    font-size: 1.2em;
-    margin: 0px;
-    padding: 0px 0px 0.2em 0px; }
+  .frontpage-news-content-link .frontpage-news-heading {
+    margin-top: 0px;
+    padding-top: 0px;
+    color: #1068ae; }
+  .frontpage-news-content-link .frontpage-news-heading:hover {
+    color: #cccccc; }
+  .frontpage-news-content-link .frontpage-news-excerpt {
+    color: #000000; }
+  .frontpage-news-content-link .frontpage-news-excerpt:hover {
+    color: #cccccc; }
 
-.frontpage-news-item-meta {
+.frontpage-news-content-link:hover {
+  text-decoration: none; }
+
+.frontpage-news-date {
   float: left;
-  width: 100%; }
-  .frontpage-news-item-meta p {
-    font-size: 0.8em; }
+  display: block;
+  width: 100%;
+  color: #cccccc;
+  text-align: right;
+  font-size: 0.8em; }
 
 /**
  * Frontpage - Services 
