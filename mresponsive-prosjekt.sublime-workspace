@@ -4,28 +4,64 @@
 		"selected_items":
 		[
 			[
-				"col-xs",
-				"col-xs-12	 bootstrap.css"
+				"bad",
+				"background-color"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"bo",
+				"bottom"
+			],
+			[
+				"pos",
+				"position"
+			],
+			[
+				"back",
+				"background-image: 〔property〕"
+			],
+			[
+				"ccc",
+				"cccccc"
+			],
+			[
+				"me",
+				"meyership-blue"
 			],
 			[
 				"pad",
-				"padding-top"
+				"padding-bottom"
+			],
+			[
+				"text",
+				"text-decoration"
+			],
+			[
+				"col",
+				"color"
+			],
+			[
+				"bor",
+				"border-radius"
+			],
+			[
+				"mar",
+				"margin-top"
+			],
+			[
+				"col-xs",
+				"col-xs-12	 bootstrap.css"
 			],
 			[
 				"no",
 				"none"
 			],
 			[
-				"back",
-				"background-color: 〔property〕"
-			],
-			[
 				"in",
 				"inline-block"
-			],
-			[
-				"text",
-				"text-align"
 			],
 			[
 				"max",
@@ -34,10 +70,6 @@
 			[
 				"wid",
 				"width"
-			],
-			[
-				"bac",
-				"background:   (property)"
 			],
 			[
 				"bac-",
@@ -68,10 +100,6 @@
 				"float"
 			],
 			[
-				"mar",
-				"margin"
-			],
-			[
 				"he",
 				"header	Tag"
 			],
@@ -84,10 +112,37 @@
 	"buffers":
 	[
 		{
+			"contents": "<?php\n/**\n * The main template file\n *\n */\n\nget_header(); ?>\n\n    <div id=\"wrapper\" class=\"container\">\n\n\n\n\n\n	<?php get_template_part( 'template-content-header-big'); ?> \n\n        <div id=\"content-wrapper\">\n        <div id=\"0ntent-full-width\" class=\"no-padding\"> \n           \n		<?php get_template_part( 'template-frontpage-news'); ?> \n           <?php get_template_part( 'template-services'); ?> \n			<?php get_template_part( 'template-collaborators'); ?> \n\n\n	    </div> <!-- .content-full-width -->\n	</div> <!-- #content-wrapper -->\n</div> <!-- #wrapper -->\n\n<?php\nget_footer();\n",
 			"file": "index.php",
+			"file_size": 579,
+			"file_write_time": 130694522250000000,
 			"settings":
 			{
-				"buffer_size": 1084,
+				"buffer_size": 578,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "template-services.php",
+			"settings":
+			{
+				"buffer_size": 1372,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "footer.php",
+			"settings":
+			{
+				"buffer_size": 719,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "_general.scss",
+			"settings":
+			{
+				"buffer_size": 11101,
 				"line_ending": "Unix"
 			}
 		}
@@ -178,12 +233,20 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
+	"expanded_folders":
+	[
+		"/Users/MediaAgency/public_html/mship/wp-content/themes/mresponsive"
+	],
 	"file_history":
 	[
+		"/Users/MediaAgency/public_html/mship/wp-content/themes/mresponsive/functions.php",
+		"/Users/MediaAgency/public_html/mship/wp-content/themes/mresponsive/template-frontpage-news.php",
+		"/Users/MediaAgency/public_html/mship/wp-content/themes/mresponsive/template-services.php",
+		"/Users/MediaAgency/public_html/mship/wp-content/themes/mresponsive/single-services.php",
+		"/Users/MediaAgency/public_html/mship/wp-content/themes/mresponsive/mresponsive-prosjekt.sublime-project",
 		"/Users/MediaAgency/public_html/mship/wp-content/themes/mresponsive/template-content-header-small.php",
 		"/Users/MediaAgency/public_html/mship/wp-content/themes/mresponsive/header.php",
 		"/Users/MediaAgency/public_html/mship/wp-content/themes/mresponsive/page-no-image.php",
-		"/Users/MediaAgency/public_html/mship/wp-content/themes/mresponsive/functions.php",
 		"/Users/MediaAgency/public_html/mship/wp-content/themes/mresponsive/prototype/_style-SM.scss",
 		"/Users/MediaAgency/public_html/mship/wp-content/themes/mresponsive/prototype/_style-MD.scss",
 		"/Users/MediaAgency/public_html/mship/wp-content/themes/mresponsive/prototype/_style-LG.scss",
@@ -228,7 +291,7 @@
 	],
 	"find":
 	{
-		"height": 23.0
+		"height": 35.0
 	},
 	"find_in_files":
 	{
@@ -242,6 +305,11 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"visual",
+			"hero",
+			"cover",
+			"center",
+			"frontpage-collaborators",
 			"main",
 			"content-header",
 			"page",
@@ -270,7 +338,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -279,7 +347,89 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1084,
+						"buffer_size": 578,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								455,
+								455
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"auto_complete_triggers":
+							[
+								{
+									"characters": "<",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								}
+							],
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 161.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "template-services.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1372,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1197,
+								1120
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"auto_complete_triggers":
+							[
+								{
+									"characters": "<",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								}
+							],
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 266.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "footer.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 719,
 						"regions":
 						{
 						},
@@ -310,6 +460,53 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
+					"stack_index": 3,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 3,
+					"file": "_general.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 11101,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6223,
+								5901
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": "<",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								}
+							],
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 5976.0,
+						"zoom_level": 1.0
+					},
 					"stack_index": 0,
 					"type": "text"
 				}
@@ -333,6 +530,12 @@
 				0,
 				1,
 				1
+			],
+			[
+				0,
+				1,
+				1,
+				2
 			]
 		],
 		"cols":
@@ -343,6 +546,7 @@
 		"rows":
 		[
 			0.0,
+			0.432741116751,
 			1.0
 		]
 	},
@@ -401,7 +605,7 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 0,
+	"selected_group": 1,
 	"settings":
 	{
 	},
