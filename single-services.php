@@ -1,47 +1,45 @@
 <?php
 /**
- * The main template file
+ * The template for displaying all pages
  *
  */
-
 get_header(); ?>
 
-<div id="wrapper" class="container">
 
+    <div id="wrapper" class="container">
 
+        <?php get_template_part( 'template-content-header-big'); ?> 
 
+        <div id="content-wrapper">
 
-
-    <?php get_template_part( 'template-content-header-big'); ?>
-
-    <div id="content-wrapper">
-        <div id="content-full-width" class="no-padding">
-
+            <div class="col-sm-12 col-md-8 side-by-side-fill-height">
+            <div id="normal-content" class="col-xs-12">
+            <h1>test</h1>
             <?php
-            if ( have_posts() ) :
                 // Start the Loop.
                 while ( have_posts() ) : the_post();
 
-                    /*
-                     * Include the post format-specific template for the content. If you want to
-                     * use this in a child theme, then include a file called called content-___.php
-                     * (where ___ is the post format) and that will be used instead.
-                     */
-                    get_template_part( 'content', get_post_format() );
+
+                    echo "<h1>" . the_title() . "</h1>";
+                    
+                    echo the_content();
 
                 endwhile;
-            // Previous/next post navigation.
-
-            else :
-                // If no content, include the "No posts found" template.
-                get_template_part( 'content', 'none' );
-
-            endif;
             ?>
+            </div> <!-- #normal-content -->
+            </div>
 
-        </div> <!-- .content-full-width -->
+        <div id="sidebar-right" class="col-sm-12 col-md-4 side-by-side-fill-height">
+            <div class="sidebar"> 
+                <h2>sidebar</h2>
+                <?php get_sidebar( 'content' ); ?>
+            </div> <!-- .sidebar -->   
+        </div> <!-- #sidebar-right -->
+            
+    
     </div> <!-- #content-wrapper -->
-</div> <!-- #wrapper -->
+    </div> <!-- #wrapper -->
+
 
 <?php
 get_footer();

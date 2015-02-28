@@ -12,10 +12,10 @@ get_header(); ?>
 
 
 
-	<?php get_template_part( 'template-content-header-big'); ?> 
+	<?php get_template_part( 'template-content-header-frontpage'); ?> 
 
         <div id="content-wrapper">
-        <div id="content-full-width" class="no-padding"> 
+        <div id="0ntent-full-width" class="no-padding"> 
            
 		<?php get_template_part( 'template-frontpage-news'); ?> 
            <?php get_template_part( 'template-services'); ?> 
