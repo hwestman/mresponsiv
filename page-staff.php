@@ -24,7 +24,7 @@ get_header(); ?>
             foreach($users as $user){ ?>
 
                 <ul class="staff-list">
-                    <a class="staff-list-link">
+                    <a class="staff-list-link" href="<?php get_bloginfo('url') ?>?author=<?php echo $user->ID; ?>">
                     <li class="staff-list-visual">
                         <span class="staff-list-thumbnail-crop">
                             <?php

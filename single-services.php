@@ -47,7 +47,7 @@ get_header(); ?>
 
                     ?>
                     <ul class="sidebar-person">
-                        <a class="person-sidebar-link">
+                        <a class="person-sidebar-link" href="<?php get_bloginfo('url') ?>?author=<?php echo $user->ID; ?>">
                             <li class="sidebar-person-visual">
                         <span class="sidebar-person-thumbnail-crop">
 
@@ -63,7 +63,7 @@ get_header(); ?>
                             </li>
                             <li class="sidebar-person-content">
                                 <h4 class="sidebar-person-name"><?php echo $user->user_firstname." ".$user->user_lastname; ?></h4>
-                                <p class="sidebar-person-title"><?php echo get_user_meta($contactperson,'position',true);  ?></p>
+                                <p class="sidebar-person-title"><?php echo get_user_meta($user->ID,'position',true);  ?></p>
                             </li>
                         </a>
                     </ul>
