@@ -27,6 +27,52 @@ body {
 }
 
 /**
+ * Page - Staff 
+ * ----------------------------------------------------------------------------
+ */
+
+ .staff-list {
+    width: 100%;
+    padding: 0px;
+ }
+
+ .staff-list-link {
+ 	padding: 10px 15px 10px 15px;
+    background-repeat: no-repeat;
+    background-position: center right;
+ 	background-image: url('img/icon-person-sidebar.png');
+ }
+
+ .staff-list-link:hover {
+ 	background-image: url('img/icon-person-sidebar-black.png');
+ }
+
+.staff-list-visual {
+	float: left;
+	width: 90px;
+	padding: 0px;
+	margin-right: 15px;
+}
+
+.staff-list-thumbnail-crop {
+	width: 90px;
+}
+
+.staff-list-content {
+	float: none;
+}
+
+.staff-list-person-heading {
+	text-align: left;
+	padding-top: 15px;
+}
+
+.staff-list-person-text {
+	text-align: left;
+}
+
+
+/**
  * Author - Single person
  * ----------------------------------------------------------------------------
  */
