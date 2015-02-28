@@ -591,6 +591,122 @@ img {
 
 
 
+/**
+ * 0.0 Author - Single person
+ * ----------------------------------------------------------------------------
+ */
+
+.person-list {
+    float: left;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+.person-list-visual {
+    float: left;
+    width: 200px;
+    margin-right: 30px;
+}
+
+.person-image {
+    float: left;
+    border-radius: 50%;
+    overflow: hidden;
+
+    img {
+       width: 100%; 
+       height: auto;
+       display: block;
+    }
+    
+}
+
+.person-list-content {
+    float: none; 
+    overflow: hidden;
+    width: auto;
+
+}
+.person-list-content-person {
+    float: left;
+    width: 100%;
+    display: block;
+    border-bottom: 1px solid #e6e6e6;
+    padding: 10px 15px 30px 15px;
+}    
+
+.person-list-content-person-heading {
+    margin: 0px;
+    padding: 0px;  
+}
+
+.person-list-content-person-text {
+    margin: 0px;
+    padding: 0px;      
+}
+
+.person-info-list {
+    float: left;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;   
+}
+
+.person-info-list-item {
+    float: left;
+    width: 100%;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.person-info-list-item-link {
+    float: left;
+    width: 100%;
+    display: block;
+    padding: 10px 15px 10px 15px;
+    color: #000000;
+    background-repeat: no-repeat;
+    background-position: center right;
+}
+
+.icon-phone {
+    background-image: url('img/icon-phone-green.png');
+}
+
+.icon-phone:hover {
+    background-image: url('img/icon-phone-black.png');
+}
+
+.icon-email{
+    background-image: url('img/icon-email-green.png');
+}
+
+.icon-email:hover{
+    background-image: url('img/icon-email-black.png');
+}
+
+.person-info-list-item-link:hover {
+    text-decoration: none;
+    color: $meyership-blue;
+    background-color: #e6e6e6;
+}
+
+.person-info-list-item-heading {
+    margin: 0px;
+    padding: 0px 0px 5px 0px;
+
+}
+
+.person-info-list-item-text {
+    margin: 0px;
+    padding: 0px;   
+    line-height: 1em;
+    font-size: 0.9em;
+}
+
+
 
 /**
  * 0.0 ˍSidebar

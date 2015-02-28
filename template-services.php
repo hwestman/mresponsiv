@@ -24,7 +24,7 @@
 		<div class="frontpage-services-single col-xs-12">
 			<div class="frontpage-services-single-visual" style="background-image: url('<?php echo $services_thumbnail2[0] ?>');">
 			</div>
-			<a class="frontpage-services-content-link" href="<?php echo $services_url; ?>">
+			<a class="frontpage-services-content-link" href="<?php echo the_permalink(); ?>">
 				<h2 class="frontpage-services-single-heading"><?php echo the_title(); ?></h2>
 			</a>	
 		</div>

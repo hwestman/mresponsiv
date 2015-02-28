@@ -27,6 +27,30 @@ body {
 }
 
 /**
+ * Author - Single person
+ * ----------------------------------------------------------------------------
+ */
+
+ .person-list-visual {
+ 	float: left;
+ 	width: 100%;
+ }
+
+ .person-image {
+ 	width: 120px;
+ 	margin-bottom: 15px;
+ }
+
+ .person-list-content {
+  	float: left;
+ 	width: 100%;	
+ }
+
+.person-list-content-person {
+	padding: 15px;
+}
+
+/**
  * 0.0 Page Title
  * ----------------------------------------------------------------------------
  */

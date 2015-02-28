@@ -6,28 +6,29 @@
 get_header(); ?>
 
 
-    <div id="wrapper" class="container">
+<div id="wrapper" class="container">
 
-        <?php get_template_part( 'template-content-header-big'); ?> 
+    <?php get_template_part( 'template-content-header-big'); ?> 
 
-        <div id="content-wrapper">
+    <div id="content-wrapper">
 
-            <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 side-by-side-fill-height">
+        <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 side-by-side-fill-height">
             <div id="normal-content" class="col-xs-12">
-            <h1>test</h1>
-            <?php
-                // Start the Loop.
-                while ( have_posts() ) : the_post();
+            <?php $items = new WP_Query( array( 'post_type' => 'services') ); ?>
+            <?php if( $items->have_posts() ) : ?>
 
+                <h1 class="post-heading"><?php echo the_title(); ?></h1>
 
-                    echo "<h1>" . the_title() . "</h1>";
-                    
-                    echo the_content();
+                <?php echo the_content(); ?>
 
-                endwhile;
-            ?>
+                <p>Written by: 
+<?php the_author_posts_link(); ?></p>
+
+             <?php wp_reset_query(); // Reset the loop. ?>
+            <?php endif; ?>
+
             </div> <!-- #normal-content -->
-            </div>
+        </div> <!-- .side-by-side-fill-height -->
 
         <div id="sidebar-right" class="col-xs-12 col-sm-12 col-md-4 col-lg-4 side-by-side-fill-height">
             <div class="sidebar">
