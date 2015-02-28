@@ -107,5 +107,24 @@ body {
     padding-top: 75px;
  }
 
+ #footer-partner-heading {
+ 	text-align: center;
+ }
+
+ #footer-partner-links {
+
+
+	li {
+		float: left;
+		width: 100%;
+	}
+
+	a {
+		float: left;
+		line-height: 1em;
+		width: 100%;
+	}
+}
+
 
 } // @media
