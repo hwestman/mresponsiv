@@ -11,7 +11,7 @@ if ( have_posts() ) : while ( have_posts() ) : the_post(); // Starting the loop.
     if(get_post_meta(get_the_ID(), 'maps_url', true)){
 
         ?><div id="hero-image">
-            <iframe id="gmapsiframe" width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/view?key=AIzaSyCom8hD56nB6LI9MnJNXLbXmGu7970IbOU&center=<?php echo get_post_meta(get_the_ID(), 'maps_url', true);?>&zoom=14"></iframe>
+            <iframe id="gmapsiframe" width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCom8hD56nB6LI9MnJNXLbXmGu7970IbOU&q=Meyership&center=<?php echo get_post_meta(get_the_ID(), 'maps_url', true);?>&zoom=14"></iframe>
 		</div>
 
         <?php
