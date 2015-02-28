@@ -204,6 +204,7 @@ function register_services_meta_boxes() {
 
 add_action( 'admin_init', 'register_services_meta_boxes' ); // Add to admin panel
 
+
 /*
 * Function for adding the options tab.
 */
@@ -246,7 +247,6 @@ function update_services_add_options(){
     if( $_POST["contactpersons"]  != "" AND ($key = array_search("ferryman", $_POST["contactpersons"])) !== false){
          unset($_POST["contactpersons"][$key]);
          update_post_meta($post->ID, "contactpersons", $_POST["contactpersons"]);
-
     }
   }
 }
@@ -332,6 +332,91 @@ if( ! function_exists( 'wpt_setup' ) ):
         }
 endif;
 
+
+/**
+ * 8.0 Services (Custom post type)
+ * ----------------------------------------------------------------------------
+ */
+
+//Add custom post type for collaborators
+
+function register_contact_custom_post(){
+
+    register_post_type('contact', array(
+        'label' => __('Kontakt'),
+        'singular_label' => __('Kontakt'),
+        'public' => true,
+        'show_ui' => true, // UI in admin panel
+        'show_in_nav_menus' => true,
+        'capability_type' => 'post',
+        'hierarchical' => false,
+        'rewrite' => array("slug" => "kontakt"), // Permalinks format
+        'supports' => array('title', 'thumbnail')
+    ));
+}
+
+add_action('init', 'register_contact_custom_post'); // Enable Collaborators post
+
+function register_contact_meta_boxes() {
+    add_meta_box("wysiwyg-editor-1", "1. Kolonne", "first_column_box","contact", "normal", "high");
+    add_meta_box("wysiwyg-editor-2", "2. Kolonne", "second_column_box","contact", "normal", "high");
+}
+
+add_action( 'admin_init', 'register_contact_meta_boxes' ); // Add to admin panel
+
+/*
+* Function for adding the options tab.
+*/
+function first_column_box() {
+
+    global $post;
+    $custom = get_post_custom( $post->ID );
+
+    $content = get_post_meta($post->ID, 'first_column', true);
+
+    $args = array(
+        'textarea_rows' => 15,
+        'textarea_name'=>"first_column",
+        'quicktags'=>"true",
+        'media-buttons'=>false
+
+    );
+    wp_editor( $content, "first_col",$args);
+
+}
+
+function second_column_box() {
+
+    global $post;
+    $custom = get_post_custom( $post->ID );
+
+    $content = get_post_meta($post->ID, 'second_column', true);
+
+    $args = array(
+        'textarea_rows' => 15,
+        'textarea_name'=>"second_column",
+        'quicktags'=>"true",
+        'media-buttons'=>false
+
+    );
+    wp_editor( $content, "second_col",$args);
+}
+
+function update_contact_add_options(){
+    global $post;
+
+    if ( $post ){
+        if( $_POST["first_column"]  != "" ){
+            update_post_meta($post->ID, "first_column", $_POST["first_column"]);
+        }
+        if( $_POST["second_column"]  != "" ){
+            update_post_meta($post->ID, "second_column", $_POST["second_column"]);
+        }
+    }
+}
+
+
+add_action( 'save_post', 'update_contact_add_options' );
 
 /**
  * 6.0 MISC
