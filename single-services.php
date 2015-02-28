@@ -30,8 +30,12 @@ get_header(); ?>
             </div>
 
         <div id="sidebar-right" class="col-sm-12 col-md-4 side-by-side-fill-height">
-            <div class="sidebar"> 
-                <h2>Relevante personer</h2>
+            <div class="sidebar">
+                <div class="sidebar-person-heading">
+                    <h2>Kontaktpersoner</h2>
+                </div>
+                
+                
 
                   <ul class="sidebar-person">
                     <a class="person-sidebar-link">
