@@ -652,6 +652,18 @@ small, .font_small {
     height: 240px; }
 
   /**
+   * Sidebar 
+   * ----------------------------------------------------------------------------
+   */
+  .sidebar {
+    min-height: 50px; }
+
+  .side-by-side-fill-height {
+    float: left;
+    width: 100%;
+    display: block; }
+
+  /**
    * 0.0 Page Title
    * ----------------------------------------------------------------------------
    */
@@ -748,6 +760,18 @@ small, .font_small {
 
   #content-header-big {
     height: 225px; }
+
+  /**
+   * Sidebar 
+   * ----------------------------------------------------------------------------
+   */
+  .sidebar {
+    min-height: 50px; }
+
+  .side-by-side-fill-height {
+    float: left;
+    width: 100%;
+    display: block; }
 
   /**
    * 3.0 Header

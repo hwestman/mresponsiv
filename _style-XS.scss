@@ -12,6 +12,21 @@ body {
 }
 
 /**
+ * Sidebar 
+ * ----------------------------------------------------------------------------
+ */
+
+ .sidebar {
+ 	min-height: 50px;
+ }
+
+.side-by-side-fill-height {
+	float: left;
+	width: 100%;
+	display: block;
+}
+
+/**
  * 0.0 Page Title
  * ----------------------------------------------------------------------------
  */
@@ -106,7 +121,7 @@ body {
  * Single - Services 
  * ----------------------------------------------------------------------------
  */
- 
+
  .person-sidebar-link {
     background-position: right center;
  }
