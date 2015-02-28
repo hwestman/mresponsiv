@@ -31,8 +31,36 @@ get_header(); ?>
 
         <div id="sidebar-right" class="col-sm-12 col-md-4 side-by-side-fill-height">
             <div class="sidebar"> 
-                <h2>sidebar</h2>
-                <?php get_sidebar( 'content' ); ?>
+                <h2>Relevante personer</h2>
+
+                  <ul class="sidebar-person">
+                    <a class="person-sidebar-link">
+                    <li class="sidebar-person-visual">
+                        <span class="sidebar-person-thumbnail-crop">
+                            <img class="sidebar-person-thumbnail" src="<?php echo get_template_directory_uri(); ?>/img/mann_square.jpg">
+                        </span>
+                    </li>
+                    <li class="sidebar-person-content">
+                        <h4 class="sidebar-person-name">Geir Gunnar Johansen</h4>
+                        <p class="sidebar-person-title">Docking ansvarlig</p>
+                    </li>
+                    </a>
+                </ul>  
+                
+                  <ul class="sidebar-person">
+                    <a class="person-sidebar-link">
+                    <li class="sidebar-person-visual">
+                        <span class="sidebar-person-thumbnail-crop">
+                            <img class="sidebar-person-thumbnail" src="<?php echo get_template_directory_uri(); ?>/img/mann_square.jpg">
+                        </span>
+                    </li>
+                    <li class="sidebar-person-content">
+                        <h4 class="sidebar-person-name">Anders Henriksen Sten</h4>
+                        <p class="sidebar-person-title">Docking ansvarlig</p>
+                    </li>
+                    </a>
+                </ul>              
+                
             </div> <!-- .sidebar -->   
         </div> <!-- #sidebar-right -->
             

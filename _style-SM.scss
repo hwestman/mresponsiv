@@ -96,6 +96,27 @@ body {
     float: left;
 }
 
+/**
+ * Single - Services 
+ * ----------------------------------------------------------------------------
+ */
+
+ .person-sidebar-link {
+    background-position: right center;
+ }
+
+ .sidebar-person-thumbnail-crop {
+    width: 60px;
+    margin-bottom: 0px;
+ }
+
+ .sidebar-person-content {
+ 	float: none;
+ 	width: auto;
+ 	overflow: hidden;
+ 	padding: 10px 45px 10px 10px; 
+ }
+
 
 /**
  *  Footer

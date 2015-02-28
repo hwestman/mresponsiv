@@ -660,6 +660,78 @@ img {
 
 
 /**
+ * Single - Services 
+ * ----------------------------------------------------------------------------
+ */
+
+ .sidebar-person {
+        float: left;
+        width: 100%; 
+        margin-bottom: 30px;
+ }
+
+ .person-sidebar-link {
+    float: left;
+    width: 100%;
+    display: block;
+    color: #000000;
+    background-image: url('img/icon-person-sidebar.png');
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    cursor: pointer;
+ }
+
+ .person-sidebar-link:hover {
+    color: $meyership-blue;
+    background-image: url('img/icon-person-sidebar-black.png');
+    text-decoration: none;
+ }
+
+ .sidebar-person-visual {
+
+    img {
+    float: left; 
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    }
+ }
+
+ .sidebar-person-thumbnail-crop {
+    float: left;
+    width: 120px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-bottom: 15px;
+ }
+
+ .sidebar-person-content {
+    float: left;
+    width: 100%;
+    padding-right: 55px;
+ }
+
+ .sidebar-person-name {
+    margin-top: 0px;
+    padding-top: 0px;
+    line-height: 1em;
+    margin-bottom: 0.25em;
+ }
+
+ .sidebar-person-title {
+    margin: 0px;
+    padding: 0px;
+    line-height: 1em;
+    font-size: 0.9em;
+ }
+
+
+
+
+
+
+/**
  * 0.0 Footer
  * ----------------------------------------------------------------------------
  */
