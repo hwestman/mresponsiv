@@ -12,7 +12,7 @@ get_header(); ?>
 
         <div id="content-wrapper">
 
-            <div class="col-sm-12 col-md-8 side-by-side-fill-height">
+            <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 side-by-side-fill-height">
             <div id="normal-content" class="col-xs-12">
             <h1>test</h1>
             <?php
@@ -29,7 +29,7 @@ get_header(); ?>
             </div> <!-- #normal-content -->
             </div>
 
-        <div id="sidebar-right" class="col-sm-12 col-md-4 side-by-side-fill-height">
+        <div id="sidebar-right" class="col-xs-12 col-sm-12 col-md-4 col-lg-4 side-by-side-fill-height">
             <div class="sidebar">
                 <div class="sidebar-person-heading">
                     <h2>Kontaktpersoner</h2>
