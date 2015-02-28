@@ -4,11 +4,11 @@ body {
 }
 
 #main {
-	margin-top: 55px;
+	margin-top: 63px;
 }
 
 #content-header-big {
-    height: 260px;
+    height: 295px;
 }
 
 #content-header-small {
@@ -87,7 +87,7 @@ body {
     background-position: center top;
     background-size:cover;
 	width: 100%;
-	height: 270px;
+	height: 340px;
 	position: absolute;
 	margin-right: auto;
 	margin-left: auto;
@@ -104,6 +104,17 @@ body {
  * 0.0 SIDEBAR 
  * ----------------------------------------------------------------------------
  */
+
+
+/**
+ *  Footer
+ * ----------------------------------------------------------------------------
+ */
+
+ #footer-outer {
+    margin-top: -60px;
+    padding-top: 90px;
+ }
 
 
 
