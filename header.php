@@ -103,6 +103,6 @@
 		</header>
 	</div>
 
-	<?php get_template_part( 'template-hero-image'); ?> 
+	<?php get_template_part( 'template-hero-image'); ?>
 
 	<div id="main">

@@ -334,7 +334,7 @@ endif;
 
 
 /**
- * 8.0 Services (Custom post type)
+ * 8.0 Contact (Custom post type)
  * ----------------------------------------------------------------------------
  */
 
@@ -358,11 +358,35 @@ function register_contact_custom_post(){
 add_action('init', 'register_contact_custom_post'); // Enable Collaborators post
 
 function register_contact_meta_boxes() {
+    add_meta_box("maps_box", "Google maps", "maps_box","contact", "normal", "high");
+    add_meta_box("contact_form_box", "ContactForm7", "contact_form_box","contact", "normal", "high");
     add_meta_box("wysiwyg-editor-1", "1. Kolonne", "first_column_box","contact", "normal", "high");
     add_meta_box("wysiwyg-editor-2", "2. Kolonne", "second_column_box","contact", "normal", "high");
 }
 
 add_action( 'admin_init', 'register_contact_meta_boxes' ); // Add to admin panel
+
+function maps_box(){
+    global $post;
+    $custom = get_post_custom( $post->ID );
+
+    ?><p>
+        <label>Link til Google maps</label><br />
+        <input type="text" name="maps_url" value="<?= $custom["maps_url"][0] ?>" style="width:99%;"/>
+    </p><?php
+
+
+}
+function contact_form_box(){
+    global $post;
+    $custom = get_post_custom( $post->ID );
+
+    ?><p>
+        <label>Shortcode for contactform7</label><br />
+        <input type="text" name="contact_form_shortcode" value="<?= esc_html__($custom["contact_form_shortcode"][0])?>" style="width:99%;"/>
+    </p><?php
+
+}
 
 /*
 * Function for adding the options tab.
@@ -379,7 +403,6 @@ function first_column_box() {
         'textarea_name'=>"first_column",
         'quicktags'=>"true",
         'media-buttons'=>false
-
     );
     wp_editor( $content, "first_col",$args);
 
@@ -397,7 +420,6 @@ function second_column_box() {
         'textarea_name'=>"second_column",
         'quicktags'=>"true",
         'media-buttons'=>false
-
     );
     wp_editor( $content, "second_col",$args);
 }
@@ -411,6 +433,12 @@ function update_contact_add_options(){
         }
         if( $_POST["second_column"]  != "" ){
             update_post_meta($post->ID, "second_column", $_POST["second_column"]);
+        }
+        if( $_POST["maps_url"]  != "" ){
+            update_post_meta($post->ID, "maps_url", $_POST["maps_url"]);
+        }
+        if( $_POST["contact_form_shortcode"]  != "" ){
+            update_post_meta($post->ID, "contact_form_shortcode", $_POST["contact_form_shortcode"]);
         }
     }
 }
