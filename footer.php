@@ -10,14 +10,18 @@
 	<div id="footer-inner" class="container">
 		<div id="footer-content" >
 			<div id="footer-partner-heading" class="mb-m">
+				<div class="col-xs-12">
 				<h3>I Meyership konsernet</h3>
+				</div>
 			</div>
 
 			<div class="col-xs-12">
-				<div id="footer-partner-links" class="mb-m">
+				<div class="col-xs-12">
+					<div id="footer-partner-links" class="mb-m">
 
-					<?php wp_nav_menu( array( 'footer-partners' => 'Footer - Partners' ) ); ?>
-					
+						<?php wp_nav_menu( array( 'footer-partners' => 'Footer - Partners' ) ); ?>
+						
+					</div>
 				</div>
 			</div>
 			<div id="footer-copyright" class="mb-s">

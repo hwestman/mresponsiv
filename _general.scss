@@ -672,18 +672,21 @@ img {
  }
 
  .footer-bg {
-    background-color: #ccc;
+    background-color: #000000;
  }
 
 
 #footer-partner-heading {
-    color: #000000;
+    color: #ffffff;
 }
 
 #footer-partner-links {
     float: left;
     width: 100%;
-    padding: 0px;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding: 15px 15px 0px 15px;
+    background-color: #333;
 
     ul {
         float: left;
@@ -695,7 +698,7 @@ img {
 
     li {
         float: left;
-        margin: 0px 15px 10px 0px;
+        margin: 0px 15px 15px 0px;
     }
 
     a {
@@ -709,11 +712,13 @@ img {
     }
 
     a:hover {
-     background-color: #333;
+     background-color: #cccccc;
+     color: #000000;
     }
 }
 
 #footer-copyright {
     text-align: center;
     color: #656565;
+    font-size: 0.8em;
 }
