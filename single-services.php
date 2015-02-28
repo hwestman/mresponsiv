@@ -42,6 +42,8 @@ get_header(); ?>
 
                 $contactpersons = get_post_meta($post->ID, 'contactpersons', true);
 
+                if(!$contactpersons){$contactpersons=array();}
+
                 foreach($contactpersons as $contactperson){
                     $user = get_userdata($contactperson);
 
