@@ -32,6 +32,12 @@ wp_enqueue_style( 'theme-css', get_template_directory_uri() . '/style.css', fals
 // Adding the bootstrap v3.3.1 JavaScript (minified)
 wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/bootstrap/bootstrap.min.js', array( 'jquery' ));
 
+wp_enqueue_script( 'jquery-js', 'https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js');
+
+
+// Adding a javascript file to be used for misc
+wp_enqueue_script( 'onload-js', get_template_directory_uri() . '/js/onload.js');
+
 }
 
 

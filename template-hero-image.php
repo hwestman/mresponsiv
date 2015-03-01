@@ -5,7 +5,7 @@
 ?>
 
 <?php
-if ( have_posts() ) : while ( have_posts() ) : the_post(); // Starting the loop.
+//if ( have_posts() ) : while ( have_posts() ) : the_post(); // Starting the loop.
 
     /*This is ugly, but roy you painted me up in this corner!, :P https://www.youtube.com/watch?v=wzqXggZU3eE*/
     if(get_post_meta(get_the_ID(), 'maps_url', true)){
@@ -43,5 +43,5 @@ if ( have_posts() ) : while ( have_posts() ) : the_post(); // Starting the loop.
 	<?php 		
 	} //end else 
 
-wp_reset_query(); // Reset the loop.
-endwhile; endif;  // Ending the loop.
+//wp_reset_query(); // Reset the loop.
+//endwhile; endif;  // Ending the loop.

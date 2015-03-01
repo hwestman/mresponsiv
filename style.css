@@ -799,31 +799,28 @@ small, .font_small {
 /*
 * contactform7
 */
-#normal-content {
-  white-space: normal; }
-  #normal-content .contact-form-widget form br {
-    margin-bottom: 10px; }
-  #normal-content .contact-form-widget form input, #normal-content .contact-form-widget form textarea {
-    float: left;
-    border-radius: 5px;
-    border: solid black 1px;
-    padding: 10px;
-    line-height: 20px;
-    margin: 10px 0 10px 0;
-    width: 95%; }
-  #normal-content .contact-form-widget form .wpcf7-submit {
-    border-radius: 0;
-    background-color: #79BF08;
-    color: white;
-    border: none;
-    padding: 10px 20px 10px 20px;
-    width: 100px; }
-  #normal-content strong {
-    font-weight: bold; }
-  #normal-content ul {
-    float: left;
-    clear: both;
-    margin-bottom: 1.3em; }
+#normal-content .contact-form-widget form br {
+  margin-bottom: 10px; }
+#normal-content .contact-form-widget form input, #normal-content .contact-form-widget form textarea {
+  float: left;
+  border-radius: 5px;
+  border: solid black 1px;
+  padding: 10px;
+  line-height: 20px;
+  margin: 10px 0 10px 0;
+  width: 95%; }
+#normal-content .contact-form-widget form .wpcf7-submit {
+  border-radius: 0;
+  background-color: #79BF08;
+  color: white;
+  border: none;
+  padding: 10px 20px 10px 20px;
+  width: 100px; }
+#normal-content strong {
+  font-weight: bold; }
+#normal-content ul {
+  float: left;
+  margin-bottom: 1.3em; }
 
 /* Extra small devices (phones, less than 768px) */
 @media (max-width: 767px) {
