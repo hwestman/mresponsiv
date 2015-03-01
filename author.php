@@ -96,8 +96,13 @@ get_header(); ?>
 
 
 			</div> <!-- #full-width-content -->
+
             <div class="col-sm-12 col-md-4 side-by-side-fill-height">
-                <?php echo do_shortcode('[contact-form-7 id="83" title="user-form"]'); ?>
+                <?php
+                    $opt =  get_option('cf7_users_shortcode');
+                    echo do_shortcode('[contact-form-7 id="'.$opt.'" title="user-form"]');
+
+                ?>
 
             </div>
             </div>
