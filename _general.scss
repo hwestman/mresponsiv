@@ -992,3 +992,59 @@ img {
     color: #656565;
     font-size: 0.8em;
 }
+
+
+/*
+* contactform7
+*/
+
+#normal-content{
+  .contact-form-widget{
+      form{
+        p{
+        }
+        br{
+          margin-bottom: 10px;
+
+        }
+        input,textarea{
+          float: left;
+          border-radius: 5px;
+          border: solid black 1px;
+          padding: 10px;
+          line-height: 20px;
+          margin: 10px 0 10px 0;
+          width: 95%;
+        }
+        .wpcf7-submit {
+          border-radius: 0;
+          background-color: $meyership-green;
+          color: white;
+          border: none;
+          padding: 10px 20px 10px 20px;
+          width: 100px;
+        }
+
+        .your-name{
+
+
+        }
+
+      }
+
+  }
+
+  strong{
+    font-weight: bold;
+
+  }
+  ul{
+    float: left;
+    clear: both;
+    margin-bottom: 1.3em;
+  }
+  li{
+  }
+  white-space: normal;
+
+}
