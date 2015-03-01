@@ -299,6 +299,7 @@ function modify_contact_fields( $contactmethods ) {
     $contactmethods['number'] = 'Telefonnummer';
     $contactmethods['hiredate'] = 'Ansatt siden';
     $contactmethods['position'] = 'Stilling';
+    $contactmethods['mobile'] = 'Mobil';
 
     return $contactmethods;
 }
@@ -349,8 +350,8 @@ endif;
 function register_contact_custom_post(){
 
     register_post_type('contact', array(
-        'label' => __('Kontakt'),
-        'singular_label' => __('Kontakt'),
+        'label' => __('Kontaktinfo'),
+        'singular_label' => __('Kontaktinformasjon'),
         'public' => true,
         'show_ui' => true, // UI in admin panel
         'show_in_nav_menus' => true,
@@ -456,5 +457,13 @@ add_action( 'save_post', 'update_contact_add_options' );
  * 6.0 MISC
  * ----------------------------------------------------------------------------
  */
+
+function author_email()  {
+    $user = (isset($_GET['author_name'])) ? get_user_by('slug', $_GET['author_name']) : get_userdata($_GET['author']);
+
+
+    return $user->user_email;
+}
+add_shortcode('authormail', 'author_email');
 
 ?>

@@ -56,7 +56,7 @@ get_header(); ?>
 									Mobil
 								</h4>
 								<p class="person-info-list-item-text ">
-                                    <?php echo $user->number; ?>
+                                    <?php echo $user->mobile; ?>
 								</p>
 							</a>
 						</li>
@@ -68,11 +68,23 @@ get_header(); ?>
 									Telefon
 								</h4>
 								<p class="person-info-list-item-text ">
-                                    <?php echo $user->user_number; ?>
+                                    <?php echo $user->number; ?>
 								</p>
 							</a>
 						</li>
-					</ul>					
+					</ul>
+                    <ul class="person-info-list">
+                        <li class="person-info-list-item">
+                            <a class="person-info-list-item-link" href="" >
+                                <h4 class="person-info-list-item-heading">
+                                    Ansatt siden
+                                </h4>
+                                <p class="person-info-list-item-text ">
+                                    <?php echo $user->hiredate; ?>
+                                </p>
+                            </a>
+                        </li>
+                    </ul>
             	</li>
 
             </ul>
@@ -84,6 +96,10 @@ get_header(); ?>
 
 
 			</div> <!-- #full-width-content -->
+            <div class="col-sm-12 col-md-4 side-by-side-fill-height">
+                <?php echo do_shortcode('[contact-form-7 id="83" title="user-form"]'); ?>
+
+            </div>
             </div>
     		</div> <!-- #normal-content -->
     </div> <!-- #content-wrapper -->
