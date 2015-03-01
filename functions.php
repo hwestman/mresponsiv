@@ -458,6 +458,10 @@ add_action( 'save_post', 'update_contact_add_options' );
  * ----------------------------------------------------------------------------
  */
 
+/*
+ * Mail
+ */
+
 function author_email()  {
     $user = (isset($_GET['author_name'])) ? get_user_by('slug', $_GET['author_name']) : get_userdata($_GET['author']);
 
@@ -465,5 +469,46 @@ function author_email()  {
     return $user->user_email;
 }
 add_shortcode('authormail', 'author_email');
+
+
+add_action('admin_init', 'cf7_users_general_section');
+
+function cf7_users_general_section()
+{
+    add_settings_section(
+        'cf7_users', // Section ID
+        'Contactform7 for users', // Section Title
+        'cf7_users_options_callback', // Callback
+        'general' // What Page?  This makes the section show up on the General Settings Page
+    );
+
+    add_settings_field( // Option 1
+        'cf7_users_shortcode', // Option ID
+        'Form ID', // Label
+        'cf7_users_callback', // !important - This is where the args go!
+        'general', // Page it will be displayed (General Settings)
+        'cf7_users', // Name of our section
+        array( // The $args
+            'cf7_users_shortcode' // Should match Option ID
+        )
+    );
+    register_setting('general', 'cf7_users_shortcode', 'esc_attr');
+}
+
+
+
+    function cf7_users_options_callback()
+    { // Section Callback
+        echo '<p>Contactform7 ID for the form to be used for users</p>';
+    }
+//[contact-form-7 id="83" title="user-form"]
+    function cf7_users_callback($args)
+    {  // Textbox Callback
+        $option = get_option($args[0]);
+
+        ?>
+        <input type="text" id="<?php echo $args[0]?>" name="<?php echo $args[0] ?>" value="<?php echo $option; ?>"style="width:400px;" />
+        <?php
+    }
 
 ?>
