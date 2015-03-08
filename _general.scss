@@ -20,6 +20,7 @@ $margin-large: 60px;
 html {font-size: 1em;} 
 
 body {
+  height: 100%;
   background-color: white;
   font-family: helvetica, arial, sans-serif;
   font-weight: 400;
@@ -48,8 +49,17 @@ h4 {font-size: 1.2em;}
 
 small, .font_small {font-size: 0.833em;}
 
+#main {
+    float: left; 
+    width: 100%;
+    height: 100%;
+}
+
 #wrapper {
-    overflow: hidden;
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin-bottom: 270px;
 }
 
 
@@ -641,8 +651,9 @@ img {
 #content-wrapper {
     float: left;
     width: 100%;
+    height: 100%;
+    min-height: 100%;
     position:relative;
-    min-height: 600px;
     background-color: #ffffff;
     z-index: 10;
 }
@@ -784,7 +795,7 @@ img {
 
 .sidebar {
     padding: 30px 15px 30px 15px;
-    min-height: 600px;
+    min-height: 100%;
 }
 
 #sidebar-right{
@@ -936,7 +947,7 @@ img {
  #footer-outer {
     float: left;
     width: 100%;
-    overflow: hidden;
+    height: 300px;
     z-index: 5;
  }
 
