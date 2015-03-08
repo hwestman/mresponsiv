@@ -799,9 +799,9 @@ small, .font_small {
 /*
 * contactform7
 */
-#normal-content .contact-form-widget form br {
+#normal-content form br {
   margin-bottom: 10px; }
-#normal-content .contact-form-widget form input, #normal-content .contact-form-widget form textarea {
+#normal-content form input, #normal-content form textarea {
   float: left;
   border-radius: 5px;
   border: solid #333 1px;
@@ -809,7 +809,7 @@ small, .font_small {
   line-height: 20px;
   margin: 10px 0 10px 0;
   width: 95%; }
-#normal-content .contact-form-widget form .wpcf7-submit {
+#normal-content form .wpcf7-submit {
   border-radius: 0;
   background-color: #79BF08;
   color: white;

@@ -89,12 +89,6 @@ get_header(); ?>
 
             </ul>
 
-            
-
-
-            
-
-
 			</div> <!-- #full-width-content -->
 
             <div class="col-sm-12 col-md-4 side-by-side-fill-height">
