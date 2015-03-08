@@ -18,7 +18,7 @@ get_header(); ?>
     	<div id="cntent-full-width" class="no-padding"> 
         <div id="normal-content">
            
-		<?php get_template_part( 'template-frontpage-news'); ?> 
+		<?php //not ready yet get_template_part( 'template-frontpage-news'); ?>
            <?php get_template_part( 'template-services'); ?> 
 			<?php get_template_part( 'template-collaborators'); ?> 
 
