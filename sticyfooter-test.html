@@ -43,6 +43,7 @@ html, body {
 }
 #content {
     height: 100%;
+    bottom: 0px;
 }
 
 
@@ -55,12 +56,12 @@ html, body {
 }
 
 #no-sidebar {
-    width: 10px;
+	float: left;
+	width: 1px;
     position: absolute;
     top: 150px;
     bottom: 50px;
-    background-color: #F0F0F0;
-    left: 0;
+    background-color: transparent;
     z-index: -10;
 }
 
@@ -89,13 +90,15 @@ html, body {
 #content-sidebar {
     width: 66.66666667%;
 	height: 100%;
+    position: relative;
+    bottom: 0px;
     background-color:yellow;	
 }
 
 #content-no-sidebar {
+    float: left;
     width: 100%;
 	height: 100%;
-    background-color:yellow;		
 }
 
 .menu {
@@ -104,10 +107,6 @@ html, body {
 	width: 100%;
 	height: 45px;
     z-index: 10;
-}
-
-.sidebar-no-sidebar {
-
 }
 
 
@@ -125,7 +124,7 @@ html, body {
     
     <div id="header"><div id="header-content">Header</div></div>
     <div id="content">
-        <div id="content-no-sidebar">
+        <div id="content-no-sidebar" >
             Main<br />
             Main<br />            Main<br />
             Main<br />            Main<br />
@@ -133,30 +132,6 @@ html, body {
             Main<br />            Main<br />
             Main<br />            Main<br />
             Main<br />            Main<br />
-            Main<br />            Main<br />
-            Main<br />            Main<br />
-            Main<br />            Main<br />
-            Main<br />            Main<br />            Main<br />
-            Main<br />            Main<br />
-            Main<br />            Main<br />
-            Main<br />            Main<br />
-            Main<br />            Main<br />
-            Main<br />            Main<br />            Main<br />
-            Main<br />            Main<br />
-            Main<br />            Main<br />
-            Main<br />            Main<br />
-            Main<br />            Main<br />
-            Main<br />            Main<br />            Main<br />
-            Main<br />            Main<br />
-            Main<br />            Main<br />
-            Main<br />            Main<br />
-            Main<br />            Main<br />
-            Main<br />            Main<br />            Main<br />
-            Main<br />            Main<br />
-            Main<br />            Main<br />
-            Main<br />            Main<br />
-            Main<br />            Main<br />
-            Main<br />            Main<br />            Main<br />
             Main<br />            Main<br />
             Main<br />            Main<br />
             Main<br />            Main<br />
@@ -164,8 +139,8 @@ html, body {
             Main<br />            Main<br />
             Main<br />
         </div>
-        <div id="no-sidebar"  class="">
-            sidebar
+        <div id="no-sidebar">
+           
         </div>
     </div>
 
