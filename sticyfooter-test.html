@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+
+<style type="text/css">
+
+html, body {
+    margin: 0px;
+    padding: 0px;
+    min-height: 100%;
+    height: 100%;
+}
+#wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    width: 970px;
+    margin: 0 auto -50px; /* the bottom margin is the negative value of the footer's height */
+    position: relative
+}
+#footer {
+    height: 50px;
+    background-color: red;
+}
+#footer-content {
+    height: 32px; /* height + top/bottom paddding + top/bottom border must add up to footer height */
+    padding: 8px;
+}
+.push {
+    height: 50px;
+    clear: both;
+}
+
+#header {
+    height: 150px;
+    background-color: green;
+
+}
+#header-content {
+    height: 32px; /* height + top/bottom paddding + top/bottom border must add up to footer height */
+    padding: 8px;
+}
+#content {
+    height: 100%;
+}
+
+
+#sidebar {
+    width: 33.33333333%;
+    position: absolute;
+    top: 150px;
+    bottom: 50px;
+    background-color: #F0F0F0;
+}
+
+#no-sidebar {
+	float: left;
+	width: 1px;
+    position: absolute;
+    top: 150px;
+    bottom: 50px;
+    background-color: #F0F0F0;	
+}
+
+.sidebar-left {
+ 	left: 0;
+}
+
+.sidebar-right {
+ 	right: 0;
+}
+
+.content-sidebar-left {
+	margin-left: 33.33333333%;
+}
+
+.content-sidebar-right {
+	margin-right: 33.33333333%;	
+}
+
+#main {
+    width: 66.66666667%;
+	height: 100%;
+    background-color:yellow;
+}
+
+#content-sidebar {
+    width: 66.66666667%;
+	height: 100%;
+    background-color:yellow;	
+}
+
+#content-no-sidebar {
+    width: 100%;
+	height: 100%;
+    background-color:yellow;		
+}
+
+.menu {
+	position: absolute;
+	background-color: red;
+	width: 100%;
+	height: 45px;
+    z-index: 10;
+}
+
+
+</style>
+
+
+    </head>
+    <body>
+
+    <div class="menu">
+    	
+    </div>
+    
+    <div id="wrapper">
+    
+    <div id="header"><div id="header-content">Header</div></div>
+    <div id="content">
+        <div id="content-sidebar" class="content-sidebar-left">
+            Main<br />
+            Main<br />            Main<br />
+            Main<br />            Main<br />
+            Main<br />            Main<br />
+            Main<br />            Main<br />
+            Main<br />            Main<br />
+            Main<br />            Main<br />
+            Main<br />            Main<br />
+            Main<br />            Main<br />
+            Main<br />            Main<br />
+            Main<br />            Main<br />
+            Main<br />            Main<br />
+            Main<br />
+        </div>
+        <div id="sidebar" class="sidebar-left">
+            sidebar
+        </div>
+    </div>
+
+    <div class="push"></div>
+</div>
+<div id="footer"><div id="footer-content">Footer</div></div>
+</html>
