@@ -4,11 +4,63 @@
 		"selected_items":
 		[
 			[
-				"bad",
-				"background-color"
+				"pad",
+				"padding-top"
+			],
+			[
+				"tex",
+				"text-align"
+			],
+			[
+				"mar",
+				"margin-right"
+			],
+			[
+				"po",
+				"pointer"
+			],
+			[
+				"cur",
+				"cursor"
 			],
 			[
 				"bac",
+				"background-color"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"over",
+				"overflow"
+			],
+			[
+				"a",
+				"auto"
+			],
+			[
+				"bl",
+				"black"
+			],
+			[
+				"back",
+				"background"
+			],
+			[
+				"bord",
+				"border-radius"
+			],
+			[
+				"line",
+				"line-height"
+			],
+			[
+				"ff",
+				"ffffff"
+			],
+			[
+				"bad",
 				"background-color"
 			],
 			[
@@ -20,20 +72,12 @@
 				"position"
 			],
 			[
-				"back",
-				"background-image: 〔property〕"
-			],
-			[
 				"ccc",
 				"cccccc"
 			],
 			[
 				"me",
 				"meyership-blue"
-			],
-			[
-				"pad",
-				"padding-bottom"
 			],
 			[
 				"text",
@@ -46,10 +90,6 @@
 			[
 				"bor",
 				"border-radius"
-			],
-			[
-				"mar",
-				"margin-top"
 			],
 			[
 				"col-xs",
@@ -68,10 +108,6 @@
 				"max-width"
 			],
 			[
-				"wid",
-				"width"
-			],
-			[
 				"bac-",
 				"background-color:   (property)"
 			],
@@ -86,10 +122,6 @@
 			[
 				"min-",
 				"min-height"
-			],
-			[
-				"tex",
-				"text-decoration"
 			],
 			[
 				"co",
@@ -112,13 +144,18 @@
 	"buffers":
 	[
 		{
-			"contents": "<?php\n/**\n * The main template file\n *\n */\n\nget_header(); ?>\n\n    <div id=\"wrapper\" class=\"container\">\n\n\n\n\n\n	<?php get_template_part( 'template-content-header-big'); ?> \n\n        <div id=\"content-wrapper\">\n        <div id=\"0ntent-full-width\" class=\"no-padding\"> \n           \n		<?php get_template_part( 'template-frontpage-news'); ?> \n           <?php get_template_part( 'template-services'); ?> \n			<?php get_template_part( 'template-collaborators'); ?> \n\n\n	    </div> <!-- .content-full-width -->\n	</div> <!-- #content-wrapper -->\n</div> <!-- #wrapper -->\n\n<?php\nget_footer();\n",
 			"file": "index.php",
-			"file_size": 579,
-			"file_write_time": 130694522250000000,
 			"settings":
 			{
-				"buffer_size": 578,
+				"buffer_size": 644,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "single-services.php",
+			"settings":
+			{
+				"buffer_size": 2944,
 				"line_ending": "Unix"
 			}
 		},
@@ -126,23 +163,74 @@
 			"file": "template-services.php",
 			"settings":
 			{
-				"buffer_size": 1372,
+				"buffer_size": 1374,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "footer.php",
+			"file": "author.php",
 			"settings":
 			{
-				"buffer_size": 719,
+				"buffer_size": 2819,
 				"line_ending": "Unix"
 			}
 		},
 		{
+			"file": "page-staff.php",
+			"settings":
+			{
+				"buffer_size": 1772,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "\n\n$meyership-blue:  #1068AE; \n$meyership-green: #79BF08;\n$meyership-lightgray: #F0F0F0;\n$meyership-dark-blue-gray: #4f5b6b;\n\n$margin-small: 15px;\n$margin-medium: 30px;\n$margin-large: 60px;\n \n\n\n\n/**\n * 1.0 Repeatable Patterns\n * ----------------------------------------------------------------------------\n */\n\nhtml {font-size: 1em;} \n\nbody {\n  height: 100%;\n  background-color: white;\n  font-family: helvetica, arial, sans-serif;\n  font-weight: 400;\n  line-height: 1.45;\n  color: #333;\n}\n\np {margin-bottom: 1.3em;}\n\nh1, h2, h3, h4 {\n  margin: 1.414em 0 0.5em;\n  font-weight: inherit;\n  line-height: 1.2;\n}\n\nh1 {\n  margin-top: 0;\n  font-size: 2.074em;\n}\n\nh2 {font-size: 1.728em;}\n\nh3 {font-size: 1.44em;}\n\nh4 {font-size: 1.2em;}\n\nsmall, .font_small {font-size: 0.833em;}\n\n#main {\n    float: left; \n    width: 100%;\n    height: 100%;\n}\n\n#wrapper {\n    min-height: 100%;\n    height: auto !important;\n    height: 100%;\n    margin-bottom: 270px;\n}\n\n\n.mb-s {\n    margin: 0px 0px 10px 0px;\n}\n.mb-m {\n    margin: 0px 0px 30px 0px;\n}\n.mb-xl {\n    margin: 0px 0px 45px 0px;\n}\n/* Margins */\n\n/*bottom*/\n.margin-bottom-small{\n    margin-bottom: $margin-small;\n}\n.margin-bottom-medium{\n    margin-bottom: $margin-medium;\n}\n.margin-bottom-large{\n    margin-bottom: $margin-large;\n}\n\n/*Right*/\n.margin-right-small{\n    margin-right: $margin-small;\n}\n.margin-right-medium{\n    margin-right: $margin-medium;\n}\n.margin-right-large{\n    margin-right: $margin-large;\n}\n\n\n\n/**\n * 0.0 Header\n * ----------------------------------------------------------------------------\n */\n\n.navbar-default {\n    background-color: transparent;\n}\n\n#header {\n    width: 100%;\n	position: fixed;\n    top:0;\n	margin-right: auto;\n	margin-left: auto;\n	z-index: 2;\n	overflow: hidden;\n}\n\n.header-bg {\n	background-color: #ffffff;\n}\n\n\n#site-title-link {\n    color: #000000;\n}\n\n#site-logo {\n        float: left;\n        display: block;\n        width: 42px;\n        height: 42px;\n}\n\n\n\n#site-title {\n    font-weight: normal;\n}\n\n/*\n* — Minor Section Heading —\n*/\n\n\n#blue {\n	background-color: blue;\n}\n\n#content {\n	float: left;\n	min-height: 100%;\n}\n\n\n/*\n* 	Hero Image \n*/\n\n\n#hero-image {\n	width: 100%;\n	position: absolute;\n	margin-right: auto;\n	margin-left: auto;\n	z-index: -2;\n	overflow: hidden;\n\n	img {\n		display: block;\n		float: left;\n		width: 100%;\n		height: auto;\n	}\n}\n\n#product-menu {\n	float: left;\n	padding: 20px 0px 0px 0px;\n\n	li {\n		float: left;\n		margin: 0px 10px 10px 0px;\n	}\n}\n\n#info-menu {\n	float: left;\n	padding: 20px 0px 0px 0px;\n\n	li {\n		float: left;\n		margin: 0px 10px 10px 0px;\n	}\n}\n\n\n/**\n * 0.0 page-title\n * ----------------------------------------------------------------------------\n */\n\n#page-title {\n\n\n    .page-title-text {\n        display: inline-block;\n        line-height: 1em;\n        padding: 10px 15px 8px 15px;\n        color: #ffffff;\n        width: auto;\n        background-color: $meyership-blue;\n    }\n}\n\n\n/**\n * Page - Full width content\n * ----------------------------------------------------------------------------\n */\n\n#normal-content {\n    padding-top: 30px;\n    padding-bottom: 30px;\n\n}\n\n#full-width-content {\n    padding-top: 30px;\n    padding-bottom: 30px;\n\n}\n\n\n\n/**\n * Frontpage \n * ----------------------------------------------------------------------------\n */\n\n\n\n.frontpage-section-heading {\n\n    h2 {\n        padding-top: 0px;\n        margin-top: 0px;\n        text-align: left;\n    }\n}\n\n.frontpage-section {\n    margin-bottom: 45px;\n}\n\n\n/**\n * Frontpage - News\n * ----------------------------------------------------------------------------\n */\n\n\n.frontpage-news-item {\n    float: left;\n    width: 100%;\n    margin: 0px;\n    padding: 0px;\n    list-style: none;  \n}\n\n.frontpage-news-item-visual {\n    float: left;\n    padding-bottom: 15px;\n\nimg {\n    float: left; \n    display: block;\n    width: 100%;\n    max-width: 100%;\n    height: auto;\n}\n\n}\n\n.frontpage-news-content-link {\n        float: left; \n        display: block;\n        width: 100%;    \n\n    .frontpage-news-heading {\n        margin-top: 0px;\n        padding-top: 0px;\n        color: $meyership-blue;\n    }\n\n    .frontpage-news-heading:hover {\n        color: #cccccc;\n    }\n\n    .frontpage-news-excerpt {\n        color: #000000;\n    }\n\n    .frontpage-news-excerpt:hover {\n        color: #cccccc;\n    }\n}\n\n.frontpage-news-content-link:hover {\n    text-decoration: none;\n}\n\n.frontpage-news-date {\n        float: left; \n        display: block;\n        width: 100%; \n        color: #cccccc;\n        text-align: right;\n        font-size: 0.8em;\n}\n\n\n\n/**\n * Frontpage - Services \n * ----------------------------------------------------------------------------\n */\n\n.frontpage-services {\n    float: left;\n    width: 100%;\n    margin: 0px;\n    padding: 0px;\n    list-style: none;  \n}\n\n.frontpage-services-single {\n    float: left;\n    width: 100%;  \n    margin-bottom: 30px;\n}\n\n.frontpage-services-single:hover {\n    opacity: 0.7;\n}\n\n\n\n.frontpage-services-single-visual {\n    float: left; \n    width: 100%;\n    background-repeat: no-repeat;\n    background-position: center top;\n    background-size: cover;\n    height: 170px;\n    position: relative;\n    background-color: #000000;\n\n\n    img {\n        float: left; \n        display: block;\n        width: 100%;\n        max-width: 100%;\n        height: auto;\n        border-radius: 50%;\n    }\n\n    .frontpage-services-thumbnail-link {\n        float: left; \n        display: block;\n        width: 100%;\n        padding-left: 10%;\n        padding-right: 10%;\n        overflow: hidden;\n    }\n\n}\n\n.frontpage-services-content {\n    float: none;\n    width: auto;\n    overflow: hidden;\n    padding-top: 30px;\n}\n\n.frontpage-services-content-link {\n        float: left; \n        height: 100%;\n        position: absolute;\n        bottom: 0;\n        display: block;\n        width: 100%;\n\n        h2 {\n            color: #ffffff;\n            position: absolute;\n            bottom: 0;\n            margin: 0px 15px 15px 15px;\n            padding: 10px 10px 6px 10px;\n            font-size: 1em;\n            font-weight: lighter;\n            background-color: #000000;\n            display: inline-block;\n        }\n\n\n}\n\n.frontpage-services-content-link:hover {\n    \n}\n\n\n\n\n\n\n\n.frontpage-services-single-heading {\n    margin-top: 0px;\n    padding-top: 0px;\n}\n\n.frontpage-services-item-link {\n    float: left;\n    padding: 15px;\n    display: block;\n    width: 100%;\n    margin: 0px;\n    text-decoration: none;\n    color: #000000;\n\n\n    h2 {\n        color: $meyership-blue;\n    }\n\n    p {\n        color: #000000;\n    }\n\n}\n\n.frontpage-services-item-link:hover {\n    background-color: #e5e5e5;\n    text-decoration: none;\n\n}\n\n.frontpage-services-item-thumbnail {\n    float: left;\n    width: 25%;\n    padding-right: 15px;\n\n    img {\n    float: left; \n    display: block;\n    width: 100%;\n    max-width: 100%;\n    height: auto;\n    border-radius: 50%;\n    } \n}\n\n.frontpage-services-item-info {\n    width: auto;\n    overflow: hidden;\n    \n    h2 {\n        margin-top: 0px;\n    }\n}\n\n/**\n * Frontpage - Collaborators\n * ----------------------------------------------------------------------------\n */\n\n.frontpage-collaborators-list {\n    float: left;\n    width: 100%;\n    margin: 0px;\n    padding: 0px;\n    list-style: none;     \n}\n\n.frontpage-collaborators-item {\n\n   img {\n    float: left; \n    display: block;\n    width: 100%;\n    max-width: 100%;\n    height: auto;\n    }\n}\n\n.frontpage-collaborators-item-link {\n    float: left;\n    display: block;\n    width: 100%;\n    margin: 0px;\n    padding: 0px;\n    text-decoration: none;\n}\n\n.frontpage-collaborators-item-link:hover {\n    opacity: 0.7;\n}\n\n\n/**\n * Page - Staff \n * ----------------------------------------------------------------------------\n */\n\n .staff-list {\n    margin: 0px;\n    float: left;\n    width: 33.33333%;\n    padding-right: 15px;\n    padding-left: 15px;\n    list-style: none; \n    padding-bottom: 30px;\n }\n\n .staff-list-link {\n    float: left;\n    padding-top: 15px;\n    padding-bottom: 15px;\n    width: 100%;\n    display: block;\n    color: #000000;\n }\n\n .staff-list-link:hover {\n    background-color: #f3f3f3;\n    text-decoration: none;\n    color: $meyership-blue;\n    cursor: pointer;\n }\n\n.staff-list-visual {\n    float: left;\n    width: 100%;\n    padding-bottom: 15px;\n}\n\n .staff-list-thumbnail-crop {\n    width: 160px;\n    margin: auto;\n    display: block;\n    overflow: hidden;\n    border-radius: 50%;\n\n        img {\n            float: left; \n            display: block;\n            width: 100%;\n            max-width: 100%;\n            height: auto;\n        }\n }\n\n .staff-list-content {\n    float: left;\n    width: 100%;\n }\n\n .staff-list-person-heading {\n    padding: 0px;\n    margin: 0px;\n    text-align: center;\n }\n .staff-list-person-text {\n    padding: 0px;\n    margin: 0px;\n    font-size: 0.9em;\n    text-align: center;\n }\n\n\n/**\n * 0.0 ˍContent\n * ----------------------------------------------------------------------------\n */\n\n\n#content-header {\n    float: left;\n    width: 100%;\n\n    #content-header-big {\n    float: left;\n    width: 100%;\n    }\n\n    #content-header-small {\n    float: left;\n    width: 100%;\n    }\n\n    #content-header-frontpage {\n    float: left;\n    width: 100%;       \n    }\n\n     #content-header-heading {\n        float: left;\n        display: block;\n        line-height: 1em;\n        padding: 10px 15px 8px 15px;\n        margin: 15px 0px 15px 0px;\n        color: #ffffff;\n        width: auto;\n        background-color: $meyership-blue;\n     }\n    \n    h2 {\n        font-size: 1em;\n        margin: 0px;\n        padding: 0px;\n    }\n\n     #content-frontpage-header-heading {\n        float: left;\n        display: block;\n        line-height: 1em;\n        padding: 20px 15px 16px 15px;\n        margin: 15px 0px 15px 0px;\n        color: #ffffff;\n        width: auto;\n        font-size: 1.77em;\n        font-weight: lighter;\n        background-color: $meyership-dark-blue-gray;\n\n        h2 {\n        font-size: 1.44em;\n        margin: 0px;\n        padding: 0px;    \n        }\n\n     }\n    \n\n}\n\n\n#content-wrapper {\n    float: left;\n    width: 100%;\n    height: 100%;\n    min-height: 100%; \n    position:relative;\n    background-color: #ffffff;\n    z-index: 10;\n}\n\n#content-full-width {\n    padding: 40px 0px 0px 0px;\n}\n\n.side-by-side-fill-height{\n    display: table-cell;\n    vertical-align: top;\n    float: none;\n    height: 100%;\n}\n\n\n\n/**\n * 0.0 Author - Single person\n * ----------------------------------------------------------------------------\n */\n\n.person-list {\n    float: left;\n    width: 100%;\n    margin: 0px;\n    padding: 0px;\n    list-style: none;\n}\n\n.person-list-visual {\n    float: left;\n    width: 200px;\n    margin-right: 30px;\n}\n\n.person-image {\n    float: left;\n    border-radius: 50%;\n    overflow: hidden;\n\n    img {\n       width: 100%; \n       height: auto;\n       display: block;\n    }\n    \n}\n\n.person-list-content {\n    float: none; \n    overflow: hidden;\n    width: auto;\n\n}\n.person-list-content-person {\n    float: left;\n    width: 100%;\n    display: block;\n    border-bottom: 1px solid #e6e6e6;\n    padding: 10px 15px 30px 15px;\n}    \n\n.person-list-content-person-heading {\n    margin: 0px;\n    padding: 0px;  \n}\n\n.person-list-content-person-text {\n    margin: 0px;\n    padding: 0px;      \n}\n\n.person-info-list {\n    float: left;\n    width: 100%;\n    margin: 0px;\n    padding: 0px;\n    list-style: none;   \n}\n\n.person-info-list-item {\n    float: left;\n    width: 100%;\n    border-bottom: 1px solid #e6e6e6;\n}\n\n.person-info-list-item-link {\n    float: left;\n    width: 100%;\n    display: block;\n    padding: 10px 15px 10px 15px;\n    color: #000000;\n    background-repeat: no-repeat;\n    background-position: center right;\n}\n\n.icon-phone {\n    background-image: url('img/icon-phone-green.png');\n}\n\n.icon-phone:hover {\n    background-image: url('img/icon-phone-black.png');\n}\n\n.icon-email{\n    background-image: url('img/icon-email-green.png');\n}\n\n.icon-email:hover{\n    background-image: url('img/icon-email-black.png');\n}\n\n.person-info-list-item-link:hover {\n    text-decoration: none;\n    color: $meyership-blue;\n    background-color: #e6e6e6;\n}\n\n.person-info-list-item-heading {\n    margin: 0px;\n    padding: 0px 0px 5px 0px;\n\n}\n\n.person-info-list-item-text {\n    margin: 0px;\n    padding: 0px;   \n    line-height: 1em;\n    font-size: 0.9em;\n}\n\n\n\n/**\n * 0.0 ˍSidebar\n * ----------------------------------------------------------------------------\n */\n\n.sidebar {\n    padding: 30px 15px 30px 15px;\n    min-height: 100%;\n}\n\n#sidebar-right{\n    background-color: $meyership-lightgray;   \n\n    \n    .content{\n        float: left;\n        width: 100%;\n    }\n\n\n\n    .contact-person{\n\n        float: left;\n\n       .left-col{\n            width: 120px;\n            float: left;\n            color: black;\n        }\n        .right-col{\n            width: 90px;\n            float: left;\n\n        }\n\n        img{\n            border: none;\n            float: left;\n            width: 120px;\n\n        }\n        button {\n            margin-top: 15px;\n            color:white;\n            border-radius: 50%;\n            width: 90px;\n            height: 90px;\n            border: none;\n            background-color: $meyership-green;\n        }\n        .name{\n            float: left;\n            clear: both;\n            margin: 30px  0 0 0;\n\n        }\n        .title{\n            float: left;\n            clear: both;\n            margin: 10px  0 0 0;\n        }\n\n    }\n}\n\n\n/**\n * Single - Services \n * ----------------------------------------------------------------------------\n */\n\n .sidebar-person-heading {\n        float: left;\n        width: 100%;\n        margin-bottom: 15px;\n    \n    h2 {\n    margin-top: 0px;\n    padding-top: 0px;\n    }\n\n }\n\n .sidebar-person {\n        float: left;\n        width: 100%; \n        margin-bottom: 30px;\n }\n\n .person-sidebar-link {\n    float: left;\n    width: 100%;\n    display: block;\n    color: #000000;\n    background-image: url('img/icon-person-sidebar.png');\n    background-repeat: no-repeat;\n    background-position: right bottom;\n    cursor: pointer;\n }\n\n .person-sidebar-link:hover {\n    color: $meyership-blue;\n    background-image: url('img/icon-person-sidebar-black.png');\n    text-decoration: none;\n }\n\n .sidebar-person-visual {\n\n    img {\n    float: left; \n    display: block;\n    width: 100%;\n    max-width: 100%;\n    height: auto;\n    }\n }\n\n .sidebar-person-thumbnail-crop {\n    float: left;\n    width: 120px;\n    overflow: hidden;\n    border-radius: 50%;\n    margin-bottom: 15px;\n }\n\n .sidebar-person-content {\n    float: left;\n    width: 100%;\n    padding-right: 55px;\n }\n\n .sidebar-person-name {\n    margin-top: 0px;\n    padding-top: 0px;\n    line-height: 1em;\n    margin-bottom: 0.25em;\n }\n\n .sidebar-person-title {\n    margin: 0px;\n    padding: 0px;\n    line-height: 1em;\n    font-size: 0.9em;\n }\n\n\n\n\n\n\n/**\n * 0.0 Footer\n * ----------------------------------------------------------------------------\n */\n\n #footer-outer {\n    float: left;\n    width: 100%;\n    height: 300px;\n    z-index: 5;\n }\n\n .footer-bg {\n    background-color: #000000;\n }\n\n\n#footer-partner-heading {\n    color: #ffffff;\n}\n\n#footer-partner-links {\n    float: left;\n    width: 100%;\n    padding-right: 15px;\n    padding-left: 15px;\n    padding: 15px 15px 0px 15px;\n    background-color: #333;\n\n    ul {\n        float: left;\n        width: 100%;\n        list-style: none;\n        margin: 0px;\n        padding: 0px;\n    }\n\n    li {\n        float: left;\n        margin: 0px 15px 15px 0px;\n    }\n\n    a {\n\n        float: left;\n        display: block;\n        color: #ffffff;\n        background-color: $meyership-blue;\n        padding: 10px 15px 10px 15px;\n        line-height: 1em;\n        text-decoration: none;\n    }\n\n    a:hover {\n     background-color: #cccccc;\n     color: #000000;\n    }\n}\n\n#footer-copyright {\n    text-align: center;\n    color: #656565;\n    font-size: 0.8em;\n}\n",
 			"file": "_general.scss",
+			"file_size": 15793,
+			"file_write_time": 130696892080000000,
 			"settings":
 			{
-				"buffer_size": 11101,
+				"buffer_size": 15788,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "_style-LG.scss",
+			"settings":
+			{
+				"buffer_size": 1496,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "_style-MD.scss",
+			"settings":
+			{
+				"buffer_size": 1648,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "_style-SM.scss",
+			"settings":
+			{
+				"buffer_size": 2625,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "_style-XS.scss",
+			"settings":
+			{
+				"buffer_size": 3145,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "template-hero-image.php",
+			"settings":
+			{
+				"buffer_size": 1373,
 				"line_ending": "Unix"
 			}
 		}
@@ -235,17 +323,23 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/MediaAgency/public_html/mship/wp-content/themes/mresponsive"
+		"/Users/MediaAgency/public_html/mship/wp-content/themes/mresponsive",
+		"/Users/MediaAgency/public_html/mship/wp-content/themes/mresponsive/css"
 	],
 	"file_history":
 	[
-		"/Users/MediaAgency/public_html/mship/wp-content/themes/mresponsive/functions.php",
-		"/Users/MediaAgency/public_html/mship/wp-content/themes/mresponsive/template-frontpage-news.php",
-		"/Users/MediaAgency/public_html/mship/wp-content/themes/mresponsive/template-services.php",
-		"/Users/MediaAgency/public_html/mship/wp-content/themes/mresponsive/single-services.php",
-		"/Users/MediaAgency/public_html/mship/wp-content/themes/mresponsive/mresponsive-prosjekt.sublime-project",
 		"/Users/MediaAgency/public_html/mship/wp-content/themes/mresponsive/template-content-header-small.php",
+		"/Users/MediaAgency/public_html/mship/wp-content/themes/mresponsive/functions.php",
+		"/Users/MediaAgency/public_html/mship/wp-content/themes/mresponsive/template-content-header-big.php",
+		"/Users/MediaAgency/public_html/mship/wp-content/themes/mresponsive/template-content-header-frontpage.php",
 		"/Users/MediaAgency/public_html/mship/wp-content/themes/mresponsive/header.php",
+		"/Users/MediaAgency/public_html/mship/wp-content/themes/mresponsive/page-fullwidth.php",
+		"/Users/MediaAgency/public_html/mship/wp-content/themes/mresponsive/template-hero-image.php",
+		"/Users/MediaAgency/public_html/mship/wp-content/themes/mresponsive/single-services.php",
+		"/Users/MediaAgency/public_html/mship/wp-content/themes/mresponsive/footer.php",
+		"/Users/MediaAgency/public_html/mship/wp-content/themes/mresponsive/template-services.php",
+		"/Users/MediaAgency/public_html/mship/wp-content/themes/mresponsive/template-frontpage-news.php",
+		"/Users/MediaAgency/public_html/mship/wp-content/themes/mresponsive/mresponsive-prosjekt.sublime-project",
 		"/Users/MediaAgency/public_html/mship/wp-content/themes/mresponsive/page-no-image.php",
 		"/Users/MediaAgency/public_html/mship/wp-content/themes/mresponsive/prototype/_style-SM.scss",
 		"/Users/MediaAgency/public_html/mship/wp-content/themes/mresponsive/prototype/_style-MD.scss",
@@ -305,6 +399,13 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"#main",
+			"main",
+			"#wrapper",
+			"normal",
+			"content-wrapper",
+			"sidebar",
+			"#content-header-frontpage-heading",
 			"visual",
 			"hero",
 			"cover",
@@ -338,7 +439,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -347,15 +448,60 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 578,
+						"buffer_size": 644,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								455,
-								455
+								295,
+								270
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"auto_complete_triggers":
+							[
+								{
+									"characters": "<",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								}
+							],
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "single-services.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2944,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								209,
+								194
 							]
 						],
 						"settings":
@@ -373,30 +519,31 @@
 								}
 							],
 							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 161.0,
+						"translation.y": 108.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 1,
+					"buffer": 2,
 					"file": "template-services.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1372,
+						"buffer_size": 1374,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1197,
-								1120
+								536,
+								536
 							]
 						],
 						"settings":
@@ -417,19 +564,308 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 266.0,
+						"translation.y": 155.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "author.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2819,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								897,
+								729
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"auto_complete_triggers":
+							[
+								{
+									"characters": "<",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								}
+							],
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 236.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "page-staff.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1772,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								448,
+								433
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"auto_complete_triggers":
+							[
+								{
+									"characters": "<",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								}
+							],
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 194.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 5,
+					"file": "_general.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 15788,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								9960,
+								9960
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": "<",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								}
+							],
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 9575.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "footer.php",
+					"buffer": 6,
+					"file": "_style-LG.scss",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 719,
+						"buffer_size": 1496,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								12,
+								13
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": "<",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								}
+							],
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": -0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "_style-MD.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1648,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1358,
+								1358
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": "<",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								}
+							],
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 908.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "_style-SM.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2625,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								276,
+								137
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": "<",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								}
+							],
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 125.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "_style-XS.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3145,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								537,
+								537
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": "<",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								}
+							],
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 413.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "template-hero-image.php",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 1373,
 						"regions":
 						{
 						},
@@ -453,61 +889,13 @@
 									"selector": "text.html"
 								}
 							],
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/PHP/PHP.tmLanguage"
 						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.x": -0.0,
+						"translation.y": 135.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
-					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 0,
-			"sheets":
-			[
-				{
-					"buffer": 3,
-					"file": "_general.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 11101,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								6223,
-								5901
-							]
-						],
-						"settings":
-						{
-							"auto_complete_triggers":
-							[
-								{
-									"characters": "<",
-									"selector": "text.html"
-								},
-								{
-									"characters": ".#",
-									"selector": "text.html"
-								}
-							],
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 5976.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
+					"stack_index": 4,
 					"type": "text"
 				}
 			]
@@ -546,7 +934,7 @@
 		"rows":
 		[
 			0.0,
-			0.432741116751,
+			0.459768143778,
 			1.0
 		]
 	},
@@ -605,7 +993,7 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 1,
+	"selected_group": 0,
 	"settings":
 	{
 	},
