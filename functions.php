@@ -365,7 +365,7 @@ function register_contact_custom_post(){
 add_action('init', 'register_contact_custom_post'); // Enable Collaborators post
 
 function register_contact_meta_boxes() {
-    add_meta_box("maps_box", "Google maps", "maps_box","contact", "normal", "high");
+    //#implementgooglemaps add_meta_box("maps_box", "Google maps", "maps_box","contact", "normal", "high");
     add_meta_box("contact_form_box", "ContactForm7", "contact_form_box","contact", "normal", "high");
     add_meta_box("wysiwyg-editor-1", "1. Kolonne", "first_column_box","contact", "normal", "high");
     add_meta_box("wysiwyg-editor-2", "2. Kolonne", "second_column_box","contact", "normal", "high");
@@ -373,6 +373,8 @@ function register_contact_meta_boxes() {
 
 add_action( 'admin_init', 'register_contact_meta_boxes' ); // Add to admin panel
 
+/*
+ * //#implementgooglemaps
 function maps_box(){
     global $post;
     $custom = get_post_custom( $post->ID );
@@ -384,6 +386,7 @@ function maps_box(){
 
 
 }
+*/
 function contact_form_box(){
     global $post;
     $custom = get_post_custom( $post->ID );
@@ -441,9 +444,10 @@ function update_contact_add_options(){
         if( $_POST["second_column"]  != "" ){
             update_post_meta($post->ID, "second_column", $_POST["second_column"]);
         }
+        /* //#implementgooglemaps
         if( $_POST["maps_url"]  != "" ){
             update_post_meta($post->ID, "maps_url", $_POST["maps_url"]);
-        }
+        }*/
         if( $_POST["contact_form_shortcode"]  != "" ){
             update_post_meta($post->ID, "contact_form_shortcode", $_POST["contact_form_shortcode"]);
         }
