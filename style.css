@@ -759,10 +759,10 @@ small, .font_small {
   z-index: 5; }
 
 .footer-bg {
-  background-color: #000000; }
+  background-color: #e5e5e5; }
 
 #footer-partner-heading {
-  color: #ffffff; }
+  color: #000000; }
 
 #footer-partner-links {
   float: left;
@@ -770,7 +770,7 @@ small, .font_small {
   padding-right: 15px;
   padding-left: 15px;
   padding: 15px 15px 0px 15px;
-  background-color: #333; }
+  background-color: #eeeeee; }
   #footer-partner-links ul {
     float: left;
     width: 100%;
