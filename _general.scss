@@ -1093,6 +1093,7 @@ img {
 #sidebar {
     width: 33.33333333%;
     position: absolute;
+    clear: both;
     top: 350px;
     bottom: 300px;
     background-color: #F0F0F0;
@@ -1117,6 +1118,7 @@ img {
 }
 
 #sidebar-padding {
+    float: left;
     padding: 30px;
 }
 
@@ -1124,7 +1126,9 @@ img {
 
 #content {
     float: left;
+    position: relative;
     width: 100%;
+
 }
 
 .content-sidebar-left {
@@ -1152,4 +1156,26 @@ img {
 
 #content-padding {
     padding: 30px;
+}
+
+.col_1 {
+    width: 50%;
+    position: relative;
+    display: table-cell;
+    vertical-align: top;
+    float: none;
+    height: 100%;
+    background-color: yellow;
+}
+
+.col_2 {
+    width: 50%;
+    position: relative;
+    display: table-cell;
+    vertical-align: top;
+    float: none;
+    height: 100%; 
+    background-color: blue;  
+    bottom: 0px;
+    top: 0px;
 }

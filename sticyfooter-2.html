@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+
+<style type="text/css">
+
+html, body {
+    margin: 0px;
+    padding: 0px;
+    min-height: 100%;
+    height: 100%;
+}
+#wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    width: 970px;
+    margin: 0 auto -50px; /* the bottom margin is the negative value of the footer's height */
+    position: relative;
+}
+#footer {
+    height: 50px;
+    background-color: red;
+}
+#footer-content {
+    height: 32px; /* height + top/bottom paddding + top/bottom border must add up to footer height */
+    padding: 8px;
+}
+.push {
+    height: 50px;
+    clear: both;
+}
+
+#content-header {
+    height: 150px;
+    background-color: green;
+
+}
+#header-content {
+    height: 32px; /* height + top/bottom paddding + top/bottom border must add up to footer height */
+    padding: 8px;
+}
+
+
+
+.menu {
+	position: absolute;
+	background-color: red;
+	width: 100%;
+	height: 45px;
+    z-index: 10;
+}
+
+
+#content {
+
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    width: 970px;
+    margin: 0 auto -50px; /* the bottom margin is the negative value of the footer's height */
+    position: relative;
+
+    position: relative;
+    display: block;
+    
+}
+
+.col_1 {
+    width: 70%;
+    position: relative;
+    display: table-cell;
+    vertical-align: top;
+    float: none;
+    background-color: yellow;
+}
+
+.col_2 {
+    width: 30%;
+    position: relative;
+    display: table-cell;
+    vertical-align: top;
+    float: none;
+    background-color: blue;  
+}
+
+.bs-1 {
+
+}
+
+.bs-2 {
+
+}
+
+
+</style>
+
+
+    </head>
+    <body>
+
+    
+    <div id="wrapper">
+    
+
+    <div id="content">
+        <div class="col_1 ">
+            <div class="bs-1">
+                adasdas
+            </div>
+        </div>
+        <div class="col_2 ">
+            <div class="bs-2">
+            <p>Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Nulla quis lorem ut libero malesuada feugiat. Nulla porttitor accumsan tincidunt. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Vivamus suscipit tortor eget felis porttitor volutpat. Proin eget tortor risus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Sed porttitor lectus nibh. Pellentesque in ipsum id orci porta dapibus. Donec rutrum congue leo eget malesuada.</p>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="push"></div>
+</div>
+<div id="footer"><div id="footer-content">Footer</div></div>
+</html>
