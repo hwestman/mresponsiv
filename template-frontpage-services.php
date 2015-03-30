@@ -4,11 +4,12 @@
  */
 ?>
 
-<div id="frontpage-collaborators-container" class="col-xs-12 frontpage-section">
-	<div class="frontpage-section-heading col-xs-12">
+<div id="frontpage-collaborators-container" class="frontpage-section">
+	<div class="frontpage-section-heading ">
 		<h2>Tjenester</h2>
 	</div>   
-    <div class="col-xs-12">
+
+    <div>
         <div class="frontpage-services">
 
 <?php $items = new WP_Query( array( 'post_type' => 'services', 'posts_per_page' => -1, 'orderby' => 'menu_order', 'order' => 'ASC') ); ?>

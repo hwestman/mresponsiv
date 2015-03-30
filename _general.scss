@@ -17,14 +17,26 @@ $margin-large: 60px;
  * ----------------------------------------------------------------------------
  */
 
-html {font-size: 1em;} 
+html {
+    font-size: 1em;
+    margin: 0px;
+    padding: 0px;
+    min-height: 100%;
+    height: 100%;
+
+} 
 
 body {
-  background-color: white;
-  font-family: helvetica, arial, sans-serif;
-  font-weight: 400;
-  line-height: 1.45;
-  color: #333;
+    font-size: 1em;
+    margin: 0px;
+    padding: 0px;
+    min-height: 100%;
+    height: 100%;    
+    background-color: white;
+    font-family: helvetica, arial, sans-serif;
+    font-weight: 400;
+    line-height: 1.45;
+    color: #333;
 }
 
 p {margin-bottom: 1.3em;}
@@ -47,15 +59,6 @@ h3 {font-size: 1.44em;}
 h4 {font-size: 1.2em;}
 
 small, .font_small {font-size: 0.833em;}
-
-#main {
-
-}
-
-#wrapper {
-    overflow:hidden;
-}
-
 
 .mb-s {
     margin: 0px 0px 10px 0px;
@@ -582,86 +585,46 @@ img {
  */
 
 
-#content-header {
+ #content-header-heading {
     float: left;
-    width: 100%;
+    display: block;
+    line-height: 1em;
+    font-size: 1em;
+    padding: 10px 15px 8px 15px;
+    margin: 10px 0px 15px 0px;
+    color: #ffffff;
+    width: auto;
+    background-color: $meyership-blue;
 
-    #content-header-big {
-    float: left;
-    width: 100%;
-    }
-
-    #content-header-small {
-    float: left;
-    width: 100%;
-    }
-
-    #content-header-frontpage {
-    float: left;
-    width: 100%;       
-    }
-
-     #content-header-heading {
-        float: left;
-        display: block;
-        line-height: 1em;
-        padding: 10px 15px 8px 15px;
-        margin: 15px 0px 15px 0px;
-        color: #ffffff;
-        width: auto;
-        background-color: $meyership-blue;
-     }
-    
     h2 {
         font-size: 1em;
         margin: 0px;
         padding: 0px;
     }
 
-     #content-frontpage-header-heading {
-        float: left;
-        display: block;
-        line-height: 1em;
-        padding: 20px 15px 16px 15px;
-        margin: 15px 0px 15px 0px;
-        color: #ffffff;
-        width: auto;
-        font-size: 1.77em;
-        font-weight: lighter;
-        background-color: $meyership-dark-blue-gray;
+ }
 
-        h2 {
-        font-size: 1.44em;
-        margin: 0px;
-        padding: 0px;    
-        }
-
-     }
-    
-
-}
-
-
-#content-wrapper {
+ #content-header-frontpage {
     float: left;
-    width: 100%;
-    min-height: 600px;
-    position:relative;
-    background-color: #ffffff;
-    z-index: 10;
-}
+    display: block;
+    line-height: 1em;
+    padding: 20px 15px 16px 15px;
+    margin: 15px 0px 15px 0px;
+    color: #ffffff;
+    width: auto;
+    font-size: 1.77em;
+    font-weight: lighter;
+    background-color: $meyership-dark-blue-gray;
+     display: inline-block;
 
-#content-full-width {
-    padding: 40px 0px 0px 0px;
-}
+    h2 {
+    font-size: 1.44em;
+    margin: 0px;
+    padding: 0px;
+   
+    }
 
-.side-by-side-fill-height{
-    display: table-cell;
-    vertical-align: top;
-    float: none;
-    height: 100%;
-}
-
+ }
 
 
 /**
@@ -1046,4 +1009,147 @@ img {
   li{
   }
 
+}
+
+
+
+/* STICKYFOOTER - DEPENDENDT */
+
+#wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -300px; /* the bottom margin is the negative value of the footer's height */
+    position: relative;
+
+}
+
+@media (min-width: 768px) {
+  #wrapper {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  #wrapper {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  #wrapper {
+    width: 1170px;
+  }
+}
+
+
+
+#main {
+    height: 100%;
+}
+
+.push {
+    height: 300px; /* height + Must be same height as footer height */
+    clear: both;
+}
+ 
+#content-header {
+    float: left;
+    width: 100%;
+}
+
+#content-header-inner {
+    float: left;
+    width: 100%;  
+}
+
+#content {
+    height: 100%;
+    bottom: 0px;
+}
+
+#content-header {
+    height: 350px; /* height + Must match Top of sidebar */
+    background-color: transparent;
+}
+
+#fixed-menu-spacer {
+    margin-top: 63px;
+}
+
+#footer {
+    height: 300px;
+    background-color: red;
+}
+
+#footer-inner{
+    height: 282px; /* height + top/bottom paddding + top/bottom border must add up to footer height */
+    padding: 8px;
+}
+
+
+
+
+/* STICKYFOOTER - Sidebars */
+
+#sidebar {
+    width: 33.33333333%;
+    position: absolute;
+    top: 350px;
+    bottom: 300px;
+    background-color: #F0F0F0;
+}
+
+#no-sidebar {
+    float: left;
+    width: 1px;
+    position: absolute;
+    top: 350px;
+    bottom: 300px;
+    background-color: transparent;
+    z-index: -10;
+}
+
+.sidebar-left {
+    left: 0;
+}
+
+.sidebar-right {
+    right: 0;
+}
+
+#sidebar-padding {
+    padding: 30px;
+}
+
+/* STICKYFOOTER - Content */
+
+#content {
+    float: left;
+    width: 100%;
+}
+
+.content-sidebar-left {
+    margin-left: 33.33333333%;
+}
+
+.content-sidebar-right {
+    margin-right: 33.33333333%; 
+}
+
+#content-sidebar {
+    width: 66.66666667%;
+    height: 100%;
+    position: relative;
+    bottom: 0px;
+    background-color: #ffffff;  
+}
+
+#content-no-sidebar {
+    float: left;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+}
+
+#content-padding {
+    padding: 30px;
 }

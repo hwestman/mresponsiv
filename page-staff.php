@@ -1,56 +1,62 @@
 <?php
 /*
-Template Name: Page - Staff
-*/	
+Template Name: Page - Fullwidth 
+*/  
 get_header(); ?>
 
 
-    <div id="wrapper" class="container">
+<?php get_template_part( 'template-content-header-normal'); ?> 
+            
 
-		<?php get_template_part( 'template-content-header-small'); ?> 
 
-        <div id="content-wrapper">
+<div id="content-no-sidebar">
 
-            <div class="col-sm-12 col-md-8 side-by-side-fill-height">
-			<div id="normal-content" class="col-xs-12">
-			<h1>Ansatte</h1>
-			<?php
+    <div id="content-padding">
 
-            $args= array(
-                'order'=>'ASC'
-            );
-            $users = get_users($args);
+    <div id="normal-content">
+    <h1>Ansatte</h1>
+    <?php
 
-            foreach($users as $user){ ?>
+    $args= array(
+        'order'=>'ASC'
+    );
+    $users = get_users($args);
 
-                <ul class="staff-list">
-                    <a class="staff-list-link" href="<?php get_bloginfo('url') ?>?author=<?php echo $user->ID; ?>">
-                    <li class="staff-list-visual">
-                        <span class="staff-list-thumbnail-crop">
-                            <?php
+    foreach($users as $user){ ?>
 
-                            //just a function to get the url instead of img element
-                            preg_match("/src='(.*?)'/i", get_avatar($user->ID), $matches);
-                            $contactperson_photo =  $matches[1];
-                            ?>
-                            <img class="staff-list-thumbnail" src="<?php echo $contactperson_photo ?>">
-                        </span>
-                    </li>
-                    <li class="staff-list-content">
-                        <h4 class="staff-list-person-heading"><?php echo $user->user_firstname." ".$user->user_lastname; ?></h4>
-                        <p class="staff-list-person-text"><?php echo get_user_meta($user->ID,'position',true);  ?></p>
-                    </li>
-                    </a>
-                </ul>
-			<?php } ?>
+        <ul class="staff-list">
+            <a class="staff-list-link" href="<?php get_bloginfo('url') ?>?author=<?php echo $user->ID; ?>">
+            <li class="staff-list-visual">
+                <span class="staff-list-thumbnail-crop">
+                    <?php
 
-			</div> <!-- #normal-content -->
-			</div>
+                    //just a function to get the url instead of img element
+                    preg_match("/src='(.*?)'/i", get_avatar($user->ID), $matches);
+                    $contactperson_photo =  $matches[1];
+                    ?>
+                    <img class="staff-list-thumbnail" src="<?php echo $contactperson_photo ?>">
+                </span>
+            </li>
+            <li class="staff-list-content">
+                <h4 class="staff-list-person-heading"><?php echo $user->user_firstname." ".$user->user_lastname; ?></h4>
+                <p class="staff-list-person-text"><?php echo get_user_meta($user->ID,'position',true);  ?></p>
+            </li>
+            </a>
+        </ul>
+    <?php } ?>
 
-    
-    </div> <!-- #content-wrapper -->
-    </div> <!-- #wrapper -->
+    </div> <!-- #normal-content -->
 
+</div> <!-- .content-padding -->
+
+</div> <!-- #content-no-sidebar -->
+
+
+<div id="no-sidebar" ></div> <!-- #sidebar -->
+
+</div> <!-- .content -->
+<div class="push"></div> <!-- .push must be inside #wrapper -->
+</div> <!-- #wrapper -->
 
 <?php
 get_footer();

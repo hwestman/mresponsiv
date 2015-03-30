@@ -55,8 +55,6 @@
 
 
 
-<div id="page" class="hfeed site">
-
 	<div id="site-header">
 		<header>
 			<nav class="navbar navbar-default navbar-fixed-top header-background header-bg role="navigation">

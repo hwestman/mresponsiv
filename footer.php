@@ -6,7 +6,8 @@
 
 
 
-<div id="footer-outer" class="fluid-container footer-bg">
+<div id="footer" class="fluid-container footer-bg">
+
 	<div id="footer-inner" class="container">
 		<div id="footer-content" >
 			<div id="footer-partner-heading" class="mb-m">

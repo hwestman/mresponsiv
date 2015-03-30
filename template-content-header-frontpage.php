@@ -4,19 +4,13 @@
  */
 ?>
 
-<?php
-	if ( have_posts() ) : the_post(); // Starting the loop.
-	?>
+<div id="wrapper">
 
-        <div id="content-header">
-            <div id="content-header-big">
-                <h2 id="content-frontpage-header-heading">
-                    <?php bloginfo('description'); ?>
-                </h2>
-            </div>
+	<div id="content-header">
+        <div id="fixed-menu-spacer"></div>
+        <div id="content-header-inner">
+        	<h2 id="content-header-frontpage"><?php bloginfo('description'); ?></h2>	
         </div>
+    </div>
 
-<?php 		
-wp_reset_query(); // Reset the loop.
- endif;  // Ending the loop.
-?>
+    <div id="content">

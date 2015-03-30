@@ -5,32 +5,30 @@ Template Name: Page - Fullwidth
 get_header(); ?>
 
 
-    <div id="wrapper" class="container">
+<?php get_template_part( 'template-content-header-normal'); ?> 
+        	
 
-		<?php get_template_part( 'template-content-header-big'); ?> 
 
-        <div id="content-wrapper">
+        <div id="content-no-sidebar" >
+        	<div id="content-padding">
+            Main<br />
+            Main<br />            Main<br />
 
-            <div class="col-sm-12 col-md-8 side-by-side-fill-height">
-            <div id="full-width-content" class="col-xs-12">
-			<?php
+			</div>
+        </div>
 
-				// Start the Loop.
-				while ( have_posts() ) : the_post();
+       	<div id="no-sidebar" >
+          a
+        </div> <!-- #sidebar -->
 
-					echo "<h1>" . get_the_title() . "</h1>";
-					
-					echo the_content();
-
-				endwhile;
-			?>
-			
-			</div> <!-- #ull-width-content -->
-            </div>
+    </div> <!-- .content -->
     
-    </div> <!-- #content-wrapper -->
-    </div> <!-- #wrapper -->
 
+
+
+	<div class="push"></div> <!-- .push must be inside #wrapper -->
+
+</div> <!-- #wrapper -->
 
 <?php
 get_footer();

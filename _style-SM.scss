@@ -1,11 +1,11 @@
 @media (min-width: 768px) and (max-width: 991px) {
 
-body {
+body, html {
+	height: auto;
+	min-height: auto;
 }
 
-#main {
-	margin-top: 55px;
-}
+
 
 #content-header-big {
     height: 225px;
@@ -128,7 +128,7 @@ body {
     background-position: center top;
     background-size:cover;
 	width: 100%;
-	height: 270px;
+	height: 320px;
 	position: absolute;
 	margin-right: auto;
 	margin-left: auto;
@@ -197,6 +197,78 @@ body {
 		width: 100%;
 	}
 }
+
+/* STICKYFOOTER - DEPENDENDT */
+
+#main {
+	height: auto;
+}
+
+#wrapper {
+    min-height: auto;
+    height: auto !important;
+    height:  auto;
+    margin: auto; /* the bottom margin is the negative value of the footer's height */
+    position: relative;
+
+}
+
+.push  {
+	height: 0px;
+}
+
+#content-header {
+    height: 275px; /* height + Must match Top of sidebar */
+    background-color: transparent;
+}
+
+#sidebar {
+	float: left;
+    width: 100%;
+    position: relative;
+    top: 0;
+    bottom: 0;
+    background-color: #F0F0F0;
+}
+
+
+
+
+#no-sidebar {
+    float: left;
+    width: 0px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background-color: transparent;
+    z-index: -10;
+}
+
+#content-sidebar {
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    background-color: #ffffff;  
+}
+
+#content-no-sidebar {
+    float: left;
+    width: 100%;
+    height: auto;
+    background-color: #ffffff;
+}
+
+.content-sidebar-left {
+    margin-left: 0px;
+}
+
+.content-sidebar-right {
+    margin-right: 0px;
+}
+
+ #footer-outer {
+    height: auto;
+ }
 
 
 } // @media

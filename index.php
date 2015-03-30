@@ -1,30 +1,35 @@
 <?php
-/**
- * The main template file
- *
- */
-
+/*
+Template Name: Page - Fullwidth 
+*/	
 get_header(); ?>
 
-    <div id="wrapper" class="container">
+
+<?php get_template_part( 'template-content-header-frontpage'); ?> 
 
 
 
+        <div id="content-no-sidebar" >
+        	<div id="content-padding">
+
+			<?php //not ready yet get_template_part( 'template-frontpage-news'); ?>
+            <?php get_template_part( 'template-frontpage-services'); ?> 
+			<?php get_template_part( 'template-frontpage-collaborators'); ?> 
+
+			</div>
+        </div>
+
+       	<div id="no-sidebar" >
+          
+        </div> <!-- #sidebar -->
+
+    </div> <!-- .content -->
+    
 
 
-	<?php get_template_part( 'template-content-header-frontpage'); ?> 
 
-    <div id="content-wrapper">
-    	<div id="cntent-full-width" class="no-padding"> 
-        <div id="normal-content">
-           
-		<?php //not ready yet get_template_part( 'template-frontpage-news'); ?>
-           <?php get_template_part( 'template-services'); ?> 
-			<?php get_template_part( 'template-collaborators'); ?> 
+	<div class="push"></div> <!-- .push must be inside #wrapper -->
 
-		</div> <!-- #normal-content -->
-	    </div> <!-- .content-full-width -->
-	</div> <!-- #content-wrapper -->
 </div> <!-- #wrapper -->
 
 <?php
