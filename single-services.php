@@ -1,9 +1,9 @@
 <?php
-/**
- * The template for displaying all pages
- *
- */
+/*
+Template Name: Page - Fullwidth 
+*/  
 get_header(); ?>
+
 
 
 <?php get_template_part( 'template-content-header-normal'); ?> 
@@ -18,13 +18,8 @@ get_header(); ?>
 
         <div id="sidebar" class="sidebar-right" >
           <div id="sidebar-padding">
-            Main<br />            Main<br />          Main<br />
-            Main<br />            Main<br /> Main<br />
-            Main<br />            Main<br /> Main<br />
-            Main<br />            Main<br /> Main<br />
-            Main<br />            Main<br /> Main<br />
-            Main<br />            Main<br />
-          </div>
+                <?php get_template_part( 'template-sidebar-staff'); ?> 
+          </div> <!-- #sidebar-padding -->
         </div> <!-- #sidebar -->
 
 </div>
@@ -34,7 +29,7 @@ get_header(); ?>
 </div> <!-- #content -->
 
 
-	<div class="push"></div> <!-- .push must be inside #wrapper -->
+    <div class="push"></div> <!-- .push must be inside #wrapper -->
 
 </div> <!-- #wrapper -->
 

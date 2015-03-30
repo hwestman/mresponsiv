@@ -54,15 +54,12 @@ html, body {
 
 
 #content {
-
-    min-height: 100%;
-    height: auto !important;
-    height: 100%;
     width: 970px;
-    margin: 0 auto -50px; /* the bottom margin is the negative value of the footer's height */
     position: relative;
 
-    position: relative;
+    height: 500px; /* older browsers */
+    height: calc(100% - 50px);
+
     display: block;
     
 }

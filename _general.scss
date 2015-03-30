@@ -833,23 +833,46 @@ img {
         float: left;
         width: 100%; 
         margin-bottom: 30px;
+        position: relative;
+        
  }
 
  .person-sidebar-link {
     float: left;
+    padding: 15px;
     width: 100%;
     display: block;
     color: #000000;
-    background-image: url('img/icon-person-sidebar.png');
-    background-repeat: no-repeat;
-    background-position: right bottom;
     cursor: pointer;
+    text-decoration: underline;
  }
 
  .person-sidebar-link:hover {
     color: $meyership-blue;
-    background-image: url('img/icon-person-sidebar-black.png');
-    text-decoration: none;
+    text-decoration: underline;
+    background-color: #cccccc;
+ }
+
+  .person-sidebar-color-link {
+    float: left;
+    line-height: 1em;
+    font-size: 12px;
+    position: relative;
+    display: block;
+    padding: 10px 15px 8px 15px;
+    margin: 15px 0px 15px 0px;
+    color: #ffffff;
+    background-color: $meyership-green;
+    cursor: pointer;   
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+ }
+
+.person-sidebar-color-link:hover {
+text-decoration:none;
+color: #ffffff;
+background-color: #000000; 
  }
 
  .sidebar-person-visual {
@@ -874,7 +897,7 @@ img {
  .sidebar-person-content {
     float: left;
     width: 100%;
-    padding-right: 55px;
+    padding-right: 70px;
  }
 
  .sidebar-person-name {
@@ -1061,11 +1084,6 @@ img {
     width: 100%;  
 }
 
-#content {
-    height: 100%;
-    bottom: 0px;
-}
-
 #content-header {
     height: 350px; /* height + Must match Top of sidebar */
     background-color: transparent;
@@ -1077,7 +1095,6 @@ img {
 
 #footer {
     height: 300px;
-    background-color: red;
 }
 
 #footer-inner{
@@ -1092,11 +1109,23 @@ img {
 
 #sidebar {
     width: 33.33333333%;
+    position: relative;
+    background-color: #F0F0F0;
+    min-height: 50px;
+}
+
+#sidebar-background {
+    width: 33.33333333%;
+    height: 100%;
+    min-height: 100%;
+    z-index: -20;
     position: absolute;
     clear: both;
-    top: 350px;
-    bottom: 300px;
     background-color: #F0F0F0;
+}
+
+.sidebar-background-right {
+    right: 0;
 }
 
 #no-sidebar {
@@ -1111,10 +1140,12 @@ img {
 
 .sidebar-left {
     left: 0;
+    float: left;
 }
 
 .sidebar-right {
     right: 0;
+    float: right;
 }
 
 #sidebar-padding {
@@ -1126,17 +1157,17 @@ img {
 
 #content {
     float: left;
-    position: relative;
     width: 100%;
-
+    position: relative;
+    height: 100%;
 }
 
-.content-sidebar-left {
-    margin-left: 33.33333333%;
+.content-left {
+    float: left;
 }
 
-.content-sidebar-right {
-    margin-right: 33.33333333%; 
+.content-right {
+    float: right;
 }
 
 #content-sidebar {
@@ -1156,26 +1187,4 @@ img {
 
 #content-padding {
     padding: 30px;
-}
-
-.col_1 {
-    width: 50%;
-    position: relative;
-    display: table-cell;
-    vertical-align: top;
-    float: none;
-    height: 100%;
-    background-color: yellow;
-}
-
-.col_2 {
-    width: 50%;
-    position: relative;
-    display: table-cell;
-    vertical-align: top;
-    float: none;
-    height: 100%; 
-    background-color: blue;  
-    bottom: 0px;
-    top: 0px;
 }

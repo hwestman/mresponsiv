@@ -16,9 +16,9 @@ foreach($contactpersons as $contactperson){
 
     ?>
     <ul class="sidebar-person">
-        <a class="person-sidebar-link" href="<?php get_bloginfo('url') ?>?author=<?php echo $user->ID; ?>">
+       
             <li class="sidebar-person-visual">
-        <span class="sidebar-person-thumbnail-crop">
+        <a class="sidebar-person-thumbnail-crop" href="<?php get_bloginfo('url') ?>?author=<?php echo $user->ID; ?>">
 
             <?php
 
@@ -27,13 +27,18 @@ foreach($contactpersons as $contactperson){
             $contactperson_photo =  $matches[1];
             ?>
 
+            
             <img class="sidebar-person-thumbnail" src="<?php echo $contactperson_photo ?>">
-        </span>
+        </a>
             </li>
             <li class="sidebar-person-content">
+                <a class="sidebar-person-name-link" href="<?php get_bloginfo('url') ?>?author=<?php echo $user->ID; ?>">
                 <h4 class="sidebar-person-name"><?php echo $user->user_firstname." ".$user->user_lastname; ?></h4>
+                </a>
                 <p class="sidebar-person-title"><?php echo get_user_meta($user->ID,'position',true);  ?></p>
             </li>
+        <a class="person-sidebar-color-link" href="<?php get_bloginfo('url') ?>?author=<?php echo $user->ID; ?>">
+        Kontakt
         </a>
     </ul>
 

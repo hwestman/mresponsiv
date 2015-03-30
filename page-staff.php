@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Page - Fullwidth 
+Template Name: Page - Staff
 */  
 get_header(); ?>
 
@@ -9,9 +9,8 @@ get_header(); ?>
             
 
 
-<div id="content-no-sidebar">
-
-    <div id="content-padding">
+        <div id="content-no-sidebar" >
+            <div id="content-padding">
 
     <div id="normal-content">
     <h1>Ansatte</h1>
@@ -47,15 +46,21 @@ get_header(); ?>
 
     </div> <!-- #normal-content -->
 
-</div> <!-- .content-padding -->
 
-</div> <!-- #content-no-sidebar -->
+            </div> <!-- #content-padding -->
+        </div>
+
+        <div id="no-sidebar" >
+          a
+        </div> <!-- #sidebar -->
+
+    </div> <!-- .content -->
+    
 
 
-<div id="no-sidebar" ></div> <!-- #sidebar -->
 
-</div> <!-- .content -->
-<div class="push"></div> <!-- .push must be inside #wrapper -->
+    <div class="push"></div> <!-- .push must be inside #wrapper -->
+
 </div> <!-- #wrapper -->
 
 <?php

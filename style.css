@@ -680,22 +680,42 @@ small, .font_small {
 .sidebar-person {
   float: left;
   width: 100%;
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+  position: relative; }
 
 .person-sidebar-link {
   float: left;
+  padding: 15px;
   width: 100%;
   display: block;
   color: #000000;
-  background-image: url("img/icon-person-sidebar.png");
-  background-repeat: no-repeat;
-  background-position: right bottom;
-  cursor: pointer; }
+  cursor: pointer;
+  text-decoration: underline; }
 
 .person-sidebar-link:hover {
   color: #1068ae;
-  background-image: url("img/icon-person-sidebar-black.png");
-  text-decoration: none; }
+  text-decoration: underline;
+  background-color: #cccccc; }
+
+.person-sidebar-color-link {
+  float: left;
+  line-height: 1em;
+  font-size: 12px;
+  position: relative;
+  display: block;
+  padding: 10px 15px 8px 15px;
+  margin: 15px 0px 15px 0px;
+  color: #ffffff;
+  background-color: #79bf08;
+  cursor: pointer;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px; }
+
+.person-sidebar-color-link:hover {
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #000000; }
 
 .sidebar-person-visual img {
   float: left;
@@ -714,7 +734,7 @@ small, .font_small {
 .sidebar-person-content {
   float: left;
   width: 100%;
-  padding-right: 55px; }
+  padding-right: 70px; }
 
 .sidebar-person-name {
   margin-top: 0px;
@@ -837,10 +857,6 @@ small, .font_small {
   float: left;
   width: 100%; }
 
-#content {
-  height: 100%;
-  bottom: 0px; }
-
 #content-header {
   height: 350px;
   /* height + Must match Top of sidebar */
@@ -850,8 +866,7 @@ small, .font_small {
   margin-top: 63px; }
 
 #footer {
-  height: 300px;
-  background-color: red; }
+  height: 300px; }
 
 #footer-inner {
   height: 282px;
@@ -861,11 +876,21 @@ small, .font_small {
 /* STICKYFOOTER - Sidebars */
 #sidebar {
   width: 33.33333333%;
+  position: relative;
+  background-color: #F0F0F0;
+  min-height: 50px; }
+
+#sidebar-background {
+  width: 33.33333333%;
+  height: 100%;
+  min-height: 100%;
+  z-index: -20;
   position: absolute;
   clear: both;
-  top: 350px;
-  bottom: 300px;
   background-color: #F0F0F0; }
+
+.sidebar-background-right {
+  right: 0; }
 
 #no-sidebar {
   float: left;
@@ -877,10 +902,12 @@ small, .font_small {
   z-index: -10; }
 
 .sidebar-left {
-  left: 0; }
+  left: 0;
+  float: left; }
 
 .sidebar-right {
-  right: 0; }
+  right: 0;
+  float: right; }
 
 #sidebar-padding {
   float: left;
@@ -889,14 +916,15 @@ small, .font_small {
 /* STICKYFOOTER - Content */
 #content {
   float: left;
+  width: 100%;
   position: relative;
-  width: 100%; }
+  height: 100%; }
 
-.content-sidebar-left {
-  margin-left: 33.33333333%; }
+.content-left {
+  float: left; }
 
-.content-sidebar-right {
-  margin-right: 33.33333333%; }
+.content-right {
+  float: right; }
 
 #content-sidebar {
   width: 66.66666667%;
@@ -913,26 +941,6 @@ small, .font_small {
 
 #content-padding {
   padding: 30px; }
-
-.col_1 {
-  width: 50%;
-  position: relative;
-  display: table-cell;
-  vertical-align: top;
-  float: none;
-  height: 100%;
-  background-color: yellow; }
-
-.col_2 {
-  width: 50%;
-  position: relative;
-  display: table-cell;
-  vertical-align: top;
-  float: none;
-  height: 100%;
-  background-color: blue;
-  bottom: 0px;
-  top: 0px; }
 
 /* Extra small devices (phones, less than 768px) */
 @media (max-width: 767px) {
@@ -1096,6 +1104,9 @@ small, .font_small {
   .sidebar-person-thumbnail-crop {
     width: 60px;
     margin-bottom: 0px; }
+
+  .person-sidebar-color-link {
+    padding-left: 70px; }
 
   .sidebar-person-content {
     float: none;
@@ -1294,6 +1305,9 @@ small, .font_small {
   .sidebar-person-thumbnail-crop {
     width: 60px;
     margin-bottom: 0px; }
+
+  .person-sidebar-color-link {
+    margin-left: 70px; }
 
   .sidebar-person-content {
     float: none;
