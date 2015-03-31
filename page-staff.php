@@ -22,8 +22,9 @@ get_header(); ?>
 
 
 
-    <div id="normal-content">
-    <h1>Ansatte</h1>
+    <div class="staff-page-heading">
+        <h1>Ansatte</h1>
+    </div>
     <?php
 
     $args= array(
@@ -54,17 +55,9 @@ get_header(); ?>
         </ul>
     <?php } ?>
 
-    </div> <!-- #normal-content -->
-
-
-            </div> <!-- #content-padding -->
-        </div>
-
-        <div id="no-sidebar" >
-          a
-        </div> <!-- #sidebar -->
-
-    </div> <!-- .content -->
+</div> <!-- #content-padding -->
+</div> <!-- #content-no-sidebar --> 
+</div> <!-- .content -->
     
 
 
