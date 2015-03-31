@@ -1,6 +1,7 @@
 MRESPONSIVE
 
 Services og Products
+------------------------
 
 - Services er en tjeneste "Til lands" og forteller noe om en ting. 
 - Product er en service som har flere ting under seg feks Container som skal liste opp mange containere. 
