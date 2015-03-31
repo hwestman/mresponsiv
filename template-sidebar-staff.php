@@ -17,7 +17,7 @@ foreach($contactpersons as $contactperson){
     <ul class="sidebar-person">
        
             <li class="sidebar-person-visual">
-        <a class="sidebar-person-thumbnail-crop" href="<?php get_bloginfo('url') ?>?author=<?php echo $user->ID; ?>">
+        <a class="sidebar-person-thumbnail-crop" href="<?php echo get_author_posts_url($user->ID);?>">
 
             <?php
 
