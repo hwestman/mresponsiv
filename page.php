@@ -9,14 +9,11 @@ get_header(); ?>
   <div id="content-padding">
 
     <article>
-   esadadasda
-<?php  while ( have_posts() ) : the_post(); ?>
-  <?php the_content(); ?>
-<?php endwhile; ?>
-  <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
-<?php  ?>
-
-
+      <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+        <?php  get_template_part( 'content-normal'); ?> 
+      <?php endwhile; else : ?>
+        <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+      <?php endif; ?>
     </article>
  
   </div> <!-- #content-padding -->

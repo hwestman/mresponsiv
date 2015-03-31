@@ -12,8 +12,9 @@ get_header(); ?>
         <div id="content-no-sidebar" >
         	<div id="content-padding">
 
-			<?php //not ready yet get_template_part( 'template-frontpage-news'); ?>
+			
             <?php get_template_part( 'template-frontpage-services'); ?> 
+            <?php get_template_part( 'template-frontpage-news'); ?>
 			<?php get_template_part( 'template-frontpage-collaborators'); ?> 
 
 			</div>

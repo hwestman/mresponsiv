@@ -59,10 +59,11 @@ add_action( 'wp_enqueue_scripts', 'add_resources' );
 add_theme_support( 'post-thumbnails' );
 
 function register_costume_thumbnail_sizes (){
-    add_image_size( 'square', 400, 400, true ); // 400px x 400px (H x W Crop = true)
-    add_image_size( 'page-full-width', 1170, 320, true ); // 1170x x 650px (H x W , Crop = true)
-    add_image_size( 'collaborator', 300, 216, true ); // 300x x 216px (H x W , Crop = true)
-    add_image_size( 'news', 560, 400, true ); // 560x x 400px (H x W , Crop = true)
+    add_image_size( 'square', 400, 400, true ); // 400px x 400px (Width x Height, Crop = true)
+    add_image_size( 'page-full-width', 1170, 320, true ); // 1170x x 650px (Width x Height, Crop = true)
+    add_image_size( 'collaborator', 300, 216, true ); // 300x x 216px (Width x Height, Crop = true)
+    add_image_size( 'news', 560, 400, true ); // 560px x 400px (Width x Height, Crop = true)
+    add_image_size( 'polaroid', 720, 540, true ); // 720px x 540px (Width x Height, Crop = true)
 }
 
 add_action( 'after_setup_theme', 'register_costume_thumbnail_sizes' ); // Enable the costume sizes
