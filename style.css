@@ -963,16 +963,31 @@ img.aligncenter {
 /*
 * contactform7
 */
+.author-sidebar h3 {
+  float: left;
+  width: 100%;
+  margin: 0px;
+  padding: 0px 0px 5px 0px; }
+.author-sidebar p {
+  font-size: 0.9em; }
+
+.wpcf7 form p {
+  float: left;
+  width: 100%; }
+.wpcf7 form .wpcf7-not-valid-tip {
+  float: left;
+  width: 100%; }
 .wpcf7 form br {
   margin-bottom: 10px; }
 .wpcf7 form input, .wpcf7 form textarea {
   float: left;
   border-radius: 5px;
-  border: solid #333 1px;
+  border: solid #cccccc 1px;
   padding: 10px;
   line-height: 20px;
   margin: 10px 0 10px 0;
-  width: 95%; }
+  width: 100%;
+  resize: none; }
 .wpcf7 form .wpcf7-submit {
   border-radius: 0;
   background-color: #79bf08;
@@ -980,6 +995,11 @@ img.aligncenter {
   border: none;
   padding: 10px 20px 10px 20px;
   width: 100px; }
+.wpcf7 form .wpcf7-response-output {
+  float: left;
+  width: 100%;
+  margin: 0px;
+  padding: 15px; }
 .wpcf7 strong {
   font-weight: bold; }
 .wpcf7 ul {

@@ -88,6 +88,12 @@ get_header(); ?>
 
 <div id="sidebar" class="sidebar-right" >
   <div id="sidebar-padding">
+        <div class="author-sidebar">
+            <h3>Send en melding!</h3>
+            <p>Her kan du kontakte <?php echo $user->user_firstname; ?> direkte.</p>         
+        </div>
+
+
         <?php
             $opt =  get_option('cf7_users_shortcode');
             echo do_shortcode('[contact-form-7 id="'.$opt.'" title="user-form"]');
