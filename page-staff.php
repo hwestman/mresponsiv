@@ -12,8 +12,19 @@ get_header(); ?>
         <div id="content-no-sidebar" >
             <div id="content-padding">
 
-    <div id="normal-content">
-    <h1>Ansatte</h1>
+
+<?php if ( have_posts() ) : ?>
+  <?php while ( have_posts() ) : the_post(); ?>    
+   <?php the_content(); ?>
+  <?php endwhile; ?>
+<?php endif; ?>
+
+
+
+
+    <div class="staff-page-heading">
+        <h1>Ansatte</h1>
+    </div>
     <?php
 
     $args= array(
@@ -44,17 +55,9 @@ get_header(); ?>
         </ul>
     <?php } ?>
 
-    </div> <!-- #normal-content -->
-
-
-            </div> <!-- #content-padding -->
-        </div>
-
-        <div id="no-sidebar" >
-          a
-        </div> <!-- #sidebar -->
-
-    </div> <!-- .content -->
+</div> <!-- #content-padding -->
+</div> <!-- #content-no-sidebar --> 
+</div> <!-- .content -->
     
 
 

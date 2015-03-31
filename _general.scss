@@ -93,6 +93,76 @@ small, .font_small {font-size: 0.833em;}
     margin-right: $margin-large;
 }
 
+/**
+ * Alignments
+ */
+
+.alignleft {
+    display: inline;
+    float: left;
+}
+
+.alignright {
+    display: inline;
+    float: right;
+}
+
+.aligncenter {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+blockquote.alignleft,
+.wp-caption.alignleft,
+img.alignleft {
+    margin: 0.4em 1.6em 1.6em 0;
+}
+
+blockquote.alignright,
+.wp-caption.alignright,
+img.alignright {
+    margin: 0.4em 0 1.6em 1.6em;
+}
+
+blockquote.aligncenter,
+.wp-caption.aligncenter,
+img.aligncenter {
+    clear: both;
+    margin-top: 0.4em;
+    margin-bottom: 1.6em;
+}
+
+.wp-caption.alignleft,
+.wp-caption.alignright,
+.wp-caption.aligncenter {
+    margin-bottom: 0.6em;
+}
+
+
+/**
+ *  Captions
+ */
+
+.wp-caption {
+    margin-bottom: 1.6em;
+    max-width: 100%;
+}
+
+.wp-caption img[class*="wp-image-"] {
+    display: block;
+    margin: 0;
+}
+
+.wp-caption-text {
+    color: #707070;
+    color: rgba(51, 51, 51, 0.7);
+    font-family: "Noto Sans", sans-serif;
+    font-size: 12px;
+    line-height: 1.5;
+    padding: 0.5em 0;
+}
+
 
 
 /**
@@ -239,11 +309,14 @@ small, .font_small {font-size: 0.833em;}
 
 
 .frontpage-section-heading {
+    float: left;
+    width: 100%;
 
     h2 {
-        padding-top: 0px;
-        margin-top: 0px;
+        margin: 0px;
+        padding: 0px 0px 30px 0px;
         text-align: left;
+        font-size: 2.074em;
     }
 }
 
@@ -323,6 +396,64 @@ img {
  * Frontpage - Services 
  * ----------------------------------------------------------------------------
  */
+
+ .fp-service-item {
+    float: left;
+    width: 100%;
+    margin-bottom: 45px;
+ }
+
+
+.fp-service-visual {
+    float: left;
+    padding-bottom: 15px;
+
+    img {
+        float: left; 
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+
+}
+
+.fp-service-thumbnail-link {
+    float: left; 
+    display: block;
+    width: 100%;
+}
+
+.fp-service-text-left {
+    text-align: left;
+}
+
+.fp-service-text-right {
+    text-align: right;
+}
+
+.fp-service-heading-link {
+    color: $meyership-blue;
+    text-decoration: none;
+
+    h2 {
+        margin: 0px;
+    }
+}
+
+.fp-service-heading-link:hover {
+    color: #cccccc;
+    text-decoration: none;
+}
+
+.fp-service-excerpt-link {
+    color: #000000; 
+}
+
+.fp-service-excerpt-link:hover {
+    color: #cccccc;
+    text-decoration: none;
+}
 
 .frontpage-services {
     float: left;
@@ -513,6 +644,18 @@ img {
  * ----------------------------------------------------------------------------
  */
 
+ .staff-page-heading {
+    float: left;
+    width: 100%;
+
+    h1 {
+        margin: 0px;
+        padding: 0px 0px 30px 0px;
+        text-align: left;
+        font-size: 2.074em;
+    }
+ }
+
  .staff-list {
     margin: 0px;
     float: left;
@@ -628,7 +771,7 @@ img {
 
 
 /**
- * 0.0 Author - Single person
+ * Author - Single person
  * ----------------------------------------------------------------------------
  */
 
@@ -897,7 +1040,6 @@ background-color: #000000;
  .sidebar-person-content {
     float: left;
     width: 100%;
-    padding-right: 70px;
  }
 
  .sidebar-person-name {
@@ -915,6 +1057,76 @@ background-color: #000000;
  }
 
 
+/**
+ * Archive news 
+ * ----------------------------------------------------------------------------
+ */
+
+ .news-archive-thumbnail-link {
+    float: left;
+    width: 30%;
+
+    img {
+        float: left; 
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+
+ }
+
+
+
+ .news-archive-single-content {
+    float: left;
+    width: 70%;
+    display: block;
+    padding-left: 15px;
+
+    h2 {
+        padding: 0px;
+        margin: 0px 0px 5px 0px;
+        float: none;
+    }
+
+    p {
+        float: none;
+    }
+
+    .news-archive-heading-link {
+        color: $meyership-blue;
+    }
+
+    .news-archive-heading-link:hover {
+        color: #cccccc;
+        text-decoration: none;
+    }
+
+ }
+
+ .news-archive-single-container {
+    float: left;
+    width: 100%;
+    padding-bottom: 30px;
+ }
+
+ .news-archive-meta {
+    float: left;
+    width: 100%;
+    display: block;
+    color: #B3B3B3;
+    font-size: 0.8em;
+    margin: 0px 0px 5px 0px;
+ }
+
+ .news-archive-excerpt-link {
+    color: #000000;
+ }
+ .news-archive-excerpt-link:hover {
+    color: #cccccc;
+    text-decoration: none;
+ }
 
 
 
@@ -989,7 +1201,7 @@ background-color: #000000;
 * contactform7
 */
 
-#normal-content{
+.wpcf7 {
       form{
         p{
         }

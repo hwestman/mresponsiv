@@ -144,6 +144,63 @@ small, .font_small {
   margin-right: 60px; }
 
 /**
+ * Alignments
+ */
+.alignleft {
+  display: inline;
+  float: left; }
+
+.alignright {
+  display: inline;
+  float: right; }
+
+.aligncenter {
+  display: block;
+  margin-right: auto;
+  margin-left: auto; }
+
+blockquote.alignleft,
+.wp-caption.alignleft,
+img.alignleft {
+  margin: 0.4em 1.6em 1.6em 0; }
+
+blockquote.alignright,
+.wp-caption.alignright,
+img.alignright {
+  margin: 0.4em 0 1.6em 1.6em; }
+
+blockquote.aligncenter,
+.wp-caption.aligncenter,
+img.aligncenter {
+  clear: both;
+  margin-top: 0.4em;
+  margin-bottom: 1.6em; }
+
+.wp-caption.alignleft,
+.wp-caption.alignright,
+.wp-caption.aligncenter {
+  margin-bottom: 0.6em; }
+
+/**
+ *  Captions
+ */
+.wp-caption {
+  margin-bottom: 1.6em;
+  max-width: 100%; }
+
+.wp-caption img[class*="wp-image-"] {
+  display: block;
+  margin: 0; }
+
+.wp-caption-text {
+  color: #707070;
+  color: rgba(51, 51, 51, 0.7);
+  font-family: "Noto Sans", sans-serif;
+  font-size: 12px;
+  line-height: 1.5;
+  padding: 0.5em 0; }
+
+/**
  * 0.0 Header
  * ----------------------------------------------------------------------------
  */
@@ -242,10 +299,14 @@ small, .font_small {
  * Frontpage 
  * ----------------------------------------------------------------------------
  */
-.frontpage-section-heading h2 {
-  padding-top: 0px;
-  margin-top: 0px;
-  text-align: left; }
+.frontpage-section-heading {
+  float: left;
+  width: 100%; }
+  .frontpage-section-heading h2 {
+    margin: 0px;
+    padding: 0px 0px 30px 0px;
+    text-align: left;
+    font-size: 2.074em; }
 
 .frontpage-section {
   margin-bottom: 45px; }
@@ -301,6 +362,49 @@ small, .font_small {
  * Frontpage - Services 
  * ----------------------------------------------------------------------------
  */
+.fp-service-item {
+  float: left;
+  width: 100%;
+  margin-bottom: 45px; }
+
+.fp-service-visual {
+  float: left;
+  padding-bottom: 15px; }
+  .fp-service-visual img {
+    float: left;
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto; }
+
+.fp-service-thumbnail-link {
+  float: left;
+  display: block;
+  width: 100%; }
+
+.fp-service-text-left {
+  text-align: left; }
+
+.fp-service-text-right {
+  text-align: right; }
+
+.fp-service-heading-link {
+  color: #1068ae;
+  text-decoration: none; }
+  .fp-service-heading-link h2 {
+    margin: 0px; }
+
+.fp-service-heading-link:hover {
+  color: #cccccc;
+  text-decoration: none; }
+
+.fp-service-excerpt-link {
+  color: #000000; }
+
+.fp-service-excerpt-link:hover {
+  color: #cccccc;
+  text-decoration: none; }
+
 .frontpage-services {
   float: left;
   width: 100%;
@@ -436,6 +540,15 @@ small, .font_small {
  * Page - Staff 
  * ----------------------------------------------------------------------------
  */
+.staff-page-heading {
+  float: left;
+  width: 100%; }
+  .staff-page-heading h1 {
+    margin: 0px;
+    padding: 0px 0px 30px 0px;
+    text-align: left;
+    font-size: 2.074em; }
+
 .staff-list {
   margin: 0px;
   float: left;
@@ -529,7 +642,7 @@ small, .font_small {
     padding: 0px; }
 
 /**
- * 0.0 Author - Single person
+ * Author - Single person
  * ----------------------------------------------------------------------------
  */
 .person-list {
@@ -733,8 +846,7 @@ small, .font_small {
 
 .sidebar-person-content {
   float: left;
-  width: 100%;
-  padding-right: 70px; }
+  width: 100%; }
 
 .sidebar-person-name {
   margin-top: 0px;
@@ -747,6 +859,57 @@ small, .font_small {
   padding: 0px;
   line-height: 1em;
   font-size: 0.9em; }
+
+/**
+ * Archive news 
+ * ----------------------------------------------------------------------------
+ */
+.news-archive-thumbnail-link {
+  float: left;
+  width: 30%; }
+  .news-archive-thumbnail-link img {
+    float: left;
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto; }
+
+.news-archive-single-content {
+  float: left;
+  width: 70%;
+  display: block;
+  padding-left: 15px; }
+  .news-archive-single-content h2 {
+    padding: 0px;
+    margin: 0px 0px 5px 0px;
+    float: none; }
+  .news-archive-single-content p {
+    float: none; }
+  .news-archive-single-content .news-archive-heading-link {
+    color: #1068ae; }
+  .news-archive-single-content .news-archive-heading-link:hover {
+    color: #cccccc;
+    text-decoration: none; }
+
+.news-archive-single-container {
+  float: left;
+  width: 100%;
+  padding-bottom: 30px; }
+
+.news-archive-meta {
+  float: left;
+  width: 100%;
+  display: block;
+  color: #B3B3B3;
+  font-size: 0.8em;
+  margin: 0px 0px 5px 0px; }
+
+.news-archive-excerpt-link {
+  color: #000000; }
+
+.news-archive-excerpt-link:hover {
+  color: #cccccc;
+  text-decoration: none; }
 
 /**
  * 0.0 Footer
@@ -800,9 +963,9 @@ small, .font_small {
 /*
 * contactform7
 */
-#normal-content form br {
+.wpcf7 form br {
   margin-bottom: 10px; }
-#normal-content form input, #normal-content form textarea {
+.wpcf7 form input, .wpcf7 form textarea {
   float: left;
   border-radius: 5px;
   border: solid #333 1px;
@@ -810,16 +973,16 @@ small, .font_small {
   line-height: 20px;
   margin: 10px 0 10px 0;
   width: 95%; }
-#normal-content form .wpcf7-submit {
+.wpcf7 form .wpcf7-submit {
   border-radius: 0;
   background-color: #79bf08;
   color: white;
   border: none;
   padding: 10px 20px 10px 20px;
   width: 100px; }
-#normal-content strong {
+.wpcf7 strong {
   font-weight: bold; }
-#normal-content ul {
+.wpcf7 ul {
   float: left;
   margin-bottom: 1.3em; }
 
@@ -1105,9 +1268,6 @@ small, .font_small {
     width: 60px;
     margin-bottom: 0px; }
 
-  .person-sidebar-color-link {
-    padding-left: 70px; }
-
   .sidebar-person-content {
     float: none;
     width: auto;
@@ -1115,13 +1275,24 @@ small, .font_small {
     padding: 10px 45px 10px 10px; }
 
   /**
+   * Archive news 
+   * ----------------------------------------------------------------------------
+   */
+  .news-archive-thumbnail-link {
+    float: left;
+    width: 100%;
+    padding-bottom: 15px; }
+
+  .news-archive-single-content {
+    float: left;
+    width: 100%;
+    display: block;
+    padding-left: 0px; }
+
+  /**
    *  Footer
    * ----------------------------------------------------------------------------
    */
-  #footer-outer {
-    margin-top: -45px;
-    padding-top: 60px; }
-
   /* STICKYFOOTER - DEPENDENDT */
   #main {
     height: auto; }
@@ -1183,7 +1354,14 @@ small, .font_small {
   .content-sidebar-right {
     margin-right: 0px; }
 
-  #footer-outer {
+  #footer {
+    float: left;
+    width: 100%;
+    height: auto; }
+
+  #footer-inner {
+    float: left;
+    width: 100%;
     height: auto; } }
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 991px) {
@@ -1306,9 +1484,6 @@ small, .font_small {
     width: 60px;
     margin-bottom: 0px; }
 
-  .person-sidebar-color-link {
-    margin-left: 70px; }
-
   .sidebar-person-content {
     float: none;
     width: auto;
@@ -1319,9 +1494,19 @@ small, .font_small {
    *  Footer
    * ----------------------------------------------------------------------------
    */
-  #footer-outer {
-    margin-top: -60px;
-    padding-top: 75px; }
+  #footer {
+    float: left;
+    width: 100%;
+    height: auto; }
+
+  #footer-inner {
+    float: left;
+    width: 100%;
+    height: auto; }
+
+  #footer-content {
+    float: left;
+    width: 100%; }
 
   #footer-partner-heading {
     text-align: center; }
@@ -1393,15 +1578,6 @@ small, .font_small {
     height: auto; } }
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1199px) {
-  #content-header-big {
-    height: 295px; }
-
-  #content-header-small {
-    min-height: 55px; }
-
-  #content-header-frontpage {
-    height: 225px; }
-
   /**
    * 3.0 Header
    * ----------------------------------------------------------------------------
