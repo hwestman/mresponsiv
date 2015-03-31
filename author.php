@@ -13,7 +13,10 @@ get_header(); ?>
     <div id="content-padding">
 
             <?php
-            $user = wp_get_current_user(); ?>
+
+            $user = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : get_userdata(intval($author));
+
+            ?>
 
         <div class="person-info-container">
             <ul class="person-list">
