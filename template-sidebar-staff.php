@@ -4,8 +4,7 @@
 </div>
 
 <?php
-global $post;
-$custom = get_post_custom( $post->ID );
+$post = get_post();
 
 $contactpersons = get_post_meta($post->ID, 'contactpersons', true);
 
@@ -43,4 +42,5 @@ foreach($contactpersons as $contactperson){
     </ul>
 
 <?php }
+wp_reset_postdata();
 ?>
