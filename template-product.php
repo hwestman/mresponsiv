@@ -22,24 +22,29 @@ $theLink = get_permalink($post->ID);
             'hierarchical'             => true,
             'exclude'                  => '0,1'
         );
-        $categories = get_categories( $args );?>
-        <ul class="categories">
-        <?php foreach($categories as $cat){
+        if($catId){
+            $categories = get_categories( $args );?>
 
-            $query = new WP_Query('category_name='.$cat->name);?>
-            <li><ul class="sub-category">
+            <ul class="categories">
+                <?php foreach($categories as $cat){
 
-                <li class="sub-category-header"><?php echo $cat->name; ?></li>
-                <?php while ( $query->have_posts() ) : $query->the_post(); ?>
+                    $query = new WP_Query('category_name='.$cat->name);?>
+                    <li><ul class="sub-category">
 
-                    <li class="sub-category-item"><a href="<?php echo $theLink."?postID=".get_the_ID();?>"><?php the_title(); ?></a></li>
+                            <li class="sub-category-header"><?php echo $cat->name; ?></li>
+                            <?php while ( $query->have_posts() ) : $query->the_post(); ?>
 
-                <?php endwhile;  wp_reset_query(); ?>
+                                <li class="sub-category-item"><a href="<?php echo $theLink."?postID=".get_the_ID();?>"><?php the_title(); ?></a></li>
 
-            </ul></li>
+                            <?php endwhile;  wp_reset_query(); ?>
 
+                        </ul></li>
+
+                <?php } ?>
+            </ul>
         <?php } ?>
-        </ul>
+
+
 
     </div> <!-- #sidebar-padding -->
 </div> <!-- #sidebar -->
