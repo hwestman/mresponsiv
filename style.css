@@ -642,7 +642,7 @@ img.aligncenter {
     padding: 0px; }
 
 /**
- * 0.0 Author - Single person
+ * Author - Single person
  * ----------------------------------------------------------------------------
  */
 .person-list {
@@ -963,9 +963,9 @@ img.aligncenter {
 /*
 * contactform7
 */
-#normal-content form br {
+.wpcf7 form br {
   margin-bottom: 10px; }
-#normal-content form input, #normal-content form textarea {
+.wpcf7 form input, .wpcf7 form textarea {
   float: left;
   border-radius: 5px;
   border: solid #333 1px;
@@ -973,16 +973,16 @@ img.aligncenter {
   line-height: 20px;
   margin: 10px 0 10px 0;
   width: 95%; }
-#normal-content form .wpcf7-submit {
+.wpcf7 form .wpcf7-submit {
   border-radius: 0;
   background-color: #79bf08;
   color: white;
   border: none;
   padding: 10px 20px 10px 20px;
   width: 100px; }
-#normal-content strong {
+.wpcf7 strong {
   font-weight: bold; }
-#normal-content ul {
+.wpcf7 ul {
   float: left;
   margin-bottom: 1.3em; }
 
