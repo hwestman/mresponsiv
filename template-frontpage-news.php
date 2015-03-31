@@ -4,11 +4,11 @@
  */
 ?>
 
-<div id="frontpage-collaborators-container" class="col-xs-12 frontpage-section">
-	<div class="frontpage-section-heading col-xs-12">
+
+	<div class="frontpage-section-heading">
 		<h2>Nyheter</h2>
 	</div>   
-<div class="col-xs-12" >
+
 
 
 

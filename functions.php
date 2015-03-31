@@ -64,6 +64,7 @@ function register_costume_thumbnail_sizes (){
     add_image_size( 'collaborator', 300, 216, true ); // 300x x 216px (Width x Height, Crop = true)
     add_image_size( 'news', 560, 400, true ); // 560px x 400px (Width x Height, Crop = true)
     add_image_size( 'polaroid', 720, 540, true ); // 720px x 540px (Width x Height, Crop = true)
+    add_image_size( 'sideway', 650, 300, true ); // 650px x 300px (Width x Height, Crop = true)
 }
 
 add_action( 'after_setup_theme', 'register_costume_thumbnail_sizes' ); // Enable the costume sizes

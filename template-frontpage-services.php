@@ -11,24 +11,70 @@
 
     <div>
         <div class="frontpage-services">
-
+  
 <?php $items = new WP_Query( array( 'post_type' => 'services', 'posts_per_page' => -1, 'orderby' => 'menu_order', 'order' => 'ASC') ); ?>
 <?php if( $items->have_posts() ) : ?>
  <?php while( $items->have_posts() ) : $items->the_post(); ?>
 	
 	<?php $services_url = get_post_meta($post->ID, 'collaborator_url', true);?></p>
 	<?php $services_thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'square'); ?>
-	<?php $services_thumbnail2 = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'page-full-width'); ?>
+	<?php $services_thumbnail2 = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'sideway'); ?>
 
-		
+<?php 
 
-		<div class="frontpage-services-single col-xs-12">
-			<div class="frontpage-services-single-visual" style="background-image: url('<?php echo $services_thumbnail2[0] ?>');">
+	$i++;
+	if ($i % 2) {
+	?>
+
+	<div class="fp-service-item">
+		<div class="fp-servic-col col-xs-12 col-sm-6 col-md-6 col-lg-6">
+			<div class="fp-service-visual">
+				<a class="fp-service-thumbnail-link" href="<?php echo the_permalink(); ?>">
+					<img src="<?php echo $services_thumbnail2[0] ?>">
+				</a>
 			</div>
-			<a class="frontpage-services-content-link" href="<?php echo the_permalink(); ?>">
-				<h2 class="frontpage-services-single-heading"><?php echo the_title(); ?></h2>
-			</a>	
+		</div>	
+		<div class="fp-servic-col col-xs-12 col-sm-6 col-md-6 col-lg-6">
+			<div class="fp-service-text fp-service-text-left">
+				<a class="fp-service-heading-link" href="<?php echo the_permalink(); ?>">
+					<h2><?php echo the_title(); ?></h2>
+				</a>
+				<a class="fp-service-excerpt-link" href="<?php echo the_permalink(); ?>">
+					<?php echo the_excerpt(); ?>
+				</a>
+			</div>
 		</div>
+	</div>
+
+	<?php 
+	} else {
+	?>
+
+	<div class="fp-service-item">
+		<div class="fp-servic-col col-xs-12 col-sm-6 col-md-push-6 col-md-6 col-lg-6">
+			<div class="fp-service-visual">
+				<a class="fp-service-thumbnail-link" href="<?php echo the_permalink(); ?>">
+					<img src="<?php echo $services_thumbnail2[0] ?>">
+				</a>
+			</div>
+		</div>	
+		<div class="fp-servic-col col-xs-12 col-sm-6 col-md-pull-6 col-md-6 col-lg-6">
+			<div class="fp-service-text fp-service-text-left">
+				<a class="fp-service-heading-link" href="<?php echo the_permalink(); ?>">
+					<h2><?php echo the_title(); ?></h2>
+				</a>
+				<a class="fp-service-excerpt-link" href="<?php echo the_permalink(); ?>">
+					<?php echo the_excerpt(); ?>
+				</a>
+			</div>
+		</div>
+	</div>
+
+
+	<?php 
+	}
+	?>
+
 
 	<?php wp_reset_query(); // Reset the loop. ?>
 	<?php endwhile;?>
