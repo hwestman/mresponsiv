@@ -35,7 +35,7 @@ get_header(); ?>
     foreach($users as $user){ ?>
 
         <ul class="staff-list">
-            <a class="staff-list-link" href="<?php echo get_the_author_link();?>">
+            <a class="staff-list-link" href="<?php echo get_author_posts_url($user->ID);?>">
             <li class="staff-list-visual">
                 <span class="staff-list-thumbnail-crop">
                     <?php
