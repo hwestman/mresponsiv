@@ -500,7 +500,8 @@ add_action( 'save_post', 'update_contact_add_options' );
  */
 
 function author_email()  {
-    $user = (isset($_GET['author_name'])) ? get_user_by('slug', $_GET['author_name']) : get_userdata($_GET['author']);
+
+    $user = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : get_userdata(intval($author));
 
 
     return $user->user_email;
