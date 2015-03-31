@@ -16,6 +16,10 @@ En enkelt container er en post som tillhører en sub-category av en category med
 4. Legger til ny post i category 8-fot
 5. Nå listets product opp i sidebar til service Container
 
+Linkene i sidebar benytter en spesiell url og linker ikke til single.php for visning, men til samme url som service slik at den kan benytte samme sidebar. (ingen SEO her og det er litt dumt)
+
+
+
 
 
 
