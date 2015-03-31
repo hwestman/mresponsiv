@@ -198,19 +198,50 @@ function register_services_custom_post(){
         'capability_type' => 'post',
         'hierarchical' => false,
         'rewrite' => array("slug" => "tjenester"), // Permalinks format
-        'supports' => array('title','editor', 'thumbnail')
+        'supports' => array('title','editor', 'thumbnail','custom-fields')
     ));
 }
 
 add_action('init', 'register_services_custom_post'); // Enable Collaborators post
 
 function register_services_meta_boxes() {
+    add_meta_box("services_meta_product", "Product", "services_add_options_product", "services", "normal", "high");
     add_meta_box("services_meta", "Meta", "services_add_options", "services", "normal", "low");
 }
 
 add_action( 'admin_init', 'register_services_meta_boxes' ); // Add to admin panel
 
 
+function services_add_options_product() {
+
+global $post;
+    $isProduct = get_post_meta($post->ID, 'isProduct', true);
+?>
+    <p>
+        <label>Service is a product</label>
+        <input type="checkbox" class="is-product" name="isProduct" value="" style="margin-left: 2px"
+            <?php if($isProduct){
+                echo "checked";
+            }
+        ?> />
+    </p>
+<?php
+}
+function update_services_add_options_product(){
+    global $post;
+
+    $var = $_POST["isProduct"];
+
+    if ( $post ){
+        if( isset($_POST["isProduct"])){
+
+            update_post_meta($post->ID, "isProduct",1);
+        }else{
+            update_post_meta($post->ID, "isProduct",0);
+        }
+    }
+}
+add_action( 'save_post', 'update_services_add_options_product' );
 /*
 * Function for adding the options tab.
 */

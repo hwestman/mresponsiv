@@ -1,37 +1,28 @@
 <?php
-/*
-Template Name: Page - Fullwidth 
-*/  
+
 get_header(); ?>
 
 
 
-<?php get_template_part( 'template-content-header-normal'); ?> 
-
-        <div id="content-sidebar" class="content-left" >
-          <div id="content-padding">
-            Main<br />
+<?php get_template_part( 'template-content-header-normal');
 
 
-      </div>
-        </div>
+$post = get_post();
 
-        <div id="sidebar" class="sidebar-right" >
-          <div id="sidebar-padding">
-                <?php get_template_part( 'template-sidebar-staff'); ?> 
-          </div> <!-- #sidebar-padding -->
-        </div> <!-- #sidebar -->
-
-</div>
-
-<div id="sidebar-background" class="sidebar-background-right">
-  
-</div> <!-- #content -->
+$isProduct = get_post_meta($post->ID, 'isProduct', true);
 
 
-    <div class="push"></div> <!-- .push must be inside #wrapper -->
+if($isProduct){
+    get_template_part('template-product');
+}else{
+    get_template_part('template-service');
+}
+
+?>
+
 
 </div> <!-- #wrapper -->
 
 <?php
+
 get_footer();
