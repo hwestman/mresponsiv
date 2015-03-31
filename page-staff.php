@@ -12,6 +12,16 @@ get_header(); ?>
         <div id="content-no-sidebar" >
             <div id="content-padding">
 
+
+<?php if ( have_posts() ) : ?>
+  <?php while ( have_posts() ) : the_post(); ?>    
+   <?php the_content(); ?>
+  <?php endwhile; ?>
+<?php endif; ?>
+
+
+
+
     <div id="normal-content">
     <h1>Ansatte</h1>
     <?php

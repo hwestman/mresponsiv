@@ -216,7 +216,7 @@ body, html {
  }
 
    .person-sidebar-color-link {
-  	padding-left: 70px;
+ 
   }
 
  .sidebar-person-content {
@@ -226,16 +226,31 @@ body, html {
  	padding: 10px 45px 10px 10px; 
  }
 
+/**
+ * Archive news 
+ * ----------------------------------------------------------------------------
+ */
+
+ .news-archive-thumbnail-link {
+    float: left;
+    width: 100%;
+    padding-bottom: 15px;
+ }
+
+ .news-archive-single-content {
+    float: left;
+    width: 100%;
+    display: block;
+    padding-left: 0px;
+ }
+
 
 /**
  *  Footer
  * ----------------------------------------------------------------------------
  */
 
- #footer-outer {
-    margin-top: -45px;
-    padding-top: 60px;
- }
+
 
 
 /* STICKYFOOTER - DEPENDENDT */
@@ -311,8 +326,18 @@ body, html {
     margin-right: 0px;
 }
 
- #footer-outer {
-    height: auto;
+
+  #footer {
+	float: left;
+	width: 100%;
+	height: auto;
  }
+
+ #footer-inner {
+ 	float: left;
+	width: 100%;
+	height: auto;
+ }
+
 
 } // @media

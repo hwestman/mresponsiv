@@ -733,8 +733,7 @@ small, .font_small {
 
 .sidebar-person-content {
   float: left;
-  width: 100%;
-  padding-right: 70px; }
+  width: 100%; }
 
 .sidebar-person-name {
   margin-top: 0px;
@@ -747,6 +746,51 @@ small, .font_small {
   padding: 0px;
   line-height: 1em;
   font-size: 0.9em; }
+
+/**
+ * Archive news 
+ * ----------------------------------------------------------------------------
+ */
+.news-archive-thumbnail-link {
+  float: left;
+  width: 30%; }
+  .news-archive-thumbnail-link img {
+    float: left;
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto; }
+
+.news-archive-single-content {
+  float: left;
+  width: 70%;
+  display: block;
+  padding-left: 15px; }
+  .news-archive-single-content h2 {
+    padding: 0px;
+    margin: 0px 0px 5px 0px;
+    float: none; }
+  .news-archive-single-content p {
+    float: none; }
+
+.news-archive-single-container {
+  float: left;
+  width: 100%;
+  padding-bottom: 30px; }
+
+.news-archive-meta {
+  float: left;
+  width: 100%;
+  display: block;
+  color: #B3B3B3;
+  font-size: 0.8em;
+  margin: 0px 0px 5px 0px; }
+
+.news-archive-excerpt-link {
+  color: #000000; }
+
+.news-archive-excerpt-link:hover {
+  color: #000000; }
 
 /**
  * 0.0 Footer
@@ -1105,9 +1149,6 @@ small, .font_small {
     width: 60px;
     margin-bottom: 0px; }
 
-  .person-sidebar-color-link {
-    padding-left: 70px; }
-
   .sidebar-person-content {
     float: none;
     width: auto;
@@ -1115,13 +1156,24 @@ small, .font_small {
     padding: 10px 45px 10px 10px; }
 
   /**
+   * Archive news 
+   * ----------------------------------------------------------------------------
+   */
+  .news-archive-thumbnail-link {
+    float: left;
+    width: 100%;
+    padding-bottom: 15px; }
+
+  .news-archive-single-content {
+    float: left;
+    width: 100%;
+    display: block;
+    padding-left: 0px; }
+
+  /**
    *  Footer
    * ----------------------------------------------------------------------------
    */
-  #footer-outer {
-    margin-top: -45px;
-    padding-top: 60px; }
-
   /* STICKYFOOTER - DEPENDENDT */
   #main {
     height: auto; }
@@ -1183,7 +1235,14 @@ small, .font_small {
   .content-sidebar-right {
     margin-right: 0px; }
 
-  #footer-outer {
+  #footer {
+    float: left;
+    width: 100%;
+    height: auto; }
+
+  #footer-inner {
+    float: left;
+    width: 100%;
     height: auto; } }
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 991px) {
@@ -1306,9 +1365,6 @@ small, .font_small {
     width: 60px;
     margin-bottom: 0px; }
 
-  .person-sidebar-color-link {
-    margin-left: 70px; }
-
   .sidebar-person-content {
     float: none;
     width: auto;
@@ -1319,9 +1375,19 @@ small, .font_small {
    *  Footer
    * ----------------------------------------------------------------------------
    */
-  #footer-outer {
-    margin-top: -60px;
-    padding-top: 75px; }
+  #footer {
+    float: left;
+    width: 100%;
+    height: auto; }
+
+  #footer-inner {
+    float: left;
+    width: 100%;
+    height: auto; }
+
+  #footer-content {
+    float: left;
+    width: 100%; }
 
   #footer-partner-heading {
     text-align: center; }
@@ -1393,15 +1459,6 @@ small, .font_small {
     height: auto; } }
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1199px) {
-  #content-header-big {
-    height: 295px; }
-
-  #content-header-small {
-    min-height: 55px; }
-
-  #content-header-frontpage {
-    height: 225px; }
-
   /**
    * 3.0 Header
    * ----------------------------------------------------------------------------

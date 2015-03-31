@@ -1,28 +1,22 @@
-
 <?php
+/**
+ * Template Name: Page - News
+ *
+ */
 get_header(); ?>
 
 
-<?php  get_template_part( 'template-content-header-normal'); ?> 
+<?php get_template_part( 'template-content-header-normal'); ?> 
 
-<div id="content-sidebar" class="content-left" >
-  <div id="content-padding">
+        <div id="content-sidebar" class="content-right" >
+          <div id="content-padding">
+d adsasd asd a/>     222       Main<br /> Main<br />
+            Main<br />            Main<br /> Main<br />
 
-    <article>
-   esadadasda
-<?php  while ( have_posts() ) : the_post(); ?>
-  <?php the_content(); ?>
-<?php endwhile; ?>
-  <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
-<?php  ?>
+      </div>
+        </div>
 
-
-    </article>
- 
-  </div> <!-- #content-padding -->
-</div> <!-- #content-sidebar -->
-
-        <div id="sidebar" class="sidebar-right" >
+        <div id="sidebar" class="sidebar-left" >
           <div id="sidebar-padding">
             Main<br />
                     Main<br />            Main<br />          Main<br />
@@ -36,7 +30,7 @@ get_header(); ?>
 
 </div>
 
-<div id="sidebar-background" class="sidebar-background-right">
+<div id="sidebar-background" class="sidebar-background-left">
   
 </div> <!-- #content -->
 

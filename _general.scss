@@ -897,7 +897,6 @@ background-color: #000000;
  .sidebar-person-content {
     float: left;
     width: 100%;
-    padding-right: 70px;
  }
 
  .sidebar-person-name {
@@ -915,6 +914,64 @@ background-color: #000000;
  }
 
 
+/**
+ * Archive news 
+ * ----------------------------------------------------------------------------
+ */
+
+ .news-archive-thumbnail-link {
+    float: left;
+    width: 30%;
+
+    img {
+        float: left; 
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+
+ }
+
+ .news-archive-single-content {
+    float: left;
+    width: 70%;
+    display: block;
+    padding-left: 15px;
+
+    h2 {
+        padding: 0px;
+        margin: 0px 0px 5px 0px;
+        float: none;
+    }
+
+    p {
+        float: none;
+    }
+
+ }
+
+ .news-archive-single-container {
+    float: left;
+    width: 100%;
+    padding-bottom: 30px;
+ }
+
+ .news-archive-meta {
+    float: left;
+    width: 100%;
+    display: block;
+    color: #B3B3B3;
+    font-size: 0.8em;
+    margin: 0px 0px 5px 0px;
+ }
+
+ .news-archive-excerpt-link {
+    color: #000000;
+ }
+ .news-archive-excerpt-link:hover {
+    color: #000000;
+ }
 
 
 
