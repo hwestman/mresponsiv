@@ -52,6 +52,11 @@ get_header(); ?>
                 <p class="staff-list-person-text"><?php echo get_user_meta($user->ID,'position',true);  ?></p>
             </li>
             </a>
+            <a href="" class="staff-list-fixed-link">
+                <span class="staff-list-fixed-link-inner">
+                    Kontakt
+                </span>
+            </a>
         </ul>
     <?php } ?>
 

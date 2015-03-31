@@ -662,6 +662,7 @@ img {
     width: 33.33333%;
     padding-right: 15px;
     padding-left: 15px;
+    position: relative;
     list-style: none; 
     padding-bottom: 30px;
  }
@@ -669,18 +670,49 @@ img {
  .staff-list-link {
     float: left;
     padding-top: 15px;
-    padding-bottom: 15px;
+    padding-bottom: 75px;
     width: 100%;
     display: block;
     color: #000000;
  }
 
- .staff-list-link:hover {
+ .staff-list-link:hover{
     background-color: #f3f3f3;
     text-decoration: none;
     color: $meyership-blue;
     cursor: pointer;
  }
+
+.staff-list-fixed-link {
+    position: absolute;
+    display: block;
+    background-color: $meyership-green;
+    font-size: 14px;
+    line-height: 14px;
+    padding: 10px 10px 10px 10px;
+    border-radius: 5px;
+    margin: auto;
+    color: #ffffff;
+    text-decoration: none;
+    bottom: 50px;
+    height:34px;
+    width:70px;
+    left:50%;
+    margin-left:-35px;
+}
+
+.staff-list-fixed-link-inner {
+    display: block;
+    width: 70px;
+    margin: auto
+}
+
+.staff-list-fixed-link:hover {
+    background-color: #000000;
+    color: #ffffff;
+    text-decoration: none;
+
+}
 
 .staff-list-visual {
     float: left;
@@ -776,6 +808,10 @@ img {
  * ----------------------------------------------------------------------------
  */
 
+ .news {
+
+ }
+ 
  .news-navbar {
     float: left; 
     width: 100%;
@@ -888,6 +924,12 @@ img {
     
 }
 
+.person-info-container {
+    float: left;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
 .person-list-content {
     float: none; 
     overflow: hidden;
@@ -922,18 +964,55 @@ img {
 
 .person-info-list-item {
     float: left;
+    position: relative;
     width: 100%;
+    height: 74px;
     border-bottom: 1px solid #e6e6e6;
 }
 
 .person-info-list-item-link {
     float: left;
     width: 100%;
+    height: 74px;
     display: block;
     padding: 10px 15px 10px 15px;
     color: #000000;
     background-repeat: no-repeat;
     background-position: center right;
+}
+
+.person-info-list-item-no-link {
+    float: left;
+    width: 100%;
+    height: 74px;
+    display: block;
+    padding: 10px 15px 10px 15px;
+    color: #000000;
+    background-repeat: no-repeat;
+    background-position: center right;
+}
+
+.person-info-list-item-fixed-link {
+    position: absolute;
+    display: block;
+    background-color: $meyership-green;
+    font-size: 14px;
+    line-height: 14px;
+    padding: 10px 10px 10px 10px;
+    border-radius: 5px;
+    right: 15px;
+    top: 20px;
+    width: 50px;
+    bottom: 20px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.person-info-list-item-fixed-link:hover {
+    background-color: #000000;
+    color: #ffffff;
+    text-decoration: none;
+
 }
 
 .icon-phone {
@@ -960,7 +1039,7 @@ img {
 
 .person-info-list-item-heading {
     margin: 0px;
-    padding: 0px 0px 5px 0px;
+    padding: 4px 0px 5px 0px;
 
 }
 

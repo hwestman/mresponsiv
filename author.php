@@ -14,7 +14,7 @@ get_header(); ?>
 
             <?php
             $user = (isset($_GET['author_name'])) ? get_user_by('slug', $_GET['author_name']) : get_userdata($_GET['author']); ?>
-
+        <div class="person-info-container">
             <ul class="person-list">
                 <li class="person-list-visual">
                     <span class="person-image">
@@ -32,9 +32,12 @@ get_header(); ?>
                         <h1 class="person-list-content-person-heading"><?php echo $user->user_firstname." ".$user->user_lastname; ?></h1>
                         <p class="person-list-content-person-text"><?php echo get_user_meta($user->ID,'position',true);  ?></p>
                     </span>
+
+                    <?php if ($user->user_email != "") {  ?>
                     <ul class="person-info-list">
                         <li class="person-info-list-item">
-                            <a class="person-info-list-item-link icon-email" href="" >
+                            <a class="person-info-list-item-link" 
+                            href="mailto:<?php echo $user->user_email; ?>?Subject=Hei!" target="_top">
                                 <h4 class="person-info-list-item-heading">
                                     E-post
                                 </h4>
@@ -42,11 +45,18 @@ get_header(); ?>
                                     <?php echo $user->user_email; ?>
                                 </p>
                             </a>
+                            <a class="person-info-list-item-fixed-link"
+                            href="mailto:<?php echo $user->user_email; ?>?Subject=Hei!" target="_top">
+                                Skriv
+                            </a>
                         </li>
                     </ul>
+                    <?php } ?>
+
+                    <?php if ($user->mobile != "") {  ?>
                     <ul class="person-info-list">
                         <li class="person-info-list-item">
-                            <a class="person-info-list-item-link icon-phone" href="" >
+                            <a class="person-info-list-item-link" href="tel:<?php echo $user->mobile; ?>" >
                                 <h4 class="person-info-list-item-heading">
                                     Mobil
                                 </h4>
@@ -54,11 +64,18 @@ get_header(); ?>
                                     <?php echo $user->mobile; ?>
                                 </p>
                             </a>
+                            <a class="person-info-list-item-fixed-link" href="tel:<?php echo $user->mobile; ?>" >
+                                Ring
+                            </a>
                         </li>
                     </ul>
+                    <?php } ?>
+
+
+                    <?php if ($user->number != "") {  ?>
                     <ul class="person-info-list">
                         <li class="person-info-list-item">
-                            <a class="person-info-list-item-link icon-phone" href="" >
+                            <a class="person-info-list-item-link" href="tel:<?php echo $user->number; ?>" >
                                 <h4 class="person-info-list-item-heading">
                                     Telefon
                                 </h4>
@@ -66,23 +83,32 @@ get_header(); ?>
                                     <?php echo $user->number; ?>
                                 </p>
                             </a>
+                            <a class="person-info-list-item-fixed-link" href="tel:<?php echo $user->number; ?>" >
+                                Ring
+                            </a>
                         </li>
                     </ul>
+                    <?php } ?>
+
+                    <?php if ($user->hiredate != "") {  ?>
                     <ul class="person-info-list">
                         <li class="person-info-list-item">
-                            <a class="person-info-list-item-link" href="" >
+                            <span class="person-info-list-item-no-link" href="" >
                                 <h4 class="person-info-list-item-heading">
                                     Ansatt siden
                                 </h4>
                                 <p class="person-info-list-item-text ">
                                     <?php echo $user->hiredate; ?>
                                 </p>
-                            </a>
+                            </span>
                         </li>
                     </ul>
+                    <?php } ?>
+
                 </li>
 
             </ul>
+        </div> <!-- .person-info-container -->
     </div>  <!-- #content-padding-->
 </div> <!-- #content-sidebar -->
 

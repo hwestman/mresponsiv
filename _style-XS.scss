@@ -11,6 +11,9 @@ body, html {
 
 
 
+
+
+
 /**
  *  Content headers 
  * ----------------------------------------------------------------------------
@@ -49,15 +52,39 @@ body, html {
  }
 
  .staff-list-link {
- 	padding: 10px 15px 10px 15px;
-    background-repeat: no-repeat;
-    background-position: center right;
- 	background-image: url('img/icon-person-sidebar.png');
+ 	padding: 10px 100px 10px 15px;
+ 	height: 120px;
+ 	overflow: hidden;
  }
 
  .staff-list-link:hover {
- 	background-image: url('img/icon-person-sidebar-black.png');
+ 	
  }
+
+ .staff-list-fixed-link {
+    position: absolute;
+    display: block;
+    background-color: $meyership-green;
+    font-size: 14px;
+    line-height: 14px;
+    padding: 10px 10px 10px 10px;
+    border-radius: 5px;
+    margin: auto;
+    color: #ffffff;
+    text-decoration: none;
+    top: 43px;
+    height:34px;
+    width:70px;
+    left:auto;
+    right: 15px;
+    margin-left: 0px;
+}
+
+.staff-list-fixed-link-inner {
+    display: block;
+    width: 70px;
+    margin: auto
+}
 
 .staff-list-visual {
 	float: left;
