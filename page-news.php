@@ -8,16 +8,34 @@ get_header(); ?>
 
 <?php get_template_part( 'template-content-header-normal'); ?> 
 
-        <div id="sidebar" class="sidebar-left" >
-          <div id="sidebar-padding">
-            Main<br />            Main<br />          Main<br />
-            Main<br />            Main<br /> Main<br />
-            Main<br />            Main<br /> Main<br />
-            Main<br />            Main<br /> Main<br />
-            Main<br />            Main<br /> Main<br />
-            Main<br />            Main<br />
-          </div>
-        </div> <!-- #sidebar -->
+<div id="sidebar" class="sidebar-left">
+  <div id="sidebar-padding">
+    <div class="news-navbar">
+      <div class="news-navbar-toggle">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-news-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <span class="toggle-heading">Sortering</span>
+      </div> <!-- .news-nav-toggle -->
+      <div class="collapse navbar-collapse navbar-news-collapse">
+        <div class="news-nav-heading">
+          <h3>Årstall</h3>
+        </div>
+        <ul class="news-nav">
+          <li class="news-nav-item">
+            <a href="" class="news-nav-item-link">2015</a>
+          </li>
+          <li class="news-nav-item">
+             <a href="" class="news-nav-item-link">2014</a>
+          </li>
+        </ul>
+      </div><!-- .navbar-collapse -->
+    </div> <!-- #news-navbar-->
+  </div> <!-- #sidebar-padding -->
+</div> <!-- #sidebar -->
 
 
         <div id="content-sidebar" class="content-right" >

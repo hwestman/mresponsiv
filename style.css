@@ -642,6 +642,71 @@ img.aligncenter {
     padding: 0px; }
 
 /**
+ * Archive - News 
+ * ----------------------------------------------------------------------------
+ */
+.news-navbar {
+  float: left;
+  width: 100%; }
+
+.news-navbar-toggle {
+  float: left;
+  width: 100%;
+  position: relative; }
+  .news-navbar-toggle .toggle-heading {
+    float: left;
+    padding: 15px 0px 10px 0px;
+    color: #888; }
+  .news-navbar-toggle .navbar-toggle {
+    position: relative;
+    float: left;
+    margin-right: 15px;
+    padding: 9px 10px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    background-color: transparent;
+    border: 1px solid #ddd;
+    border-radius: 4px; }
+  .news-navbar-toggle .icon-bar {
+    background-color: #888; }
+
+.news-nav-heading {
+  float: left;
+  width: 100%;
+  border-bottom: 1px solid #cccccc; }
+  .news-nav-heading h3 {
+    margin: 0px;
+    padding: 15px 0px 15px 0px; }
+
+.news-nav {
+  float: left;
+  width: 100%;
+  margin: 0px 0px 30px 0px;
+  padding: 0px;
+  list-style: none; }
+
+.news-nav-item {
+  float: left;
+  width: 100%;
+  margin: 0px;
+  padding: 0px; }
+
+.news-nav-item-link {
+  float: left;
+  width: 100%;
+  display: block;
+  line-height: 1em;
+  margin: 0px;
+  padding: 15px 10px 10px 10px;
+  border-bottom: 1px solid #cccccc;
+  text-decoration: none; }
+
+.news-nav-item-link:hover {
+  background-color: #cccccc;
+  color: #000000;
+  text-decoration: none; }
+
+/**
  * Author - Single person
  * ----------------------------------------------------------------------------
  */
@@ -1094,6 +1159,7 @@ img.aligncenter {
 
 #sidebar-padding {
   float: left;
+  width: 100%;
   padding: 30px; }
 
 /* STICKYFOOTER - Content */
@@ -1666,6 +1732,13 @@ img.aligncenter {
   * — Branding 
   */
   /**
+   * Archive - News 
+   * ----------------------------------------------------------------------------
+   */
+  .news-navbar-toggle .toggle-heading {
+    display: none; }
+
+  /**
    * 0.0 SIDEBAR 
    * ----------------------------------------------------------------------------
    */
@@ -1753,6 +1826,13 @@ img.aligncenter {
   /*
   * — Branding 
   */
+  /**
+   * Archive - News 
+   * ----------------------------------------------------------------------------
+   */
+  .news-navbar-toggle .toggle-heading {
+    display: none; }
+
   /**
    *  Footer
    * ----------------------------------------------------------------------------
