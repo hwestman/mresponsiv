@@ -80,7 +80,7 @@ add_action( 'after_setup_theme', 'register_costume_thumbnail_sizes' ); // Enable
 
 register_nav_menus( array(
     'primary' => __( 'Primary Menu', 'mresponsive'),
-    'secondary' => __( 'FooterLinks', 'mresponsive' ),
+    'secondary' => __( 'Secondary-menu', 'mresponsive' ),
 ) );
 
 /*

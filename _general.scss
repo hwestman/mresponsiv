@@ -1140,10 +1140,10 @@ img {
 
  .sidebar-person {
         float: left;
-        width: 100%; 
         margin-bottom: 30px;
         position: relative;
-        
+        width: 175px;
+        height: 250px;
  }
 
  .person-sidebar-link {
@@ -1164,9 +1164,10 @@ img {
 
   .person-sidebar-color-link {
     float: left;
+    bottom: 0;
     line-height: 1em;
     font-size: 12px;
-    position: relative;
+    position: absolute;
     display: block;
     padding: 10px 15px 8px 15px;
     margin: 15px 0px 15px 0px;
