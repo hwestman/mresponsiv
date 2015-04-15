@@ -31,7 +31,7 @@ foreach($contactpersons as $contactperson){
         </a>
             </li>
             <li class="sidebar-person-content">
-                <a class="sidebar-person-name-link" href="<?php get_bloginfo('url') ?>?author=<?php echo $user->ID; ?>">
+                <a class="sidebar-person-name-link" href="<?php echo get_author_posts_url($user->ID);?>">
                 <h4 class="sidebar-person-name"><?php echo $user->user_firstname." ".$user->user_lastname; ?></h4>
                 </a>
                 <p class="sidebar-person-title"><?php echo get_user_meta($user->ID,'position',true);  ?></p>

@@ -32,7 +32,10 @@ get_header(); ?>
     );
     $users = get_users($args);
 
-    foreach($users as $user){ ?>
+    foreach($users as $user){
+
+        if(isset($user->user_firstname) && $user->user_firstname != ""){
+        ?>
 
         <ul class="staff-list">
             <a class="staff-list-link" href="<?php echo get_author_posts_url($user->ID);?>">
@@ -58,7 +61,10 @@ get_header(); ?>
                 </span>
             </a>
         </ul>
-    <?php } ?>
+
+    <?php }
+
+    } ?>
 
 </div> <!-- #content-padding -->
 </div> <!-- #content-no-sidebar --> 
