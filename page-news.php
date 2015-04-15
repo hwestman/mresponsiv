@@ -10,6 +10,7 @@ get_header(); ?>
 
 <div id="sidebar" class="sidebar-left">
   <div id="sidebar-padding">
+  
     <div class="news-navbar">
       <div class="news-navbar-toggle">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-news-collapse">
