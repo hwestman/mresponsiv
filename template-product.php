@@ -34,7 +34,7 @@ $theLink = get_permalink($post->ID);
                             <li class="sub-category-header"><?php echo $cat->name; ?></li>
                             <?php while ( $query->have_posts() ) : $query->the_post(); ?>
 
-                                <li class="sub-category-item"><a href="<?php echo $theLink."?postID=".get_the_ID();?>"><?php the_title(); ?></a></li>
+                                <li class="sub-category-item"><a href="<?php echo $theLink."?product=".$post->post_name;?>"><?php the_title(); ?></a></li>
 
                             <?php endwhile;  wp_reset_query(); ?>
 
@@ -54,9 +54,17 @@ $theLink = get_permalink($post->ID);
 <div id="content-sidebar" class="content-right" >
     <div id="content-padding">
 
-        <?php if(isset($_GET['postID'])){
+        <?php if(isset($_GET['product'])){
 
-         $post = get_post($_GET['postID']);
+
+            $args=array(
+                'name'           => $_GET['product'],
+                'post_type'      => 'post',
+                'posts_per_page' => 1
+            );
+            $post = get_posts( $args )[0];
+
+         //$post = get_post($_GET['product']);
         }
 
         ?>
