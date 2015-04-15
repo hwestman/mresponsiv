@@ -9,7 +9,48 @@ $theLink = get_permalink($post->ID);
 
 <div id="sidebar" class="sidebar-left" >
     <div id="sidebar-padding">
+    <div class="service-navbar">
 
+      <div class="service-navbar-toggle">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-service-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <span class="toggle-heading">Kategorier</span>
+      </div> <!-- .news-nav-toggle -->
+
+<div class="collapse navbar-collapse navbar-service-collapse">
+<ul class="nav navbar-nav">
+    <li class="menu-item menu-item-has-children dropdown">
+    <a title="22-fot" href="#" data-toggle="dropdown" class="dropdown-toggle" aria-haspopup="true">22-fot <span class="caret"></span></a>    
+        <ul role="menu" class="dropdown-menu sidebar-dropdown-menu">
+            <li id="menu-item-69" class="">
+                <a title="24-varme" href="http://192.168.10.101/mship/left-sidebar/">24-varme</a>
+            </li>        
+        </ul>
+    </li>
+    <li class="menu-item menu-item-has-children dropdown">
+    <a title="22-fot" href="#" data-toggle="dropdown" class="dropdown-toggle" aria-haspopup="true">22-fot <span class="caret"></span></a>    
+        <ul role="menu" class="dropdown-menu sidebar-dropdown-menu">
+            <li id="menu-item-69" class="">
+                <a title="24-varme" href="http://192.168.10.101/mship/left-sidebar/">24-varme</a>
+            </li>        
+            <li id="menu-item-69" class="">
+                <a title="24-varme" href="http://192.168.10.101/mship/left-sidebar/">24-varme</a>
+            </li>   
+        </ul>
+    </li>
+</ul>
+
+
+      </div><!-- .navbar-collapse -->
+
+
+
+
+    </div> <!-- .service-navbar -->
         <?php
 
         //$catid = get_cat_ID($post->post_name);
