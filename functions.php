@@ -76,7 +76,14 @@ add_action( 'after_setup_theme', 'register_costume_thumbnail_sizes' ); // Enable
  * ----------------------------------------------------------------------------
  */
 
+//register_nav_menu( 'main_menu', __( 'Main Menu', 'wptuts' ) );
 
+register_nav_menus( array(
+    'primary' => __( 'Primary Menu', 'mresponsive'),
+    'secondary' => __( 'FooterLinks', 'mresponsive' ),
+) );
+
+/*
 //Adding support for costume menus 
 function register_costume_menus () {
   register_nav_menus(
@@ -87,7 +94,7 @@ function register_costume_menus () {
 }
 
 add_action( 'init', 'register_costume_menus' ); // Enable costume menus
-
+*/
 
 /**
  * 3.0 Push down Navigation 
@@ -196,7 +203,6 @@ function register_services_custom_post(){
         'singular_label' => __('Tjenester'),
         'public' => true,
         'show_ui' => true, // UI in admin panel
-        'show_in_nav_menus' => true,
         'capability_type' => 'post',
         'hierarchical' => false,
         'rewrite' => array("slug" => "tjenester"), // Permalinks format
@@ -363,7 +369,7 @@ require('wp_bootstrap_navwalker.php');
 
 /**
  * Adding new costume main menu.
- */
+ *
 
 add_action( 'after_setup_theme', 'wpt_setup' );
 if( ! function_exists( 'wpt_setup' ) ):

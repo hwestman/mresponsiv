@@ -17,11 +17,11 @@
 			</div>
 
 			<div class="col-xs-12">
-					<div id="footer-partner-links" class="mb-s">
+                <div id="footer-partner-links" class="mb-s">
 
-						<?php wp_nav_menu( array( 'footer-partners' => 'Footer - Partners' ) ); ?>
+                    <?php wp_nav_menu( array( 'footer-partners' => 'Footer - Partners' ) ); ?>
 						
-				</div>
+                </div>
 			</div>
 			<div id="footer-copyright" class="mb-s">
 				<p>Meyership © 2015</p>
