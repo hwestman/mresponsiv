@@ -1,14 +1,19 @@
 <?php
 /**
- * The template for displaying all pages
+ * The template for displaying a post in contact info costum post.
  *
  */
 get_header(); ?>
 
 
-<div id="wrapper" class="container">
+<?php get_template_part( 'template-content-header-normal'); ?> 
+            
 
-    <?php get_template_part( 'template-content-header-big'); ?> 
+
+        <div id="content-no-sidebar" >
+            <div id="content-padding">
+
+<?php get_template_part( 'template-content-header-big'); ?> 
 
     <div id="content-wrapper">
 
@@ -41,15 +46,28 @@ get_header(); ?>
                 <?php wp_reset_query(); // Reset the loop.
             endif; ?>
 
-            </div> <!-- #normal-content -->
-        </div> <!-- .side-by-side-fill-height -->
 
 
-            
+
+
+
+
+            </div>
+        </div>
+
+        <div id="no-sidebar" >
+          a
+        </div> <!-- #sidebar -->
+
+    </div> <!-- .content -->
     
-    </div> <!-- #content-wrapper -->
-    </div> <!-- #wrapper -->
 
+
+
+    <div class="push"></div> <!-- .push must be inside #wrapper -->
+
+</div> <!-- #wrapper -->
 
 <?php
 get_footer();
+
