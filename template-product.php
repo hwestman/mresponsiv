@@ -32,13 +32,14 @@ $theLink = get_permalink($post->ID);
             'child_of'                 => $catId,
             'hide_empty'               => false,
             'hierarchical'             => true,
-            'exclude'                  => '0,1',
-            'orderby'                  => 'name',
-            'order'                    => 'DESC'
+            'exclude'                  => '0,1'
         );
         if($catId){
-            $categories = get_categories( $args );?>
-
+            $categories = get_categories( $args );
+            usort($categories, function($a, $b)
+            {
+                return strnatcmp($a->name, $b->name);
+            }); ?>
                 <?php foreach($categories as $cat){
 
                     $query = new WP_Query('category_name='.$cat->name);?>
