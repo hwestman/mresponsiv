@@ -12,28 +12,32 @@ get_header(); ?>
   <div id="sidebar-padding">
   
     <div class="news-navbar">
-      <div class="news-navbar-toggle">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-news-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <span class="toggle-heading">Sortering</span>
-      </div> <!-- .news-nav-toggle -->
-      <div class="collapse navbar-collapse navbar-news-collapse">
-        <div class="news-nav-heading">
-          <h3>Årstall</h3>
-        </div>
-        <ul class="news-nav">
-          <li class="news-nav-item">
-            <a href="" class="news-nav-item-link">2015</a>
-          </li>
-          <li class="news-nav-item">
-             <a href="" class="news-nav-item-link">2014</a>
-          </li>
-        </ul>
-      </div><!-- .navbar-collapse -->
+
+
+        <div class="sidebar-menu-container">
+
+
+        <div class="sidebar-menu-header">
+            <h3 class="sidebar-menu-title">Alternativer</h3>
+            <button class="sidebar-menu-toggle">
+                <span class="toggle-button-stroke"></span>
+                <span class="toggle-button-stroke"></span>
+                <span class="toggle-button-stroke"></span>
+            </button>
+        </div> <!-- .sidebar-menu-header -->
+
+                <ul class="sidebar-menu">
+                <li class="submenu-toggle">
+                  <li class="news-nav-item">
+                    <a href="" class="news-nav-item-link">2015</a>
+                  </li>
+                  <li class="news-nav-item">
+                     <a href="" class="news-nav-item-link">2014</a>
+                  </li>
+                </ul> <!-- .sidebar-menu -->
+        </div> <!-- .sidebar-menu-container -->
+
+
     </div> <!-- #news-navbar-->
   </div> <!-- #sidebar-padding -->
 </div> <!-- #sidebar -->

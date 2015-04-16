@@ -11,46 +11,17 @@ $theLink = get_permalink($post->ID);
     <div id="sidebar-padding">
     <div class="service-navbar">
 
-      <div class="service-navbar-toggle">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-service-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <span class="toggle-heading">Kategorier</span>
-      </div> <!-- .news-nav-toggle -->
+        <div class="sidebar-menu-container">
+        <div class="sidebar-menu-header">
+            <h3 class="sidebar-menu-title">Alternativer</h3>
+            <button class="sidebar-menu-toggle">
+                <span class="toggle-button-stroke"></span>
+                <span class="toggle-button-stroke"></span>
+                <span class="toggle-button-stroke"></span>
+            </button>
+        </div> <!-- .sidebar-menu-header -->
 
-<div class="collapse navbar-collapse navbar-service-collapse">
-<ul class="nav navbar-nav">
-    <li class="menu-item menu-item-has-children dropdown">
-    <a title="22-fot" href="#" data-toggle="dropdown" class="dropdown-toggle" aria-haspopup="true">22-fot <span class="caret"></span></a>    
-        <ul role="menu" class="dropdown-menu sidebar-dropdown-menu">
-            <li id="menu-item-69" class="">
-                <a title="24-varme" href="http://192.168.10.101/mship/left-sidebar/">24-varme</a>
-            </li>        
-        </ul>
-    </li>
-    <li class="menu-item menu-item-has-children dropdown">
-    <a title="22-fot" href="#" data-toggle="dropdown" class="dropdown-toggle" aria-haspopup="true">22-fot <span class="caret"></span></a>    
-        <ul role="menu" class="dropdown-menu sidebar-dropdown-menu">
-            <li id="menu-item-69" class="">
-                <a title="24-varme" href="http://192.168.10.101/mship/left-sidebar/">24-varme</a>
-            </li>        
-            <li id="menu-item-69" class="">
-                <a title="24-varme" href="http://192.168.10.101/mship/left-sidebar/">24-varme</a>
-            </li>   
-        </ul>
-    </li>
-</ul>
-
-
-      </div><!-- .navbar-collapse -->
-
-
-
-
-    </div> <!-- .service-navbar -->
+        <ul class="sidebar-menu">
         <?php
 
         //$catid = get_cat_ID($post->post_name);
@@ -66,13 +37,15 @@ $theLink = get_permalink($post->ID);
         if($catId){
             $categories = get_categories( $args );?>
 
-            <ul class="categories">
                 <?php foreach($categories as $cat){
 
                     $query = new WP_Query('category_name='.$cat->name);?>
-                    <li><ul class="sub-category">
 
-                            <li class="sub-category-header"><?php echo $cat->name; ?></li>
+                    <li class="submenu-toggle">
+                        <h4 class="dropdown-menu-heading"><?php echo $cat->name; ?></h4>
+                        <ul class="sidebar-dropdown-menu">
+
+                            
                             <?php while ( $query->have_posts() ) : $query->the_post(); ?>
 
                                 <li class="sub-category-item"><a href="<?php echo $theLink."?product=".$post->post_name;?>"><?php the_title(); ?></a></li>
@@ -82,11 +55,12 @@ $theLink = get_permalink($post->ID);
                         </ul></li>
 
                 <?php } ?>
-            </ul>
+            </ul> <!-- .sidebar-menu -->
+        </div> <!-- .sidebar-menu-container -->
         <?php } ?>
 
 
-
+        </div> <!-- .service-navbar -->
     </div> <!-- #sidebar-padding -->
 </div> <!-- #sidebar -->
 

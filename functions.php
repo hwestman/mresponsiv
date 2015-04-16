@@ -34,6 +34,9 @@ wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/bootstrap/bo
 
 wp_enqueue_script( 'jquery-js', 'https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js');
 
+wp_enqueue_script( 'functions-js', get_template_directory_uri() . '/js/functions.js', array( 'jquery' ));
+
+
 
 // Adding a javascript file to be used for misc
 wp_enqueue_script( 'onload-js', get_template_directory_uri() . '/js/onload.js');

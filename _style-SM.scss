@@ -62,6 +62,37 @@ body, html {
 	display: block;
 }
 
+/**
+ * Sidebar-menu - toggle
+ * ----------------------------------------------------------------------------
+ */
+ 
+.sidebar-menu-toggle {
+    display: block;
+}
+
+.submenu-toggle ul {
+    display: none;
+    margin-bottom: 15px;
+}
+
+.display-submenu ul {
+    display: block;
+    margin-bottom: 30px;
+}
+
+.sidebar-menu-container .sidebar-menu {
+    display: none;
+}
+
+.display-sidebar-menu .sidebar-menu {
+    display: block;
+}
+
+.dropdown-menu-heading {
+    cursor: pointer;
+}
+
 
 /**
  * 3.0 Header
