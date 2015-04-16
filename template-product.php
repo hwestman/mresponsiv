@@ -32,7 +32,9 @@ $theLink = get_permalink($post->ID);
             'child_of'                 => $catId,
             'hide_empty'               => false,
             'hierarchical'             => true,
-            'exclude'                  => '0,1'
+            'exclude'                  => '0,1',
+            'orderby'                  => 'name',
+            'order'                    => 'DESC'
         );
         if($catId){
             $categories = get_categories( $args );?>
@@ -88,9 +90,10 @@ $theLink = get_permalink($post->ID);
 
 
             <?php echo get_the_post_thumbnail( $post->ID, 'sideway') ?>
-            <?php echo $post->post_content;
+            <p>
+                <?php echo $post->post_content; ?>
+            </p>
 
-            ?>
 
         <?php
         wp_reset_postdata();
