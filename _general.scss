@@ -1395,11 +1395,13 @@ overflow: hidden;
     text-decoration: none;
 }
 
-
-
 .submenu-toggle ul {
     display: block;
     margin-bottom: 30px;
+}
+
+.submenu-toggle .caret {
+    margin-left: 8px;
 }
 
 .display-submenu ul {

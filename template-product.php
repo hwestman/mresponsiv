@@ -42,7 +42,7 @@ $theLink = get_permalink($post->ID);
                     $query = new WP_Query('category_name='.$cat->name);?>
 
                     <li class="submenu-toggle">
-                        <h4 class="dropdown-menu-heading"><?php echo $cat->name; ?></h4>
+                        <h4 class="dropdown-menu-heading"><?php echo $cat->name; ?><span class="caret no-desktop"></span></h4>
                         <ul class="sidebar-dropdown-menu">
 
                             

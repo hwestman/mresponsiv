@@ -1133,6 +1133,9 @@ img.aligncenter {
   display: block;
   margin-bottom: 30px; }
 
+.submenu-toggle .caret {
+  margin-left: 8px; }
+
 .display-submenu ul {
   display: block;
   margin-bottom: 30px; }
@@ -1916,6 +1919,9 @@ img.aligncenter {
     height: auto; } }
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1199px) {
+  .no-desktop {
+    display: none; }
+
   /**
    * 3.0 Header
    * ----------------------------------------------------------------------------
@@ -2003,6 +2009,9 @@ img.aligncenter {
     padding-top: 90px; } }
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
+  .no-desktop {
+    display: none; }
+
   #content-header-big {
     height: 295px; }
 
