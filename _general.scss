@@ -1748,6 +1748,7 @@ overflow: hidden;
           font-weight: bold;
           border-bottom: none;
           font-size: 12px;
+
           td{
             border-right: none;
             padding: 0;
@@ -1768,6 +1769,7 @@ overflow: hidden;
           border-right: solid gray 1px;
           text-align: center;
           padding: 10px;
+          white-space: pre;
         }
         td:first-child{
           text-align: left;

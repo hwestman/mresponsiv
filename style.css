@@ -1396,7 +1396,8 @@ img.aligncenter {
   .post-content table tbody td {
     border-right: solid gray 1px;
     text-align: center;
-    padding: 10px; }
+    padding: 10px;
+    white-space: pre; }
   .post-content table tbody td:first-child {
     text-align: left; }
   .post-content table tbody td:last-child {
