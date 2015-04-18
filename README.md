@@ -19,7 +19,7 @@ En enkelt container er en post som tillhører en sub-category av en category med
 Linkene i sidebar benytter en spesiell url og linker ikke til single.php for visning, men til samme url som service slik at den kan benytte samme sidebar. (ingen SEO her og det er litt dumt)
 
 
-Tabelles
+Tabeller
 ---------
 Tabeller i poster blir stylet manuelt i css
 Det skal bare være å kopiere inn en tabellstruktur (som feks er laget i excel) inn i en post også styles den som vist her:
