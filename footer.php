@@ -19,8 +19,7 @@
 			<div class="col-xs-12">
                 <div id="footer-partner-links" class="mb-s">
 
-                    <?php wp_nav_menu( array('container_class' => 'menu-footer',
-                                             'theme_location' => 'secondary')); ?>
+                    <?php wp_nav_menu( 'footer_menu'); ?>
 						
                 </div>
 			</div>

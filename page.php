@@ -8,32 +8,29 @@ get_header(); ?>
 <div id="content-sidebar" class="content-left" >
   <div id="content-padding">
 
-    <article>
-      <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-        <?php  get_template_part( 'content-normal'); ?> 
-      <?php endwhile; else : ?>
-        <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
-      <?php endif; ?>
-    </article>
- 
+      <?php
+        while ( have_posts() ) : the_post();
+          get_template_part( 'content', get_post_format() );
+        endwhile; 
+      ?>
+      <?php wp_reset_query(); ?>
+
   </div> <!-- #content-padding -->
 </div> <!-- #content-sidebar -->
 
         <div id="sidebar" class="sidebar-right" >
           <div id="sidebar-padding">
-            Main<br />
-                    Main<br />            Main<br />          Main<br />
-            Main<br />            Main<br /> Main<br />
-            Main<br />            Main<br /> Main<br />
-            Main<br />            Main<br /> Main<br />
-            Main<br />            Main<br /> Main<br />
-            Main<br />            Main<br />
+            <?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('m_res_page')) : else : ?>
+
+              <!-- Do nothing if dont exist-->
+
+              <?php endif; ?>
           </div>
         </div> <!-- #sidebar -->
 
 </div>
 
-<div id="sidebar-background" class="sidebar-background-right">
+<div id="sidebar-background" class="sidebar-background-right"></div>
   
 </div> <!-- #content -->
 

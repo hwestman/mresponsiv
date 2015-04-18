@@ -52,55 +52,52 @@ add_action( 'wp_enqueue_scripts', 'add_resources' );
 
 
 
-
 /**
- * 1.0 Thumbnails 
+ * 2.0 After theme setup. 
  * ----------------------------------------------------------------------------
  */
 
-// Adding support for post/page thumbnails
-add_theme_support( 'post-thumbnails' );
 
-function register_costume_thumbnail_sizes (){
-    add_image_size( 'square', 400, 400, true ); // 400px x 400px (Width x Height, Crop = true)
-    add_image_size( 'page-full-width', 1170, 320, true ); // 1170x x 650px (Width x Height, Crop = true)
-    add_image_size( 'collaborator', 300, 216, true ); // 300x x 216px (Width x Height, Crop = true)
-    add_image_size( 'news', 560, 400, true ); // 560px x 400px (Width x Height, Crop = true)
-    add_image_size( 'polaroid', 720, 540, true ); // 720px x 540px (Width x Height, Crop = true)
-    add_image_size( 'sideway', 650, 300, true ); // 650px x 300px (Width x Height, Crop = true)
-}
+add_action( 'after_setup_theme', 'm_res_wpt_setup' );
+if( ! function_exists( 'wpt_setup' ) ):
+        function m_res_wpt_setup() {
 
-add_action( 'after_setup_theme', 'register_costume_thumbnail_sizes' ); // Enable the costume sizes
+            //Registrer nav-menus
+            register_nav_menu( 'main_menu', __( 'Main - Menu', 'm_res' ) );
+            register_nav_menu( 'footer_menu', __( 'Footer - Menu', 'm_res' ) );
 
+            //Allowing post-thumbnails
+            add_theme_support( 'post-thumbnails' );
+            
+            //Setup custom thumbnail size 
+            add_image_size( 'square', 400, 400, true ); // 400px x 400px (Width x Height, Crop = true)
+            add_image_size( 'page-full-width', 1170, 320, true ); // 1170x x 650px (Width x Height, Crop = true)
+            add_image_size( 'collaborator', 300, 216, true ); // 300x x 216px (Width x Height, Crop = true)
+            add_image_size( 'news', 560, 400, true ); // 560px x 400px (Width x Height, Crop = true)
+            add_image_size( 'polaroid', 720, 540, true ); // 720px x 540px (Width x Height, Crop = true)
+            add_image_size( 'sideway', 650, 300, true ); // 650px x 300px (Width x Height, Crop = true)
+
+            //Load text domaion
+            load_theme_textdomain('m_res_ls', get_template_directory() . '/languages');
+        }
+endif;
 
 
 /**
- * 2.0 Menus 
+ * 3.0 Bootstrap menu
  * ----------------------------------------------------------------------------
+ * Require the bootstrap navigation
+ * Source: https://github.com/twittem/wp-bootstrap-navwalker
+ *
  */
 
-//register_nav_menu( 'main_menu', __( 'Main Menu', 'wptuts' ) );
+require('wp_bootstrap_navwalker.php');
 
-register_nav_menus( array(
-    'primary' => __( 'Primary Menu', 'mresponsive'),
-    'secondary' => __( 'Secondary-menu', 'mresponsive' ),
-) );
 
-/*
-//Adding support for costume menus 
-function register_costume_menus () {
-  register_nav_menus(
-    array(
-      'footer-partners' => __( 'Footer - Partners' )
-    )
-  );
-}
 
-add_action( 'init', 'register_costume_menus' ); // Enable costume menus
-*/
 
 /**
- * 3.0 Push down Navigation 
+ * 4.0 Push down Navigation 
  * Fixe issue for admin users navbar.
  * ----------------------------------------------------------------------------
  */
@@ -131,7 +128,7 @@ function mbe_wp_head(){
 
 
 /**
- * 3.0 Collaborators (Costume post type)
+ * 5.0 Collaborators (Costume post type)
  * ----------------------------------------------------------------------------
  */
 
@@ -193,7 +190,7 @@ function update_collaborators_add_options(){
 add_action( 'save_post', 'update_collaborators_add_options' );
 
 /**
- * 4.0 Services (Custom post type)
+ * 6.0 Services (Custom post type)
  * ----------------------------------------------------------------------------
  */
 
@@ -303,7 +300,7 @@ function update_services_add_options(){
 add_action( 'save_post', 'update_services_add_options' );
 
 /**
- * 4.0 Theme Appearance Options (Logo etc..)
+ * 7.0 Theme Appearance Options (Logo etc..)
  * ----------------------------------------------------------------------------
  */
 
@@ -332,7 +329,7 @@ $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'them
 add_action('customize_register', 'add_custom_logo');
 
 /**
- * 5.0 contact fields
+ * 8.0 contact fields
  * ----------------------------------------------------------------------------
  */
 
@@ -356,36 +353,6 @@ remove_action( 'admin_color_scheme_picker', 'admin_color_scheme_picker' );
 
 
 
-
-
-/**
- * 5.0 Bootstrap menu
- * ----------------------------------------------------------------------------
- */
-
-/*************
-Require the bootstrap navigation
-Source: https://github.com/twittem/wp-bootstrap-navwalker
-*************/
-
-require('wp_bootstrap_navwalker.php');
-
-/**
- * Adding new costume main menu.
- *
-
-add_action( 'after_setup_theme', 'wpt_setup' );
-if( ! function_exists( 'wpt_setup' ) ):
-        function wpt_setup() {
-           register_nav_menu( 'main_menu', __( 'Main Menu', 'wptuts' ) );
-        }
-endif;
-
-
-/**
- * 8.0 Contact (Custom post type)
- * ----------------------------------------------------------------------------
- */
 
 //Add custom post type for collaborators
 
@@ -500,12 +467,8 @@ function update_contact_add_options(){
 add_action( 'save_post', 'update_contact_add_options' );
 
 /**
- * 6.0 MISC
+ * 9.0 Mail
  * ----------------------------------------------------------------------------
- */
-
-/*
- * Mail
  */
 
 function author_email()  {
@@ -557,6 +520,43 @@ function cf7_users_general_section()
         <input type="text" id="<?php echo $args[0]?>" name="<?php echo $args[0] ?>" value="<?php echo $option; ?>"style="width:400px;" />
         <?php
     }
+
+
+/**
+ * 10.0 Widget Areas
+ * ----------------------------------------------------------------------------
+ */
+
+function m_res_add_widget() {
+    if (function_exists('register_sidebar')) {
+
+        register_sidebar(array(
+            'name' => 'Page - Sidebar',
+            'id'   => 'm_res_page',
+            'description'   => 'Appears in the sidebar of page.',
+            'before_widget' => '<div class="mb-m"><div id="%1$s" class="singel-widget %2$s">',
+            'after_widget'  => '</div></div>',
+            'before_title'  => '<div class="widget-title-container mb-s">
+                                <div class="widget-title-stroke">
+                                <h4  class="widget-title-text-color widget-title-text-bg widget-title-size">',
+            'after_title'   => '</h4></div></div>'
+        ));
+
+        register_sidebar(array(
+            'name' => 'Post',
+            'id'   => 'm_res_post',
+            'description'   => 'Appears in the sidebar of post',
+            'before_widget' => '<div class="mb-m"><div id="%1$s" class="singel-widget %2$s">',
+            'after_widget'  => '</div></div>',
+            'before_title'  => '<div class="widget-title-container mb-s">
+                                <div class="widget-title-stroke">
+                                <h4  class="widget-title-text-color widget-title-text-bg widget-title-size">',
+            'after_title'   => '</h4></div></div>'
+        ));
+
+    }
+}
+add_action( 'widgets_init', 'm_res_add_widget' );
 
 
 ?>
