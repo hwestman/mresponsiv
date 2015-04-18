@@ -27,14 +27,10 @@ get_header(); ?>
         </div> <!-- .sidebar-menu-header -->
             <?php
 
-                    $years = $wpdb->get_results( "select YEAR(post_date) as 'year' from wp_posts as wpost
-                                                    INNER JOIN wp_term_relationships as rel ON (wpost.ID = rel.object_id)
-                                                    INNER JOIN wp_term_taxonomy as tax ON (rel.term_taxonomy_id = tax.term_taxonomy_id)
-                                                    INNER JOIN wp_terms as ter ON (tax.term_id = ter.term_id)
-                                                    AND tax.taxonomy = 'category'
-                                                    AND ter.name = 'news'
-                                                    WHERE wpost.post_type = 'post' AND wpost.post_status = 'publish'
-                                                    GROUP BY year DESC;" ); ?>
+
+
+            $years = $wpdb->get_results( "SELECT YEAR(post_date) AS year FROM wp_posts WHERE post_type = 'post' AND post_status = 'publish' GROUP BY year DESC");
+            ?>
 
             <ul class="sidebar-menu">
                 <!--<li class="submenu-toggle">-->
@@ -42,14 +38,9 @@ get_header(); ?>
                     <?php
 
                     foreach ( $years as $year ) {?>
-
-
-
-
                         <li class="news-nav-item">
-
                             <a href="<?php echo site_url(); ?>/news/<?php echo $year->year; ?>" class="news-nav-item-link"><?php echo $year->year; ?></a>
-                          </li>
+                        </li>
 
                    <?php  } ?>
 
