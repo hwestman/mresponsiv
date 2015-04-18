@@ -1,33 +1,20 @@
 <?php
 /*
-Template Name: Page - Contact
+Template Name: Output the post/page content
 */	
 ?>
 
-<?php get_template_part( 'template-content-header-normal'); ?> 
-        	
+
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
+    <header class="entry-header">
+        <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+    </header> <!-- .entry-header -->
+
+    <div class="entry-content">
+        <?php the_content(); ?>
+    </div> <!-- .entry-content -->
+
+</article> <!-- #post -->
 
 
-        <div id="content-no-sidebar" >
-        	<div id="content-padding">
-            Main<br />
-            Main<br />            Main<br />
-
-			</div>
-        </div>
-
-       	<div id="no-sidebar" >
-          a
-        </div> <!-- #sidebar -->
-
-    </div> <!-- .content -->
-    
-
-
-
-	<div class="push"></div> <!-- .push must be inside #wrapper -->
-
-</div> <!-- #wrapper -->
-
-<?php
-get_footer();
