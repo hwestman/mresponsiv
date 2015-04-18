@@ -325,7 +325,7 @@ $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'them
     'label'    => __( 'Logo', 'themeslug' ),
     'section'  => 'theme_custom_logo_section',
     'settings' => 'theme_custom_logo_setting',
-    'default-image' => get_template_directory_uri() . '/img/fallback-image-logo.jpg',
+    'default-image' => get_template_directory_uri() . '/img/logo_fallback.png',
 ) ) );
 
 }

@@ -74,11 +74,6 @@
 									<?php site_logo(); ?>
 								</a>
 							</div> <!-- #site-logo-container -->
-							<div id="site-title-container">
-								<a id="site-title-link" href="<?php echo site_url(); ?>">
-									<h1 id="site-title"><?php bloginfo('name'); ?></h1>
-								</a>
-							</div> <!-- #site-title-container -->
 						</div> <!-- #site-branding -->
 						</div> <!-- .navbar-heade -->
 
