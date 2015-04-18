@@ -1736,8 +1736,8 @@ overflow: hidden;
 .post-content{
   table{
     width: 100%;
-    min-width: 300px;
     margin-bottom: 25px;
+    margin-top: 25px;
 
 
       tbody{
@@ -1747,13 +1747,15 @@ overflow: hidden;
         tr:first-child{
           font-weight: bold;
           border-bottom: none;
-
+          font-size: 12px;
           td{
             border-right: none;
+            padding: 0;
           }
         }
         tr:nth-child(2){
           border-bottom: none;
+          font-weight: bold;
           td{
             border-right: none;
           }
@@ -1775,6 +1777,10 @@ overflow: hidden;
         }
       }
   }
+}
+.wp-post-image{
+  margin: 0 auto;
+  display: block;
 }
 
 
