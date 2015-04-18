@@ -18,9 +18,15 @@
 
 			<div class="col-xs-12">
                 <div id="footer-partner-links" class="mb-s">
-
-                    <?php wp_nav_menu( 'footer_menu'); ?>
-						
+					<?php
+					wp_nav_menu(
+					    array(
+						'menu' => 'Footer',
+						// do not fall back to first non-empty menu
+						'theme_location' => 'footer_menu',
+					  )
+					);
+					?>		
                 </div>
 			</div>
 			<div id="footer-copyright" class="mb-s">
