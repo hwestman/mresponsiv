@@ -1,5 +1,10 @@
 MRESPONSIVE
 
+PERMALINKS
+-----------
+Må være slått på
+/%category%/%year%/%postname%/
+
 Services og Products
 ------------------------
 

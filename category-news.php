@@ -71,7 +71,12 @@ get_header(); ?>
         <div id="content-sidebar" class="content-right" >
 
             <?php
-            query_posts( array ( 'category_name' => 'news', 'posts_per_page' => 10, 'year' => get_query_var( 'year') ));
+            $postyear = get_query_var( 'year');
+            $postlimit = 0;//by default
+            if($postyear == 0 ){
+                $postlimit=10;
+            }
+            query_posts( array ( 'category_name' => 'news', 'posts_per_page' => $postlimit, 'year' => $postyear ));
             //query_posts( 'posts_per_page=3' );
             if (have_posts()){ ?>
 
