@@ -55,7 +55,7 @@ get_header(); ?>
                 <p class="staff-list-person-text"><?php echo get_user_meta($user->ID,'position',true);  ?></p>
             </li>
             </a>
-            <a href="" class="staff-list-fixed-link">
+            <a class="staff-list-fixed-link" href="<?php echo get_author_posts_url($user->ID);?>">
                 <span class="staff-list-fixed-link-inner">
                     Kontakt
                 </span>
