@@ -29,7 +29,21 @@ get_header(); ?>
 
 
 
-            $years = $wpdb->get_results( "SELECT YEAR(post_date) AS year FROM wp_posts WHERE post_type = 'post' AND post_status = 'publish' GROUP BY year DESC");
+            //$years = $wpdb->get_results( "SELECT YEAR(post_date) AS year FROM wp_posts WHERE post_type = 'post' AND post_status = 'publish' GROUP BY year DESC");
+
+            $category = get_term_by('name', 'news', 'category');
+
+            $id = $category->term_id;
+            $years = $wpdb->get_results( "SELECT YEAR(post_date) as 'year' FROM $wpdb->posts
+                                        LEFT JOIN $wpdb->term_relationships ON
+                                        ($wpdb->posts.ID = $wpdb->term_relationships.object_id)
+                                        LEFT JOIN $wpdb->term_taxonomy ON
+                                        ($wpdb->term_relationships.term_taxonomy_id = $wpdb->term_taxonomy.term_taxonomy_id)
+                                        WHERE $wpdb->posts.post_status = 'publish'
+                                        AND $wpdb->term_taxonomy.taxonomy = 'category'
+                                        AND $wpdb->term_taxonomy.term_id = $id
+                                        ORDER BY post_date DESC");
+
             ?>
 
             <ul class="sidebar-menu">
@@ -56,7 +70,7 @@ get_header(); ?>
         <div id="content-sidebar" class="content-right" >
 
             <?php
-            query_posts( array ( 'category_name' => 'news', 'posts_per_page' => 3, 'year' => get_query_var( 'year') ));
+            query_posts( array ( 'category_name' => 'news', 'posts_per_page' => 10, 'year' => get_query_var( 'year') ));
             //query_posts( 'posts_per_page=3' );
             if (have_posts()){ ?>
 
