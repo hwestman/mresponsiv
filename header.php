@@ -47,7 +47,7 @@
 			echo '<img id="site-logo" src="' . $logo_image_option . '" alt="Logo">';
 		}
 		else {
-			echo '<img id="site-logo" src="' . get_template_directory_uri() . '/img/logo_fallback.jpg" alt="Logo">';
+			echo '<img id="site-logo" src="' . get_template_directory_uri() . '/img/logo_fallback.png" alt="Logo">';
 		}
 	}
 
