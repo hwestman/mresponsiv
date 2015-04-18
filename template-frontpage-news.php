@@ -10,7 +10,7 @@
 			 if (have_posts()){ ?>
 
             <div class="frontpage-section-heading">
-                <h2>Nyheter</h2>
+                <a href="<?php echo get_site_url() ?>/news"><h2>Nyheter</h2></a>
             </div>
                <?php while (have_posts()) : the_post(); ?>
                         <div class="col-xs-12 col-md-4">
