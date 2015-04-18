@@ -87,6 +87,8 @@ $theLink = get_permalink($post->ID);
 
         ?>
         <div class="post-content">
+            <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
             <h1 class="post-heading"><?php echo $post->post_title ?></h1>
 
 
@@ -96,9 +98,8 @@ $theLink = get_permalink($post->ID);
                     //echo $post->post_content;
                     echo do_shortcode( $post->post_content );
                 ?>
-
-
-        </div>
+            </article> <!-- #post -->
+        </div> <!-- .post-content -->
         <?php
         wp_reset_postdata();
         get_template_part( 'template-sidebar-staff'); ?>
