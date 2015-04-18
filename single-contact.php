@@ -19,11 +19,7 @@ get_header(); ?>
 
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <div id="normal-content" class="col-xs-12">
-            <div class="contact-form-widget col-xs-12 col-md-4">
 
-                <?php echo do_shortcode(get_post_meta(get_the_ID(), 'contact_form_shortcode', true)) ?>
-
-            </div>
 
             <?php $items = new WP_Query( array( 'post_type' => 'contact') );
             if( $items->have_posts() ) : ?>
@@ -45,6 +41,11 @@ get_header(); ?>
 
                 <?php wp_reset_query(); // Reset the loop.
             endif; ?>
+            <div class="contact-form-widget col-xs-12 col-md-4">
+
+                <?php echo do_shortcode(get_post_meta(get_the_ID(), 'contact_form_shortcode', true)) ?>
+
+            </div>
 
 
 
