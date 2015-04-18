@@ -47,7 +47,7 @@
 			echo '<img id="site-logo" src="' . $logo_image_option . '" alt="Logo">';
 		}
 		else {
-			echo '<img id="site-logo" src="' . get_template_directory_uri() . '/img/fallback-image-logo.jpg">';
+			echo '<img id="site-logo" src="' . get_template_directory_uri() . '/img/logo_fallback.png" alt="Logo">';
 		}
 	}
 
@@ -74,11 +74,6 @@
 									<?php site_logo(); ?>
 								</a>
 							</div> <!-- #site-logo-container -->
-							<div id="site-title-container">
-								<a id="site-title-link" href="<?php echo site_url(); ?>">
-									<h1 id="site-title"><?php bloginfo('name'); ?></h1>
-								</a>
-							</div> <!-- #site-title-container -->
 						</div> <!-- #site-branding -->
 						</div> <!-- .navbar-heade -->
 
