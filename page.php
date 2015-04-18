@@ -30,9 +30,9 @@ get_header(); ?>
 
 </div>
 
-<div id="sidebar-background" class="sidebar-background-right"></div>
+<div id="sidebar-background" class="sidebar-background-right">
   
-</div> <!-- #content -->
+</div> <!-- #sidebar-background -->
 
 
     <div class="push"></div> <!-- .push must be inside #wrapper -->
