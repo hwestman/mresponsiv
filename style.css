@@ -1373,6 +1373,32 @@ img.aligncenter {
 #content-padding {
   padding: 30px; }
 
+.post-content table {
+  width: 100%;
+  min-width: 300px;
+  margin-bottom: 25px; }
+  .post-content table tbody tr {
+    border-bottom: solid gray 1px; }
+  .post-content table tbody tr:first-child {
+    font-weight: bold;
+    border-bottom: none; }
+    .post-content table tbody tr:first-child td {
+      border-right: none; }
+  .post-content table tbody tr:nth-child(2) {
+    border-bottom: none; }
+    .post-content table tbody tr:nth-child(2) td {
+      border-right: none; }
+  .post-content table tbody tr:last-child {
+    border: none; }
+  .post-content table tbody td {
+    border-right: solid gray 1px;
+    text-align: center;
+    padding: 10px; }
+  .post-content table tbody td:first-child {
+    text-align: left; }
+  .post-content table tbody td:last-child {
+    border: none; }
+
 /* Extra small devices (phones, less than 768px) */
 @media (max-width: 767px) {
   body, html {

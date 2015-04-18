@@ -86,16 +86,19 @@ $theLink = get_permalink($post->ID);
         }
 
         ?>
-
+        <div class="post-content">
             <h1 class="post-heading"><?php echo $post->post_title ?></h1>
 
 
             <?php echo get_the_post_thumbnail( $post->ID, 'sideway') ?>
-            <p>
-                <?php echo $post->post_content; ?>
-            </p>
+
+                <?php
+                    //echo $post->post_content;
+                    echo do_shortcode( $post->post_content );
+                ?>
 
 
+        </div>
         <?php
         wp_reset_postdata();
         get_template_part( 'template-sidebar-staff'); ?>

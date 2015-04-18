@@ -1733,6 +1733,50 @@ overflow: hidden;
 #content-padding {
     padding: 30px;
 }
+.post-content{
+  table{
+    width: 100%;
+    min-width: 300px;
+    margin-bottom: 25px;
+
+
+      tbody{
+        tr{
+          border-bottom: solid gray 1px;
+        }
+        tr:first-child{
+          font-weight: bold;
+          border-bottom: none;
+
+          td{
+            border-right: none;
+          }
+        }
+        tr:nth-child(2){
+          border-bottom: none;
+          td{
+            border-right: none;
+          }
+        }
+        tr:last-child{
+          border: none;
+        }
+
+        td{
+          border-right: solid gray 1px;
+          text-align: center;
+          padding: 10px;
+        }
+        td:first-child{
+          text-align: left;
+        }
+        td:last-child{
+          border: none;
+        }
+      }
+  }
+}
+
 
 
 
