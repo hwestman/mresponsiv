@@ -42,9 +42,10 @@ get_header(); ?>
                                         WHERE $wpdb->posts.post_status = 'publish'
                                         AND $wpdb->term_taxonomy.taxonomy = 'category'
                                         AND $wpdb->term_taxonomy.term_id = $id
-                                        ORDER BY post_date GROUP BY year DESC");
+                                        GROUP BY year ORDER BY post_date DESC");
 
             ?>
+
 
             <ul class="sidebar-menu">
                 <!--<li class="submenu-toggle">-->
