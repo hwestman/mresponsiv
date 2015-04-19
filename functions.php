@@ -299,6 +299,67 @@ function update_services_add_options(){
 
 add_action( 'save_post', 'update_services_add_options' );
 
+
+
+/**
+ * Attempting to refactor out the custom post type for contact-page and replacing it with a meta box and template :)
+ */
+
+function register_page_meta_boxes() {
+
+    add_meta_box("sidebarShortcode", "Shortcode for Sidebar", "sidebarShortcodeMarkup","page", "normal", "high");
+    add_meta_box("wysiwyg-editor-2", "Kolonne 2", "secondColumn","page", "normal", "high");
+
+}
+
+add_action( 'admin_init', 'register_page_meta_boxes' ); // Add to admin panel
+
+function sidebarShortcodeMarkup(){
+    global $post;
+    $custom = get_post_custom( $post->ID );
+
+    ?><p>
+    <label>Shortcode for page with the template: Page - Sidebar with shortcode</label><br />
+    <input type="text" name="sidebarShortcode" value="<?= esc_html__($custom["sidebarShortcode"][0])?>" style="width:99%;"/>
+    </p><?php
+}
+
+function update_sidebarShortcode(){
+    global $post;
+
+    if ( $post ){
+
+        if( $_POST["sidebarShortcode"]  != "" ){
+            update_post_meta($post->ID, "sidebarShortcode", $_POST["sidebarShortcode"]);
+        }
+        if( $_POST["secondColumn"]  != "" ){
+            update_post_meta($post->ID, "secondColumn", $_POST["secondColumn"]);
+        }
+    }
+
+}
+function secondColumn() {
+
+    global $post;
+    $custom = get_post_custom( $post->ID );
+
+    $content = get_post_meta($post->ID, 'secondColumn', true); ?>
+
+    <label>Content for another column, use with template: one column sidebar right and two column sidebar right..</label><br />
+
+    <?php $args = array(
+        'textarea_rows' => 15,
+        'textarea_name'=>"secondColumn",
+        'quicktags'=>"true",
+        'media-buttons'=>false
+    );
+
+    wp_editor( $content, "secondColumn",$args);
+}
+
+
+add_action( 'save_post', 'update_sidebarShortcode' );
+
 /**
  * 7.0 Theme Appearance Options (Logo etc..)
  * ----------------------------------------------------------------------------
@@ -310,20 +371,20 @@ add_action( 'save_post', 'update_services_add_options' );
 
 function add_custom_logo( $wp_customize ) {
 
-$wp_customize->add_section( 'theme_custom_logo_section' , array(
-    'title'       => __( 'Logo', 'themeslug' ),
-    'priority'    => 30,
-    'description' => 'To change the Logo, upload a new image. Optimal image size for this template is 10 x 10 pixels',
-) );
+    $wp_customize->add_section( 'theme_custom_logo_section' , array(
+        'title'       => __( 'Logo', 'themeslug' ),
+        'priority'    => 30,
+        'description' => 'To change the Logo, upload a new image. Optimal image size for this template is 10 x 10 pixels',
+    ) );
 
-$wp_customize->add_setting( 'theme_custom_logo_setting' );
+    $wp_customize->add_setting( 'theme_custom_logo_setting' );
 
-$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'theme_custom_logo', array(
-    'label'    => __( 'Logo', 'themeslug' ),
-    'section'  => 'theme_custom_logo_section',
-    'settings' => 'theme_custom_logo_setting',
-    'default-image' => get_template_directory_uri() . '/img/logo_fallback.png',
-) ) );
+    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'theme_custom_logo', array(
+        'label'    => __( 'Logo', 'themeslug' ),
+        'section'  => 'theme_custom_logo_section',
+        'settings' => 'theme_custom_logo_setting',
+        'default-image' => get_template_directory_uri() . '/img/logo_fallback.png',
+    ) ) );
 
 }
 add_action('customize_register', 'add_custom_logo');
@@ -350,121 +411,6 @@ add_filter('user_contactmethods','modify_contact_fields',10,1);
 
 //Remove color picker for users
 remove_action( 'admin_color_scheme_picker', 'admin_color_scheme_picker' );
-
-
-
-
-//Add custom post type for collaborators
-
-function register_contact_custom_post(){
-
-    register_post_type('contact', array(
-        'label' => __('Kontaktinfo'),
-        'singular_label' => __('Kontaktinformasjon'),
-        'public' => true,
-        'show_ui' => true, // UI in admin panel
-        'show_in_nav_menus' => true,
-        'capability_type' => 'post',
-        'hierarchical' => false,
-        'rewrite' => array("slug" => "kontakt"), // Permalinks format
-        'supports' => array('title', 'thumbnail')
-    ));
-}
-
-add_action('init', 'register_contact_custom_post'); // Enable Collaborators post
-
-function register_contact_meta_boxes() {
-    //#implementgooglemaps add_meta_box("maps_box", "Google maps", "maps_box","contact", "normal", "high");
-    add_meta_box("contact_form_box", "ContactForm7", "contact_form_box","contact", "normal", "high");
-    add_meta_box("wysiwyg-editor-1", "1. Kolonne", "first_column_box","contact", "normal", "high");
-    add_meta_box("wysiwyg-editor-2", "2. Kolonne", "second_column_box","contact", "normal", "high");
-}
-
-add_action( 'admin_init', 'register_contact_meta_boxes' ); // Add to admin panel
-
-/*
- * //#implementgooglemaps
-function maps_box(){
-    global $post;
-    $custom = get_post_custom( $post->ID );
-
-    ?><p>
-        <label>Link til Google maps</label><br />
-        <input type="text" name="maps_url" value="<?= $custom["maps_url"][0] ?>" style="width:99%;"/>
-    </p><?php
-
-
-}
-*/
-function contact_form_box(){
-    global $post;
-    $custom = get_post_custom( $post->ID );
-
-    ?><p>
-        <label>Shortcode for contactform7</label><br />
-        <input type="text" name="contact_form_shortcode" value="<?= esc_html__($custom["contact_form_shortcode"][0])?>" style="width:99%;"/>
-    </p><?php
-
-}
-
-/*
-* Function for adding the options tab.
-*/
-function first_column_box() {
-
-    global $post;
-    $custom = get_post_custom( $post->ID );
-
-    $content = get_post_meta($post->ID, 'first_column', true);
-
-    $args = array(
-        'textarea_rows' => 15,
-        'textarea_name'=>"first_column",
-        'quicktags'=>"true",
-        'media-buttons'=>false
-    );
-    wp_editor( $content, "first_col",$args);
-
-}
-
-function second_column_box() {
-
-    global $post;
-    $custom = get_post_custom( $post->ID );
-
-    $content = get_post_meta($post->ID, 'second_column', true);
-
-    $args = array(
-        'textarea_rows' => 15,
-        'textarea_name'=>"second_column",
-        'quicktags'=>"true",
-        'media-buttons'=>false
-    );
-    wp_editor( $content, "second_col",$args);
-}
-
-function update_contact_add_options(){
-    global $post;
-
-    if ( $post ){
-        if( $_POST["first_column"]  != "" ){
-            update_post_meta($post->ID, "first_column", $_POST["first_column"]);
-        }
-        if( $_POST["second_column"]  != "" ){
-            update_post_meta($post->ID, "second_column", $_POST["second_column"]);
-        }
-        /* //#implementgooglemaps
-        if( $_POST["maps_url"]  != "" ){
-            update_post_meta($post->ID, "maps_url", $_POST["maps_url"]);
-        }*/
-        if( $_POST["contact_form_shortcode"]  != "" ){
-            update_post_meta($post->ID, "contact_form_shortcode", $_POST["contact_form_shortcode"]);
-        }
-    }
-}
-
-
-add_action( 'save_post', 'update_contact_add_options' );
 
 /**
  * 9.0 Mail
@@ -559,6 +505,13 @@ function m_res_add_widget() {
 add_action( 'widgets_init', 'm_res_add_widget' );
 
 add_filter('widget_text', 'do_shortcode');
+
+
+
+/**
+ * 11.0 Header image
+ * ----------------------------------------------------------------------------
+ */
 
 $headerArgs = array(
     'width' => 2000,

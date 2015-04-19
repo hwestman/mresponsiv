@@ -114,9 +114,6 @@ article img {
   display: block;
   max-width: 100%;
   height: auto; }
-article table {
-  display: block;
-  overflow-x: auto; }
 
 small, .font_small {
   font-size: 0.833em; }
@@ -289,7 +286,7 @@ img.aligncenter {
   padding: 10px 15px 8px 15px;
   color: #ffffff;
   width: auto;
-  background-color: #1068ae; }
+  background-color: #1068AE; }
 
 /**
  * Page - Full width content
@@ -347,7 +344,7 @@ img.aligncenter {
   .frontpage-news-content-link .frontpage-news-heading {
     margin-top: 0px;
     padding-top: 0px;
-    color: #1068ae; }
+    color: #1068AE; }
   .frontpage-news-content-link .frontpage-news-heading:hover {
     color: #cccccc; }
   .frontpage-news-content-link .frontpage-news-excerpt {
@@ -397,7 +394,7 @@ img.aligncenter {
   text-align: right; }
 
 .fp-service-heading-link {
-  color: #1068ae;
+  color: #1068AE;
   text-decoration: none; }
   .fp-service-heading-link h2 {
     margin: 0px; }
@@ -489,7 +486,7 @@ img.aligncenter {
   text-decoration: none;
   color: #000000; }
   .frontpage-services-item-link h2 {
-    color: #1068ae; }
+    color: #1068AE; }
   .frontpage-services-item-link p {
     color: #000000; }
 
@@ -578,13 +575,13 @@ img.aligncenter {
 .staff-list-link:hover {
   background-color: #f3f3f3;
   text-decoration: none;
-  color: #1068ae;
+  color: #1068AE;
   cursor: pointer; }
 
 .staff-list-fixed-link {
   position: absolute;
   display: block;
-  background-color: #79bf08;
+  background-color: #79BF08;
   font-size: 14px;
   line-height: 14px;
   padding: 10px 10px 10px 10px;
@@ -654,7 +651,7 @@ img.aligncenter {
   margin: 10px 0px 15px 0px;
   color: #ffffff;
   width: auto;
-  background-color: #1068ae; }
+  background-color: #1068AE; }
   #content-header-heading h2 {
     font-size: 1em;
     margin: 0px;
@@ -829,7 +826,7 @@ img.aligncenter {
 .person-info-list-item-fixed-link {
   position: absolute;
   display: block;
-  background-color: #79bf08;
+  background-color: #79BF08;
   font-size: 14px;
   line-height: 14px;
   padding: 10px 10px 10px 10px;
@@ -860,7 +857,7 @@ img.aligncenter {
 
 .person-info-list-item-link:hover {
   text-decoration: none;
-  color: #1068ae;
+  color: #1068AE;
   background-color: #e6e6e6; }
 
 .person-info-list-item-heading {
@@ -882,7 +879,7 @@ img.aligncenter {
   min-height: 600px; }
 
 #sidebar-right {
-  background-color: #f0f0f0;
+  background-color: #F0F0F0;
   overflow: hidden; }
   #sidebar-right .content {
     float: left;
@@ -907,7 +904,7 @@ img.aligncenter {
       width: 90px;
       height: 90px;
       border: none;
-      background-color: #79bf08; }
+      background-color: #79BF08; }
     #sidebar-right .contact-person .name {
       float: left;
       clear: both;
@@ -947,7 +944,7 @@ img.aligncenter {
   text-decoration: underline; }
 
 .person-sidebar-link:hover {
-  color: #1068ae;
+  color: #1068AE;
   text-decoration: underline;
   background-color: #cccccc; }
 
@@ -961,7 +958,7 @@ img.aligncenter {
   padding: 10px 15px 8px 15px;
   margin: 15px 0px 15px 0px;
   color: #ffffff;
-  background-color: #79bf08;
+  background-color: #79BF08;
   cursor: pointer;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -1028,7 +1025,7 @@ img.aligncenter {
   .news-archive-single-content p {
     float: none; }
   .news-archive-single-content .news-archive-heading-link {
-    color: #1068ae; }
+    color: #1068AE; }
   .news-archive-single-content .news-archive-heading-link:hover {
     color: #cccccc;
     text-decoration: none; }
@@ -1202,7 +1199,7 @@ img.aligncenter {
     float: left;
     display: block;
     color: #ffffff;
-    background-color: #1068ae;
+    background-color: #1068AE;
     padding: 10px 15px 10px 15px;
     line-height: 1em;
     text-decoration: none; }
@@ -1245,7 +1242,7 @@ img.aligncenter {
   resize: none; }
 .wpcf7 form .wpcf7-submit {
   border-radius: 0;
-  background-color: #79bf08;
+  background-color: #79BF08;
   color: white;
   border: none;
   padding: 10px 20px 10px 20px;
@@ -1486,7 +1483,7 @@ img.aligncenter {
   .staff-list-fixed-link {
     position: absolute;
     display: block;
-    background-color: #79bf08;
+    background-color: #79BF08;
     font-size: 14px;
     line-height: 14px;
     padding: 10px 10px 10px 10px;
@@ -1712,9 +1709,8 @@ img.aligncenter {
     margin-right: 0px; }
 
   .post-content table {
-    width: 100%;
-    margin-bottom: 25px;
-    margin-top: 25px; }
+    display: block;
+    overflow-x: auto; }
     .post-content table tbody td {
       padding: 0; }
 
@@ -2158,3 +2154,5 @@ img.aligncenter {
   #footer-outer {
     margin-top: -60px;
     padding-top: 90px; } }
+
+/*# sourceMappingURL=style.css.map */

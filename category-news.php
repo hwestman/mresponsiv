@@ -18,7 +18,7 @@ get_header(); ?>
 
 
         <div class="sidebar-menu-header">
-            <h3 class="sidebar-menu-title">Alternativer</h3>
+            <h3 class="sidebar-menu-title"><a href="<?php echo site_url(); ?>/news">Arkiv</a></h3>
             <button class="sidebar-menu-toggle">
                 <span class="toggle-button-stroke"></span>
                 <span class="toggle-button-stroke"></span>
@@ -67,7 +67,6 @@ get_header(); ?>
   </div> <!-- #sidebar-padding -->
 </div> <!-- #sidebar -->
 
-
         <div id="content-sidebar" class="content-right" >
 
             <?php
@@ -81,10 +80,6 @@ get_header(); ?>
             if (have_posts()){ ?>
 
                 <?php while (have_posts()) : the_post(); ?>
-
-
-
-
 
                     <div id="content-padding">
                       <div class="news-archive-single-container">
