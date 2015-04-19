@@ -92,7 +92,11 @@ $theLink = get_permalink($post->ID);
             <h1 class="post-heading"><?php echo $post->post_title ?></h1>
 
 
-            <?php echo get_the_post_thumbnail( $post->ID, 'sideway') ?>
+            <?php
+                if(isset($_GET['product'])) { //Have to make sure this is a product and not a service, cause we allready see the service image :)
+                    echo get_the_post_thumbnail($post->ID, 'sideway');
+                }
+            ?>
 
                 <?php
                     //echo $post->post_content;
