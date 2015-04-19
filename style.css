@@ -297,8 +297,11 @@ img.aligncenter {
   padding-bottom: 30px; }
 
 #full-width-content {
-  padding-top: 30px;
-  padding-bottom: 30px; }
+  width: 100%;
+  height: 100%;
+  position: relative;
+  bottom: 0px;
+  background-color: #ffffff; }
 
 /**
  * Frontpage 
@@ -1414,10 +1417,8 @@ img.aligncenter {
   margin: 0 auto;
   display: block; }
 
-.gallery-item {
-  margin: 10px; }
-  .gallery-item img {
-    margin: 0 auto; }
+.gallery-item img {
+  margin: 0 auto; }
 
 /* Extra small devices (phones, less than 768px) */
 @media (max-width: 767px) {
