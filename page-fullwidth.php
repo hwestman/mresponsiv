@@ -5,28 +5,20 @@ Template Name: Page - Fullwidth
 get_header(); ?>
 
 
-<?php get_template_part( 'template-content-header-normal'); ?> 
-        	
+<?php  get_template_part( 'template-content-header-normal'); ?>
 
+    <div id="content-sidebar" class="content-left" >
+        <div id="content-padding">
 
-        <div id="content-no-sidebar" >
-        	<div id="content-padding">
-            Main<br />
-            Main<br />            Main<br />
+            <?php
+            while ( have_posts() ) : the_post();
+                get_template_part( 'content', get_post_format() );
+            endwhile;
+            ?>
+            <?php wp_reset_query(); ?>
 
-			</div>
-        </div>
-
-       	<div id="no-sidebar" >
-          a
-        </div> <!-- #sidebar -->
-
-    </div> <!-- .content -->
-    
-
-
-
-	<div class="push"></div> <!-- .push must be inside #wrapper -->
+        </div> <!-- #content-padding -->
+    </div> <!-- #content-sidebar -->
 
 </div> <!-- #wrapper -->
 
