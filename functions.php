@@ -558,5 +558,8 @@ function m_res_add_widget() {
 }
 add_action( 'widgets_init', 'm_res_add_widget' );
 
+add_filter('widget_text', 'do_shortcode');
+
+add_theme_support( 'custom-header' );
 
 ?>
