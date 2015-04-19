@@ -329,7 +329,9 @@ img.aligncenter {
 
 .frontpage-news-item-visual {
   float: left;
-  padding-bottom: 15px; }
+  padding-bottom: 15px;
+  width: 340px;
+  height: 25px; }
   .frontpage-news-item-visual img {
     float: left;
     display: block;

@@ -353,13 +353,15 @@ img.aligncenter {
     float: left;
     padding-bottom: 15px;
 
-img {
-    float: left; 
-    display: block;
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-}
+    width: 340px;
+    height: 25px;
+    img {
+        float: left;
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
 
 }
 

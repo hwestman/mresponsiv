@@ -44,7 +44,7 @@ get_header(); ?>
                     <?php
 
                     //just a function to get the url instead of img element
-                    preg_match("/src='(.*?)'/i", get_avatar($user->ID), $matches);
+                    preg_match("/src='(.*?)'/i", get_avatar($user->ID,200), $matches);
                     $contactperson_photo =  $matches[1];
                     ?>
                     <img class="staff-list-thumbnail" src="<?php echo $contactperson_photo ?>">
