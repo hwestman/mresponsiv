@@ -40,9 +40,16 @@
 		$background_image = htmlentities($url_background[0]);
 
     }
-
+    //Fallback
     if($background_image == null){
-        $background_image = get_stylesheet_directory_uri() . "/img/background-fallback-full-width.jpg";
+        //Fallback 1
+        $background_image = get_header_image();
+
+        //Fallback 2
+        if(!$background_image){
+            $background_image = get_stylesheet_directory_uri() . "/img/background-fallback-full-width.jpg";
+        }
+
     } ?>
 
     <div id="hero-image" style="background-image: url('<?php echo $background_image; ?>');"></div>
