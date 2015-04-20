@@ -4,15 +4,16 @@
  */
 ?>
 
+
+
+<?php $items = new WP_Query( array( 'post_type' => 'samarbeidspartnere', 'posts_per_page' => -1, 'orderby' => 'menu_order', 'order' => 'ASC') ); ?>
+<?php if( $items->have_posts() ) : ?>
 <div id="frontpage-collaborators-container" class="col-xs-12 frontpage-section">
 	<div class="frontpage-section-heading col-xs-12">
 		<h2>Samarbeidspartnere</h2>
 	</div>   
     <div class="col-xs-push-1 col-xs-10">
         <ul class="frontpage-collaborators-list">
-
-<?php $items = new WP_Query( array( 'post_type' => 'samarbeidspartnere', 'posts_per_page' => -1, 'orderby' => 'menu_order', 'order' => 'ASC') ); ?>
-<?php if( $items->have_posts() ) : ?>
  <?php while( $items->have_posts() ) : $items->the_post(); ?>
 	
 	<?php $collaborator_url = get_post_meta($post->ID, 'collaborator_url', true);?></p>
@@ -25,8 +26,9 @@
          </li>   
 	<?php wp_reset_query(); // Reset the loop. ?>
 	<?php endwhile;?>
-	<?php endif; ?>
-
-      </ul>
+	 </ul>
 	</div>
 </div> <!-- #frontpage-collaborators-container -->
+	<?php endif; ?>
+
+     
