@@ -35,10 +35,12 @@ get_header(); ?>
     foreach($users as $user){
 
         if(isset($user->user_firstname) && $user->user_firstname != ""){
+
+            $authorUrl = get_author_posts_url($user->ID);
         ?>
 
         <ul class="staff-list">
-            <a class="staff-list-link" href="<?php echo get_author_posts_url($user->ID);?>">
+            <a class="staff-list-link" href="<?php echo $authorUrl;?>">
             <li class="staff-list-visual">
                 <span class="staff-list-thumbnail-crop">
                     <?php
@@ -55,7 +57,7 @@ get_header(); ?>
                 <p class="staff-list-person-text"><?php echo get_user_meta($user->ID,'position',true);  ?></p>
             </li>
             </a>
-            <a class="staff-list-fixed-link" href="<?php echo get_author_posts_url($user->ID);?>">
+            <a class="staff-list-fixed-link" href="<?php echo $authorUrl;?>">
                 <span class="staff-list-fixed-link-inner">
                     Kontakt
                 </span>
