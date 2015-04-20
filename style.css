@@ -333,7 +333,7 @@ img.aligncenter {
 .frontpage-news-item-visual {
   float: left;
   padding-bottom: 15px;
-  width: 340px;
+  min-width: 250px;
   height: 250px; }
   .frontpage-news-item-visual img {
     float: left;
