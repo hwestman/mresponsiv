@@ -114,6 +114,13 @@ article img {
   display: block;
   max-width: 100%;
   height: auto; }
+article ul {
+  display: block;
+  padding-left: 25px;
+  list-style-type: disc; }
+article strong {
+  display: inline;
+  font-weight: bold; }
 
 small, .font_small {
   font-size: 0.833em; }

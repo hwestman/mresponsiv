@@ -66,6 +66,18 @@ article {
         height: auto;
     }
 
+    ul {
+            display: block;
+            padding-left: 25px;
+            list-style-type: disc;    
+    }
+
+    strong {
+        display: inline;
+        font-weight: bold;
+
+    }
+
 }
 
 small, .font_small {font-size: 0.833em;}
