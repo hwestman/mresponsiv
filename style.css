@@ -122,15 +122,15 @@ article strong {
   display: inline;
   font-weight: bold; }
 
-.content-one-column img, .content-two-column img, .contact-first-column img, .contact-second-column img {
+.content-one-column img, .content-two-column img, .contact-first-column img, .contact-second-column img, .sidebar-shortcode img {
   display: block;
   max-width: 100%;
   height: auto; }
-.content-one-column ul, .content-two-column ul, .contact-first-column ul, .contact-second-column ul {
+.content-one-column ul, .content-two-column ul, .contact-first-column ul, .contact-second-column ul, .sidebar-shortcode ul {
   display: block;
   padding-left: 25px;
   list-style-type: disc; }
-.content-one-column strong, .content-two-column strong, .contact-first-column strong, .contact-second-column strong {
+.content-one-column strong, .content-two-column strong, .contact-first-column strong, .contact-second-column strong, .sidebar-shortcode strong {
   display: inline;
   font-weight: bold; }
 

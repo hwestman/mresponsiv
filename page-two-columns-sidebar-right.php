@@ -27,7 +27,7 @@ get_template_part( 'template-content-header-normal'); ?>
 
         <div id="sidebar" class="sidebar-right">
             <div id="sidebar-padding">
-                <div class="">
+                <div class="sidebar-shortcode">
                     <?php echo do_shortcode(get_post_meta(get_the_ID(), 'sidebarShortcode', true)) ?>
                 </div> <!-- .contact-form-widget -->
 
