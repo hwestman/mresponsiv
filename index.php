@@ -9,26 +9,20 @@ get_header(); ?>
 
 
 
-        <div id="content-no-sidebar" >
-        	<div id="content-padding">
+<div id="content-no-sidebar" >
+    <div id="content-padding">
 
-			
-            <?php get_template_part( 'template-frontpage-services'); ?> 
-            <?php get_template_part( 'template-frontpage-news'); ?>
-			<?php get_template_part( 'template-frontpage-collaborators'); ?> 
+        <?php get_template_part( 'template-frontpage-services'); ?> 
+        <?php get_template_part( 'template-frontpage-news'); ?>
+        <?php get_template_part( 'template-frontpage-collaborators'); ?> 
 
-			</div>
-        </div>
+    </div> <!-- #content-padding -->
+</div> <!-- #content-no-sidebar -->
 
-       	<div id="no-sidebar" >
-          
-        </div> <!-- #sidebar -->
+    <div id="no-sidebar" ></div> <!-- #sidebar -->
 
-    </div> <!-- .content -->
+</div> <!-- .content -->
     
-
-
-
 	<div class="push"></div> <!-- .push must be inside #wrapper -->
 
 </div> <!-- #wrapper -->

@@ -1,42 +1,43 @@
 <?php
 /*
- * Generate markup for the hero-image section
+ * Generate markup for the frontpage news section
  */
 ?>
 
-            <?php
-            query_posts( array ( 'category_name' => 'news', 'posts_per_page' => 3 ) );
-            //query_posts( 'posts_per_page=3' );
-			 if (have_posts()){ ?>
+<div id="frontpage-news-section" class="frontpage-section">
 
-            <div class="frontpage-section-heading">
-                <a href="<?php echo get_site_url() ?>/news"><h2>Nyheter</h2></a>
-            </div>
-               <?php while (have_posts()) : the_post(); ?>
-                        <div class="col-xs-12 col-md-4">
+    <?php
+    query_posts( array ( 'category_name' => 'news', 'posts_per_page' => 3 ) );
+    if (have_posts()){ ?>
 
+    <div class="frontpage-section-heading">
+        <a href="<?php echo get_site_url() ?>/news"><h2>Nyheter</h2></a>
+    </div>
+    <?php while (have_posts()) : the_post(); ?>
+        
+        <div class="frontpage-news-item-container col-xs-12 col-md-4">
+            <ul class="frontpage-news-item">
 
-                <ul class="frontpage-news-item">
-                    <li class="frontpage-news-item-visual">
-                        <a class="frontpage-news-thumbnail-link" href="<?php the_permalink(); ?>">
+                <li class="frontpage-news-item-visual">
+                    <a class="frontpage-news-thumbnail-link" href="<?php the_permalink(); ?>">
                         <?php the_post_thumbnail('news'); ?>
-                        </a>
-                    </li>
-                    <li class="frontpage-news-item-content">
-                        <a class="frontpage-news-content-link" href="<?php the_permalink(); ?>">
-                            <h3 class="frontpage-news-heading"><?php the_title(); ?></h3>
-                            <p class="frontpage-news-excerpt"><?php echo get_the_excerpt(); ?></p>
-                        </a>
-                        <span class="frontpage-news-date"><?php echo get_the_date( 'd. M Y'); ?></span>
+                    </a> <!-- .frontpage-news-thumbnail-link -->
+                </li> <!-- .frontpage-news-item-visual-->
 
-                    </li>
+                <li class="frontpage-news-item-content">
+                    <a class="frontpage-news-content-link" href="<?php the_permalink(); ?>">
+                        <h3 class="frontpage-news-heading"><?php the_title(); ?></h3>
+                        <p class="frontpage-news-excerpt"><?php echo get_the_excerpt(); ?></p>
+                    </a> <!-- .frontpage-news-content-link -->
+                    <span class="frontpage-news-date">
+                        <?php echo get_the_date( 'd. M Y'); ?>
+                    </span> <!-- .frontpage-news-date -->
+                </li> <!-- .frontpage-news-item-content -->
 
-                </ul> <!-- .frontpage-news-item -->
-                        </div>
+            </ul> <!-- .frontpage-news-item -->
+        </div> <!-- .frontpage-news-item-container -->
 			
-			
-			<?php  	endwhile; }	?>
-			<?php wp_reset_query(); ?>
+		<?php  	endwhile; }	?>
+		<?php wp_reset_query(); ?>
 
-</div>
-</div> <!-- #frontpage-collaborators-container -->
+</div> <!-- #frontpage-news-section -->
