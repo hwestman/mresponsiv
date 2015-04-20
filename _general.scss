@@ -67,17 +67,36 @@ article {
     }
 
     ul {
-            display: block;
-            padding-left: 25px;
-            list-style-type: disc;    
+        display: block;
+        padding-left: 25px;
+        list-style-type: disc;    
     }
 
     strong {
         display: inline;
         font-weight: bold;
-
     }
 
+}
+
+.content-one-column, .content-two-column, .contact-first-column, .contact-second-column {
+    
+    img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+
+    ul {
+        display: block;
+        padding-left: 25px;
+        list-style-type: disc;    
+    }
+
+    strong {
+        display: inline;
+        font-weight: bold;
+    }
 }
 
 small, .font_small {font-size: 0.833em;}
