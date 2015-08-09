@@ -18,62 +18,34 @@
 
 	<?php $services_url = get_post_meta($post->ID, 'collaborator_url', true);?></p>
 	<?php $services_thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'square'); ?>
-	<?php $services_thumbnail2 = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'sideway'); ?>
 
+
+	<!-- IF 3 x per linje -->
+	
 	<?php 
 
-	$i++;
-	if ($i % 2) {
-	?>
+	if($items->post_count == 4){ ?>
+	<div class="fp-service-item col-xs-12 col-sm-6 col-md-3 col-lg-3">
 
-	<div class="fp-service-item">
-		<div class="fp-servic-col col-xs-12 col-sm-6 col-md-6 col-lg-6">
+	<?php } else { ?>
+	
+	<div class="fp-service-item col-xs-12 col-sm-6 col-md-4 col-lg-4">
+	<?php } ?>
+
+		<a class="fp-service-item-link" href="<?php echo the_permalink(); ?>">
 			<div class="fp-service-visual">
-				<a class="fp-service-thumbnail-link" href="<?php echo the_permalink(); ?>">
-					<img src="<?php echo $services_thumbnail2[0] ?>">
-				</a>  <!-- fp-service-thumbnail-link-->
-			</div> <!-- fp-service-visual -->
-		</div>	<!-- fp-servic-col -->
-		<div class="fp-servic-col col-xs-12 col-sm-6 col-md-6 col-lg-6">
-			<div class="fp-service-text fp-service-text-left">
-				<a class="fp-service-heading-link" href="<?php echo the_permalink(); ?>">
-					<h2><?php echo the_title(); ?></h2>
-				</a> <!-- .fp-service-heading-link -->
-				<a class="fp-service-excerpt-link" href="<?php echo the_permalink(); ?>">
-					<?php echo the_excerpt(); ?>
-				</a> <!-- .fp-service-excerpt-link -->
-			</div> <!-- .fp-service-text-->
-		</div> <!-- .fp-servic-col -->  
+				<img src="<?php echo $services_thumbnail[0] ?>">
+			</div>
+			<div class="fp-service-content">
+				<h2><?php echo the_title(); ?></h2>
+			</div> 
+		</a> 
 	</div> <!-- .fp-service-item -->  
 
-	<?php 
-	} else {
-	?>
-
-	<div class="fp-service-item">
-		<div class="fp-servic-col col-xs-12 col-sm-6 col-md-push-6 col-md-6 col-lg-6">
-			<div class="fp-service-visual">
-				<a class="fp-service-thumbnail-link" href="<?php echo the_permalink(); ?>">
-					<img src="<?php echo $services_thumbnail2[0] ?>">
-				</a>  <!-- .fp-service-thumbnail-link --> 
-			</div> <!-- .fp-service-visual --> 
-		</div> <!-- .fp-servic-col -->  	 
-		<div class="fp-servic-col col-xs-12 col-sm-6 col-md-pull-6 col-md-6 col-lg-6">
-			<div class="fp-service-text fp-service-text-left">
-				<a class="fp-service-heading-link" href="<?php echo the_permalink(); ?>">
-					<h2><?php echo the_title(); ?></h2>
-				</a> <!-- .fp-service-heading-link-->
-				<a class="fp-service-excerpt-link" href="<?php echo the_permalink(); ?>">
-					<?php echo the_excerpt(); ?>
-				</a> <!-- .fp-service-excerpt-link-->   
-			</div> <!-- .fp-service-text -->  
-		</div> <!-- .fp-servic-col --> 
-	</div> <!-- .fp-service-item --> 
 
 
-	<?php 
-	}
-	?>
+
+
 
 
 	<?php wp_reset_query(); // Reset the loop. ?>
