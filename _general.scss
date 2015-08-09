@@ -462,28 +462,24 @@ img.aligncenter {
 
 @media (min-width: 992px) and (max-width: 1199px) {
 
- .fp-service-item {
-
+    .fp-service-item {
     width: 25%;
- }
+    }
 
 }
 
-
  @media (min-width: 768px) and (max-width: 991px) {
 
- .fp-service-item {
-
-    width: 50%;
- }
+    .fp-service-item {
+        width: 50%;
+    }
 }
 
 @media (max-width: 767px) {
 
- .fp-service-item {
-
-    width: 100%;
- }
+    .fp-service-item {
+        width: 100%;
+    }
 }
 
  .fp-service-item-link {
@@ -526,6 +522,12 @@ img.aligncenter {
     float: left;
     width: 100%;
     text-align: center;
+    overflow: hidden;
+
+    h2 {
+        font-size: 1.2em;
+    }
+
 }
 
 

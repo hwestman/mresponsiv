@@ -444,7 +444,10 @@ img.aligncenter {
 .fp-service-content {
   float: left;
   width: 100%;
-  text-align: center; }
+  text-align: center;
+  overflow: hidden; }
+  .fp-service-content h2 {
+    font-size: 1.2em; }
 
 /**
  * Frontpage - Collaborators
