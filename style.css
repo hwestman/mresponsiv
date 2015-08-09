@@ -330,10 +330,13 @@ img.aligncenter {
   float: left;
   width: 100%; }
   .frontpage-section-heading h2 {
-    margin: 0px;
-    padding: 0px 0px 30px 0px;
+    float: left;
+    width: 100%;
+    padding: 0px 0px 10px 0px;
+    margin: 0px 0px 30px 0px;
     text-align: left;
-    font-size: 1.9em; }
+    font-size: 1.9em;
+    border-bottom: 1px solid #F0F0F0; }
 
 .frontpage-section {
   margin-bottom: 45px; }
@@ -391,26 +394,42 @@ img.aligncenter {
  * Frontpage - Services 
  * ----------------------------------------------------------------------------
  */
-.fp-service-item {
+.frontpage-services {
   float: left;
+  width: 100%;
   margin-bottom: 15px; }
 
+.fp-service-item {
+  float: left;
+  width: 20%;
+  margin-bottom: 30px; }
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .fp-service-item {
+    width: 25%; } }
+@media (min-width: 768px) and (max-width: 991px) {
+  .fp-service-item {
+    width: 50%; } }
+@media (max-width: 767px) {
+  .fp-service-item {
+    width: 100%; } }
 .fp-service-item-link {
   float: left;
   display: block;
   width: 100%;
   padding-top: 30px;
   padding-bottom: 15px;
-  color: #000000; }
+  color: #000000;
+  background-color: #F0F0F0; }
 
 .fp-service-item-link:hover {
-  background-color: #f3f3f3;
+  background-color: #1068ae;
   text-decoration: none;
-  color: #1068ae;
+  color: #ffffff;
   cursor: pointer; }
 
 .fp-service-visual {
-  width: 160px;
+  width: 140px;
   margin: auto;
   display: block;
   overflow: hidden;
