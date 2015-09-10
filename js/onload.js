@@ -2,7 +2,7 @@
 $(document).ready(function(){
 
 
-    removeElementsFromGoogleMaps();
+
 });
 
 function removeElementsFromGoogleMaps(){

@@ -11,8 +11,18 @@ get_header(); ?>
 
 <div id="content-no-sidebar" >
     <div id="content-padding">
+        <?php
+        $postsWithCat = new WP_Query( array( 'post_type' => 'services', 'category_name'=>'bedrift,privat') );
 
-        <?php get_template_part( 'template-frontpage-services'); ?> 
+        if($postsWithCat->post_count > 0){
+            get_template_part( 'template-frontpage-services-inCategory');
+        }else{
+            get_template_part( 'template-frontpage-services');
+        }
+
+
+        ?>
+
         <?php get_template_part( 'template-frontpage-news'); ?>
         <?php get_template_part( 'template-frontpage-collaborators'); ?> 
 

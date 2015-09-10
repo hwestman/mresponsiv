@@ -206,7 +206,8 @@ function register_services_custom_post(){
         'capability_type' => 'post',
         'hierarchical' => false,
         'rewrite' => array("slug" => "tjenester"), // Permalinks format
-        'supports' => array('title','editor', 'thumbnail','custom-fields')
+        'supports' => array('title','editor', 'thumbnail','custom-fields'),
+        'taxonomies' => array('category')
     ));
 }
 
