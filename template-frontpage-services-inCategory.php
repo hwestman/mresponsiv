@@ -52,15 +52,8 @@
             <?php $services_thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'square'); ?>
 
 
-                <!-- IF 3 x per linje -->
-
-                <?php if($index > 2){ ?>
-                    <div class="fp-seperated-service-item col-xs-12 col-sm-6 col-md-6 col-lg-6" style="margin-top: 30px;">
-
-                <?php } else { ?>
 
                     <div class="fp-seperated-service-item col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                <?php } ?>
 
                 <a class="fp-service-item-link" href="<?php echo the_permalink(); ?>">
                     <div class="fp-service-visual">
