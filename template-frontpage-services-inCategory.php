@@ -43,6 +43,8 @@
 
     function printServices($items){
 
+        $index = 1;
+
         if( $items->have_posts() ) :?>
             <?php while( $items->have_posts() ) : $items->the_post(); ?>
 
@@ -52,8 +54,8 @@
 
                 <!-- IF 3 x per linje -->
 
-                <?php if($items->post_count == 4){ ?>
-                    <div class="fp-seperated-service-item col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                <?php if($index > 2){ ?>
+                    <div class="fp-seperated-service-item col-xs-12 col-sm-6 col-md-6 col-lg-6" style="margin-top: 30px;">
 
                 <?php } else { ?>
 
@@ -73,7 +75,9 @@
 
 
                     <?php wp_reset_query(); // Reset the loop. ?>
-                <?php endwhile;?>
+                <?php
+            $index++;
+            endwhile;?>
             <?php endif;
     }
 
