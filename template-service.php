@@ -27,7 +27,7 @@ $post = get_post();
 </div> <!-- #sidebar -->
 
 </div> <!-- #content -->
-<!--
+
 <div id="sidebar-background" class="sidebar-background-right"></div>
 
 <div class="push"></div> <!-- .push must be inside #wrapper -->
