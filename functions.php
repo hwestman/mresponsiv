@@ -173,7 +173,7 @@ function collaborators_add_options() {
     </p>
 
     <?php
-    wp_set_object_terms( $post->ID, '1','category');
+    wp_set_object_terms( $post->ID, 'Uncategorized','category');
 }
 
 /**
