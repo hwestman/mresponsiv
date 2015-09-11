@@ -17,7 +17,7 @@ if($isProduct){
 }else{
     get_template_part('template-service');
 }
-get_template_part( 'template-service-collaborators');
+
 ?>
 
 <div id="sidebar-background" class="sidebar-background-right"></div>
