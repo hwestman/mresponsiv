@@ -11,7 +11,7 @@ function add_resources() {
 
 /******  Styles/CSS  ******/
 
-// Adding the bootstrap CSS (minified)
+// Adding the bootstrap CSS (minified)colla
 // Bootstrap @grid-float-breakpoint costumized to “@screen-md-min” from getbootstrap.com
 
 
@@ -173,6 +173,7 @@ function collaborators_add_options() {
     </p>
 
     <?php
+    wp_set_object_terms( $post->ID, '1','category');
 }
 
 /**
