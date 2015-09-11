@@ -103,6 +103,7 @@ $theLink = get_permalink($post->ID);
                     echo do_shortcode( $post->post_content );
                 ?>
             </article> <!-- #post -->
+            <?php get_template_part( 'template-service-collaborators'); ?>
         </div> <!-- .post-content -->
         <?php
         wp_reset_postdata();
