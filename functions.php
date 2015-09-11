@@ -144,7 +144,7 @@ function register_collaborators_custom_post(){
         'capability_type' => 'post',
         'hierarchical' => false,
         'rewrite' => array("slug" => "samarbeidspartnere"), // Permalinks format
-        'taxonomies' => array("post_tag"),
+        'taxonomies' => array("post_tag","category"),
         'supports' => array('title', 'thumbnail')
     )); 
 }

@@ -4,9 +4,8 @@
  */
 ?>
 
-<?php echo get_post( $post )->post_name; ?>
 
-<?php $items = new WP_Query( array( 'post_type' => 'samarbeidspartnere', 'posts_per_page' => -1, 'orderby' => 'menu_order', 'order' => 'ASC', 'category_name'=>get_post( $post )->post_name;) ); ?>
+<?php $items = new WP_Query( array( 'post_type' => 'samarbeidspartnere', 'posts_per_page' => -1, 'orderby' => 'menu_order', 'order' => 'ASC', 'category_name'=>get_post( $post )->post_name) ); ?>
 <?php if( $items->have_posts() ) : ?>
 <div id="frontpage-collaborators-container" class="frontpage-section">
 	<div class="frontpage-section-heading">
