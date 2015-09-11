@@ -7,7 +7,7 @@
 
 
 <?php $items = new WP_Query( array( 'post_type' => 'samarbeidspartnere', 'posts_per_page' => -1, 'orderby' => 'menu_order', 'order' => 'ASC') ); ?>
-<?php if( $items->have_posts() ) : ?>
+<?php if( $items->have_posts() && has_category()) : ?>
 <div id="frontpage-collaborators-container" class="frontpage-section">
 	<div class="frontpage-section-heading">
 		<h2>Samarbeidspartnere</h2>
