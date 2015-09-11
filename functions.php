@@ -173,7 +173,9 @@ function collaborators_add_options() {
     </p>
 
     <?php
-    wp_set_object_terms( $post->ID, 'Uncategorized','category');
+    if(!has_term('','category',$post_ID)){
+        wp_set_object_terms( $post->ID, 'Uncategorized','category');
+    }
 }
 
 /**
@@ -186,6 +188,9 @@ function update_collaborators_add_options(){
   {
     if( $_POST["collaborator_url"]  != "" ){update_post_meta($post->ID, "collaborator_url", @$_POST["collaborator_url"]);}
   }
+  if(!has_term('','category',$post_ID)){
+        wp_set_object_terms( $post->ID, 'Uncategorized','category');
+    }
 }
 
 add_action( 'save_post', 'update_collaborators_add_options' );
