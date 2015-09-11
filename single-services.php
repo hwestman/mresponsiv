@@ -20,9 +20,7 @@ if($isProduct){
 
 ?>
 
-<div id="sidebar-background" class="sidebar-background-right"></div>
 
-<div class="push"></div> <!-- .push must be inside #wrapper -->
 
 
 </div> <!-- #wrapper -->
