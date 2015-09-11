@@ -13,6 +13,8 @@ $post = get_post();
                 <h1 class="post-heading"><?php echo $post->post_title ?></h1>
                 <?php echo do_shortcode( $post->post_content ); ?>
             </article>
+            
+            <?php get_template_part( 'template-service-collaborators'); ?>
         </div>
 
     </div>
