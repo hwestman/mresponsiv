@@ -27,11 +27,11 @@
 		<?php wp_reset_query(); ?>
 		
 		<?php endwhile;?>
-		<?php endif; ?>
+		
 	 	</ul> <!-- .frontpage-collaborators-list -->
 	</div> <!-- #frontpage-collaborators -->
 </div> <!-- #frontpage-collaborators-container -->
-
+<?php endif; ?>
 
 
      
