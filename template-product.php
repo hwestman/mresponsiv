@@ -115,7 +115,7 @@ $theLink = get_permalink($post->ID);
 </div>
 
 </div><!--Content end -->
-<!--
+
 <div id="sidebar-background" class="sidebar-background-left">
 </div>
 <div class="push"></div> <!-- .push must be inside #wrapper -->
