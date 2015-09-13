@@ -390,9 +390,12 @@ img.aligncenter {
 .frontpage-news-item-visual {
     float: left;
     padding-bottom: 15px;
-
     min-width: 250px;
     height: 250px;
+    overflow: hidden;
+
+    width: 100%;   
+
 
     img {
         float: left;
@@ -403,6 +406,14 @@ img.aligncenter {
     }
 
 }
+
+@media (min-width: 1px) and (max-width: 991px) {
+
+    .frontpage-news-content-link {
+        margin-top: 15px;
+    }
+}
+
 
 .frontpage-news-content-link {
         float: left; 
