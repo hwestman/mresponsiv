@@ -529,4 +529,24 @@ $headerArgs = array(
 );
 add_theme_support( 'custom-header', $headerArgs);
 
+
+/**
+ * 12.0 Roles
+ */
+$result = add_role(
+    'administrasjon',
+    __( 'Administrasjon' ),
+    array(
+        'read'         => true,  // true allows this capability
+        'edit_posts'   => true,
+        'delete_posts' => true, // Use false to explicitly deny
+    )
+);
+if ( null !== $result ) {
+    echo 'Yay! New role created!';
+}
+else {
+    echo 'Oh... the basic_contributor role already exists.';
+}
+
 ?>
