@@ -33,15 +33,15 @@ get_header(); ?>
         'order'=>'ASC',
         'role'=>'administrasjon'
     );
-    $users = get_users($args);
+    $administrasjonUsers = get_users($args);
 
 
-    if($users != null){ ?>
+    if($administrasjonUsers != null){ ?>
         <div class="staff-page-heading">
             <h2>Administrasjon</h2>
         </div>
         <div class="staff-container">
-            <?php displayUsers($users); ?>
+            <?php displayUsers($administrasjonUsers); ?>
         </div> <!-- .staff-container -->
     <?php }
 
@@ -51,9 +51,11 @@ get_header(); ?>
     );
     $users = get_users($args); ?>
 
+    <?php if(administrasjonUsers!= null){?>
     <div class="staff-page-heading">
      <h2>Resten</h2>
     </div>
+    <?php } ?>
     <div class="staff-container">
         <?php displayUsers($users); ?>
     </div> <!-- .staff-container -->
