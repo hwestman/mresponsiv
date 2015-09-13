@@ -502,6 +502,10 @@ img.aligncenter {
     text-align: left;
     font-size: 2.074em; }
 
+.staff-container {
+  float: left;
+  width: 100%; }
+
 .staff-list {
   margin: 0px;
   float: left;

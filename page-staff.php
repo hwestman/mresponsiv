@@ -40,8 +40,9 @@ get_header(); ?>
         <div class="staff-page-heading">
             <h2>Administrasjon</h2>
         </div>
-        <?php displayUsers($users); ?>
-
+        <div class="staff-container">
+            <?php displayUsers($users); ?>
+        </div> <!-- .staff-container -->
     <?php }
 
     $args= array(
@@ -53,8 +54,9 @@ get_header(); ?>
     <div class="staff-page-heading">
      <h2>Resten</h2>
     </div>
+    <div class="staff-container">
         <?php displayUsers($users); ?>
-
+    </div> <!-- .staff-container -->
 
 </div> <!-- #content-padding -->
 </div> <!-- #content-no-sidebar --> 
