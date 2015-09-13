@@ -495,6 +495,13 @@ img.aligncenter {
     background-color: #F0F0F0;
  }
 
+@media (min-width: 768px) {
+
+    .fp-service-item-link{
+    min-height: 280px;
+    }
+}
+
   .fp-service-item-link:hover {
     background-color: $meyership-blue;
     text-decoration: none;
