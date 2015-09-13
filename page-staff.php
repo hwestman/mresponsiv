@@ -36,7 +36,7 @@ get_header(); ?>
     $administrasjonUsers = get_users($args);
 
 
-    if($administrasjonUsers != null){ ?>
+    if($administrasjonUsers != null && count($administrasjonUsers) > 0){ ?>
         <div class="staff-page-heading">
             <h2>Administrasjon</h2>
         </div>
@@ -51,9 +51,9 @@ get_header(); ?>
     );
     $users = get_users($args); ?>
 
-    <?php if(administrasjonUsers!= null){?>
+    <?php if($administrasjonUsers != null && count($administrasjonUsers) > 0){?>
     <div class="staff-page-heading">
-     <h2>Resten</h2>
+     <h2>Personell</h2>
     </div>
     <?php } ?>
     <div class="staff-container">
