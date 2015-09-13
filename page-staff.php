@@ -51,9 +51,11 @@ get_header(); ?>
         'order'=>'ASC',
         'role'=>'subscriber'
     );
+
+
     $userIDs = sortUsers(get_users($args)); ?>
 
-    <?php if($administrasjonUserIDs != null && count($administrasjonUsers) > 0){?>
+    <?php if($administrasjonUserIDs != null && count($administrasjonUserIDs) > 0){?>
     <div class="staff-page-heading">
      <h2>Personell</h2>
     </div>
