@@ -407,6 +407,7 @@ function modify_contact_fields( $contactmethods ) {
     $contactmethods['hiredate'] = 'Ansatt siden';
     $contactmethods['position'] = 'Stilling';
     $contactmethods['mobile'] = 'Mobil';
+    $contactmethods['sortOrder'] = 'Sorteringsnummer';
 
     return $contactmethods;
 }
