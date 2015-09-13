@@ -13,11 +13,6 @@ get_header(); ?>
             <div id="content-padding">
 
 
-<?php if ( have_posts() ) : ?>
-  <?php while ( have_posts() ) : the_post(); ?>    
-   <?php the_content(); ?>
-  <?php endwhile; ?>
-<?php endif; ?>
 
 
 
@@ -29,19 +24,26 @@ get_header(); ?>
 
     <?php
 
+    //$contactpersons = get_post_meta($post->ID, 'contactpersons', true);
+
+
+    //foreach($user_order as $key => $value){
+
     $args= array(
         'order'=>'ASC',
         'role'=>'administrasjon'
     );
-    $administrasjonUsers = get_users($args);
 
 
-    if($administrasjonUsers != null && count($administrasjonUsers) > 0){ ?>
+    $administrasjonUserIDs = sortUsers(get_users($args));
+    //wp_reset_postdata();
+
+    if($administrasjonUserIDs != null && count($administrasjonUserIDs) > 0){ ?>
         <div class="staff-page-heading">
             <h2>Administrasjon</h2>
         </div>
         <div class="staff-container">
-            <?php displayUsers($administrasjonUsers); ?>
+            <?php displayUsers($administrasjonUserIDs); ?>
         </div> <!-- .staff-container -->
     <?php }
 
@@ -49,15 +51,15 @@ get_header(); ?>
         'order'=>'ASC',
         'role'=>'subscriber'
     );
-    $users = get_users($args); ?>
+    $userIDs = sortUsers(get_users($args)); ?>
 
-    <?php if($administrasjonUsers != null && count($administrasjonUsers) > 0){?>
+    <?php if($administrasjonUserIDs != null && count($administrasjonUsers) > 0){?>
     <div class="staff-page-heading">
      <h2>Personell</h2>
     </div>
     <?php } ?>
     <div class="staff-container">
-        <?php displayUsers($users); ?>
+        <?php displayUsers($userIDs); ?>
     </div> <!-- .staff-container -->
 
 </div> <!-- #content-padding -->
@@ -73,8 +75,11 @@ get_header(); ?>
 
 <?php
 
-function displayUsers($users){
-    foreach($users as $user){
+function displayUsers($userIDs){
+
+    foreach($userIDs as $key => $value){
+
+        $user = get_userdata($key);
 
         if(isset($user->user_firstname) && $user->user_firstname != ""){
 
@@ -110,6 +115,26 @@ function displayUsers($users){
 
     }
 
+}
+
+/**
+ * @param $users actual user-objects
+ * @return array RETURNS An assosiative array of userids, so its not user-objects!
+ */
+function sortUsers($users){
+
+
+    $user_order = array();
+    foreach($users as $user){
+        $index = get_user_meta($user->ID,'sortOrder',true);
+
+        if($index == "" || $index == null){
+            $index = 10;
+        }
+        $user_order[$user->ID] = $index;
+    }
+    asort($user_order);
+    return $user_order;
 }
 
 get_footer();
