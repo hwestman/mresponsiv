@@ -542,11 +542,4 @@ $result = add_role(
         'delete_posts' => true, // Use false to explicitly deny
     )
 );
-if ( null !== $result ) {
-    echo 'Yay! New role created!';
-}
-else {
-    echo 'Oh... the basic_contributor role already exists.';
-}
-
 ?>
