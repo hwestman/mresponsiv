@@ -41,8 +41,11 @@ $theLink = get_permalink($post->ID);
                 return strnatcmp($a->name, $b->name);
             }); ?>
                 <?php foreach($categories as $cat){
-
-                    $query = new WP_Query('category_name='.$cat->name);?>
+		$args = array(
+			'category_name'=>'$cat->name',
+			'posts_per_page'=>-1
+			);
+                   $query = new WP_Query($args);?>
 
                     <li class="submenu-toggle">
                         <h4 class="dropdown-menu-heading"><?php echo $cat->name; ?><span class="caret no-desktop"></span></h4>
