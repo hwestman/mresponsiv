@@ -40,9 +40,9 @@
 
 
     <?php
-
+	
     function printServices($items){
-
+	global $post;
         $index = 1;
 
         if( $items->have_posts() ) :?>
