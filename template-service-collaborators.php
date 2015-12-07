@@ -9,7 +9,7 @@
 <?php if( $items->have_posts() ) : ?>
 <div id="frontpage-collaborators-container" class="frontpage-section">
 	<div class="frontpage-section-heading">
-		<h2>Samarbeidspartnere</h2>
+		<h2>Våre samarbeidspartnere</h2>
 	</div> <!-- .frontpage-section-heading -->    
 
     <div id="'frontpage-collaborators'">
