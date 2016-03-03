@@ -7,28 +7,17 @@
 <div id="frontpage-news-section" class="frontpage-section">
 
     <?php
-    query_posts( array ( 'category_name' => 'news', 'posts_per_page' => 3 ) );
-	
-    if (have_posts()){ ?>
+    $idObj = get_category_by_slug('archived'); 
+    $id = $idObj->term_id;
+    $the_query = new WP_Query( array( 'category_name' => 'news','category__not_in'=>array($id),'posts_per_page'=>3 ) ); 
+    if ( $the_query->have_posts() ) : ?>
 
     <div class="frontpage-section-heading">
         <a href="<?php echo get_site_url() ?>/news"><h2>Nyheter</h2></a>
     </div>
-    <?php while (have_posts()) : the_post(); ?>
-        <?php
-	$cats = get_the_category();
-	$cat_name = $cats[0]->name;
+    <?php 
 
-	$shouldSkip = false;
-	foreach($cats as $cat){
-		if($cat->name == "archived"){
-			$shouldSkip = true;
-		}
-	}
-	if($shouldSkip){
-		continue;
-	}
-	
+	while ( $the_query->have_posts() ) : $the_query->the_post(); 
 	?>
         <div class="frontpage-news-item-container col-xs-12 col-md-4">
             <ul class="frontpage-news-item">
@@ -52,7 +41,7 @@
             </ul> <!-- .frontpage-news-item -->
         </div> <!-- .frontpage-news-item-container -->
 			
-		<?php  	endwhile; }	?>
-		<?php wp_reset_query(); ?>
-
+	<?php  	endwhile; 
+		wp_reset_query(); 
+	endif; ?>
 </div> <!-- #frontpage-news-section -->
