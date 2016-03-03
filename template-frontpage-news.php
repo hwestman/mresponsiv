@@ -8,13 +8,28 @@
 
     <?php
     query_posts( array ( 'category_name' => 'news', 'posts_per_page' => 3 ) );
+	
     if (have_posts()){ ?>
 
     <div class="frontpage-section-heading">
         <a href="<?php echo get_site_url() ?>/news"><h2>Nyheter</h2></a>
     </div>
     <?php while (have_posts()) : the_post(); ?>
-        
+        <?php
+	$cats = get_the_category();
+	$cat_name = $cats[0]->name;
+
+	$shouldSkip = false;
+	foreach($cats as $cat){
+		if($cat->name == "archived"){
+			$shouldSkip = true;
+		}
+	}
+	if($shouldSkip){
+		continue;
+	}
+	
+	?>
         <div class="frontpage-news-item-container col-xs-12 col-md-4">
             <ul class="frontpage-news-item">
 
