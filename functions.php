@@ -128,7 +128,7 @@ function mbe_wp_head(){
 
 
 /**
- * 5.0 Collaborators (Costume post type)
+ * 5.0 Collaborators (Custom post type)
  * ----------------------------------------------------------------------------
  */
 
@@ -195,6 +195,7 @@ function update_collaborators_add_options(){
 
 add_action( 'save_post', 'update_collaborators_add_options' );
 
+
 /**
  * 6.0 Services (Custom post type)
  * ----------------------------------------------------------------------------
@@ -212,7 +213,7 @@ function register_services_custom_post(){
         'capability_type' => 'post',
         'hierarchical' => false,
         'rewrite' => array("slug" => "tjenester"), // Permalinks format
-        'supports' => array('title','editor', 'thumbnail','custom-fields'),
+        'supports' => array('title','editor', 'thumbnail','custom-fields','page-attributes'),
         'taxonomies' => array('category')
     ));
 }
@@ -257,6 +258,7 @@ function update_services_add_options_product(){
     }
 }
 add_action( 'save_post', 'update_services_add_options_product' );
+
 /*
 * Function for adding the options tab.
 */
@@ -305,6 +307,33 @@ function update_services_add_options(){
 
 
 add_action( 'save_post', 'update_services_add_options' );
+
+/**
+ * 7.0 Projects (Custom post type)
+ * ----------------------------------------------------------------------------
+ */
+
+//Add custom post type for collaborators
+
+function register_projects_custom_post(){
+    
+    register_post_type('projects', array(
+        'label' => __('Prosjekter'),
+        'singular_label' => __('Prosjekter'),
+        'public' => true,
+        'show_ui' => true, // UI in admin panel
+        'capability_type' => 'post',
+        'hierarchical' => false,
+        'rewrite' => array("slug" => "prosjekter"), // Permalinks format
+        'taxonomies' => array("post_tag","category"),
+        'supports' => array('title','editor', 'thumbnail','page-attributes')
+    )); 
+
+}
+
+add_action('init', 'register_projects_custom_post'); // Enable Collaborators post 
+
+
 
 
 

@@ -60,15 +60,15 @@ get_header(); ?>
                     <?php if ($user->mobile != "") {  ?>
                     <ul class="person-info-list">
                         <li class="person-info-list-item">
-                            <a class="person-info-list-item-link" href="tel:<?php echo $user->mobile; ?>" >
+                            <a class="person-info-list-item-link" href="tel:0047<?php echo $user->mobile; ?>" >
                                 <h4 class="person-info-list-item-heading">
                                     Mobil
                                 </h4>
                                 <p class="person-info-list-item-text ">
-                                    <?php echo $user->mobile; ?>
+                                    +47 <?php echo $user->mobile; ?>
                                 </p>
                             </a>
-                            <a class="person-info-list-item-fixed-link" href="tel:<?php echo $user->mobile; ?>" >
+                            <a class="person-info-list-item-fixed-link" href="tel:0047<?php echo $user->mobile; ?>" >
                                 Ring
                             </a>
                         </li>
@@ -79,15 +79,15 @@ get_header(); ?>
                     <?php if ($user->number != "") {  ?>
                     <ul class="person-info-list">
                         <li class="person-info-list-item">
-                            <a class="person-info-list-item-link" href="tel:<?php echo $user->number; ?>" >
+                            <a class="person-info-list-item-link" href="tel:0047<?php echo $user->number; ?>" >
                                 <h4 class="person-info-list-item-heading">
                                     Telefon
                                 </h4>
                                 <p class="person-info-list-item-text ">
-                                    <?php echo $user->number; ?>
+                                    +47 <?php echo $user->number; ?>
                                 </p>
                             </a>
-                            <a class="person-info-list-item-fixed-link" href="tel:<?php echo $user->number; ?>" >
+                            <a class="person-info-list-item-fixed-link" href="tel:0047<?php echo $user->number; ?>" >
                                 Ring
                             </a>
                         </li>

@@ -47,7 +47,7 @@
                         <img src="<?php echo $services_thumbnail[0] ?>">
                     </div>
                     <div class="fp-service-content">
-                        <h2><?php echo the_title(); ?></h2>
+                        <h2><?php echo the_title(); ?></h2>                        
                     </div>
                 </a>
             </div> <!-- .fp-service-item -->

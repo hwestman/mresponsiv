@@ -11,9 +11,9 @@
 	<div id="footer-inner" class="container">
 		<div id="footer-content" >
 			<div id="footer-partner-heading" class="mb-m">
-				<div class="col-xs-12">
-				<h3>I Meyership konsernet</h3>
-				</div>
+				<div class="col-xs-12" >
+					<h3 style="border-bottom:solid 1px black">I Meyership konsernet</h3>
+				</div>				
 			</div>
 
 			<div class="col-xs-12">
@@ -30,7 +30,7 @@
                 </div>
 			</div>
 			<div id="footer-copyright" class="mb-s">
-				<p>Meyership © 2015</p>
+				<p>Meyership © <?php echo date("Y"); ?></p>
 			</div>
 
 		</div> <!-- footer-content -->     

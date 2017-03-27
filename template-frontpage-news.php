@@ -4,7 +4,9 @@
  */
 ?>
 
-<div id="frontpage-news-section" class="frontpage-section">
+<div class="row" id="frontpage-news-section" class="frontpage-section">
+    <div class="col-md-12">
+        <hr/>
 
     <?php
     $idObj = get_category_by_slug('archived'); 
@@ -12,36 +14,49 @@
     $the_query = new WP_Query( array( 'category_name' => 'news','category__not_in'=>array($id),'posts_per_page'=>3 ) ); 
     if ( $the_query->have_posts() ) : ?>
 
-    <div class="frontpage-section-heading">
-        <a href="<?php echo get_site_url() ?>/news"><h2>Nyheter</h2></a>
-    </div>
+    
     <?php 
 
 	while ( $the_query->have_posts() ) : $the_query->the_post(); 
 	?>
-        <div class="frontpage-news-item-container col-xs-12 col-md-4">
-            <ul class="frontpage-news-item">
-
-                <li class="frontpage-news-item-visual">
-                    <a class="frontpage-news-thumbnail-link" href="<?php the_permalink(); ?>">
-                        <?php the_post_thumbnail('news'); ?>
-                    </a> <!-- .frontpage-news-thumbnail-link -->
-                </li> <!-- .frontpage-news-item-visual-->
-
-                <li class="frontpage-news-item-content">
-                    <a class="frontpage-news-content-link" href="<?php the_permalink(); ?>">
-                        <h3 class="frontpage-news-heading"><?php the_title(); ?></h3>
-                        <p class="frontpage-news-excerpt"><?php echo get_the_excerpt(); ?></p>
-                    </a> <!-- .frontpage-news-content-link -->
-                    <span class="frontpage-news-date">
-                        <?php echo get_the_date( 'd. M Y'); ?>
-                    </span> <!-- .frontpage-news-date -->
-                </li> <!-- .frontpage-news-item-content -->
-
-            </ul> <!-- .frontpage-news-item -->
-        </div> <!-- .frontpage-news-item-container -->
-			
+        
+        <div class="row">
+            
+                <div class="col-md-4">
+                    <a href="<?php the_permalink(); ?>">
+                    <img class="img-responsive" src="<?php the_post_thumbnail_url('news'); ?>"/>
+                    </a>
+                </div>
+                <div class="col-md-8">
+                    <div class="row news-header">
+                        <a href="<?php the_permalink(); ?>">
+                        <div class="col-xs-8">
+                            <h2 class="pull-left"><?php the_title(); ?></h2>
+                        </div>
+                        <div class="col-xs-4">
+                            <h3 class="pull-right"><?php echo get_the_date( 'd. M Y'); ?></h3>
+                        </div>
+                        </a>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <p class="frontpage-news-excerpt"><?php echo get_the_excerpt(); ?></p>    
+                        </div>                    
+                    </div>
+                </div>
+            
+        </div>
+        <hr class="new-services-separator">            
+        
 	<?php  	endwhile; 
 		wp_reset_query(); 
 	endif; ?>
+    <div class="row">
+        <div class="col-md-12">
+            <a class="pull-right" href="<?php echo get_site_url() ?>/news"><h2>Arkiv</h2></a>
+            
+        </div>
+    </div>
+
+    </div>
 </div> <!-- #frontpage-news-section -->

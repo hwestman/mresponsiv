@@ -29,5 +29,10 @@
         }
 
     } ?>
-
-    <div id="hero-image" style="background-image: url('<?php echo $background_image; ?>');"></div>
+    <?php if (is_home()){ ?>
+        
+    <?php }else{ ?>
+        <div id="hero-image" style="background-image: url('<?php echo $background_image; ?>');">
+            
+        </div>
+    <?php } ?>

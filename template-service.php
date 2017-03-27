@@ -14,7 +14,9 @@ $post = get_post();
                 <?php echo do_shortcode( $post->post_content ); ?>
             </article>
             
+            <?php get_template_part( 'template-service-projects'); ?>
             <?php get_template_part( 'template-service-collaborators'); ?>
+            
         </div>
 
     </div>
