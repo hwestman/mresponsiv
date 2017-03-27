@@ -61,7 +61,7 @@
 				<div id="menu-max-width">
 
 					<div class="navbar-header">
-						<button type="button" class="navbar-toggle" dat	-toggle="collapse" data-target=".navbar-ex1-collapse">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
 							<span class="sr-only">Toggle navigation</span>
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
