@@ -27,14 +27,16 @@ get_header(); ?>
                         $colOffset = " col-lg-offset-5";
                         break;
                     case 2:
-                        $colLg = "col-lg-6";
+                        $colLg = "col-lg-2";
+                        $colOffset = " col-lg-offset-4";
                         break;
                     case 3:
                         $colLg = "col-lg-2";
                         $colOffset = " col-lg-offset-3";
                         break;
                     case 4:
-                        $colLg = "col-lg-3";
+                        $colLg = "col-lg-2";
+                        $colOffset = " col-lg-offset-2";
                         break;
                     case 5:
                         $colLg = "col-lg-2";
