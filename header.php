@@ -35,9 +35,14 @@
 
 
 </head>
-
+<?php
+	$bodyClasses = "";
+	if ( is_front_page() ) {	
+		$bodyClasses = "front-body ";		
+	}
+?>
 <!-- Push down the menu, when user is logged inn -->
-<?php echo '<body id="tagline" class="myBody '.join(' ', get_body_class()).'">'.PHP_EOL; ?>
+<?php echo '<body id="tagline" class="myBody '.$bodyClasses.join(' ', get_body_class()).'">'.PHP_EOL; ?>
 
 <?php
 

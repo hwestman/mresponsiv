@@ -82,15 +82,17 @@ body {
   font-weight: 400;
   line-height: 1.45;
   color: #333;
-  padding-top: 70px !important;
-  background: url("img/luft.jpg") no-repeat center center fixed;
+  padding-top: 70px !important; }
+
+.myBody {
+  padding-top: 70px !important; }
+
+.front-body {
+  background: url("img/tog.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover; }
-
-.myBody {
-  padding-top: 70px !important; }
 
 p {
   margin-bottom: 1.3em; }
