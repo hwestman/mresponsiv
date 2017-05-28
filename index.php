@@ -8,70 +8,58 @@ get_header(); ?>
         <img class="mship-graphic" src="<?php echo get_template_directory_uri()?>/img/mship_grafikk.png" />               
         <hr class="mship-graphic-seperator">            
     </div>-->
-    <div class="row" id="new-service-container">
-        
-        <?php $items = new WP_Query( array( 'post_type' => 'services', 'posts_per_page' => -1, 'orderby' => 'menu_order', 'order' => 'ASC') );
-        
-        if( $items->have_posts() ) : ?>
-            <?php while( $items->have_posts() ) : $items->the_post(); ?>
-                <?php $services_url = get_post_meta($post->ID, 'collaborator_url', true);?>
-                <?php $services_thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'square'); ?>
-                
-                <?php
-                $colLg = "col-lg-2"; 
-                $colOffset = "";
-                
-                switch ($items->post_count) {
-                    case 1:
-                        $colLg = "col-lg-2";
-                        $colOffset = " col-lg-offset-5";
-                        break;
-                    case 2:
-                        $colLg = "col-lg-2";
-                        $colOffset = " col-lg-offset-4";
-                        break;
-                    case 3:
-                        $colLg = "col-lg-2";
-                        $colOffset = " col-lg-offset-3";
-                        break;
-                    case 4:
-                        $colLg = "col-lg-2";
-                        $colOffset = " col-lg-offset-2";
-                        break;
-                    case 5:
-                        $colLg = "col-lg-2";
-                        $colOffset = " col-lg-offset-1";
-                        break;
-                    case 7:
-                        $colLg = "col-lg-1";
-                        
-                        break;
-                    default:
-                        # code...
-                        break;
-                }
-                ?>
 
-                <div class="col-xs-6 col-sm-4 <?php echo $colLg; if($items->current_post+1 == 1)echo $colOffset  ?>   new-service-item">
-                    <a class="new-service-item-link" href="<?php echo the_permalink(); ?>">
-                        <div class="new-service-item">
-                            <img src="<?php echo $services_thumbnail[0] ?>"/>
-                            <div class="new-service-title">
-                                <p><?php echo the_title(); ?></p>                        
-                            </div>                                        
-                        </div> <!-- .fp-service-item -->
-                    </a>
+     <div class="row front-section" >
+        <div class="col-lg-12">
+            <div class="row tagline">
+                <div class="col-xs-12">
+                    <div class=" center-block">
+                        <h1>
+                            <div class="m-blue">150</div> år med transporttjenester
+                        </h1> 
+                    </div>  
                 </div>
-                
-                <?php wp_reset_query(); // Reset the loop. ?>
-            <?php endwhile;?>
-        <?php endif; ?>
+            </div>
+            <div class="row front-buttons">
+                <div class="col-xs-12 col-lg-4 col-lg-offset-4">
+                    <a href="#news" class="btn btn-info">Nyheter</a>
+                    <a href="#services" class="btn btn-info">Våre tjenester</a>
+                </div>
+            </div>            
+        </div> 
     </div>
+
+    <div class="row front-section middle-section" id="services" >
+        <div  class="col-xs-12">
+            <div class="center-block">
+                <h2>Våre tjenester</h2>
+            </div>       
+            <?php get_template_part( 'template-frontpage-services-horizontal'); ?>        
+            <div class="row front-buttons">
+                <div class="col-xs-12 center-block">
+                    <a href="#news" class="btn btn-info">Nyheter</a>
+                </div>
+            </div>       
+        </div>
+    </div>
+    
+    <div class="row front-section middle-section" id="news">
+        <div  class="col-xs-12 ">
+            <div class="center-block">
+                <h2>Nyheter</h2>
+            </div>   
+            <?php get_template_part( 'template-frontpage-news'); ?>        
+                          
+        </div>
+    </div>
+          
+    
     <!--<div class="hidden-xs">
         <img class="mship-graphic" src="<?php echo get_template_directory_uri()?>/img/mship_grafikk.png" />               
         <hr class="mship-graphic-seperator">            
     </div>-->
-<?php get_template_part( 'template-frontpage-news'); ?>
+    
+    
 </div>
 
 <?php
