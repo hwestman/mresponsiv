@@ -24,8 +24,8 @@
             
                 <div class="col-md-4">
                     <a href="<?php the_permalink(); ?>">
-                    <img class="img-responsive" src="<?php the_post_thumbnail_url('news'); ?>"/>
-                    </a>
+			<img class="img-responsive" src="<?php the_post_thumbnail_url('news'); ?>"/>
+			</a>
                 </div>
                 <div class="col-md-8">
                     <div class="row news-header">
