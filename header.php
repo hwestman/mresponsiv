@@ -37,7 +37,7 @@
 </head>
 
 <!-- Push down the menu, when user is logged inn -->
-<?php echo '<body class="'.join(' ', get_body_class()).'">'.PHP_EOL; ?>
+<?php echo '<body id="tagline" class="myBody '.join(' ', get_body_class()).'">'.PHP_EOL; ?>
 
 <?php
 

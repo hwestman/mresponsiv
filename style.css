@@ -73,22 +73,24 @@ table {
 html {
   font-size: 1em;
   margin: 0px;
-  padding: 0px;
-  min-height: 100%;
-  height: 100%; }
+  padding: 0px; }
 
 body {
   font-size: 1em;
-  margin: 0px;
-  padding: 0px;
-  min-height: 100%;
-  height: 100%;
   background-color: white;
   font-family: helvetica, arial, sans-serif;
   font-weight: 400;
   line-height: 1.45;
   color: #333;
-  padding-top: 62px !important; }
+  padding-top: 70px !important;
+  background: url("img/luft.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+
+.myBody {
+  padding-top: 70px !important; }
 
 p {
   margin-bottom: 1.3em; }
@@ -230,7 +232,8 @@ img.aligncenter {
  * ----------------------------------------------------------------------------
  */
 .navbar-default {
-  background-color: transparent; }
+  background-color: transparent;
+  border-color: transparent; }
 
 #header {
   width: 100%;
@@ -338,14 +341,58 @@ img.aligncenter {
   width: 100%;
   left: 0; }
 
-.mship-graphic-xs {
-  margin-top: 70px; }
+.front-section {
+  height: calc(100vh - 70px); }
+
+.middle-section {
+  padding-top: 70px;
+  height: 100vh;
+  background-color: white; }
+
+.middle-section h2 {
+  margin: 0;
+  padding: 0 0 0 0;
+  text-align: center;
+  color: #333; }
+
+.tagline {
+  background-color: #333;
+  margin-top: 200px;
+  padding: 20px 20px 20px 20px;
+  margin-bottom: 70px; }
+
+.tagline h1 {
+  color: white;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  font-weight: 400; }
+
+.tagline .m-blue {
+  color: #337ab7;
+  display: inline; }
+
+.front-buttons {
+  text-align: center; }
+
+.front-buttons .btn {
+  background-color: #333;
+  border-radius: 0;
+  background-image: none;
+  border: none;
+  padding: 15px 20px 15px 20px;
+  font-size: 15px; }
+
+.front-buttons .btn:hover {
+  background-color: #337ab7; }
 
 /**
  * Frontpage - News
  * ----------------------------------------------------------------------------
  */
 #frontpage-news-section {
+  background-color: white;
+  padding: 20px;
   margin-top: 30px; }
   #frontpage-news-section a {
     color: black; }
@@ -370,7 +417,8 @@ img.aligncenter {
  * ----------------------------------------------------------------------------
  */
 #new-service-container {
-  margin-top: 70px; }
+  padding: 10px 10px 10px 10px;
+  background-color: white; }
 
 .new-service-item {
   position: relative;
@@ -396,7 +444,7 @@ img.aligncenter {
   position: absolute;
   top: 70px;
   left: 0px;
-  padding: 10px;
+  padding: 20px;
   background-color: white; }
 
 .new-services-separator {
@@ -416,21 +464,13 @@ img.aligncenter {
     top: 135px; } }
 @media (min-width: 1200px) {
   .new-service-title {
-    top: 70px; } }
+    top: 140px; } }
 @media (min-width: 1400px) {
-  #new-service-container {
-    width: calc(100% + 200px);
-    margin-left: -100px; }
-
   .new-service-title {
-    top: 85px; } }
+    top: 150px; } }
 @media (min-width: 1700px) {
-  #new-service-container {
-    width: calc(100% + 500px);
-    margin-left: -250px; }
-
   .new-service-title {
-    top: 115px; } }
+    top: 155px; } }
 /**
  * Frontpage - Collaborators
  * ----------------------------------------------------------------------------

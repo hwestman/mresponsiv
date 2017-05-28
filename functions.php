@@ -15,10 +15,7 @@ function add_resources() {
 // Bootstrap @grid-float-breakpoint costumized to “@screen-md-min” from getbootstrap.com
 
 
-wp_enqueue_style( 'bootstrap-css', get_template_directory_uri() . '/bootstrap/bootstrap.min.css');
 
-// Adding Theme specific styles
-wp_enqueue_style( 'theme-css', get_template_directory_uri() . '/style.css', false);
 
 wp_enqueue_style( 'bootstrap-css', get_template_directory_uri() . '/bootstrap/bootstrap.min.css');
 
