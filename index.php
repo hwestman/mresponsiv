@@ -10,9 +10,9 @@ get_header(); ?>
     </div>-->
 
      <div class="row front-section" >
-        <div class="col-lg-12">
-            <div class="row tagline">
-                <div class="col-xs-12">
+        <div class="col-xs-12">
+            <div class="row ">
+                <div class="col-xs-12 col-md-8 col-md-offset-2 tagline">
                     <div class=" center-block">
                         <h1>
                             <div class="m-blue">150</div> år med transporttjenester

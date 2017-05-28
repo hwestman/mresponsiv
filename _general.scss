@@ -33,7 +33,7 @@ body {
     color: #333;
     padding-top: 70px !important;
     background: url('img/luft.jpg') no-repeat center center fixed; 
-    -webkit-background-size: cover;
+    -webkit-background-size: cover;    
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
@@ -368,6 +368,7 @@ img.aligncenter {
 
 .front-section{
     height: calc(100vh - 70px);    
+    
     
 }
 .middle-section{
