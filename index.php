@@ -15,7 +15,12 @@ get_header(); ?>
                         <div class="col-xs-12 col-md-8 col-md-offset-2 tagline">
                             <div class=" center-block">
                                 <h1>
-                                    <div class="m-blue">150</div> år med transporttjenester
+                                    <!-- <div class="m-blue">150</div> år med transporttjenester -->
+                                    <?php 
+                                        $tagline = explode(' ',get_bloginfo( 'description' ),2);
+                                    ?>
+                                    <div class="m-blue"><?php echo $tagline[0] ?></div>
+                                    <?php echo $tagline[1] ?>
                                 </h1> 
                             </div>  
                         </div>
