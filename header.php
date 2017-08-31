@@ -25,27 +25,22 @@
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
-	<!-- CSS -->
-
-	
+	<!-- CSS -->	
 	<?php wp_head(); ?>
-
-
-
-
-
 </head>
 <?php
 	$bodyClasses = "";
 	if ( is_front_page() ) {	
-		$bodyClasses = "front-body ";		
+		$bodyClasses = "front-body ";
+		$bodyClasses.="site-".get_bloginfo( 'name' )." ";
 	}
+	
 ?>
 <!-- Push down the menu, when user is logged inn -->
-<?php echo '<body id="tagline" class="myBody '.$bodyClasses.join(' ', get_body_class()).'">'.PHP_EOL; ?>
+
+<?php echo '<body id="tagline" class="myBody '.$bodyClasses.join(' ', get_body_class()).'" >'.PHP_EOL; ?>
 
 <?php
-
 	function site_logo() {
 		$logo_image_option = get_theme_mod( 'theme_custom_logo_setting' );
 		if ( $logo_image_option != "") {
@@ -57,9 +52,6 @@
 	}
 
 ?>
-
-
-
 	<div id="site-header">
 		<header>
 			<nav class="navbar navbar-default navbar-fixed-top header-background header-bg role="navigation">

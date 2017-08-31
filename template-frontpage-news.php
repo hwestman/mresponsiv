@@ -6,7 +6,7 @@
 
 <div class="row" id="frontpage-news-section" class="frontpage-section">
     <div class="col-md-12">
-        <hr/>
+        
 
     <?php
     $idObj = get_category_by_slug('archived'); 
