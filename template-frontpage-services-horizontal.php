@@ -42,7 +42,7 @@
                 // }
                 ?>
 
-            <div class="col-xs-6 col-sm-4 col-lg-4  <?php echo $colLg; if($items->current_post+1 == 1)echo $colOffset  ?>   new-service-item">
+            <div class="col-xs-6 col-md-4  <?php echo $colLg; if($items->current_post+1 == 1)echo $colOffset  ?>   new-service-item">
                 <a class="new-service-item-link" href="<?php echo the_permalink(); ?>">
                     <div class="new-service-item">
                         <img src="<?php echo $services_thumbnail[0] ?>"/>
