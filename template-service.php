@@ -30,7 +30,7 @@ $post = get_post();
 
 </div> <!-- #content -->
 
-<div id="sidebar-background" class="sidebar-background-right"></div>
+<div id="sidebar-background" class="sidebar-background-right hidden-sm hidden-xs"></div>
 
 <div class="push"></div> <!-- .push must be inside #wrapper -->
 
