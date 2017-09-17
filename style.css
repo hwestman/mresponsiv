@@ -506,7 +506,8 @@ img.aligncenter {
   width: 100%;
   margin: 0px;
   padding: 0px;
-  list-style: none; }
+  list-style: none;
+  margin-bottom: 50px; }
 
 .frontpage-collaborators-item img {
   float: left;
@@ -514,6 +515,9 @@ img.aligncenter {
   width: 100%;
   max-width: 100%;
   height: auto; }
+.frontpage-collaborators-item h3 {
+  max-height: 3em;
+  font-size: 18px; }
 
 .frontpage-collaborators-item-link {
   float: left;
@@ -1743,7 +1747,10 @@ img.aligncenter {
   #footer-inner {
     float: left;
     width: 100%;
-    height: auto; } }
+    height: auto; }
+
+  .frontpage-collaborators-item h3 {
+    font-size: 28px; } }
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 991px) {
   body, html {

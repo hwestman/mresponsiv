@@ -822,16 +822,22 @@ li {
     margin: 0px;
     padding: 0px;
     list-style: none;     
+    margin-bottom: 50px;
 }
 
 .frontpage-collaborators-item {
 
    img {
+       
     float: left; 
     display: block;
     width: 100%;
     max-width: 100%;
     height: auto;
+    }
+    h3{
+        max-height: 3em;
+        font-size: 18px;
     }
 }
 
@@ -1837,8 +1843,6 @@ overflow: hidden;
     width: 1170px;
   }
 }
-
-
 
 #main {
     height: 100%;

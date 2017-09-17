@@ -216,6 +216,7 @@ add_action('init', 'register_services_custom_post'); // Enable Collaborators pos
 
 function register_services_meta_boxes() {
     add_meta_box("services_meta_product", "Product", "services_add_options_product", "services", "normal", "high");
+    add_meta_box("services_meta_frontpage", "Frontpage", "services_add_options_frontpage", "services", "normal", "high");
     add_meta_box("services_meta", "Meta", "services_add_options", "services", "normal", "low");
 }
 
@@ -252,6 +253,37 @@ function update_services_add_options_product(){
     }
 }
 add_action( 'save_post', 'update_services_add_options_product' );
+
+function services_add_options_frontpage() {
+    
+    global $post;
+    $isFrontpage = get_post_meta($post->ID, 'isFrontpage', true);
+    ?>
+        <p>
+            <label>Service is on frontpage</label>
+            <input type="checkbox" class="is-product" name="isFrontpage" value="" style="margin-left: 2px"
+                <?php if($isFrontpage){
+                    echo "checked";
+                }
+            ?> />
+        </p>
+    <?php
+    }
+    function update_services_add_options_frontpage(){
+        global $post;
+    
+        $var = $_POST["isFrontpage"];
+    
+        if ( $post ){
+            if( isset($_POST["isFrontpage"])){
+    
+                update_post_meta($post->ID, "isFrontpage",1);
+            }else{
+                update_post_meta($post->ID, "isFrontpage",0);
+            }
+        }
+    }
+    add_action( 'save_post', 'update_services_add_options_frontpage' );
 
 /*
 * Function for adding the options tab.
