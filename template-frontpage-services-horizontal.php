@@ -1,9 +1,16 @@
 <div class="row" id="new-service-container">
         
+
+
         <?php $items = new WP_Query( array( 'post_type' => 'services', 'posts_per_page' => -1, 'orderby' => 'menu_order', 'order' => 'ASC') );
         
         if( $items->have_posts() ) : ?>
             <?php while( $items->have_posts() ) : $items->the_post(); ?>
+                <?php $isFrontpage = get_post_meta($post->ID, 'isFrontpage', true); 
+                if(!$isFrontpage){
+                    continue;
+                }
+                ?>
                 <?php $services_url = get_post_meta($post->ID, 'collaborator_url', true);?>
                 <?php $services_thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'square'); ?>
                 
