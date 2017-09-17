@@ -8,3 +8,4 @@ jonas
 bower_components
 *.map
 .idea
+prototype/js/.DS_Store

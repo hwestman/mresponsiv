@@ -7,7 +7,7 @@
         if( $items->have_posts() ) : ?>
             <?php while( $items->have_posts() ) : $items->the_post(); ?>
                 <?php $isFrontpage = get_post_meta($post->ID, 'isFrontpage', true); 
-                if(!$isFrontpage){
+                if($isFrontpage){
                     continue;
                 }
                 ?>
