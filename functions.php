@@ -260,7 +260,7 @@ function services_add_options_frontpage() {
     $isFrontpage = get_post_meta($post->ID, 'isFrontpage', true);
     ?>
         <p>
-            <label>Service is on frontpage</label>
+            <label>Hide service from frontpage</label>
             <input type="checkbox" class="is-product" name="isFrontpage" value="" style="margin-left: 2px"
                 <?php if($isFrontpage){
                     echo "checked";
