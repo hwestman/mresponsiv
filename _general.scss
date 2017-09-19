@@ -833,10 +833,11 @@ li {
     display: block;
     width: 100%;
     max-width: 100%;
-    height: auto;
+    max-height: 200px; 
+    background-size: cover;
     }
     h3{
-        max-height: 3em;
+        height: 2em;
         font-size: 18px;
     }
 }
