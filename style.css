@@ -91,11 +91,32 @@ body {
   -o-background-size: cover;
   background-size: cover; }
 
-.site-Meyership {
+.site-meyership {
   background: url("img/luft.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
+  background-size: cover; }
+
+.site-mosjøen {
+  background: url("img/mosjoen.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+
+.site-m-distribusjon {
+  background: url("img/luft.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+
+  .site-rana-transportservice {
+    background: url("img/luft.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
   background-size: cover; }
 
 .myBody {
@@ -514,7 +535,7 @@ img.aligncenter {
   display: block;
   width: 100%;
   max-width: 100%;
-  max-height: 200px;
+  max-height: 150px;
   background-size: cover; }
 .frontpage-collaborators-item h3 {
   height: 2em;

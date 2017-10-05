@@ -31,8 +31,11 @@
 <?php
 	$bodyClasses = "";
 	if ( is_front_page() ) {	
+
+		$siteName = strtolower(get_bloginfo( 'name' ));
+		$siteName = str_replace(" ","-",$siteName);
 		$bodyClasses = "front-body ";
-		$bodyClasses.="site-".get_bloginfo( 'name' )." ";
+		$bodyClasses.="site-".$siteName." ";
 	}
 	
 ?>
