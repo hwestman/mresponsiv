@@ -597,4 +597,13 @@ $result = add_role(
         'delete_posts' => true, // Use false to explicitly deny
     )
 );
+$result = add_role(
+    'financial',
+    __( 'Økonomi' ),
+    array(
+        'read'         => true,  // true allows this capability
+        'edit_posts'   => true,
+        'delete_posts' => true, // Use false to explicitly deny
+    )
+);
 ?>
