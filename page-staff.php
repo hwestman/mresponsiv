@@ -23,12 +23,7 @@ get_header(); ?>
 
 
     <?php
-
-    //$contactpersons = get_post_meta($post->ID, 'contactpersons', true);
-
-
-    //foreach($user_order as $key => $value){
-
+	// ADMINISTRATION------------------------
     $args= array(
         'order'=>'ASC',
         'role'=>'administrasjon'
@@ -47,7 +42,7 @@ get_header(); ?>
         </div> <!-- .staff-container -->
     <?php }
 
-    
+    //USERS---------------------------
 
     $args= array(
         'order'=>'ASC',
@@ -64,7 +59,8 @@ get_header(); ?>
     <div class="staff-container">
         <?php displayUsers($userIDs); ?>
     </div> <!-- .staff-container -->
-                        
+<?php               
+         //FINANCTIAL-------------------------------
 $args= array(
         'order'=>'ASC',
         'role'=>'financial'
@@ -72,7 +68,6 @@ $args= array(
 
 
     $financialUserIDs = sortUsers(get_users($args));
-    //wp_reset_postdata();
 
     if($financialUserIDs != null && count($financialUserIDs) > 0){ ?>
         <div class="staff-page-heading">
@@ -81,7 +76,8 @@ $args= array(
         <div class="staff-container">
             <?php displayUsers($financialUserIDs); ?>
         </div> <!-- .staff-container -->
-    <?php }
+    <?php } ?>
+
 
 </div> <!-- #content-padding -->
 </div> <!-- #content-no-sidebar --> 
