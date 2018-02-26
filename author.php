@@ -126,8 +126,7 @@ get_header(); ?>
 
         <?php
             $opt =  get_option('cf7_users_shortcode');
-            echo do_shortcode('[contact-form-7 id="'.$opt.'" title="user-form"]');
-
+	    echo do_shortcode('[contact-form-7 id="'.$opt.'" title="user-form"]');
         ?>
   </div>
 </div> <!-- #sidebar -->

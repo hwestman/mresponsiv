@@ -47,11 +47,12 @@ get_header(); ?>
         </div> <!-- .staff-container -->
     <?php }
 
+    
+
     $args= array(
         'order'=>'ASC',
         'role'=>'subscriber'
     );
-
 
     $userIDs = sortUsers(get_users($args)); ?>
 
@@ -63,6 +64,24 @@ get_header(); ?>
     <div class="staff-container">
         <?php displayUsers($userIDs); ?>
     </div> <!-- .staff-container -->
+                        
+$args= array(
+        'order'=>'ASC',
+        'role'=>'financial'
+    );
+
+
+    $financialUserIDs = sortUsers(get_users($args));
+    //wp_reset_postdata();
+
+    if($financialUserIDs != null && count($financialUserIDs) > 0){ ?>
+        <div class="staff-page-heading">
+            <h2>M økonomi</h2>
+        </div>
+        <div class="staff-container">
+            <?php displayUsers($financialUserIDs); ?>
+        </div> <!-- .staff-container -->
+    <?php }
 
 </div> <!-- #content-padding -->
 </div> <!-- #content-no-sidebar --> 
