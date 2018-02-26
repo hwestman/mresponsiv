@@ -480,12 +480,13 @@ remove_action( 'admin_color_scheme_picker', 'admin_color_scheme_picker' );
  * ----------------------------------------------------------------------------
  */
 
+
 function author_email()  {
 
-    $user = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : get_userdata(intval($author));
+    //$user = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : get_userdata(intval($author));
+    $author = get_user_by( 'slug', get_query_var( 'author_name' ) );
 
-
-    return $user->user_email;
+    return $author->user_email;
 }
 add_shortcode('authormail', 'author_email');
 
