@@ -71,7 +71,7 @@ $args= array(
 
     if($financialUserIDs != null && count($financialUserIDs) > 0){ ?>
         <div class="staff-page-heading">
-            <h2>M økonomi</h2>
+            <h2>M Økonomi</h2>
         </div>
         <div class="staff-container">
             <?php displayUsers($financialUserIDs); ?>
