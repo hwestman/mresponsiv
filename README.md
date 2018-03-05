@@ -1,2 +1,2 @@
-# Wordpress template for 
+# Wordpress template
 https://meyership.no/
