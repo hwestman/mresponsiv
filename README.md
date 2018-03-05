@@ -1,3 +1,2 @@
-# Wordpress template for https://meyership.no/
-
-A multisite template.
+# Wordpress template for 
+https://meyership.no/
